@@ -2,7 +2,6 @@ import React, { ReactElement } from 'react';
 
 import { IBreadcrumb, IToggleMenuManager } from '@/interface';
 import { useApp } from '@/pages/_app';
-import { useAuth } from '@/stores/auth/useAuth';
 import { usePage } from '@/stores/page/usePage';
 
 import { Button } from '@/components/button/button';
@@ -16,7 +15,6 @@ import { variable } from '@/styles/variable';
 export function Header({ toggleMenuManager }: IToggleMenuManager): ReactElement {
     // CONTEXT
     const { setStateTheme } = useApp();
-    const { setStateAuth } = useAuth();
     const { stateBreadcrumb } = usePage();
 
     return (
@@ -28,14 +26,6 @@ export function Header({ toggleMenuManager }: IToggleMenuManager): ReactElement 
                             stateBreadcrumb?.map((item: IBreadcrumb) => {
                                 return <li key={item.title}>{item.link ? <LinkTo link={item.link} text={item.title} /> : item.title}</li>;
                             })}
-                    </ul>
-                </HeaderItemsStyled>
-
-                <HeaderItemsStyled display={{ d: 'none', md: 'block' }}>
-                    <ul>
-                        <li>
-                            <Button onClick={(): void => setStateAuth(null)} text="Logout" typeStyle="button-unset" />
-                        </li>
                     </ul>
                 </HeaderItemsStyled>
 

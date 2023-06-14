@@ -1,6 +1,5 @@
 import { ComponentProps, ComponentType, Dispatch, ReactNode, SetStateAction } from 'react';
 
-import { BarDatum } from '@nivo/bar';
 import { IInputStyled, IStyledSystem, ISvgStyled } from 'styled-components';
 
 import { TDisplay, TInputType, TLanguage, TProductSvgName } from '@/type';
@@ -45,12 +44,6 @@ export interface ICarousel extends IStyledSystem {
     data: Record<string, any> | null;
     title?: '' | 'project' | 'video';
     url?: string;
-}
-
-export interface IChartBar {
-    data: BarDatum[];
-    indexBy: string;
-    keys: string[];
 }
 
 export interface IFaqPopularQuestion {

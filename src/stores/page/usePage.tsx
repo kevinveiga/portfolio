@@ -8,30 +8,22 @@ import { urlSignIn } from '@/configApp';
 import { verifyUrlsNeedAuthentication } from '@/helpers/verification';
 import { IBreadcrumb } from '@/interface';
 import { useApp } from '@/pages/_app';
-import { useAuth } from '@/stores/auth/useAuth';
 import { useAxiosInterceptor } from '@/stores/axiosInterceptor/useAxiosInterceptor';
-import { useMenu } from '@/stores/menu/useMenu';
 import { usePersistedState } from '@/stores/persistedState/usePersistedState';
 import { TLanguage } from '@/type';
 
 interface IPageContext {
     stateBreadcrumb: IBreadcrumb[] | null;
     stateLanguage: TLanguage;
-    stateMenu: boolean;
     setStateBreadcrumb: Dispatch<SetStateAction<IBreadcrumb[] | null>>;
     setStateLanguage: Dispatch<SetStateAction<TLanguage>>;
-    setStateMenu: Dispatch<SetStateAction<boolean>>;
-    toggleMenu: () => void;
 }
 
 const PageContext = createContext<IPageContext>({
     stateBreadcrumb: null,
     stateLanguage: 'en',
-    stateMenu: true,
     setStateBreadcrumb: () => null,
-    setStateLanguage: () => 'en',
-    setStateMenu: () => true,
-    toggleMenu: () => true
+    setStateLanguage: () => 'en'
 });
 
 export function usePage(): IPageContext {
@@ -48,27 +40,22 @@ export function PageProvider({ children }: any): PropsWithChildren<any> {
     // CONTEXT
     useAxiosInterceptor();
     const { setStateIsLoading, setStateModalMessage } = useApp();
-    const { setStateAuth } = useAuth();
     const router = useRouter();
     const { i18n } = useTranslation();
 
     // STATE
     const [stateBreadcrumb, setStateBreadcrumb] = useState<IBreadcrumb[] | null>(null);
     const [stateLanguage, setStateLanguage] = usePersistedState<TLanguage>('language', 'en');
-    const { stateMenu, setStateMenu, toggleMenu } = useMenu();
 
     // CONTEXT PROVIDER
     const contextProvider = useMemo(
         () => ({
             stateBreadcrumb: stateBreadcrumb,
             stateLanguage: stateLanguage,
-            stateMenu: stateMenu,
             setStateBreadcrumb: setStateBreadcrumb,
-            setStateLanguage: setStateLanguage,
-            setStateMenu: setStateMenu,
-            toggleMenu: toggleMenu
+            setStateLanguage: setStateLanguage
         }),
-        [stateBreadcrumb, stateLanguage, stateMenu, setStateLanguage, setStateMenu, toggleMenu]
+        [stateBreadcrumb, stateLanguage, setStateLanguage]
     );
 
     // SWR Config
@@ -81,8 +68,6 @@ export function PageProvider({ children }: any): PropsWithChildren<any> {
             if (status === 0 || status === 401 || status === 403) {
                 // Test if not on specific pages
                 if (verifyUrlsNeedAuthentication(router.pathname)) {
-                    setStateAuth(null);
-
                     router.push(urlSignIn).catch(() => null);
                 }
             } else if (status !== 200) {

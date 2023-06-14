@@ -3,8 +3,6 @@ import React, { createContext, Dispatch, ReactElement, SetStateAction, useContex
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { Session } from 'next-auth';
-import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider } from 'styled-components';
 
 import '@/helpers/i18next';
@@ -65,7 +63,7 @@ export function useApp(): IAppContext {
     return context;
 }
 
-function App({ Component, pageProps }: AppProps<{ session: Session }>): ReactElement {
+function App({ Component, pageProps }: AppProps): ReactElement {
     // STATE
     const [stateCookieConfirm, setStateCookieConfirm] = usePersistedState<boolean>('cookie-confirm', true);
     const [stateIsLoading, setStateIsLoading] = useState<number>(0);
@@ -107,9 +105,7 @@ function App({ Component, pageProps }: AppProps<{ session: Session }>): ReactEle
                     <Normalize />
 
                     <PageProvider>
-                        <SessionProvider session={pageProps.session} refetchInterval={0}>
-                            <Component {...pageProps} />
-                        </SessionProvider>
+                        <Component {...pageProps} />
                     </PageProvider>
 
                     {stateIsLoading > 0 ? <LoaderDynamic /> : null}

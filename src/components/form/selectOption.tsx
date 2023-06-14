@@ -51,53 +51,6 @@ export const arrayMonth = [
     }
 ];
 
-export const arrayResolution = [
-    {
-        label: '640x360 (16:9)',
-        value: '640x360'
-    },
-    {
-        label: '640x480 (4:3)',
-        value: '640x480'
-    },
-    {
-        label: '800x450 (16:9)',
-        value: '800x450'
-    },
-    {
-        label: '800x600 (4:3)',
-        value: '800x600'
-    },
-    {
-        label: '960x540 (16:9)',
-        value: '960x540'
-    },
-    {
-        label: '1024x768 (4:3)',
-        value: '1024x768'
-    },
-    {
-        label: '1120x630 (16:9)',
-        value: '1120x630'
-    },
-    {
-        label: '1280x720 (16:9)',
-        value: '1280x720'
-    },
-    {
-        label: '1920x1080 (16:9)',
-        value: '1920x1080'
-    },
-    {
-        label: '2400x1440 (16:9)',
-        value: '2400x1440'
-    },
-    {
-        label: '3840x2160 (16:9)',
-        value: '3840x2160'
-    }
-];
-
 export const arrayUF = [
     {
         label: 'UF',
