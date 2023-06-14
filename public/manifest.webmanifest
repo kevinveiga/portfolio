@@ -1,0 +1,40 @@
+{
+    "background_color": "#333333",
+    "dir": "auto",
+    "display": "standalone",
+    "gcm_sender_id": "103953800507",
+    "icons": [
+        {
+            "src": "favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "installs_allowed_from": ["*"],
+    "lang": "pt-BR",
+    "name": "Site",
+    "orientation": "portrait",
+    "permissions": ["fcm", "gcm"],
+    "prefer_related_applications": false,
+    "scope": "/",
+    "screenshots": [],
+    "short_name": "Site",
+    "splash_pages": [],
+    "start_url": "/",
+    "theme_color": "#3BACB6"
+}

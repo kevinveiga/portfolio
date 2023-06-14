@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "date": "Mon Oct 17 2022 17:45:29 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "favorite": true,
+            "id": "0",
+            "images": ["https://loremflickr.com/320/240/soccer-stadium?random=5"],
+            "live": true,
+            "order": 0,
+            "products": ["hat-trick", "triple-double"],
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Corinthians x Palmeiras",
+            "url": "",
+            "videoTime": "3"
+        },
+        {
+            "date": "Tue Dec 20 2022 16:30:00 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "favorite": false,
+            "id": "1",
+            "images": ["https://loremflickr.com/320/240/soccer-stadium?random=3"],
+            "live": false,
+            "order": 1,
+            "products": ["knock-out", "triple-double"],
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Santos X São Paulo",
+            "url": "",
+            "videoTime": "7"
+        },
+        {
+            "date": "Mon Dec 19 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "favorite": false,
+            "id": "2",
+            "images": ["https://loremflickr.com/320/240/soccer-stadium?random=7"],
+            "live": false,
+            "order": 2,
+            "products": ["hat-trick", "knock-out"],
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Internacional X Flamengo",
+            "url": "",
+            "videoTime": "23"
+        },
+        {
+            "date": "Sun Dec 18 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "favorite": true,
+            "id": "3",
+            "images": ["https://loremflickr.com/320/240/soccer-stadium?random=1"],
+            "live": false,
+            "order": 3,
+            "products": ["grand-slam", "triple-double"],
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Fluminense X Botafogo",
+            "url": "",
+            "videoTime": "120"
+        }
+    ]
+}

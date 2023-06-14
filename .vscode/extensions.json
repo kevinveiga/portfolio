@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "dsznajder.es7-react-js-snippets",
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "GraphQL.vscode-graphql",
+        "mikestead.dotenv",
+        "styled-components.vscode-styled-components"
+    ]
+}

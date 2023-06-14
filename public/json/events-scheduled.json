@@ -1,0 +1,54 @@
+{
+    "data": [
+        {
+            "date": "Mon Oct 17 2022 17:45:29 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "id": "0",
+            "live": false,
+            "order": 0,
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Corinthians x Palmeiras",
+            "url": ""
+        },
+        {
+            "date": "Tue Dec 20 2022 16:30:00 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "id": "1",
+            "live": false,
+            "order": 1,
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Santos X São Paulo",
+            "url": ""
+        },
+        {
+            "date": "Mon Dec 19 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "id": "2",
+            "live": false,
+            "order": 2,
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Internacional X Flamengo",
+            "url": ""
+        },
+        {
+            "date": "Sun Dec 18 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "id": "3",
+            "live": false,
+            "order": 3,
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Fluminense X Botafogo",
+            "url": ""
+        },
+        {
+            "date": "Thu Dec 15 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "description": "in Campeonato brasileiro",
+            "id": "4",
+            "live": false,
+            "order": 4,
+            "time": "Mon Oct 17 2022 21:00:00 GMT-0300 (Brasilia Standard Time)",
+            "title": "Bragantino X Juventude",
+            "url": ""
+        }
+    ]
+}

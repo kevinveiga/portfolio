@@ -1,0 +1,125 @@
+import React, { createContext, Dispatch, PropsWithChildren, SetStateAction, useContext, useEffect, useMemo, useState } from 'react';
+
+import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
+import { SWRConfig } from 'swr';
+
+import { urlSignIn } from '@/configApp';
+import { verifyUrlsNeedAuthentication } from '@/helpers/verification';
+import { IBreadcrumb } from '@/interface';
+import { useApp } from '@/pages/_app';
+import { useAuth } from '@/stores/auth/useAuth';
+import { useAxiosInterceptor } from '@/stores/axiosInterceptor/useAxiosInterceptor';
+import { useMenu } from '@/stores/menu/useMenu';
+import { usePersistedState } from '@/stores/persistedState/usePersistedState';
+import { TLanguage } from '@/type';
+
+interface IPageContext {
+    stateBreadcrumb: IBreadcrumb[] | null;
+    stateLanguage: TLanguage;
+    stateMenu: boolean;
+    setStateBreadcrumb: Dispatch<SetStateAction<IBreadcrumb[] | null>>;
+    setStateLanguage: Dispatch<SetStateAction<TLanguage>>;
+    setStateMenu: Dispatch<SetStateAction<boolean>>;
+    toggleMenu: () => void;
+}
+
+const PageContext = createContext<IPageContext>({
+    stateBreadcrumb: null,
+    stateLanguage: 'en',
+    stateMenu: true,
+    setStateBreadcrumb: () => null,
+    setStateLanguage: () => 'en',
+    setStateMenu: () => true,
+    toggleMenu: () => true
+});
+
+export function usePage(): IPageContext {
+    const context = useContext(PageContext);
+
+    if (context === undefined) {
+        throw new Error('usePage can only be used inside PageProvider');
+    }
+
+    return context;
+}
+
+export function PageProvider({ children }: any): PropsWithChildren<any> {
+    // CONTEXT
+    useAxiosInterceptor();
+    const { setStateIsLoading, setStateModalMessage } = useApp();
+    const { setStateAuth } = useAuth();
+    const router = useRouter();
+    const { i18n } = useTranslation();
+
+    // STATE
+    const [stateBreadcrumb, setStateBreadcrumb] = useState<IBreadcrumb[] | null>(null);
+    const [stateLanguage, setStateLanguage] = usePersistedState<TLanguage>('language', 'en');
+    const { stateMenu, setStateMenu, toggleMenu } = useMenu();
+
+    // CONTEXT PROVIDER
+    const contextProvider = useMemo(
+        () => ({
+            stateBreadcrumb: stateBreadcrumb,
+            stateLanguage: stateLanguage,
+            stateMenu: stateMenu,
+            setStateBreadcrumb: setStateBreadcrumb,
+            setStateLanguage: setStateLanguage,
+            setStateMenu: setStateMenu,
+            toggleMenu: toggleMenu
+        }),
+        [stateBreadcrumb, stateLanguage, stateMenu, setStateLanguage, setStateMenu, toggleMenu]
+    );
+
+    // SWR Config
+    const swrConfigObj = {
+        errorRetryCount: 0,
+        onError: (error: any): void => {
+            const { message = '', response: { status = 0 } = {} } = error;
+
+            // If not logged in, clean stateAuth and redirects to sign in
+            if (status === 0 || status === 401 || status === 403) {
+                // Test if not on specific pages
+                if (verifyUrlsNeedAuthentication(router.pathname)) {
+                    setStateAuth(null);
+
+                    router.push(urlSignIn).catch(() => null);
+                }
+            } else if (status !== 200) {
+                setStateModalMessage({ content: `Unavailable service: ${message as string}`, type: 'error' });
+            }
+        }
+    };
+
+    // LANGUAGE
+    useEffect(() => {
+        i18n.changeLanguage(stateLanguage).catch(() => null);
+
+        return undefined;
+    }, [i18n, stateLanguage]);
+
+    // LOADER IN CHANGE ROUTE
+    useEffect(() => {
+        const handleRouteChangeStart = (): void => {
+            setStateIsLoading((prevState: number) => prevState + 1);
+        };
+
+        const handleRouteChangeComplete = (): void => {
+            setStateIsLoading((prevState: number) => prevState - 1);
+        };
+
+        router.events.on('routeChangeStart', handleRouteChangeStart);
+        router.events.on('routeChangeComplete', handleRouteChangeComplete);
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChangeStart);
+            router.events.off('routeChangeComplete', handleRouteChangeComplete);
+        };
+    }, [router, setStateIsLoading]);
+
+    return (
+        <PageContext.Provider value={contextProvider}>
+            <SWRConfig value={swrConfigObj}>{children}</SWRConfig>
+        </PageContext.Provider>
+    );
+}

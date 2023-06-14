@@ -1,0 +1,110 @@
+[
+    {
+        "id": "haskell",
+        "label": "haskell",
+        "value": 379,
+        "color": "hsl(302, 70%, 50%)"
+    },
+    {
+        "id": "python",
+        "label": "python",
+        "value": 347,
+        "color": "hsl(288, 70%, 50%)"
+    },
+    {
+        "id": "make",
+        "label": "make",
+        "value": 174,
+        "color": "hsl(340, 70%, 50%)"
+    },
+    {
+        "id": "stylus",
+        "label": "stylus",
+        "value": 282,
+        "color": "hsl(55, 70%, 50%)"
+    },
+    {
+        "id": "lisp",
+        "label": "lisp",
+        "value": 190,
+        "color": "hsl(253, 70%, 50%)"
+    },
+    {
+        "id": "javascript",
+        "label": "javascript",
+        "value": 264,
+        "color": "hsl(266, 70%, 50%)"
+    },
+    {
+        "id": "sass",
+        "label": "sass",
+        "value": 509,
+        "color": "hsl(62, 70%, 50%)"
+    },
+    {
+        "id": "go",
+        "label": "go",
+        "value": 436,
+        "color": "hsl(236, 70%, 50%)"
+    },
+    {
+        "id": "erlang",
+        "label": "erlang",
+        "value": 25,
+        "color": "hsl(70, 70%, 50%)"
+    },
+    {
+        "id": "c",
+        "label": "c",
+        "value": 496,
+        "color": "hsl(287, 70%, 50%)"
+    },
+    {
+        "id": "css",
+        "label": "css",
+        "value": 9,
+        "color": "hsl(96, 70%, 50%)"
+    },
+    {
+        "id": "hack",
+        "label": "hack",
+        "value": 265,
+        "color": "hsl(222, 70%, 50%)"
+    },
+    {
+        "id": "php",
+        "label": "php",
+        "value": 537,
+        "color": "hsl(36, 70%, 50%)"
+    },
+    {
+        "id": "ruby",
+        "label": "ruby",
+        "value": 215,
+        "color": "hsl(297, 70%, 50%)"
+    },
+    {
+        "id": "rust",
+        "label": "rust",
+        "value": 182,
+        "color": "hsl(132, 70%, 50%)"
+    },
+    {
+        "id": "java",
+        "label": "java",
+        "value": 323,
+        "color": "hsl(280, 70%, 50%)"
+    },
+    {
+        "id": "scala",
+        "label": "scala",
+        "value": 490,
+        "color": "hsl(355, 70%, 50%)"
+    },
+    {
+        "id": "elixir",
+        "label": "elixir",
+        "value": 348,
+        "color": "hsl(107, 70%, 50%)"
+    }
+]
