@@ -5,6 +5,8 @@ import Head from 'next/head';
 import { title } from '@/configApp';
 
 import { Button } from '@/components/button/button';
+import { Footer } from '@/components/layout/footer';
+import { Header } from '@/components/layout/header';
 
 import { Box, Flex } from '@/styles/flex';
 import { Main, Spacer } from '@/styles/layout';
@@ -19,17 +21,11 @@ function Home(): ReactElement {
         <meta name="description" content="Home" />
       </Head>
 
-      <Main backgroundColor="transparent">
-        <Flex height="100vh" justifyContent="center">
-          <Box backgroundColor={variable.color.whiteTransparent5} justifyContent="flex-start" p={3} width="100%">
-            aqui vai o logo
-          </Box>
-
-          <Spacer height={variable.space.spacingMD} width="100%" />
-
-          <Box></Box>
-        </Flex>
+      <Main>
+        <Header />
       </Main>
+
+      <Footer />
     </>
   );
 }

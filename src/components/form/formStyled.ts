@@ -96,7 +96,7 @@ const inputLabel = css<IInputStyled>`
   }
 `;
 
-export const FormStyled = styled(Unform)<IStyledSystem>`
+export const FormStyled = styled(Unform as any)<IStyledSystem>`
   ${layout};
 
   width: 100%;

@@ -1,21 +1,21 @@
 import React, { ReactElement } from 'react';
 
-import { IBreadcrumb, IToggleMenuManager } from '@/interface';
+import { IBreadcrumb } from '@/interface';
 import { useApp } from '@/pages/_app';
 import { usePage } from '@/stores/page/usePage';
 
 import { Button } from '@/components/button/button';
 import { HeaderStyled, HeaderItemsStyled } from '@/components/layout/headerStyled';
 import { LinkTo } from '@/components/link/linkTo';
-import { SvgDarkLightMode, SvgMenu } from '@/components/svg/svgStore';
+import { SvgDarkLightMode, SvgFlagBrazil, SvgFlagUsa, SvgMenu } from '@/components/svg/svgStore';
 
 import { Flex } from '@/styles/flex';
 import { variable } from '@/styles/variable';
 
-export function Header({ toggleMenuManager }: IToggleMenuManager): ReactElement {
+export function Header(): ReactElement {
   // CONTEXT
   const { setStateTheme } = useApp();
-  const { stateBreadcrumb } = usePage();
+  const { stateBreadcrumb, setStateLanguage } = usePage();
 
   return (
     <HeaderStyled>
@@ -32,6 +32,18 @@ export function Header({ toggleMenuManager }: IToggleMenuManager): ReactElement 
         </HeaderItemsStyled>
 
         <HeaderItemsStyled>
+          <Button onClick={(): void => setStateLanguage('en')} typeStyle="button-unset">
+            <SvgFlagUsa />
+          </Button>
+        </HeaderItemsStyled>
+
+        <HeaderItemsStyled>
+          <Button onClick={(): void => setStateLanguage('pt_BR')} typeStyle="button-unset">
+            <SvgFlagBrazil />
+          </Button>
+        </HeaderItemsStyled>
+
+        <HeaderItemsStyled>
           <Button
             ariaLabel="dark and light mode"
             onClick={(): void => setStateTheme((prevState: boolean) => !prevState)}
@@ -42,13 +54,7 @@ export function Header({ toggleMenuManager }: IToggleMenuManager): ReactElement 
         </HeaderItemsStyled>
 
         <HeaderItemsStyled display={{ d: 'block', md: 'none' }}>
-          <Button
-            ariaLabel="menu close"
-            height="100%"
-            onClick={(): void => toggleMenuManager()}
-            typeStyle="button-unset"
-            width="100%"
-          >
+          <Button ariaLabel="menu close" height="100%" typeStyle="button-unset" width="100%">
             <SvgMenu />
           </Button>
         </HeaderItemsStyled>

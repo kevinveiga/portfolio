@@ -114,10 +114,6 @@ export interface ILanguage {
   language?: TLanguage | string;
 }
 
-export interface ILayout extends IStyledSystem {
-  children?: ReactNode;
-}
-
 export interface ILink extends IStyledSystem {
   active?: boolean;
   ariaLabel?: string;
@@ -170,10 +166,6 @@ export interface ISelectCustom extends IInput {
 export interface ISelectCustomItems {
   label: string;
   value: string;
-}
-
-export interface IToggleMenuManager {
-  toggleMenuManager: () => void;
 }
 
 export interface ITreeItem {
