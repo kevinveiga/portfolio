@@ -192,7 +192,7 @@
         "eventHandlerPropPrefix": "on"
       }
     ],
-    "react/jsx-indent": ["error", 2, { "checkAttributes": false, "indentLogicalExpressions": false }],
+    "react/jsx-indent": ["off", 2, { "checkAttributes": false, "indentLogicalExpressions": false }],
     "react/jsx-indent-props": "off",
     "react/jsx-key": "error",
     "react/jsx-no-bind": "off",
