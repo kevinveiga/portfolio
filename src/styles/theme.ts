@@ -85,7 +85,7 @@ export const lightTheme: DefaultTheme = {
       secondary: variable.color.brandSecondary
     },
     svgColor: {
-      primary: variable.color.gray3,
+      primary: variable.color.gray2,
       secondary: variable.color.grayDark2,
       tertiary: variable.color.grayDark
     },

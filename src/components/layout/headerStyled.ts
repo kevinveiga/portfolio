@@ -5,12 +5,11 @@ import { gradientDirection } from '@/styles/function';
 import { variable } from '@/styles/variable';
 
 export const HeaderStyled = styled.header`
-  ${gradientDirection({ colorStart: variable.color.turquoise, colorEnd: variable.color.turquoiseDark })};
+  ${gradientDirection({ colorStart: variable.color.blueDark, colorEnd: variable.color.turquoiseLight, deg: '45deg' })};
 
-  border-bottom: 1px solid ${({ theme }): string => theme.borderColor.secondary};
   display: flex;
+  flex-direction: column;
   height: auto;
-  justify-content: space-between;
   width: 100%;
   z-index: 0;
 `;
@@ -21,6 +20,11 @@ export const HeaderItemsStyled = styled.nav<IStyledSystem>`
   > ul {
     > li {
       display: inline-block;
+      margin-left: ${variable.space.spacingXS};
     }
+  }
+
+  svg {
+    max-width: 18px;
   }
 `;

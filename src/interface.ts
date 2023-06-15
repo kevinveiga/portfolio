@@ -293,7 +293,10 @@ export interface IVariable {
   };
   text: {
     fontPrimary: string;
+    fontSecondary: string;
     fontSize: string;
+    fontWeightBold: string;
+    fontWeightNormal: string;
     letterSpacing: string;
     lineHeight: string;
   };

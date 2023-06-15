@@ -83,7 +83,10 @@ class MyDocument extends Document {
           {/* END PRECONNECT */}
 
           {/* STYLE */}
-          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather+Sans:wght@300;700&display=swap"
+            rel="stylesheet"
+          />
           {/* END STYLE */}
         </Head>
 

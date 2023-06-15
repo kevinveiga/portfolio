@@ -11,11 +11,11 @@ export const SvgStyled = styled.svg<ISvgStyled>`
   ${verticalAlign};
 
   fill: ${({ fill, theme }): string => fill || theme.svgColor.primary};
-  ${({ height }): number | string | undefined => (height === undefined ? 'height: 15px' : undefined)};
+  ${({ height }): number | string | undefined => (height === undefined ? 'height: 14px' : undefined)};
   stroke: ${({ stroke }): string => stroke || 'unset'};
 
   @media (min-width: ${variable.breakpoint.sm}) {
-    ${({ height }): number | string | undefined => (height === undefined ? 'height: 18px' : undefined)};
+    ${({ height }): number | string | undefined => (height === undefined ? 'height: 16px' : undefined)};
   }
 
   ${({ hoverColor }): any =>

@@ -45,7 +45,8 @@ export const Th = styled.th<ITextStyled>`
   ${space};
   ${typography};
 
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 700' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ p }): string | undefined => (p === undefined ? `padding: ${variable.space.spacingSM}` : undefined)};
 
   ${({ textTransform, textTransformFirstLetter }): any =>

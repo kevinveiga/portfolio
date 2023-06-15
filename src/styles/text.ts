@@ -92,9 +92,10 @@ export const Subtitle1 = styled.p<ITextStyled>`
 
   color: ${({ color, theme }): string => color || theme.textColor.secondary};
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 400' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
 
-  @media (min-width: ${variable.breakpoint.md}) {
+  @media (min-width: ${variable.breakpoint.sm}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
   }
 `;
@@ -102,12 +103,15 @@ export const Subtitle1 = styled.p<ITextStyled>`
 export const Title1 = styled.h1<ITextStyled>`
   ${title};
 
-  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 26px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 700' : undefined)};
+  font-family: ${variable.text.fontSecondary};
+  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 46px' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
+  line-height: 1;
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingSM}` : undefined)};
 
-  @media (min-width: ${variable.breakpoint.md}) {
-    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 38px' : undefined)};
+  @media (min-width: ${variable.breakpoint.sm}) {
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 78px' : undefined)};
     ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingMD}` : undefined)};
   }
 `;
@@ -116,10 +120,11 @@ export const Title2 = styled.h2<ITextStyled>`
   ${title};
 
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 22px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 700' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingSM}` : undefined)};
 
-  @media (min-width: ${variable.breakpoint.md}) {
+  @media (min-width: ${variable.breakpoint.sm}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 28px' : undefined)};
   }
 `;
@@ -128,10 +133,11 @@ export const Title3 = styled.h3<ITextStyled>`
   ${title};
 
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 18px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 400' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingXS}` : undefined)};
 
-  @media (min-width: ${variable.breakpoint.md}) {
+  @media (min-width: ${variable.breakpoint.sm}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 22px' : undefined)};
   }
 `;
@@ -140,10 +146,11 @@ export const Title4 = styled.h4<ITextStyled>`
   ${title};
 
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 16px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 400' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   ${({ mb }): string | undefined => (mb === undefined ? 'margin-bottom: 2px' : undefined)};
 
-  @media (min-width: ${variable.breakpoint.md}) {
+  @media (min-width: ${variable.breakpoint.sm}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 18px' : undefined)};
   }
 `;
@@ -152,9 +159,10 @@ export const Title5 = styled.h5<ITextStyled>`
   ${title};
 
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 400' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
 
-  @media (min-width: ${variable.breakpoint.md}) {
+  @media (min-width: ${variable.breakpoint.sm}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
   }
 `;

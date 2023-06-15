@@ -94,7 +94,7 @@ export type TFlexDirection = 'column' | 'column-reverse' | 'inherit' | 'initial'
 
 export type TFlexWrap = 'inherit' | 'initial' | 'nowrap' | 'wrap' | 'wrap-reverse';
 
-export type TFontWeight = 'inherit' | 'initial' | 400 | 700;
+export type TFontWeight = 'inherit' | 'initial' | 300 | 700;
 
 export type TGap = 'inherit' | 'initial' | 'normal' | 'revert' | 'unset' | number | string;
 

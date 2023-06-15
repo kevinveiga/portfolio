@@ -11,7 +11,8 @@ const button = css<IButton>`
   ${typography};
 
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 700' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ small, height }): string | undefined =>
     height === undefined
       ? small

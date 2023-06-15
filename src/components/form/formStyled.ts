@@ -17,7 +17,8 @@ const input = css<IInputStyled>`
   color: ${({ color, theme }): string => color || theme.textColor.primary};
   ${({ cursor }): string | undefined => (cursor ? `cursor ${cursor}` : undefined)};
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 16px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 400' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   ${({ height }): string | undefined => (height === undefined ? `height: ${variable.layout.inputHeight}` : undefined)};
   ${({ pb }): string | undefined =>
     pb === undefined ? `padding-bottom: ${variable.layout.inputPaddingY}` : undefined};
@@ -46,7 +47,8 @@ const input = css<IInputStyled>`
   &::placeholder {
     color: ${({ colorPlaceholder, theme }): string => colorPlaceholder || theme.textColor.secondary};
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 16px' : undefined)};
-    ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 400' : undefined)};
+    ${({ fontWeight }): string | undefined =>
+      fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   }
 
   ${({ disabled }): any =>
@@ -251,7 +253,8 @@ export const LabelStyled = styled.label<ITextStyled>`
   ${typography};
 
   color: ${({ color, theme }): string => color || theme.textColor.primary};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 700' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ py }): string | undefined =>
     py === undefined
       ? `padding-bottom: ${variable.space.spacingXS}; padding-top: ${variable.space.spacingXS}`
@@ -306,7 +309,8 @@ export const LabelPlaceholderStyled = styled.label<ITextStyled>`
 
   color: ${({ color, theme }): string => color || theme.textColor.secondary};
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 400' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   z-index: 1;
 `;
 

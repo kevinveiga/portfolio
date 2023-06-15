@@ -58,7 +58,8 @@ export const StrongDocs = styled.strong`
 export const Title1Docs = styled.h1<ITextStyled>`
   color: ${({ color }): string => color || variable.color.orange};
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 22px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 700' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ my }): string | undefined => (my === undefined ? `margin: ${variable.space.spacingSM} 0` : undefined)};
 
   @media (min-width: ${variable.breakpoint.md}) {
@@ -70,7 +71,8 @@ export const Title1Docs = styled.h1<ITextStyled>`
 export const Title2Docs = styled.h2<ITextStyled>`
   color: ${({ color }): string => color || variable.color.blue};
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 16px' : undefined)};
-  ${({ fontWeight }): string | undefined => (fontWeight === undefined ? 'font-weight: 700' : undefined)};
+  ${({ fontWeight }): string | undefined =>
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ my }): string | undefined =>
     my === undefined ? `margin: ${variable.space.spacingSM} 0 ${variable.space.spacingXS} 0` : undefined};
 
