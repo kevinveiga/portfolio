@@ -1,8 +1,8 @@
-import { ComponentProps, ComponentType, Dispatch, ReactNode, SetStateAction } from 'react';
+import { ComponentProps, ComponentType, ReactNode } from 'react';
 
-import { IInputStyled, IStyledSystem, ISvgStyled } from 'styled-components';
+import { IInputStyled, IStyledSystem } from 'styled-components';
 
-import { TDisplay, TInputType, TLanguage, TProductSvgName } from '@/type';
+import { TDisplay, TInputType, TLanguage } from '@/type';
 
 export interface IAccordion {
   id: string;
@@ -40,40 +40,6 @@ export interface IButton extends IStyledSystem {
   typeStyle?: 'button' | 'button-border' | 'button-unset';
 }
 
-export interface ICarousel extends IStyledSystem {
-  data: Record<string, any> | null;
-  title?: '' | 'project' | 'video';
-  url?: string;
-}
-
-export interface IFaqPopularQuestion {
-  setStateAccordion: Dispatch<SetStateAction<string>>;
-}
-
-export interface IFetch {
-  config?: Record<string, any>;
-  fetchData?: Record<string, any>;
-  params?: Record<string, any>;
-  token?: string;
-  url: string;
-}
-
-export interface IFetchResponse {
-  data: {
-    body: {
-      message: string;
-      token: string;
-      user: Record<string, any>;
-    };
-    statusCode: number;
-  };
-}
-
-export interface IFormSignIn {
-  email: string;
-  password: string;
-}
-
 export interface IGradient {
   colorEnd?: string;
   colorEndPercent?: string | 0;
@@ -90,13 +56,6 @@ export interface IGradient3Colors {
   colorStart?: string;
   colorStartPercent?: string | 0;
   deg?: string | 0;
-}
-
-export interface IInformeRendimento {
-  ano: number;
-  file_url: string;
-  id?: string;
-  usuario: IUsuario;
 }
 
 export interface IInput extends IInputStyled {
@@ -119,16 +78,6 @@ export interface IInput extends IInputStyled {
   typeInput?: TInputType;
   validationSchema?: any;
   value?: string;
-}
-
-export interface IInputDate extends IInput {
-  maxDate?: Date | undefined;
-  minDate?: Date | undefined;
-}
-
-export interface IInputDateRange extends IInputDate {
-  nameStartDate?: string;
-  nameEndDate?: string;
 }
 
 export interface IInputDecimal extends IInput {
@@ -169,11 +118,6 @@ export interface ILayout extends IStyledSystem {
   children?: ReactNode;
 }
 
-export interface ILayoutWithMenu extends IStyledSystem {
-  children?: ReactNode;
-  menu?: ReactNode;
-}
-
 export interface ILink extends IStyledSystem {
   active?: boolean;
   ariaLabel?: string;
@@ -188,20 +132,9 @@ export interface ILinkExternal extends ILink {
   target?: '_blank' | '_parent' | '_self' | '_top';
 }
 
-export interface IManagerFilter {
-  handleSubmit: (formData: any) => void;
-  id: string;
-  searchPlaceholder?: string;
-}
-
 export interface IMask {
   cleanValue: string;
   formattedValue: string;
-}
-
-export interface IMenuManager {
-  stateMenuManager: boolean;
-  setStateMenuManager: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface IModal extends IStyledSystem {
@@ -219,54 +152,6 @@ export interface IModalConfirm {
   cbFunction?: () => void;
   message: string;
   setActive: (value: any) => void;
-}
-
-export interface IPasswordRecovery {
-  email: string;
-}
-
-export interface IPasswordReset {
-  password: string;
-  passwordConfirm: string;
-}
-
-export interface IProduct {
-  id: string;
-  isProduct?: boolean;
-  name: string;
-  order?: number;
-  questions?: IQuestion[];
-  slug: string;
-  subProducts?: ISubProduct[];
-}
-
-export interface IProductSvg extends ISvgStyled {
-  productName: TProductSvgName;
-}
-
-export interface IQuestion {
-  content?: { html: string };
-  id: string;
-  product?: IProduct;
-  questionDidHelps?: IQuestionDidHelp[];
-  subProduct?: ISubProduct;
-  title: string;
-  userId?: string;
-  views?: number;
-}
-
-export interface IQuestionDidHelp {
-  didHelp: boolean;
-  id: string;
-  questionId?: string;
-  userId?: string;
-}
-
-export interface ISearch {
-  id: string;
-  onSearchClean?: () => void;
-  onSearchSubmit: (formData: any) => void;
-  placeholder?: string;
 }
 
 export interface ISelect extends IInputStyled {
@@ -287,41 +172,6 @@ export interface ISelectCustomItems {
   value: string;
 }
 
-export interface ISignIn {
-  email: string;
-  password: string;
-}
-
-export interface ISignUp {
-  email: string;
-  name: string;
-  password: string;
-  passwordConfirm: string;
-}
-
-export interface ISetStateModal {
-  setStateModal?: Dispatch<SetStateAction<any>>;
-}
-
-export interface ISubProduct {
-  id: string;
-  name: string;
-  product?: IProduct;
-  questions?: IQuestion[];
-  slug: string;
-}
-
-export interface ITab {
-  id: string;
-  name: string;
-}
-
-export interface ITabs {
-  active?: string;
-  cbFunction?: (value: any) => void;
-  items: ITab[];
-}
-
 export interface IToggleMenuManager {
   toggleMenuManager: () => void;
 }
@@ -334,14 +184,6 @@ export interface ITreeItem {
   node: ITreeItem[] | [];
   selectedId?: string;
   type?: string;
-}
-
-export interface IUsuario {
-  admin: boolean;
-  cpf: string;
-  email: string;
-  id?: string;
-  name: string;
 }
 
 export interface IVariable {
@@ -460,11 +302,4 @@ export interface IVariable {
     letterSpacing: string;
     lineHeight: string;
   };
-}
-
-export interface IVariaveisCalculosMensal {
-  ano: number;
-  fator_cdi?: number;
-  id?: string;
-  mes: number;
 }

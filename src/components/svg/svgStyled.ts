@@ -30,12 +30,6 @@ export const SvgStyled = styled.svg<ISvgStyled>`
       : undefined};
 `;
 
-export const SvgProductDefaultSymbolStyled = styled(SvgStyled)`
-  [data-svg-color='true'] {
-    fill: ${({ fill }): string => fill || 'unset'};
-  }
-`;
-
 export const SvgLogoLoaderStyled = styled.svg`
   fill: ${({ fill }): string => fill || variable.color.grayLight2};
   height: 100%;

@@ -13,8 +13,6 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import { SWRConfig } from 'swr';
 
-import { urlSignIn } from '@/configApp';
-import { verifyUrlsNeedAuthentication } from '@/helpers/verification';
 import { IBreadcrumb } from '@/interface';
 import { useApp } from '@/pages/_app';
 import { useAxiosInterceptor } from '@/stores/axiosInterceptor/useAxiosInterceptor';
@@ -74,12 +72,7 @@ export function PageProvider({ children }: any): PropsWithChildren<any> {
       const { message = '', response: { status = 0 } = {} } = error;
 
       // If not logged in, clean stateAuth and redirects to sign in
-      if (status === 0 || status === 401 || status === 403) {
-        // Test if not on specific pages
-        if (verifyUrlsNeedAuthentication(router.pathname)) {
-          router.push(urlSignIn).catch(() => null);
-        }
-      } else if (status !== 200) {
+      if (status !== 200) {
         setStateModalMessage({ content: `Unavailable service: ${message as string}`, type: 'error' });
       }
     }

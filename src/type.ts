@@ -160,15 +160,6 @@ export type TOverflow =
 
 export type TPosition = 'absolute' | 'fixed' | 'relative' | 'static' | 'sticky';
 
-export type TProductSvgName =
-  | string
-  | 'grand-slam'
-  | 'hat-trick'
-  | 'knock-out'
-  | 'no-hitter'
-  | 'pole-position'
-  | 'triple-double';
-
 export type TState<T> = [T, Dispatch<SetStateAction<T>>];
 
 export type TTextAlign = 'center' | 'inherit' | 'initial' | 'justify' | 'left' | 'right';

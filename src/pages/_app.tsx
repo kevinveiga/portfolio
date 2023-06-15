@@ -118,7 +118,7 @@ function App({ Component, pageProps }: AppProps): ReactElement {
       </Head>
 
       <AppContext.Provider value={contextProvider}>
-        <ThemeProvider theme={stateIsServer ? defaultTheme : stateTheme ? lightTheme : defaultTheme}>
+        <ThemeProvider theme={stateIsServer ? lightTheme : stateTheme ? defaultTheme : lightTheme}>
           <Normalize />
 
           <PageProvider>

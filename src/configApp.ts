@@ -7,18 +7,8 @@ export const errorMsgDefault =
 
 export const errorMsgResponse = 'Algo deu errado, tente novamente.';
 
-export const hygraphMutationToken = process.env.HYGRAPH_MUTATION_TOKEN || '';
+export const title = 'Portfolio - Kevin Veiga';
 
-export const title = 'Site';
-
-export const url = process.env.NEXT_PUBLIC_APP_URL || 'site';
+export const url = process.env.NEXT_PUBLIC_APP_URL || '';
 
 export const urlInitial = '/';
-
-export const urlPasswordRecovery = '/auth/password-recovery';
-
-export const urlSignIn = '/auth/sign-in';
-
-export const urlSignUp = '/auth/sign-up';
-
-export const urlManager = '/manager';
