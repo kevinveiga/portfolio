@@ -7,35 +7,35 @@ import { IButton } from '@/interface';
 import { ButtonStyled, ButtonBorderStyled, ButtonUnsetStyled } from '@/components/button/buttonStyled';
 
 export function Button({
-    ariaLabel = '',
-    children,
-    text = '',
-    typeButton = 'button',
-    typeStyle = 'button',
-    ...props
+  ariaLabel = '',
+  children,
+  text = '',
+  typeButton = 'button',
+  typeStyle = 'button',
+  ...props
 }: IButton): PropsWithChildren<any> {
-    const acessibility = ariaLabel || text;
-    const buttonContent = children || parse(`<span>${text}</span>` || '');
-    let StyledComponent = ButtonStyled;
+  const acessibility = ariaLabel || text;
+  const buttonContent = children || parse(`<span>${text}</span>` || '');
+  let StyledComponent = ButtonStyled;
 
-    switch (typeStyle) {
-        case 'button-border':
-            StyledComponent = ButtonBorderStyled;
+  switch (typeStyle) {
+    case 'button-border':
+      StyledComponent = ButtonBorderStyled;
 
-            break;
+      break;
 
-        case 'button-unset':
-            StyledComponent = ButtonUnsetStyled;
+    case 'button-unset':
+      StyledComponent = ButtonUnsetStyled;
 
-            break;
+      break;
 
-        default:
-            break;
-    }
+    default:
+      break;
+  }
 
-    return (
-        <StyledComponent aria-label={acessibility} type={typeButton} {...props}>
-            {buttonContent}
-        </StyledComponent>
-    );
+  return (
+    <StyledComponent aria-label={acessibility} type={typeButton} {...props}>
+      {buttonContent}
+    </StyledComponent>
+  );
 }

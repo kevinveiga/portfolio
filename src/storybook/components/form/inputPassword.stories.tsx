@@ -11,72 +11,77 @@ import { FormStyled } from '@/components/form/formStyled';
 import { Spacer } from '@/styles/layout';
 
 function InputPasswordWithHooks(): ReactElement {
-    // VARIABLE
-    const initialData: any = {
-        password: ''
+  // VARIABLE
+  const initialData: any = {
+    password: ''
+  };
+
+  // STATE
+  const [stateInputPassword, setStateInputPassword] = useState('');
+
+  // VALIDATE
+  const validationSchema = yup.object().shape({
+    password: yup.string().min(4).max(50).required(),
+    passwordConfirm: yup
+      .string()
+      .oneOf([yup.ref('password'), stateInputPassword], 'passwords must match')
+      .required()
+  });
+
+  // FORM
+  const handleSubmit = (formData: any): void => {
+    const submit = async (): Promise<void> => {
+      await validationSchema
+        .validate(formData, {
+          abortEarly: false
+        })
+        .catch((yupError: any) => {
+          if (yupError instanceof yup.ValidationError) {
+            const errorMessages: { [key: string]: any } = {};
+
+            yupError.inner.forEach((item: any) => {
+              errorMessages[item.path] = item.message;
+            });
+          }
+        });
     };
 
-    // STATE
-    const [stateInputPassword, setStateInputPassword] = useState('');
+    submit().catch(() => null);
+  };
 
-    // VALIDATE
-    const validationSchema = yup.object().shape({
-        password: yup.string().min(4).max(50).required(),
-        passwordConfirm: yup
-            .string()
-            .oneOf([yup.ref('password'), stateInputPassword], 'passwords must match')
-            .required()
-    });
+  return (
+    <FormStyled initialData={initialData} onSubmit={handleSubmit}>
+      <Label text="Password:" />
 
-    // FORM
-    const handleSubmit = (formData: any): void => {
-        const submit = async (): Promise<void> => {
-            await validationSchema
-                .validate(formData, {
-                    abortEarly: false
-                })
-                .catch((yupError: any) => {
-                    if (yupError instanceof yup.ValidationError) {
-                        const errorMessages: { [key: string]: any } = {};
+      <InputPassword
+        cbFunction={setStateInputPassword}
+        idInput="id-password"
+        name="password"
+        validationSchema={validationSchema}
+      />
 
-                        yupError.inner.forEach((item: any) => {
-                            errorMessages[item.path] = item.message;
-                        });
-                    }
-                });
-        };
+      <Spacer />
 
-        submit().catch(() => null);
-    };
+      <Label text="Password Confirm:" />
 
-    return (
-        <FormStyled initialData={initialData} onSubmit={handleSubmit}>
-            <Label text="Password:" />
-
-            <InputPassword cbFunction={setStateInputPassword} idInput="id-password" name="password" validationSchema={validationSchema} />
-
-            <Spacer />
-
-            <Label text="Password Confirm:" />
-
-            <InputPasswordConfirm
-                idInput="id-confirm-password"
-                inputPassword={stateInputPassword}
-                name="passwordConfirm"
-                validationSchema={validationSchema}
-            />
-        </FormStyled>
-    );
+      <InputPasswordConfirm
+        idInput="id-confirm-password"
+        inputPassword={stateInputPassword}
+        name="passwordConfirm"
+        validationSchema={validationSchema}
+      />
+    </FormStyled>
+  );
 }
 
 export default {
-    component: InputPassword,
-    title: 'Components/Form'
+  component: InputPassword,
+  title: 'Components/Form'
 } as Meta;
 
 export const InputPasswordDefault: StoryObj = {
-    args: {
-        inputPassword: ''
-    },
-    render: () => <InputPasswordWithHooks />
+  args: {
+    inputPassword: ''
+  },
+  render: () => <InputPasswordWithHooks />
 };

@@ -3,78 +3,78 @@ import React, { ReactElement } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-    SvgArrowDown,
-    SvgArrowLeft,
-    SvgArrowLeftLarge,
-    SvgArrowRight,
-    SvgArrowTriangle,
-    SvgBalloonMessage,
-    SvgBar,
-    SvgCalculator,
-    SvgCalendar,
-    SvgCharacter,
-    SvgChartBar,
-    SvgChecked,
-    SvgClipboard,
-    SvgClipboardPlus,
-    SvgClockHistory,
-    SvgClose,
-    SvgCollection,
-    SvgDarkLightMode,
-    SvgDashboard,
-    SvgDelete,
-    SvgDocument,
-    SvgDownload,
-    SvgEdit,
-    SvgEmail,
-    SvgFilter,
-    SvgFlagBrazil,
-    SvgFlagSpain,
-    SvgFlagUsa,
-    SvgFolder,
-    SvgFolderArrow,
-    SvgGoogle,
-    SvgHelp,
-    SvgHelpCenter,
-    SvgHome,
-    SvgIdentification,
-    SvgInvalid,
-    SvgLive,
-    SvgLock,
-    SvgLogoLoader,
-    SvgLogout,
-    SvgMenu,
-    SvgMenuClose,
-    SvgMenuWithArrow,
-    SvgMinus,
-    SvgMoney,
-    SvgMonitoring,
-    SvgNotification,
-    SvgNumber,
-    SvgOrder,
-    SvgPartner,
-    SvgPencil,
-    SvgPhone,
-    SvgPin,
-    SvgPlus,
-    SvgPlusCircle,
-    SvgSad,
-    SvgScheduled,
-    SvgSearch,
-    SvgSettings,
-    SvgShare,
-    SvgSmile,
-    SvgStar,
-    SvgStarWithBorder,
-    SvgTriangle,
-    SvgThumbnail,
-    SvgUpload,
-    SvgUser,
-    SvgUserPlus,
-    SvgValid,
-    SvgView,
-    SvgViewDisabled,
-    SvgWallet
+  SvgArrowDown,
+  SvgArrowLeft,
+  SvgArrowLeftLarge,
+  SvgArrowRight,
+  SvgArrowTriangle,
+  SvgBalloonMessage,
+  SvgBar,
+  SvgCalculator,
+  SvgCalendar,
+  SvgCharacter,
+  SvgChartBar,
+  SvgChecked,
+  SvgClipboard,
+  SvgClipboardPlus,
+  SvgClockHistory,
+  SvgClose,
+  SvgCollection,
+  SvgDarkLightMode,
+  SvgDashboard,
+  SvgDelete,
+  SvgDocument,
+  SvgDownload,
+  SvgEdit,
+  SvgEmail,
+  SvgFilter,
+  SvgFlagBrazil,
+  SvgFlagSpain,
+  SvgFlagUsa,
+  SvgFolder,
+  SvgFolderArrow,
+  SvgGoogle,
+  SvgHelp,
+  SvgHelpCenter,
+  SvgHome,
+  SvgIdentification,
+  SvgInvalid,
+  SvgLive,
+  SvgLock,
+  SvgLogoLoader,
+  SvgLogout,
+  SvgMenu,
+  SvgMenuClose,
+  SvgMenuWithArrow,
+  SvgMinus,
+  SvgMoney,
+  SvgMonitoring,
+  SvgNotification,
+  SvgNumber,
+  SvgOrder,
+  SvgPartner,
+  SvgPencil,
+  SvgPhone,
+  SvgPin,
+  SvgPlus,
+  SvgPlusCircle,
+  SvgSad,
+  SvgScheduled,
+  SvgSearch,
+  SvgSettings,
+  SvgShare,
+  SvgSmile,
+  SvgStar,
+  SvgStarWithBorder,
+  SvgTriangle,
+  SvgThumbnail,
+  SvgUpload,
+  SvgUser,
+  SvgUserPlus,
+  SvgValid,
+  SvgView,
+  SvgViewDisabled,
+  SvgWallet
 } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
@@ -83,453 +83,453 @@ import { P } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
 function IconsWithHooks(): ReactElement {
-    return (
-        <>
-            <Title1Docs>Icons</Title1Docs>
+  return (
+    <>
+      <Title1Docs>Icons</Title1Docs>
 
-            <Flex columnGap={variable.space.spacingSM}>
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgArrowDown />
+      <Flex columnGap={variable.space.spacingSM}>
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgArrowDown />
 
-                    <P>Arrow Down</P>
-                </BoxDocs>
+          <P>Arrow Down</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgArrowLeft />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgArrowLeft />
 
-                    <P>Arrow Left</P>
-                </BoxDocs>
+          <P>Arrow Left</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgArrowLeftLarge />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgArrowLeftLarge />
 
-                    <P>Arrow Left Large</P>
-                </BoxDocs>
+          <P>Arrow Left Large</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgArrowRight />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgArrowRight />
 
-                    <P>Arrow Right</P>
-                </BoxDocs>
+          <P>Arrow Right</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgArrowTriangle />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgArrowTriangle />
 
-                    <P>Arrow Triangle</P>
-                </BoxDocs>
+          <P>Arrow Triangle</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgBalloonMessage />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgBalloonMessage />
 
-                    <P>Balloon Message</P>
-                </BoxDocs>
+          <P>Balloon Message</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgBar />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgBar />
 
-                    <P>Bar</P>
-                </BoxDocs>
+          <P>Bar</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgCalculator />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgCalculator />
 
-                    <P>Calculator</P>
-                </BoxDocs>
+          <P>Calculator</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgCalendar />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgCalendar />
 
-                    <P>Calendar</P>
-                </BoxDocs>
+          <P>Calendar</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgCharacter />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgCharacter />
 
-                    <P>Character</P>
-                </BoxDocs>
+          <P>Character</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgChartBar />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgChartBar />
 
-                    <P>Chart Bar</P>
-                </BoxDocs>
+          <P>Chart Bar</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgChecked />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgChecked />
 
-                    <P>Checked</P>
-                </BoxDocs>
+          <P>Checked</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgClipboard />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgClipboard />
 
-                    <P>Clipboard</P>
-                </BoxDocs>
+          <P>Clipboard</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgClipboardPlus />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgClipboardPlus />
 
-                    <P>Clipboard Plus</P>
-                </BoxDocs>
+          <P>Clipboard Plus</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgClockHistory />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgClockHistory />
 
-                    <P>Clock History</P>
-                </BoxDocs>
+          <P>Clock History</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgClose />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgClose />
 
-                    <P>Close</P>
-                </BoxDocs>
+          <P>Close</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgCollection />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgCollection />
 
-                    <P>Collection</P>
-                </BoxDocs>
+          <P>Collection</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgDarkLightMode />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgDarkLightMode />
 
-                    <P>Dark / Light Mode</P>
-                </BoxDocs>
+          <P>Dark / Light Mode</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgDashboard />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgDashboard />
 
-                    <P>Dashboard</P>
-                </BoxDocs>
+          <P>Dashboard</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgDelete />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgDelete />
 
-                    <P>Delete</P>
-                </BoxDocs>
+          <P>Delete</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgDocument />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgDocument />
 
-                    <P>Document</P>
-                </BoxDocs>
+          <P>Document</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgDownload />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgDownload />
 
-                    <P>Download</P>
-                </BoxDocs>
+          <P>Download</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgEdit />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgEdit />
 
-                    <P>Edit</P>
-                </BoxDocs>
+          <P>Edit</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgEmail />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgEmail />
 
-                    <P>Email</P>
-                </BoxDocs>
+          <P>Email</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgFilter />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgFilter />
 
-                    <P>Filter</P>
-                </BoxDocs>
+          <P>Filter</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgFlagBrazil />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgFlagBrazil />
 
-                    <P>Flag Brazil</P>
-                </BoxDocs>
+          <P>Flag Brazil</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgFlagSpain />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgFlagSpain />
 
-                    <P>Flag Spain</P>
-                </BoxDocs>
+          <P>Flag Spain</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgFlagUsa />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgFlagUsa />
 
-                    <P>Flag Usa</P>
-                </BoxDocs>
+          <P>Flag Usa</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgFolder />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgFolder />
 
-                    <P>Folder</P>
-                </BoxDocs>
+          <P>Folder</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgFolderArrow />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgFolderArrow />
 
-                    <P>Folder Arrow</P>
-                </BoxDocs>
+          <P>Folder Arrow</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgGoogle />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgGoogle />
 
-                    <P>Google</P>
-                </BoxDocs>
+          <P>Google</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgHelp />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgHelp />
 
-                    <P>Help</P>
-                </BoxDocs>
+          <P>Help</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgHelpCenter />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgHelpCenter />
 
-                    <P>Help Center</P>
-                </BoxDocs>
+          <P>Help Center</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgHome />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgHome />
 
-                    <P>Home</P>
-                </BoxDocs>
+          <P>Home</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgIdentification />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgIdentification />
 
-                    <P>Identification</P>
-                </BoxDocs>
+          <P>Identification</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgInvalid />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgInvalid />
 
-                    <P>Invalid</P>
-                </BoxDocs>
+          <P>Invalid</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgLive />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgLive />
 
-                    <P>Live</P>
-                </BoxDocs>
+          <P>Live</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgLock />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgLock />
 
-                    <P>Lock</P>
-                </BoxDocs>
+          <P>Lock</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <Box alignSelf="center" height="25px" width="25px">
-                        <SvgLogoLoader />
-                    </Box>
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <Box alignSelf="center" height="25px" width="25px">
+            <SvgLogoLoader />
+          </Box>
 
-                    <P>Logo Loader</P>
-                </BoxDocs>
+          <P>Logo Loader</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgLogout />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgLogout />
 
-                    <P>Logout</P>
-                </BoxDocs>
+          <P>Logout</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgMenu />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgMenu />
 
-                    <P>Menu</P>
-                </BoxDocs>
+          <P>Menu</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgMenuClose />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgMenuClose />
 
-                    <P>Menu Close</P>
-                </BoxDocs>
+          <P>Menu Close</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgMenuWithArrow />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgMenuWithArrow />
 
-                    <P>Menu With Arrow</P>
-                </BoxDocs>
+          <P>Menu With Arrow</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgMinus />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgMinus />
 
-                    <P>Minus</P>
-                </BoxDocs>
+          <P>Minus</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgMoney />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgMoney />
 
-                    <P>Money</P>
-                </BoxDocs>
+          <P>Money</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgMonitoring />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgMonitoring />
 
-                    <P>Monitoring</P>
-                </BoxDocs>
+          <P>Monitoring</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgNotification />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgNotification />
 
-                    <P>Notification</P>
-                </BoxDocs>
+          <P>Notification</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgNumber />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgNumber />
 
-                    <P>Number</P>
-                </BoxDocs>
+          <P>Number</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgOrder />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgOrder />
 
-                    <P>Order</P>
-                </BoxDocs>
+          <P>Order</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgPartner />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgPartner />
 
-                    <P>Partner</P>
-                </BoxDocs>
+          <P>Partner</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgPencil />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgPencil />
 
-                    <P>Pencil</P>
-                </BoxDocs>
+          <P>Pencil</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgPhone />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgPhone />
 
-                    <P>Phone</P>
-                </BoxDocs>
+          <P>Phone</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgPin />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgPin />
 
-                    <P>Pin</P>
-                </BoxDocs>
+          <P>Pin</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgPlus />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgPlus />
 
-                    <P>Plus</P>
-                </BoxDocs>
+          <P>Plus</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgPlusCircle />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgPlusCircle />
 
-                    <P>Plus Circle</P>
-                </BoxDocs>
+          <P>Plus Circle</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgSad />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgSad />
 
-                    <P>Sad</P>
-                </BoxDocs>
+          <P>Sad</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgScheduled />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgScheduled />
 
-                    <P>Scheduled</P>
-                </BoxDocs>
+          <P>Scheduled</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgSearch />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgSearch />
 
-                    <P>Search</P>
-                </BoxDocs>
+          <P>Search</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgSettings />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgSettings />
 
-                    <P>Settings</P>
-                </BoxDocs>
+          <P>Settings</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgShare />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgShare />
 
-                    <P>Share</P>
-                </BoxDocs>
+          <P>Share</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgSmile />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgSmile />
 
-                    <P>Smile</P>
-                </BoxDocs>
+          <P>Smile</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgStar />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgStar />
 
-                    <P>Star</P>
-                </BoxDocs>
+          <P>Star</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgStarWithBorder />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgStarWithBorder />
 
-                    <P>Star With Border</P>
-                </BoxDocs>
+          <P>Star With Border</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgTriangle />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgTriangle />
 
-                    <P>Triangle</P>
-                </BoxDocs>
+          <P>Triangle</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgThumbnail />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgThumbnail />
 
-                    <P>Thumbnail</P>
-                </BoxDocs>
+          <P>Thumbnail</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgUpload />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgUpload />
 
-                    <P>Upload</P>
-                </BoxDocs>
+          <P>Upload</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgUser />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgUser />
 
-                    <P>User</P>
-                </BoxDocs>
+          <P>User</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgUserPlus />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgUserPlus />
 
-                    <P>User Plus</P>
-                </BoxDocs>
+          <P>User Plus</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgValid />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgValid />
 
-                    <P>Valid</P>
-                </BoxDocs>
+          <P>Valid</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgView />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgView />
 
-                    <P>View</P>
-                </BoxDocs>
+          <P>View</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgViewDisabled />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgViewDisabled />
 
-                    <P>View Disabled</P>
-                </BoxDocs>
+          <P>View Disabled</P>
+        </BoxDocs>
 
-                <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
-                    <SvgWallet />
+        <BoxDocs flexDirection="column" justifyContent="center" rowGap={variable.space.spacingXS}>
+          <SvgWallet />
 
-                    <P>Wallet</P>
-                </BoxDocs>
-            </Flex>
-        </>
-    );
+          <P>Wallet</P>
+        </BoxDocs>
+      </Flex>
+    </>
+  );
 }
 
 export default {
-    title: 'Design/Icons'
+  title: 'Design/Icons'
 } as Meta;
 
 export const Icons: StoryObj = {
-    render: () => <IconsWithHooks />
+  render: () => <IconsWithHooks />
 };

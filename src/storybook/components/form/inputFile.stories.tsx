@@ -9,35 +9,35 @@ import { SvgThumbnail } from '@/components/svg/svgStore';
 import { Spacer } from '@/styles/layout';
 
 function InputFileWithHooks(): ReactElement {
-    // FORM
-    const handleSubmit = (): void => {
-        return undefined;
-    };
+  // FORM
+  const handleSubmit = (): void => {
+    return undefined;
+  };
 
-    return (
-        <FormStyled onSubmit={handleSubmit}>
-            <Label text="Checkbox:" />
+  return (
+    <FormStyled onSubmit={handleSubmit}>
+      <Label text="Checkbox:" />
 
-            <InputFile idInput="id-checkbox" label="Checkbox" name="checkbox" />
+      <InputFile idInput="id-checkbox" label="Checkbox" name="checkbox" />
 
-            <Spacer />
+      <Spacer />
 
-            <Label text="File Thumbnail:" />
+      <Label text="File Thumbnail:" />
 
-            <LabelFile component={LabelFileThumbnailStyled} forLabel="id-file-thumbnail">
-                <SvgThumbnail />
-            </LabelFile>
+      <LabelFile component={LabelFileThumbnailStyled} forLabel="id-file-thumbnail">
+        <SvgThumbnail />
+      </LabelFile>
 
-            <InputFileThumbnail idInput="id-file-thumbnail" name="file-thumbnail" />
-        </FormStyled>
-    );
+      <InputFileThumbnail idInput="id-file-thumbnail" name="file-thumbnail" />
+    </FormStyled>
+  );
 }
 
 export default {
-    component: InputFile,
-    title: 'Components/Form'
+  component: InputFile,
+  title: 'Components/Form'
 } as Meta;
 
 export const InputFileDefault: StoryObj = {
-    render: () => <InputFileWithHooks />
+  render: () => <InputFileWithHooks />
 };

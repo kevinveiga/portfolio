@@ -1,42 +1,42 @@
 import * as yup from 'yup';
 
 yup.setLocale({
-    array: {
-        length: 'Deve ter exatamente ${length} itens',
-        max: 'Deve ter no máximo ${max} itens',
-        min: 'Deve ter no mínimo ${min} itens'
-    },
-    date: {
-        max: 'Deve ser menor que a data ${max}',
-        min: 'Deve ser maior que a data ${min}'
-    },
-    mixed: {
-        default: 'Não é válido',
-        required: 'Campo obrigatório',
-        oneOf: 'Deve ser um dos seguintes valores: ${values}',
-        notOneOf: 'Não pode ser os valores: ${values}',
-        notType: 'Valor não é válido'
-    },
-    number: {
-        integer: 'Deve ser um número inteiro',
-        lessThan: 'Deve ser menor que ${less}',
-        max: 'Máximo de ${max}',
-        min: 'Mínimo de ${min}',
-        moreThan: 'Deve ser maior que ${more}',
-        negative: 'Deve ser um número negativo',
-        positive: 'Deve ser um número posítivo'
-    },
-    string: {
-        email: 'Formato de e-mail inválido',
-        length: 'Deve ter exatamente ${length} caracteres',
-        lowercase: 'Deve estar em maiúsculo',
-        max: 'Deve ter no máximo ${max} caracteres',
-        min: 'Deve ter pelo menos ${min} caracteres',
-        trim: 'Não deve conter espaços no início ou no fim',
-        uppercase: 'Deve estar em minúsculo',
-        url: 'Deve ter um formato de URL válido',
-        uuid: 'Deve ser um UUID válido'
-    }
+  array: {
+    length: 'Deve ter exatamente ${length} itens',
+    max: 'Deve ter no máximo ${max} itens',
+    min: 'Deve ter no mínimo ${min} itens'
+  },
+  date: {
+    max: 'Deve ser menor que a data ${max}',
+    min: 'Deve ser maior que a data ${min}'
+  },
+  mixed: {
+    default: 'Não é válido',
+    required: 'Campo obrigatório',
+    oneOf: 'Deve ser um dos seguintes valores: ${values}',
+    notOneOf: 'Não pode ser os valores: ${values}',
+    notType: 'Valor não é válido'
+  },
+  number: {
+    integer: 'Deve ser um número inteiro',
+    lessThan: 'Deve ser menor que ${less}',
+    max: 'Máximo de ${max}',
+    min: 'Mínimo de ${min}',
+    moreThan: 'Deve ser maior que ${more}',
+    negative: 'Deve ser um número negativo',
+    positive: 'Deve ser um número posítivo'
+  },
+  string: {
+    email: 'Formato de e-mail inválido',
+    length: 'Deve ter exatamente ${length} caracteres',
+    lowercase: 'Deve estar em maiúsculo',
+    max: 'Deve ter no máximo ${max} caracteres',
+    min: 'Deve ter pelo menos ${min} caracteres',
+    trim: 'Não deve conter espaços no início ou no fim',
+    uppercase: 'Deve estar em minúsculo',
+    url: 'Deve ter um formato de URL válido',
+    uuid: 'Deve ser um UUID válido'
+  }
 });
 
 // yup.setLocale({

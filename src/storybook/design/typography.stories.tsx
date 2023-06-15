@@ -7,83 +7,83 @@ import { BoxDocs, Title1Docs, Title2Docs } from '@/styles/storybook';
 import { P, Span, Subtitle1, Title1, Title2, Title3, Title4, Title5 } from '@/styles/text';
 
 function TypographyWithHooks(): ReactElement {
-    return (
-        <>
-            <Title1Docs>Typography</Title1Docs>
+  return (
+    <>
+      <Title1Docs>Typography</Title1Docs>
 
-            <Title2Docs>Headlines</Title2Docs>
+      <Title2Docs>Headlines</Title2Docs>
 
-            <BoxDocs flexDirection="column">
-                <Title1>Title1</Title1>
+      <BoxDocs flexDirection="column">
+        <Title1>Title1</Title1>
 
-                <P>{'<Title1>Title1</Title1>'}</P>
-            </BoxDocs>
+        <P>{'<Title1>Title1</Title1>'}</P>
+      </BoxDocs>
 
-            <BoxDocs flexDirection="column">
-                <Title2>Title2</Title2>
+      <BoxDocs flexDirection="column">
+        <Title2>Title2</Title2>
 
-                <P>{'<Title2>Title2</Title2>'}</P>
-            </BoxDocs>
+        <P>{'<Title2>Title2</Title2>'}</P>
+      </BoxDocs>
 
-            <BoxDocs flexDirection="column">
-                <Title3>Title3</Title3>
+      <BoxDocs flexDirection="column">
+        <Title3>Title3</Title3>
 
-                <Spacer />
+        <Spacer />
 
-                <P>{'<Title3>Title3</Title3>'}</P>
-            </BoxDocs>
+        <P>{'<Title3>Title3</Title3>'}</P>
+      </BoxDocs>
 
-            <BoxDocs flexDirection="column">
-                <Title4>Title4</Title4>
+      <BoxDocs flexDirection="column">
+        <Title4>Title4</Title4>
 
-                <Spacer />
+        <Spacer />
 
-                <P>{'<Title4>Title4</Title4>'}</P>
-            </BoxDocs>
+        <P>{'<Title4>Title4</Title4>'}</P>
+      </BoxDocs>
 
-            <BoxDocs flexDirection="column">
-                <Title5>Title5</Title5>
+      <BoxDocs flexDirection="column">
+        <Title5>Title5</Title5>
 
-                <Spacer />
+        <Spacer />
 
-                <P>{'<Title5>Title5</Title5>'}</P>
-            </BoxDocs>
+        <P>{'<Title5>Title5</Title5>'}</P>
+      </BoxDocs>
 
-            <Title2Docs>Subtitles</Title2Docs>
+      <Title2Docs>Subtitles</Title2Docs>
 
-            <BoxDocs flexDirection="column">
-                <Subtitle1>Subtitle1</Subtitle1>
+      <BoxDocs flexDirection="column">
+        <Subtitle1>Subtitle1</Subtitle1>
 
-                <Spacer />
+        <Spacer />
 
-                <P>{'<Subtitle1>Subtitle1</Subtitle1>'}</P>
-            </BoxDocs>
+        <P>{'<Subtitle1>Subtitle1</Subtitle1>'}</P>
+      </BoxDocs>
 
-            <Title2Docs>Texts</Title2Docs>
+      <Title2Docs>Texts</Title2Docs>
 
-            <BoxDocs flexDirection="column">
-                <P>paragraph</P>
+      <BoxDocs flexDirection="column">
+        <P>paragraph</P>
 
-                <Spacer />
+        <Spacer />
 
-                <P>{'<P>paragraph</P>'}</P>
-            </BoxDocs>
+        <P>{'<P>paragraph</P>'}</P>
+      </BoxDocs>
 
-            <BoxDocs flexDirection="column">
-                <Span>span</Span>
+      <BoxDocs flexDirection="column">
+        <Span>span</Span>
 
-                <Spacer />
+        <Spacer />
 
-                <P>{'<Span>span</Span>'}</P>
-            </BoxDocs>
-        </>
-    );
+        <P>{'<Span>span</Span>'}</P>
+      </BoxDocs>
+    </>
+  );
 }
 
 export default {
-    title: 'Design/Typography'
+  title: 'Design/Typography'
 } as Meta;
 
 export const Typography: StoryObj = {
-    render: () => <TypographyWithHooks />
+  render: () => <TypographyWithHooks />
 };

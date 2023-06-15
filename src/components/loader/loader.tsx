@@ -5,12 +5,12 @@ import { LoaderBackgroundStyled, LoaderContentStyled } from '@/components/loader
 import { SvgLogoLoader } from '@/components/svg/svgStore';
 
 export function Loader(): ReactElement | null {
-    return ReactDOM.createPortal(
-        <LoaderBackgroundStyled>
-            <LoaderContentStyled>
-                <SvgLogoLoader />
-            </LoaderContentStyled>
-        </LoaderBackgroundStyled>,
-        document.getElementById('id-loader-root') as Element
-    );
+  return ReactDOM.createPortal(
+    <LoaderBackgroundStyled>
+      <LoaderContentStyled>
+        <SvgLogoLoader />
+      </LoaderContentStyled>
+    </LoaderBackgroundStyled>,
+    document.getElementById('id-loader-root') as Element
+  );
 }

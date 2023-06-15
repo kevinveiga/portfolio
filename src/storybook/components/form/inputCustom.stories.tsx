@@ -5,105 +5,113 @@ import { Meta, StoryObj } from '@storybook/react';
 import yup from '@/helpers/yup';
 
 import { Input, Label } from '@/components/form/form';
-import { InputCep, InputCpf, InputCurrency, InputEmail, InputName, InputNumber, InputPhone } from '@/components/form/formCustom';
+import {
+  InputCep,
+  InputCpf,
+  InputCurrency,
+  InputEmail,
+  InputName,
+  InputNumber,
+  InputPhone
+} from '@/components/form/formCustom';
 import { FormStyled } from '@/components/form/formStyled';
 
 import { Spacer } from '@/styles/layout';
 
 function InputCustomWithHooks(): ReactElement {
-    // VARIABLE
-    const initialData: any = {
-        cep: '',
-        cpf: '',
-        currency: '',
-        email: '',
-        name: '',
-        number: '',
-        phone: ''
+  // VARIABLE
+  const initialData: any = {
+    cep: '',
+    cpf: '',
+    currency: '',
+    email: '',
+    name: '',
+    number: '',
+    phone: ''
+  };
+
+  // VALIDATE
+  const validationSchema = yup.object().shape({
+    cep: yup.string().min(9).required(),
+    cpf: yup.string().min(14).required(),
+    currency: yup.string().required(),
+    email: yup.string().email().required(),
+    name: yup.string().required(),
+    number: yup.number().required(),
+    phone: yup.string().min(14).max(15).required()
+  });
+
+  // FORM
+  const handleSubmit = (formData: any): void => {
+    const submit = async (): Promise<void> => {
+      await validationSchema
+        .validate(formData, {
+          abortEarly: false
+        })
+        .catch((yupError: any) => {
+          if (yupError instanceof yup.ValidationError) {
+            const errorMessages: { [key: string]: any } = {};
+
+            yupError.inner.forEach((item: any) => {
+              errorMessages[item.path] = item.message;
+            });
+          }
+        });
     };
 
-    // VALIDATE
-    const validationSchema = yup.object().shape({
-        cep: yup.string().min(9).required(),
-        cpf: yup.string().min(14).required(),
-        currency: yup.string().required(),
-        email: yup.string().email().required(),
-        name: yup.string().required(),
-        number: yup.number().required(),
-        phone: yup.string().min(14).max(15).required()
-    });
+    submit().catch(() => null);
+  };
 
-    // FORM
-    const handleSubmit = (formData: any): void => {
-        const submit = async (): Promise<void> => {
-            await validationSchema
-                .validate(formData, {
-                    abortEarly: false
-                })
-                .catch((yupError: any) => {
-                    if (yupError instanceof yup.ValidationError) {
-                        const errorMessages: { [key: string]: any } = {};
+  return (
+    <FormStyled initialData={initialData} onSubmit={handleSubmit}>
+      <Label text="Cep:" />
 
-                        yupError.inner.forEach((item: any) => {
-                            errorMessages[item.path] = item.message;
-                        });
-                    }
-                });
-        };
+      <InputCep idInput="id-cep" name="cep" validationSchema={validationSchema} />
 
-        submit().catch(() => null);
-    };
+      <Spacer />
 
-    return (
-        <FormStyled initialData={initialData} onSubmit={handleSubmit}>
-            <Label text="Cep:" />
+      <Label text="Cpf:" />
 
-            <InputCep idInput="id-cep" name="cep" validationSchema={validationSchema} />
+      <InputCpf idInput="id-cpf" name="cpf" validationSchema={validationSchema} />
 
-            <Spacer />
+      <Spacer />
 
-            <Label text="Cpf:" />
+      <Label text="Currency:" />
 
-            <InputCpf idInput="id-cpf" name="cpf" validationSchema={validationSchema} />
+      <InputCurrency idInput="id-currency" name="currency" validationSchema={validationSchema} />
 
-            <Spacer />
+      <Spacer />
 
-            <Label text="Currency:" />
+      <Label text="Email:" />
 
-            <InputCurrency idInput="id-currency" name="currency" validationSchema={validationSchema} />
+      <InputEmail idInput="id-email" name="email" validationSchema={validationSchema} />
 
-            <Spacer />
+      <Spacer />
 
-            <Label text="Email:" />
+      <Label text="Name:" />
 
-            <InputEmail idInput="id-email" name="email" validationSchema={validationSchema} />
+      <InputName idInput="id-name" name="name" validationSchema={validationSchema} />
 
-            <Spacer />
+      <Spacer />
 
-            <Label text="Name:" />
+      <Label text="Number:" />
 
-            <InputName idInput="id-name" name="name" validationSchema={validationSchema} />
+      <InputNumber idInput="id-number" name="number" validationSchema={validationSchema} />
 
-            <Spacer />
+      <Spacer />
 
-            <Label text="Number:" />
+      <Label text="Phone:" />
 
-            <InputNumber idInput="id-number" name="number" validationSchema={validationSchema} />
-
-            <Spacer />
-
-            <Label text="Phone:" />
-
-            <InputPhone idInput="id-phone" name="phone" validationSchema={validationSchema} />
-        </FormStyled>
-    );
+      <InputPhone idInput="id-phone" name="phone" validationSchema={validationSchema} />
+    </FormStyled>
+  );
 }
 
 export default {
-    component: Input,
-    title: 'Components/Form'
+  component: Input,
+  title: 'Components/Form'
 } as Meta;
 
 export const InputCustomDefault: StoryObj = {
-    render: () => <InputCustomWithHooks />
+  render: () => <InputCustomWithHooks />
 };

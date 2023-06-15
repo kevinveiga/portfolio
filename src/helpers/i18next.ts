@@ -8,32 +8,32 @@ import ptBrGlossary from '@/public/locales/pt_BR/glossary.json';
 
 const defaultNS = 'app';
 const resources = {
-    en: {
-        app: enApp,
-        glossary: enGlossary
-    },
-    pt_BR: {
-        app: ptBrApp,
-        glossary: ptBrGlossary
-    }
+  en: {
+    app: enApp,
+    glossary: enGlossary
+  },
+  pt_BR: {
+    app: ptBrApp,
+    glossary: ptBrGlossary
+  }
 };
 
 i18next
-    .use(initReactI18next)
-    .init({
-        debug: false,
-        defaultNS: defaultNS,
-        fallbackLng: 'en',
-        lng: 'pt-BR',
-        ns: [defaultNS, 'glossary'],
-        react: {
-            transEmptyNodeValue: '',
-            transSupportBasicHtmlNodes: false,
-            transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],
-            useSuspense: false
-        },
-        resources: resources
-    })
-    .catch(() => null);
+  .use(initReactI18next)
+  .init({
+    debug: false,
+    defaultNS: defaultNS,
+    fallbackLng: 'en',
+    lng: 'pt-BR',
+    ns: [defaultNS, 'glossary'],
+    react: {
+      transEmptyNodeValue: '',
+      transSupportBasicHtmlNodes: false,
+      transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],
+      useSuspense: false
+    },
+    resources: resources
+  })
+  .catch(() => null);
 
 export default i18next;

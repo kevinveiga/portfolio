@@ -14,54 +14,54 @@ import { Spacer } from '@/styles/layout';
 import { variable } from '@/styles/variable';
 
 export function ModalInfo({ content, onClose, setActive, ...props }: IModal): ReactElement | null {
-    // CONTEXT
-    const { svgColor } = useTheme();
-    const { t } = useTranslation();
+  // CONTEXT
+  const { svgColor } = useTheme();
+  const { t } = useTranslation();
 
-    // STATE
-    const [stateMaximizeMinimize, setStateMaximizeMinimize] = useState(true);
+  // STATE
+  const [stateMaximizeMinimize, setStateMaximizeMinimize] = useState(true);
 
-    // FUNCTION
-    const handleClose = (): void => {
-        if (setActive) {
-            setActive(null);
-        }
+  // FUNCTION
+  const handleClose = (): void => {
+    if (setActive) {
+      setActive(null);
+    }
 
-        if (onClose) {
-            onClose();
-        }
-    };
+    if (onClose) {
+      onClose();
+    }
+  };
 
-    const handleMaximizeMinimize = (): void => {
-        setStateMaximizeMinimize((prevState) => !prevState);
-    };
+  const handleMaximizeMinimize = (): void => {
+    setStateMaximizeMinimize((prevState) => !prevState);
+  };
 
-    return ReactDOM.createPortal(
-        <ModalInfoStyled open={stateMaximizeMinimize} {...props}>
-            <ModalInfoButtonsStyled open={stateMaximizeMinimize}>
-                <Button
-                    ariaLabel={`${t(stateMaximizeMinimize ? 'minimize' : 'maximize', { ns: 'glossary' })} modal`}
-                    obj={{ hoverColor: variable.color.primary }}
-                    onClick={(): void => handleMaximizeMinimize()}
-                    typeStyle="button-unset"
-                >
-                    <SvgArrowDown data-svg-maximize-minimize="true" fill={svgColor.primary} height="10px" />
-                </Button>
+  return ReactDOM.createPortal(
+    <ModalInfoStyled open={stateMaximizeMinimize} {...props}>
+      <ModalInfoButtonsStyled open={stateMaximizeMinimize}>
+        <Button
+          ariaLabel={`${t(stateMaximizeMinimize ? 'minimize' : 'maximize', { ns: 'glossary' })} modal`}
+          obj={{ hoverColor: variable.color.primary }}
+          onClick={(): void => handleMaximizeMinimize()}
+          typeStyle="button-unset"
+        >
+          <SvgArrowDown data-svg-maximize-minimize="true" fill={svgColor.primary} height="10px" />
+        </Button>
 
-                <Spacer />
+        <Spacer />
 
-                <Button
-                    ariaLabel={`${t('close', { ns: 'glossary' })} modal`}
-                    obj={{ hoverColor: variable.color.primary }}
-                    onClick={(): void => handleClose()}
-                    typeStyle="button-unset"
-                >
-                    <SvgClose fill={svgColor.primary} height="14px" />
-                </Button>
-            </ModalInfoButtonsStyled>
+        <Button
+          ariaLabel={`${t('close', { ns: 'glossary' })} modal`}
+          obj={{ hoverColor: variable.color.primary }}
+          onClick={(): void => handleClose()}
+          typeStyle="button-unset"
+        >
+          <SvgClose fill={svgColor.primary} height="14px" />
+        </Button>
+      </ModalInfoButtonsStyled>
 
-            {content}
-        </ModalInfoStyled>,
-        document.getElementById('id-modalinfo-root') as Element
-    );
+      {content}
+    </ModalInfoStyled>,
+    document.getElementById('id-modalinfo-root') as Element
+  );
 }

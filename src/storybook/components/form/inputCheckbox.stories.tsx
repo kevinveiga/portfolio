@@ -6,25 +6,25 @@ import { InputCheckbox, Label } from '@/components/form/form';
 import { FormStyled } from '@/components/form/formStyled';
 
 function InputCheckboxWithHooks(): ReactElement {
-    // FORM
-    const handleSubmit = (): void => {
-        return undefined;
-    };
+  // FORM
+  const handleSubmit = (): void => {
+    return undefined;
+  };
 
-    return (
-        <FormStyled onSubmit={handleSubmit}>
-            <Label text="Checkbox:" />
+  return (
+    <FormStyled onSubmit={handleSubmit}>
+      <Label text="Checkbox:" />
 
-            <InputCheckbox idInput="id-checkbox" label="Checkbox" name="checkbox" />
-        </FormStyled>
-    );
+      <InputCheckbox idInput="id-checkbox" label="Checkbox" name="checkbox" />
+    </FormStyled>
+  );
 }
 
 export default {
-    component: InputCheckbox,
-    title: 'Components/Form'
+  component: InputCheckbox,
+  title: 'Components/Form'
 } as Meta;
 
 export const InputCheckboxDefault: StoryObj = {
-    render: () => <InputCheckboxWithHooks />
+  render: () => <InputCheckboxWithHooks />
 };

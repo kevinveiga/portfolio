@@ -2,7 +2,8 @@ export const dev = process.env.NODE_ENV === 'development';
 
 export const errorEmailNotFound = 'Email não cadastrado';
 
-export const errorMsgDefault = 'Erro desconhecido, provavelmente o serviço está indisponível, por favor tente novamente mais tarde.';
+export const errorMsgDefault =
+  'Erro desconhecido, provavelmente o serviço está indisponível, por favor tente novamente mais tarde.';
 
 export const errorMsgResponse = 'Algo deu errado, tente novamente.';
 

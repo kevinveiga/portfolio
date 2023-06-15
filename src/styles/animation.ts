@@ -1,13 +1,13 @@
 import { css, IAnimation, keyframes, Keyframes } from 'styled-components';
 
 export const animation = css<IAnimation>`
-    animation-delay: ${({ delay }): string => delay || '0s'};
-    animation-direction: ${({ direction }): string => direction || 'normal'};
-    animation-duration: ${({ duration }): string => duration || '1s'};
-    animation-fill-mode: ${({ fillMode }): string => fillMode || 'both'};
-    animation-iteration-count: ${({ iterationCount }): string | number => iterationCount || 1};
-    animation-play-state: ${({ playState }): string => playState || 'running'};
-    animation-timing-function: ${({ timingFunction }): string => timingFunction || 'ease'};
+  animation-delay: ${({ delay }): string => delay || '0s'};
+  animation-direction: ${({ direction }): string => direction || 'normal'};
+  animation-duration: ${({ duration }): string => duration || '1s'};
+  animation-fill-mode: ${({ fillMode }): string => fillMode || 'both'};
+  animation-iteration-count: ${({ iterationCount }): string | number => iterationCount || 1};
+  animation-play-state: ${({ playState }): string => playState || 'running'};
+  animation-timing-function: ${({ timingFunction }): string => timingFunction || 'ease'};
 `;
 
 export const animationFadeIn = (obj = { opacity: 1, visibility: 'visible' }): Keyframes => keyframes`
