@@ -23,9 +23,13 @@ function Home(): ReactElement {
 
       <Main>
         <Header />
-      </Main>
 
-      <Footer />
+        <Flex>
+          <Box></Box>
+        </Flex>
+
+        <Footer />
+      </Main>
     </>
   );
 }

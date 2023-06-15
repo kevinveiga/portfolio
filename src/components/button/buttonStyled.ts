@@ -189,5 +189,6 @@ export const ButtonUnsetStyled = styled.button<IButton>`
     ${({ active, color }): string | undefined =>
       active || color ? `fill: ${active ? variable.color.primary : color || 'unset'}` : undefined};
     transition: fill ${variable.animation.transition};
+    vertical-align: middle;
   }
 `;

@@ -244,6 +244,9 @@ export interface IVariable {
     textLightPrimary: string;
     textLightSecondary: string;
     textLightTertiary: string;
+    turquoise: string;
+    turquoiseDark: string;
+    turquoiseLight: string;
     warning: string;
     white: string;
     whiteTransparent1: string;

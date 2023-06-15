@@ -90,7 +90,7 @@ function App({ Component, pageProps }: AppProps): ReactElement {
   const [stateIsServer, setStateIsServer] = useState(true);
   const [stateModalInfo, setStateModalInfo] = useState<IModal | null>(null);
   const [stateModalMessage, setStateModalMessage] = useState<IModal | null>(null);
-  const [stateTheme, setStateTheme] = useState(false);
+  const [stateTheme, setStateTheme] = usePersistedState<boolean>('theme', false);
 
   // CONTEXT PROVIDER
   const contextProvider = useMemo(
@@ -103,7 +103,7 @@ function App({ Component, pageProps }: AppProps): ReactElement {
       setStateModalMessage: setStateModalMessage,
       setStateTheme: setStateTheme
     }),
-    [stateIsLoading, stateIsServer, stateTheme]
+    [stateIsLoading, stateIsServer, stateTheme, setStateTheme]
   );
 
   // USEEFFECT
