@@ -273,6 +273,14 @@ export function SvgFolderArrow({ ...props }: ISvgStyled): ReactElement {
   );
 }
 
+export function SvgGithub({ ...props }: ISvgStyled): ReactElement {
+  return (
+    <SvgStyled {...props} viewBox="0 0 16 15.61" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8a8 8 0 0 0-8-8Z" />
+    </SvgStyled>
+  );
+}
+
 export function SvgGoogle({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 489.62 501.01" xmlns="http://www.w3.org/2000/svg">
@@ -332,6 +340,14 @@ export function SvgInvalid({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
       <path d="M1.2.5a.7.7 0 0 0-.5 1.3l6.8 6.7-6.8 6.7a.7.7 0 0 0 .5 1.3.7.7 0 0 0 .5-.3l6.8-6.7 6.7 6.7a.7.7 0 0 0 .5.3.7.7 0 0 0 .5-1.3L9.5 8.5l6.7-6.7a.7.7 0 1 0-1-1L8.5 7.4 1.7.7a.7.7 0 0 0-.5-.2z" />
+    </SvgStyled>
+  );
+}
+
+export function SvgLinkedin({ ...props }: ISvgStyled): ReactElement {
+  return (
+    <SvgStyled {...props} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 1.15C0 .5.53 0 1.18 0h13.64C15.48 0 16 .51 16 1.15v13.7c0 .64-.53 1.15-1.18 1.15H1.18C.53 16 0 15.49 0 14.85Zm4.94 12.24V6.17h-2.4v7.22zm-1.2-8.2c.84 0 1.36-.56 1.36-1.26-.01-.7-.52-1.24-1.34-1.24-.82 0-1.36.54-1.36 1.24s.52 1.25 1.33 1.25zm4.91 8.2V9.36c0-.22.02-.43.08-.59.17-.43.57-.87 1.23-.87.87 0 1.22.66 1.22 1.63v3.86h2.4V9.25C13.58 7.03 12.4 6 10.82 6c-1.28 0-1.85.7-2.17 1.2v.02h-.02a5.54 5.54 0 0 1 .02-.03V6.17h-2.4c.03.68 0 7.22 0 7.22z" />
     </SvgStyled>
   );
 }

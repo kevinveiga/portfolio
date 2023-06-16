@@ -107,6 +107,7 @@ export const Title1 = styled.h1<ITextStyled>`
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 46px' : undefined)};
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
+  letter-spacing: 2px;
   line-height: 1;
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingSM}` : undefined)};
 

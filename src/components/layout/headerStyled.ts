@@ -1,17 +1,25 @@
 import styled, { IStyledSystem } from 'styled-components';
 import { display } from 'styled-system';
 
-import { gradientDirection } from '@/styles/function';
 import { variable } from '@/styles/variable';
 
 export const HeaderStyled = styled.header`
-  ${gradientDirection({ colorStart: variable.color.blueDark, colorEnd: variable.color.turquoiseLight, deg: '45deg' })};
-
+  background-color: transparent;
   display: flex;
-  flex-direction: column;
   height: auto;
+  justify-content: space-between;
+  padding-bottom: ${variable.space.spacingXS};
+  padding-left: ${variable.space.spacingSM};
+  padding-right: ${variable.space.spacingSM};
+  padding-top: ${variable.space.spacingXS};
+  position: absolute;
   width: 100%;
-  z-index: 0;
+  z-index: 2;
+
+  @media (min-width: ${variable.breakpoint.sm}) {
+    padding-left: ${variable.space.spacingLG};
+    padding-right: ${variable.space.spacingLG};
+  }
 `;
 
 export const HeaderItemsStyled = styled.nav<IStyledSystem>`
