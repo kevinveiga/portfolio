@@ -6,20 +6,15 @@ import { variable } from '@/styles/variable';
 export const HomeTopStyled = styled.section`
   ${gradientDirection({ colorStart: variable.color.blueDark, colorEnd: variable.color.turquoiseLight, deg: '50deg' })};
 
+  color: ${variable.color.white};
   display: flex;
   flex-direction: column;
   height: auto;
-  padding-bottom: ${variable.space.spacingMD};
-  padding-left: ${variable.space.spacingSM};
-  padding-right: ${variable.space.spacingSM};
-  padding-top: ${variable.space.spacingXXL};
+  padding: ${variable.space.spacingLG} ${variable.space.spacingSM};
   width: 100%;
 
   @media (min-width: ${variable.breakpoint.sm}) {
-    padding-bottom: ${variable.space.spacingXXL};
-    padding-left: ${variable.space.spacingLG};
-    padding-right: ${variable.space.spacingLG};
-    padding-top: 100px;
+    padding: ${variable.space.spacingXXL} ${variable.space.spacingLG};
   }
 
   svg {

@@ -70,7 +70,7 @@ export const Normalize = createGlobalStyle`
         > body {
             ${scrollbar()};
 
-            background-color: ${({ theme }): string => theme.bgColor.primary};
+            background-color: ${({ theme }): string => theme.bgColor.tertiary};
             color: ${({ theme }): string => theme.textColor.primary};
             font-family: ${variable.text.fontPrimary};
             font-size: ${variable.text.fontSize};

@@ -134,7 +134,7 @@ export const variable: IVariable = {
   text: {
     fontPrimary: '"Merriweather Sans", "Helvetica"',
     fontSecondary: '"Anton", "Helvetica"',
-    fontSize: '16px',
+    fontSize: '14px',
     fontWeightBold: '700',
     fontWeightNormal: '300',
     letterSpacing: '0',

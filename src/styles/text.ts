@@ -17,7 +17,7 @@ const title = css<ITextStyled>`
       ? 'margin-left: auto; margin-right: 0; text-align: right;'
       : undefined};
   ${({ whiteSpace }): string | undefined => (whiteSpace ? `white-space: ${whiteSpace}` : undefined)};
-  z-index: 3;
+  z-index: 1;
 
   ${({ textTransform, textTransformFirstLetter }): any =>
     textTransform
@@ -53,8 +53,13 @@ export const P = styled.p<ITextStyled>`
   ${typography};
 
   color: ${({ color }): string => color || 'unset'};
+  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
   ${({ textDecoration }): string | undefined => (textDecoration ? `text-decoration: ${textDecoration}` : undefined)};
   ${({ whiteSpace }): string | undefined => (whiteSpace ? `white-space: ${whiteSpace}` : undefined)};
+
+  @media (min-width: ${variable.breakpoint.sm}) {
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
+  }
 
   ${({ textTransform, textTransformFirstLetter }): any =>
     textTransform
@@ -90,13 +95,12 @@ export const Span = styled.span<ITextStyled>`
 export const Subtitle1 = styled.p<ITextStyled>`
   ${title};
 
-  color: ${({ color, theme }): string => color || theme.textColor.secondary};
-  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
+  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 10px' : undefined)};
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
 
   @media (min-width: ${variable.breakpoint.sm}) {
-    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
   }
 `;
 
@@ -108,7 +112,6 @@ export const Title1 = styled.h1<ITextStyled>`
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   letter-spacing: 2px;
-  line-height: 1;
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingSM}` : undefined)};
 
   @media (min-width: ${variable.breakpoint.sm}) {
