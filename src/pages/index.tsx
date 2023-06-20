@@ -12,8 +12,9 @@ import { LinkToExternal } from '@/components/link/linkToExternal';
 import { SvgDocument, SvgGithub, SvgLinkedin } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
+import { BgImage } from '@/styles/image';
 import { LineVertical, Main, Spacer } from '@/styles/layout';
-import { Subtitle1, Title1, Title3 } from '@/styles/text';
+import { P, Title1, Title3 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
 function Home(): ReactElement {
@@ -29,6 +30,13 @@ function Home(): ReactElement {
         <Header />
 
         <HomeTopStyled>
+          <BgImage
+            backgroundPosition="100% 100%"
+            backgroundSize="150px"
+            height="200px"
+            src="images/portfolio-foto.png"
+          />
+
           <Box justifyContent="center">
             <Flex flexDirection="column">
               <Spacer height={variable.space.spacingLG} />
@@ -89,9 +97,9 @@ function Home(): ReactElement {
               <Spacer height={variable.space.spacingSM} />
 
               <Box>
-                <Subtitle1 fontWeight={700} textAlign="center">
+                <P fontWeight={700} textAlign="center">
                   Olá, me chamo Kevin M. Veiga
-                </Subtitle1>
+                </P>
               </Box>
             </Flex>
           </Box>

@@ -27,8 +27,8 @@ export const HeaderItemsStyled = styled.nav<IStyledSystem>`
 
   > ul {
     > li {
+      color: ${variable.color.white};
       display: inline-block;
-      margin-left: ${variable.space.spacingXS};
     }
   }
 

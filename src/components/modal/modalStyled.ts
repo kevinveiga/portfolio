@@ -89,7 +89,6 @@ export const ModalCookieStyled = styled.div`
   border-radius: ${variable.layout.borderRadiusPrimary};
   bottom: 25px;
   box-shadow: ${variable.layout.boxShadowPrimary};
-  color: ${variable.color.grayLight4};
   left: 50%;
   position: fixed;
   transform: translateX(-50%);

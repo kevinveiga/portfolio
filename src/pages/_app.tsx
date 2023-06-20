@@ -20,7 +20,6 @@ import { PageProvider } from '@/stores/page/usePage';
 import { usePersistedState } from '@/stores/persistedState/usePersistedState';
 
 import { Loader } from '@/components/loader/loader';
-import { ModalCookie } from '@/components/modal/modalCookie';
 import { ModalInfo } from '@/components/modal/modalInfo';
 import { ModalMessage } from '@/components/modal/modalMessage';
 
@@ -31,13 +30,6 @@ import { defaultTheme, lightTheme } from '@/styles/theme';
 const LoaderDynamic = dynamic<any>(() => import('@/components/loader/loader').then((module) => module.Loader), {
   ssr: false
 }) as typeof Loader;
-
-const ModalCookieDynamic = dynamic<any>(
-  () => import('@/components/modal/modalCookie').then((module) => module.ModalCookie),
-  {
-    ssr: false
-  }
-) as typeof ModalCookie;
 
 const ModalInfoDynamic = dynamic<any>(() => import('@/components/modal/modalInfo').then((module) => module.ModalInfo), {
   ssr: false
@@ -82,7 +74,6 @@ export function useApp(): IAppContext {
 
 function App({ Component, pageProps }: AppProps): ReactElement {
   // STATE
-  const [stateCookieConfirm, setStateCookieConfirm] = usePersistedState<boolean>('cookie-confirm', true);
   const [stateIsLoading, setStateIsLoading] = useState<number>(0);
   // Necessário para verificação no lado do servidor NextJS,
   // importante para ter um valor default antes de carregar qualquer coisa no lado do cliente,
@@ -126,8 +117,6 @@ function App({ Component, pageProps }: AppProps): ReactElement {
           </PageProvider>
 
           {stateIsLoading > 0 ? <LoaderDynamic /> : null}
-
-          {stateCookieConfirm ? <ModalCookieDynamic setActive={setStateCookieConfirm} /> : null}
 
           {stateModalInfo ? (
             <ModalInfoDynamic

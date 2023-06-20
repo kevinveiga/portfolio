@@ -8,6 +8,7 @@ import { HeaderStyled, HeaderItemsStyled } from '@/components/layout/headerStyle
 import { SvgDarkLightMode, SvgFlagBrazil, SvgFlagUsa, SvgMenu } from '@/components/svg/svgStore';
 
 import { Box } from '@/styles/flex';
+import { Spacer } from '@/styles/layout';
 import { variable } from '@/styles/variable';
 
 export function Header(): ReactElement {
@@ -23,6 +24,24 @@ export function Header(): ReactElement {
             <SvgMenu fill={variable.color.turquoiseLight} />
           </Button>
         </HeaderItemsStyled>
+
+        <HeaderItemsStyled display={{ d: 'none', sm: 'block' }}>
+          <ul>
+            <li>habilidades</li>
+
+            <li>
+              <Spacer width={variable.space.spacingMD} />
+            </li>
+
+            <li>contato</li>
+
+            <li>
+              <Spacer width={variable.space.spacingMD} />
+            </li>
+
+            <li>storybook</li>
+          </ul>
+        </HeaderItemsStyled>
       </Box>
 
       <Box alignItems="flex-start" justifyContent="flex-end">
@@ -35,9 +54,17 @@ export function Header(): ReactElement {
             </li>
 
             <li>
+              <Spacer width={variable.space.spacingXS} />
+            </li>
+
+            <li>
               <Button onClick={(): void => setStateLanguage('pt_BR')} typeStyle="button-unset">
                 <SvgFlagBrazil />
               </Button>
+            </li>
+
+            <li>
+              <Spacer width={variable.space.spacingXS} />
             </li>
 
             <li>
