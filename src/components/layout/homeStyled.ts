@@ -4,15 +4,16 @@ import { gradientDirection } from '@/styles/function';
 import { variable } from '@/styles/variable';
 
 export const HomeResumeStyled = styled.section`
-  width: 60%;
+  width: 70%;
 
   p {
     color: ${({ theme }): string => theme.textColor.secondary};
-    font-weight: 700;
+    font-size: 18px;
     text-align: center;
 
     span {
       color: ${variable.color.turquoise};
+      font-weight: 700;
     }
   }
 `;

@@ -118,35 +118,43 @@ function Home(): ReactElement {
 
               <HomeResumeStyled>
                 <p>
-                  A partir de <span>2002</span> comecei a trabalhar com <span>Front-End</span>, incluindo a parte de{' '}
-                  <span>Design</span> e poucos anos depois, tive contato com <span>Back-End</span>. Fui aprimorando meu
-                  conhecimento ao longo do tempo.
+                  A partir de <span>2002</span> comecei a trabalhar com <span>Front-End</span>, <br />
+                  incluindo <span>HTML</span>, <span>CCS</span> e <span>Design</span>, depois de evoluir com essas
+                  linguagens, <br />
+                  me dediquei ao <span>Javascript</span>.
                 </p>
 
                 <p>
-                  Em <span>2015</span> aumentei o meu foco para as <span>novas tecnologias</span> no{' '}
-                  <span>Front-End</span>, estive envolvido em grandes projetos como:{' '}
-                  <span>Agência Virtual da Guarida Imóveis</span>, <span>Portal LaSalle</span>, <span>Camicado</span>,
-                  entre outros. Nesse período meu desenvolvimento foi somente com <span>Javascript puro</span>, sem usar
-                  algum framework, fui aprimorando minhas habilidades e me tornei o <span>líder técnico</span> no
-                  desenvolvimento <span>Front-End</span>.
+                  Em <span>2015</span> aumentei o meu foco para <span>novas tecnologias</span> no <span>Front-End</span>
+                  . <br />
+                  Estive envolvido em grandes projetos como: <br />
+                  <span>Agência Virtual da Guarida Imóveis</span>, <span>Portal LaSalle</span>, <br />
+                  <span>Camicado</span>, entre outros. <br />
+                  Nesse período meu desenvolvimento foi somente com <span>Javascript puro</span>. <br />
+                  Aprimorei minhas habilidades e me tornei o <span>líder técnico</span> <br />
+                  no desenvolvimento <span>Front-End</span>.
                 </p>
 
                 <p>
-                  Em <span>2018</span> iniciei os estudos de <span>React Hooks</span>, <span>NextJS</span>,{' '}
-                  <span>Typescript</span>, <span>Styled Components</span>, <span>NodeJS</span>, <span>Webpack</span>,
-                  <span>ESLint</span>, <span>Prettier</span>, <span>Jest</span>, entre outras tecnologias. No ano
-                  seguinte, coloquei em prática meu conhecimento, em um projeto semelhante ao site Udemy, onde fui o{' '}
-                  <span>responsável</span> por todo o<span>desenvolvimento</span>, <span>configuração</span>,{' '}
-                  <span>organização e documentação</span> do <span>Front-End</span> deste projeto. Logo depois iniciei
-                  outro ótimo projeto usando também <span>NextJS</span>.
+                  Em <span>2018</span> iniciei os estudos de <span>React Hooks</span>, <span>NextJS</span>, <br />
+                  <span>Typescript</span>, <span>Styled Components</span>, <span>NodeJS</span>, <span>Webpack</span>,{' '}
+                  <br />
+                  <span>ESLint</span>, <span>Prettier</span>, <span>Jest</span>, entre outras tecnologias. <br />
                 </p>
 
                 <p>
-                  Desde então venho <span>aprimorando</span> meu desenvolvimento <span>Front-End</span> com{' '}
-                  <span>React</span>, implementando as melhores
-                  <span>metodologias</span>, <span>boas práticas</span>, <span>organização</span>, <span>testes</span> e{' '}
-                  <span>desempenho</span>.
+                  No ano seguinte, coloquei em prática meu conhecimento em <br />
+                  um projeto semelhante ao site Udemy, onde fui o <span>responsável</span> por <br />
+                  todo o <span>desenvolvimento</span>, <span>configuração</span>,{' '}
+                  <span>organização e documentação</span> <br />
+                  do <span>Front-End</span> deste projeto. Logo depois iniciei outro ótimo projeto <br />
+                  usando também <span>NextJS</span>.
+                </p>
+
+                <p>
+                  Desde então venho <span>aprimorando</span> meu desenvolvimento <span>Front-End</span> <br />
+                  com <span>React</span>, implementando as melhores <span>metodologias</span>, <br />
+                  <span>boas práticas</span>, <span>organização</span>, <span>testes</span> e <span>desempenho</span>.
                 </p>
               </HomeResumeStyled>
             </Flex>

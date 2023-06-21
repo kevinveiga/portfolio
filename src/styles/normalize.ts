@@ -313,7 +313,7 @@ export const Normalize = createGlobalStyle`
         user-select: text;
 
         + p {
-            margin-top: ${variable.space.spacingXS};
+            margin-top: ${variable.space.spacingSM};
         }
     }
 
