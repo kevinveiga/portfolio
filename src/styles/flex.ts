@@ -52,8 +52,6 @@ export const Flex = styled.div<IStyledSystem>`
       ? css`
           @media (max-width: ${variable.breakpoint.lg}) {
             overflow-x: scroll;
-
-            ${scrollbar(variable.color.gray, variable.color.white)}
           }
         `
       : undefined};

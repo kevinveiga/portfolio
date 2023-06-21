@@ -138,7 +138,7 @@ export const Title3 = styled.h3<ITextStyled>`
 
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 18px' : undefined)};
   ${({ fontWeight }): string | undefined =>
-    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
+    fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingXS}` : undefined)};
 
   @media (min-width: ${variable.breakpoint.sm}) {

@@ -31,22 +31,22 @@ export const Container = styled.div<ILayoutStyled>`
   background-color: ${({ backgroundColor }): string => backgroundColor || 'transparent'};
   ${({ px }): string | undefined =>
     px === undefined
-      ? `padding-left: ${variable.space.spacingXS}; padding-right: ${variable.space.spacingXS}`
+      ? `padding-left: ${variable.space.spacingSM}; padding-right: ${variable.space.spacingSM}`
       : undefined};
   ${({ py }): string | undefined =>
     py === undefined
-      ? `padding-bottom: ${variable.space.spacingXS}; padding-top: ${variable.space.spacingXS}`
+      ? `padding-bottom: ${variable.space.spacingSM}; padding-top: ${variable.space.spacingSM}`
       : undefined};
   ${({ width }): string | undefined => (width === undefined ? 'width: 100%' : undefined)};
 
   @media (min-width: ${variable.breakpoint.md}) {
     ${({ px }): string | undefined =>
       px === undefined
-        ? `padding-left: ${variable.space.spacingMD}; padding-right: ${variable.space.spacingMD}`
+        ? `padding-left: ${variable.space.spacingLG}; padding-right: ${variable.space.spacingLG}`
         : undefined};
     ${({ py }): string | undefined =>
       py === undefined
-        ? `padding-bottom: ${variable.space.spacingMD}; padding-top: ${variable.space.spacingMD}`
+        ? `padding-bottom: ${variable.space.spacingLG}; padding-top: ${variable.space.spacingLG}`
         : undefined};
   }
 `;

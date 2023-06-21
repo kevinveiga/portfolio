@@ -14,7 +14,7 @@ export const HomeTopStyled = styled.section`
   width: 100%;
 
   @media (min-width: ${variable.breakpoint.sm}) {
-    padding: ${variable.space.spacingXXL} ${variable.space.spacingLG};
+    padding: ${variable.space.spacingXXXL} ${variable.space.spacingLG};
   }
 
   svg {

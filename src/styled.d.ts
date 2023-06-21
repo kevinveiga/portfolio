@@ -107,20 +107,28 @@ declare module 'styled-components' {
     readonly backgroundPosition?: string | Record<string, string>;
     readonly backgroundRepeat?: TBackgroundRepeat | Record<string, TBackgroundRepeat>;
     readonly backgroundSize?: string | Record<string, string>;
+    readonly bottom?: string | number | boolean | Record<string, string | number> | Array;
     readonly className?: string;
     readonly colorEndPercent?: string;
     readonly colorStartPercent?: string;
     readonly filter?: string;
     readonly height?: string | number;
-    readonly m?: string | number | Record<string, string | number> | Array;
+    readonly left?: string | number | boolean | Record<string, string | number> | Array;
+    readonly maxHeight?: string | number | boolean | Record<string, string | number> | Array;
+    readonly maxWidth?: string | number | boolean | Record<string, string | number> | Array;
+    readonly minHeight?: string | number | boolean | Record<string, string | number> | Array;
+    readonly minWidth?: string | number | boolean | Record<string, string | number> | Array;
     readonly objectFit?: string;
     readonly opacity?: number;
     readonly overlayColor?: string;
     readonly overlayColorBottom?: string;
     readonly overlayColorTop?: string;
+    readonly right?: string | number | boolean | Record<string, string | number> | Array;
     readonly scale?: number;
     readonly size?: string;
     readonly src?: string;
+    readonly top?: string | number | boolean | Record<string, string | number> | Array;
+    readonly width?: string | number | boolean | Record<string, string | number> | Array;
     readonly zIndex?: number;
   }
 

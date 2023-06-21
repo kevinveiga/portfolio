@@ -18,13 +18,13 @@ export const variable: IVariable = {
     xs: '540px',
     sm: '720px',
     md: '960px',
-    lg: '1360px',
+    lg: '1280px',
     xl: '1600px'
   },
   color: {
     alert: 'rgba(220, 70, 70, 1)',
     black: 'rgba(0, 0, 0, 1)',
-    black2: 'rgba(17, 19, 21, 1)',
+    black2: 'rgba(20, 20, 20, 1)',
     blackTransparent1: 'rgba(0, 0, 0, 0.1)',
     blackTransparent2: 'rgba(0, 0, 0, 0.2)',
     blackTransparent3: 'rgba(0, 0, 0, 0.3)',
@@ -59,7 +59,7 @@ export const variable: IVariable = {
     success: 'rgba(72, 235, 121, 1)',
     tertiary: 'rgba(0, 122, 147, 1)',
     tertiaryHover: 'rgba(0, 102, 147, 1)',
-    textDarkPrimary: 'rgba(26, 29, 31, 1)',
+    textDarkPrimary: 'rgba(30, 30, 30, 1)',
     textDarkSecondary: 'rgba(85, 85, 85, 1)',
     textDarkTertiary: 'rgba(119, 119, 119, 1)',
     textLightPrimary: 'rgba(255, 255, 255, 1)',
@@ -129,7 +129,7 @@ export const variable: IVariable = {
     spacingLG: '32px',
     spacingXL: '40px',
     spacingXXL: '48px',
-    spacingXXXL: '56px'
+    spacingXXXL: '60px'
   },
   text: {
     fontPrimary: '"Merriweather Sans", "Helvetica"',

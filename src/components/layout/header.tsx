@@ -27,16 +27,28 @@ export function Header(): ReactElement {
 
         <HeaderItemsStyled display={{ d: 'none', sm: 'block' }}>
           <ul>
+            <li>resumo</li>
+
+            <li>
+              <Spacer width={variable.space.spacingLG} />
+            </li>
+
             <li>habilidades</li>
 
             <li>
-              <Spacer width={variable.space.spacingMD} />
+              <Spacer width={variable.space.spacingLG} />
+            </li>
+
+            <li>certificados</li>
+
+            <li>
+              <Spacer width={variable.space.spacingLG} />
             </li>
 
             <li>contato</li>
 
             <li>
-              <Spacer width={variable.space.spacingMD} />
+              <Spacer width={variable.space.spacingLG} />
             </li>
 
             <li>storybook</li>

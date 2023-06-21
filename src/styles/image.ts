@@ -1,5 +1,5 @@
 import styled, { css, IImageStyled, IStyledSystem } from 'styled-components';
-import { background, layout, space } from 'styled-system';
+import { background, layout, position, space } from 'styled-system';
 
 import { gradientDirection } from '@/styles/function';
 import { variable } from '@/styles/variable';
@@ -31,6 +31,8 @@ export const ImageCircleBorderContainer = styled.div`
 
 export const BgImage = styled.div<IImageStyled>`
   ${background};
+  ${layout};
+  ${position};
 
   ${({ attachment }): string | undefined => (attachment ? `background-attachment: ${attachment}` : undefined)};
   background-color: ${({ backgroundColor }): string => backgroundColor || 'transparent'};
@@ -41,13 +43,11 @@ export const BgImage = styled.div<IImageStyled>`
     backgroundRepeat === undefined ? 'background-repeat: no-repeat' : undefined};
   ${({ backgroundSize }): string | undefined => (backgroundSize === undefined ? 'background-size: cover' : undefined)};
   ${({ filter }): string | undefined => (filter ? `filter: ${filter}` : undefined)};
-  height: 100%;
-  left: 0;
+  ${({ height }): string | undefined => (height === undefined ? 'height: 100%' : undefined)};
   opacity: ${({ opacity }): number => opacity || 1};
   position: absolute;
-  top: 0;
   transition: filter ${variable.animation.transitionSlow}, transform ${variable.animation.transition};
-  width: 100%;
+  ${({ width }): string | undefined => (width === undefined ? 'width: 100%' : undefined)};
   z-index: ${({ zIndex }): number => zIndex || -1};
 
   ${({ scale }): any =>

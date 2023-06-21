@@ -106,11 +106,7 @@ export const letterSpacing = (value = '0', align = ''): any => {
   `;
 };
 
-export const scrollbar = (
-  colorPrimary = variable.color.primary,
-  colorSecondary = variable.color.grayDark2,
-  scrollbarSize = '8px'
-): any => {
+export const scrollbar = (colorPrimary = '', colorSecondary = '', scrollbarSize = '8px'): any => {
   return css`
     &::-webkit-scrollbar {
       height: ${scrollbarSize};
@@ -118,20 +114,20 @@ export const scrollbar = (
     }
 
     &::-webkit-scrollbar-button {
-      background-color: ${colorSecondary};
+      background-color: ${({ theme }): string => colorSecondary || theme.bgColor.primary};
       display: none;
     }
 
     &::-webkit-scrollbar-corner {
-      background-color: ${colorSecondary};
+      background-color: ${({ theme }): string => colorSecondary || theme.bgColor.primary};
     }
 
     &::-webkit-resizer {
-      background-color: ${colorSecondary};
+      background-color: ${({ theme }): string => colorSecondary || theme.bgColor.primary};
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: ${colorPrimary};
+      background-color: ${({ theme }): string => colorPrimary || theme.brandColor.primary};
       height: 50px;
     }
 
@@ -140,7 +136,7 @@ export const scrollbar = (
     }
 
     &::-webkit-scrollbar-track-piece {
-      background-color: ${colorSecondary};
+      background-color: ${({ theme }): string => colorSecondary || theme.bgColor.primary};
       margin: 0;
     }
   `;
@@ -182,11 +178,7 @@ export const scrollbarInvisible = (): any => {
   `;
 };
 
-export const scrollbarTable = (
-  colorPrimary = variable.color.gray,
-  colorSecondary = variable.color.grayDark3,
-  scrollbarSize = '6px'
-): any => {
+export const scrollbarTable = (colorPrimary = '', colorSecondary = '', scrollbarSize = '6px'): any => {
   return css`
     &::-webkit-scrollbar {
       height: ${scrollbarSize};
@@ -195,20 +187,20 @@ export const scrollbarTable = (
     }
 
     &::-webkit-scrollbar-button {
-      background-color: ${colorSecondary};
+      background-color: ${({ theme }): string => colorSecondary || theme.bgColor.tertiary};
       display: none;
     }
 
     &::-webkit-scrollbar-corner {
-      background-color: ${colorSecondary};
+      background-color: ${({ theme }): string => colorSecondary || theme.bgColor.tertiary};
     }
 
     &::-webkit-resizer {
-      background-color: ${colorSecondary};
+      background-color: ${({ theme }): string => colorSecondary || theme.bgColor.tertiary};
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: ${colorPrimary};
+      background-color: ${({ theme }): string => colorPrimary || theme.bgColor.quaternary};
       border-radius: ${variable.layout.borderRadiusPrimary};
       height: 50px;
     }

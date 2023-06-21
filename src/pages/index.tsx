@@ -13,7 +13,7 @@ import { SvgDocument, SvgGithub, SvgLinkedin } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
 import { BgImage } from '@/styles/image';
-import { LineVertical, Main, Spacer } from '@/styles/layout';
+import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout';
 import { P, Title1, Title3 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
@@ -32,14 +32,16 @@ function Home(): ReactElement {
         <HomeTopStyled>
           <BgImage
             backgroundPosition="100% 100%"
-            backgroundSize="150px"
-            height="200px"
+            backgroundSize="contain"
+            bottom={0}
+            height="280px"
+            right={{ d: variable.space.spacingSM, sm: variable.space.spacingLG }}
             src="images/portfolio-foto.png"
           />
 
           <Box justifyContent="center">
-            <Flex flexDirection="column">
-              <Spacer height={variable.space.spacingLG} />
+            <Flex flex="1 1 auto" flexDirection="column">
+              <Spacer height={{ d: variable.space.spacingSM, sm: variable.space.spacingMD }} />
 
               <Box zIndex={2}>
                 <LinkToExternal link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
@@ -67,35 +69,35 @@ function Home(): ReactElement {
 
               <Spacer height={variable.space.spacingXS} />
 
-              <Box>
-                <Title1 lineHeight="1" mb={0}>
-                  React
-                  <br />
-                  Developer
-                </Title1>
-              </Box>
-            </Flex>
+              <Flex alignItems="center">
+                <Box>
+                  <Title1 lineHeight="1" mb={0}>
+                    React
+                    <br />
+                    Developer
+                  </Title1>
+                </Box>
 
-            <Flex alignSelf="center" flex="1 1 auto">
-              <Spacer width={variable.space.spacingXL} />
+                <Box>
+                  <Spacer width={variable.space.spacingXL} />
 
-              <Box>
-                <LineVertical backgroundColor={variable.color.whiteTransparent5} />
-              </Box>
+                  <LineVertical backgroundColor={variable.color.whiteTransparent5} height="80px" />
 
-              <Spacer width={variable.space.spacingXL} />
+                  <Spacer width={variable.space.spacingXL} />
+                </Box>
 
-              <Box>
-                <Title3 fontWeight={700} mb={0}>
-                  Mais de 15 anos de experiência <br />
-                  no desenvolvimento Front-End
-                </Title3>
-              </Box>
+                <Box>
+                  <Title3 fontWeight={700} mb={0}>
+                    Mais de 15 anos de experiência <br />
+                    no desenvolvimento Front-End
+                  </Title3>
+                </Box>
+              </Flex>
+
+              <Spacer height={{ d: variable.space.spacingSM, sm: variable.space.spacingMD }} />
             </Flex>
 
             <Flex flexDirection="column">
-              <Spacer height={variable.space.spacingSM} />
-
               <Box>
                 <P fontWeight={700} textAlign="center">
                   Olá, me chamo Kevin M. Veiga
@@ -103,17 +105,31 @@ function Home(): ReactElement {
               </Box>
             </Flex>
           </Box>
-
-          <Spacer height={{ d: variable.space.spacingSM, sm: variable.space.spacingXL }} />
-
-          {/* <Box justifyContent="center">
-            <Title3 textAlign="center">Mais de 15 anos de experiência no desenvolvimento Front-End</Title3>
-          </Box> */}
         </HomeTopStyled>
 
-        <Flex>
-          <Box></Box>
-        </Flex>
+        <Section>
+          <Container>
+            <Title3 textAlign="center">resumo</Title3>
+          </Container>
+        </Section>
+
+        <SectionSecondary>
+          <Container>
+            <Title3 textAlign="center">resumo</Title3>
+          </Container>
+        </SectionSecondary>
+
+        <Section>
+          <Container>
+            <Title3 textAlign="center">resumo</Title3>
+          </Container>
+        </Section>
+
+        <SectionSecondary>
+          <Container>
+            <Title3 textAlign="center">resumo</Title3>
+          </Container>
+        </SectionSecondary>
 
         <Footer />
       </Main>
