@@ -3,6 +3,20 @@ import styled from 'styled-components';
 import { gradientDirection } from '@/styles/function';
 import { variable } from '@/styles/variable';
 
+export const HomeResumeStyled = styled.section`
+  width: 60%;
+
+  p {
+    color: ${({ theme }): string => theme.textColor.secondary};
+    font-weight: 700;
+    text-align: center;
+
+    span {
+      color: ${variable.color.turquoise};
+    }
+  }
+`;
+
 export const HomeTopStyled = styled.section`
   ${gradientDirection({ colorStart: variable.color.blueDark, colorEnd: variable.color.turquoiseLight, deg: '50deg' })};
 

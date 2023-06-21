@@ -126,7 +126,7 @@ export const Title2 = styled.h2<ITextStyled>`
   ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 22px' : undefined)};
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
-  ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingSM}` : undefined)};
+  ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingXS}` : undefined)};
 
   @media (min-width: ${variable.breakpoint.sm}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 28px' : undefined)};

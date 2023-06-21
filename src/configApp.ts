@@ -7,7 +7,7 @@ export const errorMsgDefault =
 
 export const errorMsgResponse = 'Algo deu errado, tente novamente.';
 
-export const title = 'Portfolio - Kevin Veiga';
+export const title = 'Portfolio - Kevin M. Veiga';
 
 export const url = process.env.NEXT_PUBLIC_APP_URL || '';
 

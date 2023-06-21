@@ -49,7 +49,7 @@ export const variable: IVariable = {
     green: 'rgba(30, 215, 96, 1)',
     info: 'rgba(0, 187, 238, 1)',
     orange: 'rgba(251, 153, 88, 1)',
-    pink: 'rgba(243, 49, 85, 1)',
+    pink: 'rgba(245, 55, 100, 1)',
     primary: 'rgba(0, 164, 189, 1)',
     primaryHover: 'rgba(0, 144, 189, 1)',
     red: 'rgba(180, 10, 10, 1)',

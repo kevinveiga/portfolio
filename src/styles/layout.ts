@@ -35,7 +35,7 @@ export const Container = styled.div<ILayoutStyled>`
       : undefined};
   ${({ py }): string | undefined =>
     py === undefined
-      ? `padding-bottom: ${variable.space.spacingSM}; padding-top: ${variable.space.spacingSM}`
+      ? `padding-bottom: ${variable.space.spacingMD}; padding-top: ${variable.space.spacingMD}`
       : undefined};
   ${({ width }): string | undefined => (width === undefined ? 'width: 100%' : undefined)};
 
@@ -46,7 +46,7 @@ export const Container = styled.div<ILayoutStyled>`
         : undefined};
     ${({ py }): string | undefined =>
       py === undefined
-        ? `padding-bottom: ${variable.space.spacingLG}; padding-top: ${variable.space.spacingLG}`
+        ? `padding-bottom: ${variable.space.spacingXL}; padding-top: ${variable.space.spacingXL}`
         : undefined};
   }
 `;
@@ -122,6 +122,7 @@ export const LineVerticalGradient3Colors = styled(LineVertical)`
 export const Main = styled.main`
   ${main};
 
+  box-shadow: 0 0 10px 0 ${({ theme }): string => theme.borderColor.tertiary};
   min-height: 100vh;
 `;
 

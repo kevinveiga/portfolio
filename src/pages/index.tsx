@@ -7,14 +7,14 @@ import { title } from '@/configApp';
 import { Button } from '@/components/button/button';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
-import { HomeTopStyled } from '@/components/layout/homeStyled';
+import { HomeResumeStyled, HomeTopStyled } from '@/components/layout/homeStyled';
 import { LinkToExternal } from '@/components/link/linkToExternal';
 import { SvgDocument, SvgGithub, SvgLinkedin } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
 import { BgImage } from '@/styles/image';
 import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout';
-import { P, Title1, Title3 } from '@/styles/text';
+import { P, Subtitle1, Title1, Title2, Title3 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
 function Home(): ReactElement {
@@ -109,25 +109,77 @@ function Home(): ReactElement {
 
         <Section>
           <Container>
-            <Title3 textAlign="center">resumo</Title3>
+            <Flex alignItems="center" flexDirection="column">
+              <Title2>resumo</Title2>
+
+              <Subtitle1 color={variable.color.pink} fontWeight={700}>{`</>`}</Subtitle1>
+
+              <Spacer />
+
+              <HomeResumeStyled>
+                <p>
+                  A partir de <span>2002</span> comecei a trabalhar com <span>Front-End</span>, incluindo a parte de{' '}
+                  <span>Design</span> e poucos anos depois, tive contato com <span>Back-End</span>. Fui aprimorando meu
+                  conhecimento ao longo do tempo.
+                </p>
+
+                <p>
+                  Em <span>2015</span> aumentei o meu foco para as <span>novas tecnologias</span> no{' '}
+                  <span>Front-End</span>, estive envolvido em grandes projetos como:{' '}
+                  <span>Agência Virtual da Guarida Imóveis</span>, <span>Portal LaSalle</span>, <span>Camicado</span>,
+                  entre outros. Nesse período meu desenvolvimento foi somente com <span>Javascript puro</span>, sem usar
+                  algum framework, fui aprimorando minhas habilidades e me tornei o <span>líder técnico</span> no
+                  desenvolvimento <span>Front-End</span>.
+                </p>
+
+                <p>
+                  Em <span>2018</span> iniciei os estudos de <span>React Hooks</span>, <span>NextJS</span>,{' '}
+                  <span>Typescript</span>, <span>Styled Components</span>, <span>NodeJS</span>, <span>Webpack</span>,
+                  <span>ESLint</span>, <span>Prettier</span>, <span>Jest</span>, entre outras tecnologias. No ano
+                  seguinte, coloquei em prática meu conhecimento, em um projeto semelhante ao site Udemy, onde fui o{' '}
+                  <span>responsável</span> por todo o<span>desenvolvimento</span>, <span>configuração</span>,{' '}
+                  <span>organização e documentação</span> do <span>Front-End</span> deste projeto. Logo depois iniciei
+                  outro ótimo projeto usando também <span>NextJS</span>.
+                </p>
+
+                <p>
+                  Desde então venho <span>aprimorando</span> meu desenvolvimento <span>Front-End</span> com{' '}
+                  <span>React</span>, implementando as melhores
+                  <span>metodologias</span>, <span>boas práticas</span>, <span>organização</span>, <span>testes</span> e{' '}
+                  <span>desempenho</span>.
+                </p>
+              </HomeResumeStyled>
+            </Flex>
           </Container>
         </Section>
 
         <SectionSecondary>
           <Container>
-            <Title3 textAlign="center">resumo</Title3>
+            <Flex alignItems="center" flexDirection="column">
+              <Title2>resumo</Title2>
+
+              <Subtitle1 color={variable.color.pink} fontWeight={700}>{`</>`}</Subtitle1>
+            </Flex>
           </Container>
         </SectionSecondary>
 
         <Section>
           <Container>
-            <Title3 textAlign="center">resumo</Title3>
+            <Flex alignItems="center" flexDirection="column">
+              <Title2>resumo</Title2>
+
+              <Subtitle1 color={variable.color.pink} fontWeight={700}>{`</>`}</Subtitle1>
+            </Flex>
           </Container>
         </Section>
 
         <SectionSecondary>
           <Container>
-            <Title3 textAlign="center">resumo</Title3>
+            <Flex alignItems="center" flexDirection="column">
+              <Title2>resumo</Title2>
+
+              <Subtitle1 color={variable.color.pink} fontWeight={700}>{`</>`}</Subtitle1>
+            </Flex>
           </Container>
         </SectionSecondary>
 
