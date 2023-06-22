@@ -46,7 +46,7 @@ export const Container = styled.div<ILayoutStyled>`
         : undefined};
     ${({ py }): string | undefined =>
       py === undefined
-        ? `padding-bottom: ${variable.space.spacingXL}; padding-top: ${variable.space.spacingXL}`
+        ? `padding-bottom: ${variable.space.spacingXXXL}; padding-top: ${variable.space.spacingXXXL}`
         : undefined};
   }
 `;

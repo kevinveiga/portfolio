@@ -53,12 +53,12 @@ export const P = styled.p<ITextStyled>`
   ${typography};
 
   color: ${({ color }): string => color || 'unset'};
-  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
+  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
   ${({ textDecoration }): string | undefined => (textDecoration ? `text-decoration: ${textDecoration}` : undefined)};
   ${({ whiteSpace }): string | undefined => (whiteSpace ? `white-space: ${whiteSpace}` : undefined)};
 
   @media (min-width: ${variable.breakpoint.sm}) {
-    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 16px' : undefined)};
   }
 
   ${({ textTransform, textTransformFirstLetter }): any =>

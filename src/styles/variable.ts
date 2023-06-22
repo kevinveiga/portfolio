@@ -39,17 +39,17 @@ export const variable: IVariable = {
     gray2: 'rgba(115, 123, 128, 1)',
     gray3: 'rgba(85, 85, 85, 1)',
     gray4: 'rgba(75, 75, 75, 1)',
-    grayDark: 'rgba(36, 36, 36, 1)',
+    grayDark: 'rgba(40, 40, 40, 1)',
     grayDark2: 'rgba(50, 50, 50, 1)',
     grayDark3: 'rgba(65, 65, 65, 1)',
     grayLight: 'rgba(190, 190, 190, 1)',
-    grayLight2: 'rgba(216, 221, 225, 1)',
+    grayLight2: 'rgba(215, 215, 215, 1)',
     grayLight3: 'rgba(230, 230, 230, 1)',
     grayLight4: 'rgba(240, 240, 240, 1)',
     green: 'rgba(30, 215, 96, 1)',
     info: 'rgba(0, 187, 238, 1)',
     orange: 'rgba(251, 153, 88, 1)',
-    pink: 'rgba(245, 55, 100, 1)',
+    pink: 'rgba(225, 80, 120, 1)',
     primary: 'rgba(0, 164, 189, 1)',
     primaryHover: 'rgba(0, 144, 189, 1)',
     red: 'rgba(180, 10, 10, 1)',
@@ -63,7 +63,7 @@ export const variable: IVariable = {
     textDarkSecondary: 'rgba(85, 85, 85, 1)',
     textDarkTertiary: 'rgba(119, 119, 119, 1)',
     textLightPrimary: 'rgba(255, 255, 255, 1)',
-    textLightSecondary: 'rgba(158, 158, 158, 1)',
+    textLightSecondary: 'rgba(161, 161, 161, 1)',
     textLightTertiary: 'rgba(119, 119, 119, 1)',
     turquoise: 'rgba(0, 164, 189, 1)',
     turquoiseDark: 'rgba(0, 122, 147, 1)',
@@ -73,7 +73,7 @@ export const variable: IVariable = {
     whiteTransparent1: 'rgba(255, 255, 255, 0.1)',
     whiteTransparent3: 'rgba(255, 255, 255, 0.3)',
     whiteTransparent5: 'rgba(255, 255, 255, 0.5)',
-    yellow: 'rgba(255, 198, 9, 1)'
+    yellow: 'rgba(255, 198, 0, 1)'
   },
   colors: {
     chart: [
@@ -134,9 +134,9 @@ export const variable: IVariable = {
   text: {
     fontPrimary: '"Merriweather Sans", "Helvetica"',
     fontSecondary: '"Anton", "Helvetica"',
-    fontSize: '14px',
+    fontSize: '16px',
     fontWeightBold: '700',
-    fontWeightNormal: '300',
+    fontWeightNormal: '400',
     letterSpacing: '0',
     lineHeight: '1.4'
   }

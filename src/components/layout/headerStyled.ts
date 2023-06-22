@@ -29,7 +29,7 @@ export const HeaderItemsStyled = styled.nav<IStyledSystem>`
     > li {
       color: ${variable.color.white};
       display: inline-block;
-      font-weight: 700;
+      font-size: 14px;
     }
   }
 

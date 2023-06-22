@@ -7,9 +7,19 @@ export const defaultTheme: DefaultTheme = {
 
   bgColor: {
     primary: variable.color.grayDark2,
-    secondary: variable.color.grayDark,
-    tertiary: variable.color.grayDark3,
+    secondary: variable.color.grayDark3,
+    tertiary: variable.color.grayDark,
     quaternary: variable.color.gray4
+  },
+  borderColor: {
+    primary: variable.color.gray3,
+    secondary: variable.color.grayDark3,
+    tertiary: variable.color.gray2
+  },
+  brandColor: {
+    primary: variable.color.brandPrimary,
+    secondary: variable.color.brandSecondary,
+    tertiary: variable.color.brandTertiary
   },
   breakpoints: {
     xs: variable.breakpoint.xs,
@@ -17,16 +27,6 @@ export const defaultTheme: DefaultTheme = {
     md: variable.breakpoint.md,
     lg: variable.breakpoint.lg,
     xl: variable.breakpoint.xl
-  },
-  borderColor: {
-    primary: variable.color.gray3,
-    secondary: variable.color.grayDark3,
-    tertiary: variable.color.grayDark2
-  },
-  brandColor: {
-    primary: variable.color.brandPrimary,
-    secondary: variable.color.brandSecondary,
-    tertiary: variable.color.brandTertiary
   },
   inputBgColor: {
     primary: variable.color.grayDark,

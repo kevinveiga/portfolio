@@ -39,7 +39,7 @@ export function Header(): ReactElement {
               <Spacer width={variable.space.spacingLG} />
             </li>
 
-            <li>certificados</li>
+            <li>formação</li>
 
             <li>
               <Spacer width={variable.space.spacingLG} />

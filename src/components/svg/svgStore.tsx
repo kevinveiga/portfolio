@@ -4,6 +4,8 @@ import { ISvgStyled } from 'styled-components';
 
 import { SvgStyled, SvgLogoLoaderStyled } from '@/components/svg/svgStyled';
 
+import { variable } from '@/styles/variable';
+
 export function SvgArrowDown({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 307.05 180.33" xmlns="http://www.w3.org/2000/svg">
@@ -40,6 +42,16 @@ export function SvgArrowTriangle({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 11.6 7.48" xmlns="http://www.w3.org/2000/svg">
       <path d="M5.05 7.14.25 1.66A1 1 0 0 1 1 0h9.6a1 1 0 0 1 .75 1.66l-4.8 5.48a1 1 0 0 1-1.5 0z" />
+    </SvgStyled>
+  );
+}
+
+export function SvgAwardFill({ ...props }: ISvgStyled): ReactElement {
+  return (
+    <SvgStyled {...props} viewBox="0 0 11.41 16" xmlns="http://www.w3.org/2000/svg">
+      <path d="m5.7 0 1.68.86 1.85.29.85 1.68 1.33 1.32-.3 1.85.3 1.85-1.34 1.32-.84 1.68-1.86.29-1.66.86-1.67-.86-1.86-.29-.84-1.68L0 7.85.3 6 0 4.15l1.34-1.32.84-1.68L4.04.86Z" />
+
+      <path d="M1.7 11.8V16l4-1 4 1v-4.2l-2.01.3-1.98 1.03-1.99-1.03Z" fill={variable.color.yellow} />
     </SvgStyled>
   );
 }
@@ -86,6 +98,14 @@ export function SvgCharacter({ ...props }: ISvgStyled): ReactElement {
 
 export function SvgChartBar({ ...props }: ISvgStyled): ReactElement {
   return (
+    <SvgStyled {...props} viewBox="0 0 16 15.33" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.53a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2Zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" />
+    </SvgStyled>
+  );
+}
+
+export function SvgChatSquareTextFill({ ...props }: ISvgStyled): ReactElement {
+  return (
     <SvgStyled {...props} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
       <path d="M3 10H1v3h2Zm5-4H6v7h2Zm5-5v12h-2V1Zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1ZM5 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1Z" />
     </SvgStyled>
@@ -128,6 +148,14 @@ export function SvgClockHistory({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.25 1.86a.5.5 0 0 1-.5.86l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5zM8 1a7 7 0 1 0 4.95 11.95l.71.7A8 8 0 1 1 8 0Zm.52.02A7 7 0 0 0 8 1V0a8 8 0 0 1 .6.02Zm2 .45a7 7 0 0 0-.98-.3l.22-.98c.38.09.76.2 1.12.35zm1.37.7a7.01 7.01 0 0 0-.44-.26l.5-.87a8.03 8.03 0 0 1 .98.65l-.62.8a7 7 0 0 0-.42-.31zm1.84 1.8a6.99 6.99 0 0 0-.66-.8l.73-.69c.27.29.52.6.74.91zm.74 1.35a7.08 7.08 0 0 0-.21-.47l.89-.45a7.98 7.98 0 0 1 .45 1.1l-.95.3a7.02 7.02 0 0 0-.18-.48zm.53 2.5a7 7 0 0 0-.1-1.02l.99-.17c.06.39.1.78.11 1.17l-1 .03zm-.13 1.55.08-.51 1 .12a7.96 7.96 0 0 1-.24 1.15l-.96-.26c.05-.17.09-.33.12-.5zm-.95 2.38c.18-.3.34-.6.48-.91l.92.4c-.16.36-.35.7-.56 1.04zm-.97 1.2c.13-.12.24-.25.35-.38l.76.65a8.07 8.07 0 0 1-.4.44z" />
+    </SvgStyled>
+  );
+}
+
+export function SvgCode({ ...props }: ISvgStyled): ReactElement {
+  return (
+    <SvgStyled {...props} viewBox="0 0 26 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 0a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12.89 4.01a.5.5 0 0 1 .59.64l-4 13a.5.5 0 0 1-.96-.3l4-13a.5.5 0 0 1 .37-.34zm-5.52 3a.5.5 0 0 1 .48.14.5.5 0 0 1 0 .7L6.71 11l3.14 3.15a.5.5 0 0 1-.7.7l-3.5-3.5a.5.5 0 0 1 0-.7l3.5-3.5a.5.5 0 0 1 .22-.13zm7 0a.5.5 0 0 1 .48.14l3.5 3.5a.5.5 0 0 1 0 .7l-3.5 3.5a.5.5 0 0 1-.7-.7L19.29 11l-3.14-3.15a.5.5 0 0 1 0-.7.5.5 0 0 1 .22-.13z" />
     </SvgStyled>
   );
 }
@@ -438,6 +466,19 @@ export function SvgMonitoring({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 21 20.25" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 11.25a.75.75 0 0 1-.72-.54L9.93 6H6.75V4.5h3.75a.75.75 0 0 1 .72.54l.8 2.82L14.29.53a.76.76 0 0 1 1.16-.4c.13.1.22.23.27.38l1.33 3.99H21V6h-4.5a.75.75 0 0 1-.71-.51l-.76-2.28-2.31 7.51a.75.75 0 0 1-.72.53zm7.5-1.5v4.5h-18v-12h5.25V.75H1.5A1.5 1.5 0 0 0 0 2.25v12a1.5 1.5 0 0 0 1.5 1.5h6v3h-3v1.5h12v-1.5h-3v-3h6a1.5 1.5 0 0 0 1.5-1.5v-4.5Zm-7.5 9H9v-3h3z" />
+    </SvgStyled>
+  );
+}
+
+export function SvgMortarboardFill({ ...props }: ISvgStyled): ReactElement {
+  return (
+    <SvgStyled {...props} viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.21.05a.5.5 0 0 0-.42 0l-7.5 3.5a.5.5 0 0 0 .02.91l7.5 3a.5.5 0 0 0 .38 0L14 5.14V11a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V4.74l.69-.28a.5.5 0 0 0 .02-.91z" />
+
+      <path
+        d="M4.18 7.03a.5.5 0 0 0-.66.33l-.5 1.7a.5.5 0 0 0 .3.6l4.5 1.8a.5.5 0 0 0 .37 0l4.5-1.8a.5.5 0 0 0 .29-.6l-.5-1.7a.5.5 0 0 0-.66-.33L8 8.47z"
+        fill={variable.color.turquoise}
+      />
     </SvgStyled>
   );
 }

@@ -37,17 +37,17 @@ declare module 'styled-components' {
       tertiary: string;
       quaternary: string;
     };
+    borderColor: {
+      primary: string;
+      secondary: string;
+      tertiary: string;
+    };
     brandColor: {
       primary: string;
       secondary: string;
       tertiary: string;
     };
     breakpoints: Record<string, unknown>;
-    borderColor: {
-      primary: string;
-      secondary: string;
-      tertiary: string;
-    };
     inputBgColor: {
       primary: string;
       secondary: string;
