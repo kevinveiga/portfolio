@@ -1,7 +1,7 @@
 import styled, { css, IStyledSystem } from 'styled-components';
 import { border, boxShadow, flexbox, layout, position, space, typography } from 'styled-system';
 
-import { scrollbar, scrollbarInvisible, scrollbarTable } from '@/styles/function';
+import { scrollbarInvisible, scrollbarTable } from '@/styles/function';
 import { variable } from '@/styles/variable';
 
 export const Box = styled.div<IStyledSystem>`

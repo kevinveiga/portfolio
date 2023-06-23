@@ -372,6 +372,22 @@ export function SvgInvalid({ ...props }: ISvgStyled): ReactElement {
   );
 }
 
+export function SvgLaptopCodeFill({ ...props }: ISvgStyled): ReactElement {
+  return (
+    <SvgStyled {...props} viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.5 0A1.5 1.5 0 0 0 1 1.5V10h14V1.5A1.5 1.5 0 0 0 13.5 0Zm6.17 2.7a.18.18 0 0 1 .21.23L7.46 7.57a.18.18 0 0 1-.34-.1l1.42-4.64a.18.18 0 0 1 .13-.12ZM6.7 3.79a.18.18 0 0 1 .18.04.18.18 0 0 1 0 .26L5.75 5.2l1.13 1.12a.18.18 0 0 1-.26.26L5.37 5.33a.18.18 0 0 1 0-.26l1.25-1.25a.18.18 0 0 1 .08-.04zm2.5 0a.18.18 0 0 1 .18.04l1.25 1.25a.18.18 0 0 1 0 .26L9.38 6.58a.18.18 0 0 1-.26-.26l1.13-1.12-1.13-1.12a.18.18 0 0 1 0-.26.18.18 0 0 1 .08-.04zM0 10.5A1.5 1.5 0 0 0 1.5 12h13a1.5 1.5 0 0 0 1.5-1.5Z" />
+    </SvgStyled>
+  );
+}
+
+export function SvgLink45Deg({ ...props }: ISvgStyled): ReactElement {
+  return (
+    <SvgStyled {...props} viewBox="0 0 11.07 11.07" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.12 2.7a3 3 0 0 0 .83 4.83l.77-.77a2 2 0 0 1-.9-3.35l1.84-1.83a2 2 0 1 1 2.83 2.83l-.8.8c.11.42.16.85.13 1.28l1.37-1.37A3 3 0 1 0 5.95.88ZM2.25 4.59.88 5.95a3 3 0 1 0 4.24 4.24l1.83-1.83a3 3 0 0 0-.83-4.83l-.58.6a1 1 0 0 0-.16.19 2 2 0 0 1 .86 3.34L4.42 9.48a2 2 0 1 1-2.83-2.83l.79-.79a4.02 4.02 0 0 1-.13-1.28z" />
+    </SvgStyled>
+  );
+}
+
 export function SvgLinkedin({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">

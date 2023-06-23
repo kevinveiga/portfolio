@@ -35,9 +35,9 @@ const title = css<ITextStyled>`
             background-color: ${lineColor};
             content: ' ';
             display: block;
-            height: 2px;
-            margin: 20px auto auto auto;
-            width: 95%;
+            height: 1px;
+            margin: ${variable.space.spacingXS} auto;
+            width: 100%;
           }
         `
       : undefined};

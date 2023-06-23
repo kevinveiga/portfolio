@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import Head from 'next/head';
+import { useTheme } from 'styled-components';
 
 import { title } from '@/configApp';
 
@@ -18,9 +19,10 @@ import { LinkToExternal } from '@/components/link/linkToExternal';
 import {
   SvgAwardFill,
   SvgChartBar,
-  SvgCode,
   SvgDocument,
   SvgGithub,
+  SvgLaptopCodeFill,
+  SvgLink45Deg,
   SvgLinkedin,
   SvgMortarboardFill
 } from '@/components/svg/svgStore';
@@ -34,6 +36,9 @@ import { variable } from '@/styles/variable';
 import skills from '@/public/json/skills.json';
 
 function Home(): ReactElement {
+  // CONTEXT
+  const { borderColor } = useTheme();
+
   return (
     <>
       <Head>
@@ -157,7 +162,7 @@ function Home(): ReactElement {
                 </p>
 
                 <p>
-                  No ano seguinte, ingressei em um excelente projeto semelhante ao site Udemy, <br />
+                  No ano seguinte, ingressei em um excelente projeto de cursos em investimentos, <br />
                   onde fui o <span>responsável</span> por todo o <span>desenvolvimento</span>, <span>configuração</span>
                   , <br />
                   <span>organização e documentação</span> em <span>React</span> deste projeto. <br />
@@ -182,7 +187,7 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>habilidades</Title2>
 
-              <SvgCode fill={variable.color.pink} height="50px" />
+              <SvgLaptopCodeFill fill={variable.color.pink} height="50px" />
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -236,11 +241,134 @@ function Home(): ReactElement {
 
               <HomeFlexStyled>
                 <HomeFormationBoxStyled>
-                  <Title4 textAlign="center">Graduação</Title4>
-                </HomeFormationBoxStyled>
+                  <Title4 lineColor={borderColor.secondary}>Graduação</Title4>
 
-                <HomeFormationBoxStyled>
-                  <Title4 textAlign="center">Cursos</Title4>
+                  <ul>
+                    <li>
+                      UniFtec:
+                      <br />
+                      <p>
+                        Análise e Desenvolvimento de Sistemas.
+                        <br />
+                        <span>Início: 09/05/2015</span>
+                        <br />
+                        <span>Conclusão: 01/12/2021</span>
+                      </p>
+                    </li>
+
+                    <li>
+                      Unisinos:
+                      <br />
+                      <p>
+                        Análise e Desenvolvimento de Sistemas.
+                        <br />
+                        <span>Início: 01/03/2014</span>
+                        <br />
+                        <span>Finalizado: 09/05/2015</span>
+                      </p>
+                    </li>
+                  </ul>
+
+                  <Spacer height={variable.space.spacingLG} />
+
+                  <Title4 lineColor={borderColor.secondary}>Principais Cursos</Title4>
+
+                  <ul>
+                    <li>
+                      Udemy:
+                      <br />
+                      <p>
+                        React + Redux: Fundamentos e 2 Apps do Absoluto ZERO!
+                        <br />
+                        <span>2020 - 54.5 horas</span>
+                        <br />
+                        <LinkToExternal link="/files/certificado-udemy-react-redux-fundamentos.pdf">
+                          Certificado
+                          <SvgLink45Deg height="12px" />
+                        </LinkToExternal>
+                      </p>
+                      <p>
+                        Desenvolvedor NodeJS e MongoDB
+                        <br />
+                        <span>2022 - 15.5 horas</span>
+                        <br />
+                        <LinkToExternal link="/files/certificado-udemy-nodejs-e-mongodb.pdf">
+                          Certificado
+                          <SvgLink45Deg height="12px" />
+                        </LinkToExternal>
+                      </p>
+                      <p>
+                        React Native: Desenvolva APPs Nativas para Android e IOS
+                        <br />
+                        <span>2022 - 45 horas</span>
+                        <br />
+                        <LinkToExternal link="/files/certificado-udemy-react-native-apps-nativos-android-ios.pdf">
+                          Certificado
+                          <SvgLink45Deg height="12px" />
+                        </LinkToExternal>
+                      </p>
+                      <p>
+                        AWS para Iniciantes 2023 - Aprenda e Domine a Nuvem Amazon
+                        <br />
+                        <span>2023 - 7 horas</span>
+                        <br />
+                        <LinkToExternal link="/files/certificado-udemy-aws-para-iniciantes-2023.pdf">
+                          Certificado
+                          <SvgLink45Deg height="12px" />
+                        </LinkToExternal>
+                      </p>
+                      <p>
+                        NestJS - Fundamentos
+                        <br />
+                        <span>2023 - 15 horas</span>
+                        <br />
+                        <LinkToExternal link="/files/certificado-udemy-nestjs-fundamentos.pdf">
+                          Certificado
+                          <SvgLink45Deg height="12px" />
+                        </LinkToExternal>
+                      </p>
+                    </li>
+
+                    <li>
+                      Sisnema:
+                      <br />
+                      <p>
+                        Developing MS ASP.NET Web Applications Using Visual Studio.Net
+                        <br />
+                        <span>2006 - 40 horas</span>
+                      </p>
+                    </li>
+
+                    <li>
+                      TargetTrust:
+                      <br />
+                      <p>
+                        Orientação a Objetos
+                        <br />
+                        <span>2005 - 8 horas</span>
+                      </p>
+                      <p>
+                        Mapeamento Objeto Relacional e Modelagem de Dados
+                        <br />
+                        <span>2005 - 20 horas</span>
+                      </p>
+                      <p>
+                        PostgreSQL - Fundamentos, SQL Básico e Avançado
+                        <br />
+                        <span>2005 - 20 horas</span>
+                      </p>
+                    </li>
+
+                    <li>
+                      Alfamídia:
+                      <br />
+                      <p>
+                        Adobe Photoshop CS Advanced Design Techniques
+                        <br />
+                        <span>2005 - 20 horas</span>
+                      </p>
+                    </li>
+                  </ul>
                 </HomeFormationBoxStyled>
               </HomeFlexStyled>
             </Flex>

@@ -19,10 +19,11 @@ export const HomeResumeStyled = styled.div`
 `;
 
 export const HomeFlexStyled = styled.div`
-  column-gap: ${variable.space.spacingSM};
+  column-gap: ${variable.space.spacingMD};
   display: flex;
-  justify-content: center;
-  row-gap: ${variable.space.spacingSM};
+  justify-content: space-around;
+  max-width: ${variable.breakpoint.md};
+  row-gap: ${variable.space.spacingMD};
   width: 100%;
 `;
 
@@ -32,21 +33,50 @@ export const HomeFormationBoxStyled = styled.div`
   border-radius: ${variable.layout.borderRadiusPrimary};
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: ${variable.breakpoint.xs};
   padding: ${variable.space.spacingMD};
   width: 100%;
 
   ${Title4} {
-    color: ${variable.color.pink};
+    color: ${variable.color.turquoise};
     font-weight: 700;
+  }
+
+  ul {
+    li {
+      + li {
+        margin-top: ${variable.space.spacingSM};
+      }
+
+      p {
+        color: ${({ theme }): string => theme.textColor.tertiary};
+        line-height: 1.2;
+
+        a,
+        span {
+          font-size: 12px;
+        }
+
+        a {
+          color: ${variable.color.turquoise};
+        }
+
+        span {
+          color: ${variable.color.pink};
+        }
+
+        svg {
+          fill: ${variable.color.turquoise};
+          margin-left: ${variable.space.spacingXS};
+        }
+      }
+    }
   }
 `;
 
 export const HomeSkillsBoxStyled = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 220px;
-  padding: ${variable.space.spacingMD};
 
   ${Title4} {
     color: ${variable.color.pink};
@@ -72,14 +102,13 @@ export const HomeSkillsBoxStyled = styled.div`
 
         p {
           color: ${({ theme }): string => theme.textColor.primary};
-          font-size: 16px;
           line-height: 1;
           margin: 0 ${variable.space.spacingXS};
-        }
 
-        span {
-          color: ${variable.color.turquoise};
-          font-size: 14px;
+          span {
+            color: ${variable.color.turquoise};
+            font-size: 14px;
+          }
         }
       }
     }

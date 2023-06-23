@@ -9,7 +9,7 @@ import { Flex } from '@/styles/flex';
 export function Footer(): ReactElement {
   return (
     <FooterStyled>
-      <Flex alignItems="center" fontSize="12px" height="100%" justifyContent="center" px={3} py={2}>
+      <Flex alignItems="center" fontSize="12px" height="100%" justifyContent="center" p={{ d: 3, sm: 4 }}>
         {`© ${new Date().getFullYear()} ${title}`}
       </Flex>
     </FooterStyled>
