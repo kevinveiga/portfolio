@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Front-End",
+    "itens": [
+      { "title": "Javascript", "years": "17 anos" },
+      { "title": "React", "years": "5 anos" },
+      { "title": "NextJS", "years": "4 anos" },
+      { "title": "Typescript", "years": "6 anos" },
+      { "title": "React Native", "years": "1 ano" },
+      { "title": "HTML", "years": "20 anos" }
+    ]
+  },
+  {
+    "title": "Style",
+    "itens": [
+      { "title": "Styled Components", "years": "5 anos" },
+      { "title": "Styled System", "years": "5 anos" },
+      { "title": "CSS", "years": "20 anos" },
+      { "title": "SASS", "years": "3 anos" }
+    ]
+  },
+  {
+    "title": "Back-End",
+    "itens": [
+      { "title": "NodeJS", "years": "2 anos" },
+      { "title": "NestJS", "years": "1 ano" },
+      { "title": "GraphQL", "years": "1 ano" }
+    ]
+  },
+  {
+    "title": "others",
+    "itens": [
+      { "title": "Jest", "years": "1 ano" },
+      { "title": "Storybook", "years": "1 ano" },
+      { "title": "ESLint", "years": "5 anos" },
+      { "title": "Prettier", "years": "5 anos" },
+      { "title": "Webpack", "years": "2 anos" },
+      { "title": "Gulp", "years": "3 anos" }
+    ]
+  }
+]

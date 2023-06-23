@@ -7,6 +7,7 @@ import { variable } from '@/styles/variable';
 export const HomeResumeStyled = styled.div`
   p {
     color: ${({ theme }): string => theme.textColor.secondary};
+    font-family: sans-serif;
     font-size: 18px;
     text-align: center;
 
@@ -17,20 +18,35 @@ export const HomeResumeStyled = styled.div`
   }
 `;
 
-export const HomeSkillsStyled = styled.div`
+export const HomeFlexStyled = styled.div`
   column-gap: ${variable.space.spacingSM};
   display: flex;
+  justify-content: center;
   row-gap: ${variable.space.spacingSM};
+  width: 100%;
 `;
 
-export const HomeSkillsBoxStyled = styled.div`
-  background-color: ${({ theme }): string => theme.bgColor.tertiary};
+export const HomeFormationBoxStyled = styled.div`
+  background-color: ${({ theme }): string => theme.bgColor.secondary};
   border: 1px solid ${({ theme }): string => theme.borderColor.secondary};
   border-radius: ${variable.layout.borderRadiusPrimary};
   display: flex;
   flex-direction: column;
+  max-width: 500px;
+  padding: ${variable.space.spacingMD};
+  width: 100%;
+
+  ${Title4} {
+    color: ${variable.color.pink};
+    font-weight: 700;
+  }
+`;
+
+export const HomeSkillsBoxStyled = styled.div`
+  display: flex;
+  flex-direction: column;
   min-width: 220px;
-  padding: ${variable.space.spacingSM};
+  padding: ${variable.space.spacingMD};
 
   ${Title4} {
     color: ${variable.color.pink};
@@ -41,18 +57,30 @@ export const HomeSkillsBoxStyled = styled.div`
     margin-top: ${variable.space.spacingSM};
 
     li {
-      color: ${({ theme }): string => theme.textColor.primary};
-      font-size: 16px;
-      line-height: 1.2;
-      padding: 0 ${variable.space.spacingSM};
-
       + li {
         margin-top: ${variable.space.spacingSM};
       }
 
-      span {
-        color: ${variable.color.turquoise};
-        font-size: 14px;
+      div {
+        display: inline-block;
+        vertical-align: middle;
+
+        code {
+          color: ${({ theme }): string => theme.textColor.tertiary};
+          font-size: 26px;
+        }
+
+        p {
+          color: ${({ theme }): string => theme.textColor.primary};
+          font-size: 16px;
+          line-height: 1;
+          margin: 0 ${variable.space.spacingXS};
+        }
+
+        span {
+          color: ${variable.color.turquoise};
+          font-size: 14px;
+        }
       }
     }
   }

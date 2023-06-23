@@ -7,7 +7,13 @@ import { title } from '@/configApp';
 import { Button } from '@/components/button/button';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
-import { HomeResumeStyled, HomeSkillsStyled, HomeSkillsBoxStyled, HomeTopStyled } from '@/components/layout/homeStyled';
+import {
+  HomeResumeStyled,
+  HomeFlexStyled,
+  HomeFormationBoxStyled,
+  HomeSkillsBoxStyled,
+  HomeTopStyled
+} from '@/components/layout/homeStyled';
 import { LinkToExternal } from '@/components/link/linkToExternal';
 import {
   SvgAwardFill,
@@ -24,6 +30,8 @@ import { BgImage } from '@/styles/image';
 import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout';
 import { P, Title1, Title2, Title3, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
+
+import skills from '@/public/json/skills.json';
 
 function Home(): ReactElement {
   return (
@@ -122,7 +130,7 @@ function Home(): ReactElement {
 
               <SvgAwardFill fill={variable.color.grayLight} height="50px" />
 
-              <Spacer />
+              <Spacer height={variable.space.spacingLG} />
 
               <HomeResumeStyled>
                 <p>
@@ -176,173 +184,43 @@ function Home(): ReactElement {
 
               <SvgCode fill={variable.color.pink} height="50px" />
 
-              <Spacer />
+              <Spacer height={variable.space.spacingLG} />
 
-              <HomeSkillsStyled>
-                <HomeSkillsBoxStyled>
-                  <Title4>{`< Front-End />`}</Title4>
+              <HomeFlexStyled>
+                {skills?.length > 0
+                  ? skills.map((skill) => {
+                      return (
+                        <HomeSkillsBoxStyled key={skill.title}>
+                          <Title4>{`< ${skill.title} />`}</Title4>
 
-                  <ul>
-                    <li>
-                      <p>
-                        React
-                        <br />
-                        <span>5 anos</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Typescript
-                        <br />
-                        <span>6 anos</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        NextJS
-                        <br />
-                        <span>3 anos</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        React Native
-                        <br />
-                        <span>1 ano</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Javascript
-                        <br />
-                        <span>15 anos</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        HTML
-                        <br />
-                        <span>20 anos</span>
-                      </p>
-                    </li>
-                  </ul>
-                </HomeSkillsBoxStyled>
-
-                <HomeSkillsBoxStyled>
-                  <Title4>{`< Style />`}</Title4>
-
-                  <ul>
-                    <li>
-                      <p>
-                        Styled Components
-                        <br />
-                        <span>5 anos</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Styled System
-                        <br />
-                        <span>5 anos</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        CSS
-                        <br />
-                        <span>20 anos</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        SASS
-                        <br />
-                        <span>3 anos</span>
-                      </p>
-                    </li>
-                  </ul>
-                </HomeSkillsBoxStyled>
-
-                <HomeSkillsBoxStyled>
-                  <Title4>{`< Back-End />`}</Title4>
-
-                  <ul>
-                    <li>
-                      <p>
-                        NodeJS
-                        <br />
-                        <span>1 ano</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        NestJS
-                        <br />
-                        <span>1 ano</span>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        GraphQL
-                        <br />
-                        <span>1 ano</span>
-                      </p>
-                    </li>
-                  </ul>
-                </HomeSkillsBoxStyled>
-
-                <HomeSkillsBoxStyled>
-                  <Title4>{`< others />`}</Title4>
-
-                  <ul>
-                    <li>
-                      Jest
-                      <br />
-                      <span>1 ano</span>
-                    </li>
-
-                    <li>
-                      Storybook
-                      <br />
-                      <span>1 ano</span>
-                    </li>
-
-                    <li>
-                      ESLint
-                      <br />
-                      <span>5 anos</span>
-                    </li>
-
-                    <li>
-                      Prettier
-                      <br />
-                      <span>5 anos</span>
-                    </li>
-
-                    <li>
-                      Webpack
-                      <br />
-                      <span>2 anos</span>
-                    </li>
-
-                    <li>
-                      Gulp
-                      <br />
-                      <span>3 anos</span>
-                    </li>
-                  </ul>
-                </HomeSkillsBoxStyled>
-              </HomeSkillsStyled>
+                          <ul>
+                            {skill?.itens.length > 0
+                              ? skill?.itens.map((item) => {
+                                  return (
+                                    <li key={item.title}>
+                                      <div>
+                                        <code>{'{'}</code>
+                                      </div>
+                                      <div>
+                                        <p>
+                                          {item.title}
+                                          <br />
+                                          <span>{item.years}</span>
+                                        </p>
+                                      </div>
+                                      <div>
+                                        <code>{'}'}</code>
+                                      </div>
+                                    </li>
+                                  );
+                                })
+                              : null}
+                          </ul>
+                        </HomeSkillsBoxStyled>
+                      );
+                    })
+                  : null}
+              </HomeFlexStyled>
             </Flex>
           </Container>
         </SectionSecondary>
@@ -353,6 +231,18 @@ function Home(): ReactElement {
               <Title2>formação</Title2>
 
               <SvgMortarboardFill fill={variable.color.turquoiseDark} height="50px" />
+
+              <Spacer height={variable.space.spacingLG} />
+
+              <HomeFlexStyled>
+                <HomeFormationBoxStyled>
+                  <Title4 textAlign="center">Graduação</Title4>
+                </HomeFormationBoxStyled>
+
+                <HomeFormationBoxStyled>
+                  <Title4 textAlign="center">Cursos</Title4>
+                </HomeFormationBoxStyled>
+              </HomeFlexStyled>
             </Flex>
           </Container>
         </Section>
@@ -363,6 +253,8 @@ function Home(): ReactElement {
               <Title2>contato</Title2>
 
               <SvgChartBar fill={variable.color.green} height="50px" />
+
+              <Spacer height={variable.space.spacingLG} />
             </Flex>
           </Container>
         </SectionSecondary>
