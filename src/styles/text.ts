@@ -57,7 +57,7 @@ export const P = styled.p<ITextStyled>`
   ${({ textDecoration }): string | undefined => (textDecoration ? `text-decoration: ${textDecoration}` : undefined)};
   ${({ whiteSpace }): string | undefined => (whiteSpace ? `white-space: ${whiteSpace}` : undefined)};
 
-  @media (min-width: ${variable.breakpoint.sm}) {
+  @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 16px' : undefined)};
   }
 
@@ -99,7 +99,7 @@ export const Subtitle1 = styled.p<ITextStyled>`
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
 
-  @media (min-width: ${variable.breakpoint.sm}) {
+  @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
   }
 `;
@@ -108,14 +108,14 @@ export const Title1 = styled.h1<ITextStyled>`
   ${title};
 
   font-family: ${variable.text.fontSecondary};
-  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 46px' : undefined)};
+  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 48px' : undefined)};
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingSM}` : undefined)};
 
-  @media (min-width: ${variable.breakpoint.sm}) {
-    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 78px' : undefined)};
+  @media (min-width: ${variable.breakpoint.md}) {
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 76px' : undefined)};
     ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingMD}` : undefined)};
   }
 `;
@@ -128,34 +128,34 @@ export const Title2 = styled.h2<ITextStyled>`
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingXS}` : undefined)};
 
-  @media (min-width: ${variable.breakpoint.sm}) {
-    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 28px' : undefined)};
+  @media (min-width: ${variable.breakpoint.md}) {
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 26px' : undefined)};
   }
 `;
 
 export const Title3 = styled.h3<ITextStyled>`
   ${title};
 
-  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 18px' : undefined)};
+  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 20px' : undefined)};
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightBold}` : undefined};
   ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingXS}` : undefined)};
 
-  @media (min-width: ${variable.breakpoint.sm}) {
-    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 22px' : undefined)};
+  @media (min-width: ${variable.breakpoint.md}) {
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 24px' : undefined)};
   }
 `;
 
 export const Title4 = styled.h4<ITextStyled>`
   ${title};
 
-  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 16px' : undefined)};
+  ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 18px' : undefined)};
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   ${({ mb }): string | undefined => (mb === undefined ? 'margin-bottom: 2px' : undefined)};
 
-  @media (min-width: ${variable.breakpoint.sm}) {
-    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 18px' : undefined)};
+  @media (min-width: ${variable.breakpoint.md}) {
+    ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 20px' : undefined)};
   }
 `;
 
@@ -166,7 +166,7 @@ export const Title5 = styled.h5<ITextStyled>`
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
 
-  @media (min-width: ${variable.breakpoint.sm}) {
+  @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
   }
 `;

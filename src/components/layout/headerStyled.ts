@@ -16,7 +16,7 @@ export const HeaderStyled = styled.header`
   width: 100%;
   z-index: 2;
 
-  @media (min-width: ${variable.breakpoint.sm}) {
+  @media (min-width: ${variable.breakpoint.md}) {
     padding-left: ${variable.space.spacingLG};
     padding-right: ${variable.space.spacingLG};
   }

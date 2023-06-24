@@ -112,7 +112,7 @@ declare module 'styled-components' {
     readonly colorEndPercent?: string;
     readonly colorStartPercent?: string;
     readonly filter?: string;
-    readonly height?: string | number;
+    readonly height?: string | number | boolean | Record<string, string | number> | Array;
     readonly left?: string | number | boolean | Record<string, string | number> | Array;
     readonly maxHeight?: string | number | boolean | Record<string, string | number> | Array;
     readonly maxWidth?: string | number | boolean | Record<string, string | number> | Array;

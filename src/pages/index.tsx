@@ -9,28 +9,31 @@ import { Button } from '@/components/button/button';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import {
-  HomeResumeStyled,
+  HomeContactBoxStyled,
   HomeFlexStyled,
   HomeFormationBoxStyled,
+  HomeResumeStyled,
   HomeSkillsBoxStyled,
   HomeTopStyled
 } from '@/components/layout/homeStyled';
 import { LinkToExternal } from '@/components/link/linkToExternal';
 import {
   SvgAwardFill,
-  SvgChartBar,
+  SvgChatBar,
   SvgDocument,
   SvgGithub,
+  SvgGmail,
   SvgLaptopCodeFill,
   SvgLink45Deg,
   SvgLinkedin,
-  SvgMortarboardFill
+  SvgMortarboardFill,
+  SvgWhatsappFill
 } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
 import { BgImage } from '@/styles/image';
 import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout';
-import { P, Title1, Title2, Title3, Title4 } from '@/styles/text';
+import { Span, Title1, Title2, Title3, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
 import skills from '@/public/json/skills.json';
@@ -51,18 +54,22 @@ function Home(): ReactElement {
         <Header />
 
         <HomeTopStyled>
-          <BgImage
-            backgroundPosition="100% 100%"
-            backgroundSize="contain"
-            bottom={0}
-            height="280px"
-            right={{ d: variable.space.spacingSM, sm: variable.space.spacingLG }}
-            src="images/portfolio-foto.png"
-          />
+          <Box
+            justifyContent="center"
+            px={{ d: variable.space.spacingSM, md: variable.space.spacingLG }}
+            py={{ d: variable.space.spacingLG, md: variable.space.spacingXXXL }}
+          >
+            <BgImage
+              backgroundPosition="100% 100%"
+              backgroundSize="contain"
+              bottom={0}
+              height="85%"
+              right={{ d: variable.space.spacingSM, md: variable.space.spacingLG }}
+              src="images/portfolio-foto.png"
+            />
 
-          <Box justifyContent="center">
             <Flex flex="1 1 auto" flexDirection="column">
-              <Spacer height={{ d: variable.space.spacingSM, sm: variable.space.spacingMD }} />
+              <Spacer height={variable.space.spacingMD} />
 
               <Box zIndex={2}>
                 <LinkToExternal link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
@@ -90,16 +97,16 @@ function Home(): ReactElement {
 
               <Spacer height={variable.space.spacingXS} />
 
-              <Flex alignItems="center">
+              <Flex alignItems={{ d: 'flex-start', md: 'center' }} flexDirection={{ d: 'column', md: 'row' }}>
                 <Box>
                   <Title1 lineHeight="1" mb={0}>
-                    React
+                    Front-End
                     <br />
                     Developer
                   </Title1>
                 </Box>
 
-                <Box>
+                <Box display={{ d: 'none', md: 'flex' }}>
                   <Spacer width={variable.space.spacingXL} />
 
                   <LineVertical backgroundColor={variable.color.whiteTransparent5} height="80px" />
@@ -107,23 +114,21 @@ function Home(): ReactElement {
                   <Spacer width={variable.space.spacingXL} />
                 </Box>
 
-                <Box>
-                  <Title3 fontWeight={700} mb={0}>
+                <Spacer display={{ d: 'block', md: 'none' }} height={variable.space.spacingXS} />
+
+                <Box flexDirection="column">
+                  <Title3 color={variable.color.turquoiseLight} fontWeight={700}>
+                    Kevin M. Veiga
+                  </Title3>
+
+                  <Title4>
                     Mais de 20 anos de experiência <br />
                     no desenvolvimento Front-End
-                  </Title3>
+                  </Title4>
                 </Box>
               </Flex>
 
-              <Spacer height={{ d: variable.space.spacingSM, sm: variable.space.spacingMD }} />
-            </Flex>
-
-            <Flex flexDirection="column">
-              <Box>
-                <P fontSize="14px" textAlign="center">
-                  Olá, me chamo Kevin M. Veiga
-                </P>
-              </Box>
+              <Spacer height={{ d: variable.space.spacingSM, md: variable.space.spacingMD }} />
             </Flex>
           </Box>
         </HomeTopStyled>
@@ -131,7 +136,7 @@ function Home(): ReactElement {
         <Section>
           <Container>
             <Flex alignItems="center" flexDirection="column">
-              <Title2>resumo profissional</Title2>
+              <Title2>trajetória profissional</Title2>
 
               <SvgAwardFill fill={variable.color.grayLight} height="50px" />
 
@@ -139,43 +144,43 @@ function Home(): ReactElement {
 
               <HomeResumeStyled>
                 <p>
-                  A partir de <span>2002</span> comecei a trabalhar com <span>Front-End</span> e <span>Design</span>,{' '}
+                  A partir de <Span>2002</Span> comecei a trabalhar com <Span>Front-End</Span> e <Span>Design</Span>,{' '}
                   <br />
-                  posteriormente me aprofundei em <span>Javascript</span> e trabalhei também com <span>Back-End</span>.
+                  posteriormente me aprofundei em <Span>Javascript</Span> e trabalhei também com <Span>Back-End</Span>.
                 </p>
 
                 <p>
-                  Em <span>2015</span> aumentei o meu foco em <span>novas tecnologias</span> no <span>Front-End</span>
+                  Em <Span>2015</Span> aumentei o meu foco em <Span>novas tecnologias</Span> no <Span>Front-End</Span>
                   . <br />
                   Estive envolvido em grandes projetos como: <br />
-                  <span>Agência Virtual da Guarida Imóveis</span>, <span>Portal LaSalle</span>, <span>Camicado</span>,
+                  <Span>Agência Virtual da Guarida Imóveis</Span>, <Span>Portal LaSalle</Span>, <Span>Camicado</Span>,
                   entre outros. <br />
-                  Nesse período meu desenvolvimento foi somente com <span>Javascript puro</span>. <br />
-                  Aprimorei minhas habilidades e me tornei <span>líder técnico</span>.
+                  Nesse período meu desenvolvimento foi somente com <Span>Javascript puro</Span>. <br />
+                  Aprimorei minhas habilidades e me tornei <Span>líder técnico</Span>.
                 </p>
 
                 <p>
-                  Em <span>2018</span> iniciei os estudos de <span>React</span>, <span>NextJS</span>, <br />
-                  <span>Typescript</span>, <span>Styled Components</span>, <span>NodeJS</span>, <span>Webpack</span>,{' '}
+                  Em <Span>2018</Span> iniciei os estudos de <Span>React</Span>, <Span>NextJS</Span>, <br />
+                  <Span>Typescript</Span>, <Span>Styled Components</Span>, <Span>NodeJS</Span>, <Span>Webpack</Span>,{' '}
                   <br />
                   entre outras tecnologias.
                 </p>
 
                 <p>
                   No ano seguinte, ingressei em um excelente projeto de cursos em investimentos, <br />
-                  onde fui o <span>responsável</span> por todo o <span>desenvolvimento</span>, <span>configuração</span>
+                  onde fui o <Span>responsável</Span> por todo o <Span>desenvolvimento</Span>, <Span>configuração</Span>
                   , <br />
-                  <span>organização e documentação</span> em <span>React</span> deste projeto. <br />
-                  Mais para frente fui responsável por outros ótimos projeto em <span>React</span> usando <br />
-                  <span>NextJS</span>, <span>ESLint</span>, <span>Prettier</span>, <span>Jest</span> e{' '}
-                  <span>GraphQL</span>.
+                  <Span>organização e documentação</Span> em <Span>React</Span> deste projeto. <br />
+                  Mais para frente fui responsável por outros ótimos projeto em <Span>React</Span> usando <br />
+                  <Span>NextJS</Span>, <Span>ESLint</Span>, <Span>Prettier</Span>, <Span>Jest</Span> e{' '}
+                  <Span>GraphQL</Span>.
                 </p>
 
                 <p>
-                  Desde então venho <span>aprimorando</span> meu desenvolvimento <span>Front-End</span> com{' '}
-                  <span>React</span>, <br />
-                  implementando as melhores <span>metodologias</span>, <span>boas práticas</span>,{' '}
-                  <span>organização</span>, <span>testes</span> e <span>desempenho</span>.
+                  Desde então venho <Span>aprimorando</Span> meu desenvolvimento <Span>Front-End</Span> com{' '}
+                  <Span>React</Span>, <br />
+                  implementando as melhores <Span>metodologias</Span>, <Span>boas práticas</Span>,{' '}
+                  <Span>organização</Span>, <Span>testes</Span> e <Span>desempenho</Span>.
                 </p>
               </HomeResumeStyled>
             </Flex>
@@ -210,7 +215,7 @@ function Home(): ReactElement {
                                         <p>
                                           {item.title}
                                           <br />
-                                          <span>{item.years}</span>
+                                          <Span>{item.years}</Span>
                                         </p>
                                       </div>
                                       <div>
@@ -250,9 +255,9 @@ function Home(): ReactElement {
                       <p>
                         Análise e Desenvolvimento de Sistemas.
                         <br />
-                        <span>Início: 09/05/2015</span>
+                        <Span>Início: 09/05/2015</Span>
                         <br />
-                        <span>Conclusão: 01/12/2021</span>
+                        <Span>Conclusão: 01/12/2021</Span>
                       </p>
                     </li>
 
@@ -262,9 +267,9 @@ function Home(): ReactElement {
                       <p>
                         Análise e Desenvolvimento de Sistemas.
                         <br />
-                        <span>Início: 01/03/2014</span>
+                        <Span>Início: 01/03/2014</Span>
                         <br />
-                        <span>Finalizado: 09/05/2015</span>
+                        <Span>Finalizado: 09/05/2015</Span>
                       </p>
                     </li>
                   </ul>
@@ -280,7 +285,7 @@ function Home(): ReactElement {
                       <p>
                         React + Redux: Fundamentos e 2 Apps do Absoluto ZERO!
                         <br />
-                        <span>2020 - 54.5 horas</span>
+                        <Span>2020 - 54.5 horas</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-react-redux-fundamentos.pdf">
                           Certificado
@@ -290,7 +295,7 @@ function Home(): ReactElement {
                       <p>
                         Desenvolvedor NodeJS e MongoDB
                         <br />
-                        <span>2022 - 15.5 horas</span>
+                        <Span>2022 - 15.5 horas</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-nodejs-e-mongodb.pdf">
                           Certificado
@@ -300,7 +305,7 @@ function Home(): ReactElement {
                       <p>
                         React Native: Desenvolva APPs Nativas para Android e IOS
                         <br />
-                        <span>2022 - 45 horas</span>
+                        <Span>2022 - 45 horas</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-react-native-apps-nativos-android-ios.pdf">
                           Certificado
@@ -310,7 +315,7 @@ function Home(): ReactElement {
                       <p>
                         AWS para Iniciantes 2023 - Aprenda e Domine a Nuvem Amazon
                         <br />
-                        <span>2023 - 7 horas</span>
+                        <Span>2023 - 7 horas</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-aws-para-iniciantes-2023.pdf">
                           Certificado
@@ -320,7 +325,7 @@ function Home(): ReactElement {
                       <p>
                         NestJS - Fundamentos
                         <br />
-                        <span>2023 - 15 horas</span>
+                        <Span>2023 - 15 horas</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-nestjs-fundamentos.pdf">
                           Certificado
@@ -335,7 +340,7 @@ function Home(): ReactElement {
                       <p>
                         Developing MS ASP.NET Web Applications Using Visual Studio.Net
                         <br />
-                        <span>2006 - 40 horas</span>
+                        <Span>2006 - 40 horas</Span>
                       </p>
                     </li>
 
@@ -345,17 +350,17 @@ function Home(): ReactElement {
                       <p>
                         Orientação a Objetos
                         <br />
-                        <span>2005 - 8 horas</span>
+                        <Span>2005 - 8 horas</Span>
                       </p>
                       <p>
                         Mapeamento Objeto Relacional e Modelagem de Dados
                         <br />
-                        <span>2005 - 20 horas</span>
+                        <Span>2005 - 20 horas</Span>
                       </p>
                       <p>
                         PostgreSQL - Fundamentos, SQL Básico e Avançado
                         <br />
-                        <span>2005 - 20 horas</span>
+                        <Span>2005 - 20 horas</Span>
                       </p>
                     </li>
 
@@ -365,7 +370,7 @@ function Home(): ReactElement {
                       <p>
                         Adobe Photoshop CS Advanced Design Techniques
                         <br />
-                        <span>2005 - 20 horas</span>
+                        <Span>2005 - 20 horas</Span>
                       </p>
                     </li>
                   </ul>
@@ -380,9 +385,40 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>contato</Title2>
 
-              <SvgChartBar fill={variable.color.green} height="50px" />
+              <SvgChatBar fill={variable.color.green} height="50px" />
 
               <Spacer height={variable.space.spacingLG} />
+
+              <HomeFlexStyled>
+                <HomeContactBoxStyled>
+                  <Box>
+                    <ul>
+                      <li>
+                        <SvgLinkedin fill={variable.color.blue} />
+                        <Span>Linkedin</Span>
+                      </li>
+                      <li>
+                        <SvgWhatsappFill />
+                        <Span>+55 51 98135-7941</Span>
+                      </li>
+                      <li>
+                        <SvgGmail />
+                        <Span>kevin.veiga@gmail.com</Span>
+                      </li>
+                    </ul>
+                  </Box>
+
+                  <Box>
+                    <Spacer width={variable.space.spacingXL} />
+
+                    <LineVertical backgroundColor={borderColor.secondary} height="80px" />
+
+                    <Spacer width={variable.space.spacingXL} />
+                  </Box>
+
+                  <Box></Box>
+                </HomeContactBoxStyled>
+              </HomeFlexStyled>
             </Flex>
           </Container>
         </SectionSecondary>

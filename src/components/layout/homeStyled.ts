@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
 import { gradientDirection } from '@/styles/function';
-import { Title4 } from '@/styles/text';
+import { Span, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
 export const HomeResumeStyled = styled.div`
   p {
     color: ${({ theme }): string => theme.textColor.secondary};
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
 
-    span {
+    @media (min-width: ${variable.breakpoint.md}) {
+      font-size: 16px;
+    }
+
+    ${Span} {
       color: ${variable.color.turquoise};
       font-weight: 700;
     }
@@ -21,10 +25,32 @@ export const HomeResumeStyled = styled.div`
 export const HomeFlexStyled = styled.div`
   column-gap: ${variable.space.spacingMD};
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: ${variable.breakpoint.md};
-  row-gap: ${variable.space.spacingMD};
+  row-gap: ${variable.space.spacingLG};
   width: 100%;
+`;
+
+export const HomeContactBoxStyled = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    li {
+      + li {
+        margin-top: ${variable.space.spacingSM};
+      }
+
+      svg {
+        height: 22px;
+        margin-right: ${variable.space.spacingXS};
+        max-width: 22px;
+        vertical-align: sub;
+      }
+    }
+  }
 `;
 
 export const HomeFormationBoxStyled = styled.div`
@@ -49,11 +75,11 @@ export const HomeFormationBoxStyled = styled.div`
       }
 
       p {
-        color: ${({ theme }): string => theme.textColor.tertiary};
+        color: ${({ theme }): string => theme.textColor.secondary};
         line-height: 1.2;
 
         a,
-        span {
+        ${Span} {
           font-size: 12px;
         }
 
@@ -61,7 +87,7 @@ export const HomeFormationBoxStyled = styled.div`
           color: ${variable.color.turquoise};
         }
 
-        span {
+        ${Span} {
           color: ${variable.color.pink};
         }
 
@@ -77,6 +103,11 @@ export const HomeFormationBoxStyled = styled.div`
 export const HomeSkillsBoxStyled = styled.div`
   display: flex;
   flex-direction: column;
+  min-width: 170px;
+
+  @media (min-width: ${variable.breakpoint.sm}) {
+    min-width: auto;
+  }
 
   ${Title4} {
     color: ${variable.color.pink};
@@ -97,17 +128,32 @@ export const HomeSkillsBoxStyled = styled.div`
 
         code {
           color: ${({ theme }): string => theme.textColor.tertiary};
-          font-size: 26px;
+          font-size: 22px;
         }
 
         p {
           color: ${({ theme }): string => theme.textColor.primary};
+          font-size: 14px;
           line-height: 1;
           margin: 0 ${variable.space.spacingXS};
 
-          span {
+          ${Span} {
             color: ${variable.color.turquoise};
-            font-size: 14px;
+            font-size: 12px;
+          }
+        }
+
+        @media (min-width: ${variable.breakpoint.md}) {
+          code {
+            font-size: 26px;
+          }
+
+          p {
+            font-size: 16px;
+
+            ${Span} {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -122,12 +168,7 @@ export const HomeTopStyled = styled.section`
   display: flex;
   flex-direction: column;
   height: auto;
-  padding: ${variable.space.spacingLG} ${variable.space.spacingSM};
   width: 100%;
-
-  @media (min-width: ${variable.breakpoint.sm}) {
-    padding: ${variable.space.spacingXXXL} ${variable.space.spacingLG};
-  }
 
   svg {
     fill: ${variable.color.turquoiseLight};
