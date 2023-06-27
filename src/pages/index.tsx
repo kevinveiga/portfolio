@@ -12,6 +12,8 @@ import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import {
+  HomeAnimationText1,
+  HomeAnimationText2,
   HomeBtnScrollStyled,
   HomeContactBoxStyled,
   HomeFlexStyled,
@@ -100,7 +102,8 @@ function Home(): ReactElement {
               <Flex alignItems={{ d: 'flex-start', md: 'center' }} flexDirection={{ d: 'column', md: 'row' }}>
                 <Box>
                   <Title1 lineHeight="1" mb={0}>
-                    Front-End
+                    <HomeAnimationText1>Front-End</HomeAnimationText1>
+                    <HomeAnimationText2>React</HomeAnimationText2>
                     <br />
                     Developer
                   </Title1>

@@ -2,11 +2,40 @@ import styled from 'styled-components';
 
 import { LinkToExternalStyled } from '@/components/link/linkToStyled';
 
+import { animation, animationFadeIn, animationFadeOut, animationMoveDown } from '@/styles/animation';
 import { gradientDirection } from '@/styles/function';
 import { Span, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
+export const HomeAnimationText1 = styled.span`
+  ${animation};
+
+  animation-delay: 3s;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: ${animationFadeOut()};
+  position: absolute;
+`;
+
+export const HomeAnimationText2 = styled.span`
+  ${animation};
+
+  animation-delay: 3s;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: ${animationFadeIn()};
+  position: absolute;
+`;
+
 export const HomeBtnScrollStyled = styled.button`
+  ${animation};
+
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: ${animationMoveDown()};
   bottom: ${variable.space.spacingMD};
   left: 50%;
   position: absolute;
