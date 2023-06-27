@@ -1,24 +1,29 @@
 import React, { ReactElement } from 'react';
 
+import parse from 'html-react-parser';
 import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components';
 
 import { title } from '@/configApp';
+import { scrollTo } from '@/helpers/scrollTo';
+import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
 
-import { Button } from '@/components/button/button';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import {
+  HomeBtnScrollStyled,
   HomeContactBoxStyled,
   HomeFlexStyled,
-  HomeFormationBoxStyled,
-  HomeResumeStyled,
+  HomeProfessionalQualificationBoxStyled,
+  HomeProfessionalTrajectoryBoxStyled,
   HomeSkillsBoxStyled,
   HomeTopStyled
 } from '@/components/layout/homeStyled';
 import { LinkToExternal } from '@/components/link/linkToExternal';
 import {
   SvgAwardFill,
+  SvgArrowDown,
   SvgChatBar,
   SvgDocument,
   SvgGithub,
@@ -41,6 +46,7 @@ import skills from '@/public/json/skills.json';
 function Home(): ReactElement {
   // CONTEXT
   const { borderColor } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -73,25 +79,19 @@ function Home(): ReactElement {
 
               <Box zIndex={2}>
                 <LinkToExternal link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
-                  <Button typeStyle="button-unset">
-                    <SvgLinkedin />
-                  </Button>
+                  <SvgLinkedin />
                 </LinkToExternal>
 
                 <Spacer />
 
                 <LinkToExternal link="https://github.com/kevinveiga">
-                  <Button typeStyle="button-unset">
-                    <SvgGithub />
-                  </Button>
+                  <SvgGithub />
                 </LinkToExternal>
 
                 <Spacer />
 
                 <LinkToExternal link="/files/cv-kevin-m-veiga-2023.pdf">
-                  <Button typeStyle="button-unset">
-                    <SvgDocument />
-                  </Button>
+                  <SvgDocument />
                 </LinkToExternal>
               </Box>
 
@@ -116,14 +116,15 @@ function Home(): ReactElement {
 
                 <Spacer display={{ d: 'block', md: 'none' }} height={variable.space.spacingXS} />
 
-                <Box flexDirection="column">
+                <Box flexDirection="column" maxWidth="315px">
                   <Title3 color={variable.color.turquoiseLight} fontWeight={700}>
                     Kevin M. Veiga
                   </Title3>
 
                   <Title4>
-                    Mais de 20 anos de experiência <br />
-                    no desenvolvimento Front-End
+                    {t('more than 15 years of experience', { ns: 'glossary' })}
+                    <br />
+                    {t('in Front-End development', { ns: 'glossary' })}
                   </Title4>
                 </Box>
               </Flex>
@@ -131,66 +132,36 @@ function Home(): ReactElement {
               <Spacer height={{ d: variable.space.spacingSM, md: variable.space.spacingMD }} />
             </Flex>
           </Box>
+
+          <HomeBtnScrollStyled onClick={(): void => scrollTo('#anchor-trajectory')}>
+            <SvgArrowDown />
+          </HomeBtnScrollStyled>
         </HomeTopStyled>
 
         <Section>
           <Container>
+            <div id="anchor-trajectory" />
+
             <Flex alignItems="center" flexDirection="column">
-              <Title2>trajetória profissional</Title2>
+              <Title2>{t('professional trajectory', { ns: 'glossary' })}</Title2>
 
               <SvgAwardFill fill={variable.color.grayLight} height="50px" />
 
               <Spacer height={variable.space.spacingLG} />
 
-              <HomeResumeStyled>
-                <p>
-                  A partir de <Span>2002</Span> comecei a trabalhar com <Span>Front-End</Span> e <Span>Design</Span>,{' '}
-                  <br />
-                  posteriormente me aprofundei em <Span>Javascript</Span> e trabalhei também com <Span>Back-End</Span>.
-                </p>
-
-                <p>
-                  Em <Span>2015</Span> aumentei o meu foco em <Span>novas tecnologias</Span> no <Span>Front-End</Span>
-                  . <br />
-                  Estive envolvido em grandes projetos como: <br />
-                  <Span>Agência Virtual da Guarida Imóveis</Span>, <Span>Portal LaSalle</Span>, <Span>Camicado</Span>,
-                  entre outros. <br />
-                  Nesse período meu desenvolvimento foi somente com <Span>Javascript puro</Span>. <br />
-                  Aprimorei minhas habilidades e me tornei <Span>líder técnico</Span>.
-                </p>
-
-                <p>
-                  Em <Span>2018</Span> iniciei os estudos de <Span>React</Span>, <Span>NextJS</Span>, <br />
-                  <Span>Typescript</Span>, <Span>Styled Components</Span>, <Span>NodeJS</Span>, <Span>Webpack</Span>,{' '}
-                  <br />
-                  entre outras tecnologias.
-                </p>
-
-                <p>
-                  No ano seguinte, ingressei em um excelente projeto de cursos em investimentos, <br />
-                  onde fui o <Span>responsável</Span> por todo o <Span>desenvolvimento</Span>, <Span>configuração</Span>
-                  , <br />
-                  <Span>organização e documentação</Span> em <Span>React</Span> deste projeto. <br />
-                  Mais para frente fui responsável por outros ótimos projeto em <Span>React</Span> usando <br />
-                  <Span>NextJS</Span>, <Span>ESLint</Span>, <Span>Prettier</Span>, <Span>Jest</Span> e{' '}
-                  <Span>GraphQL</Span>.
-                </p>
-
-                <p>
-                  Desde então venho <Span>aprimorando</Span> meu desenvolvimento <Span>Front-End</Span> com{' '}
-                  <Span>React</Span>, <br />
-                  implementando as melhores <Span>metodologias</Span>, <Span>boas práticas</Span>,{' '}
-                  <Span>organização</Span>, <Span>testes</Span> e <Span>desempenho</Span>.
-                </p>
-              </HomeResumeStyled>
+              <HomeProfessionalTrajectoryBoxStyled>
+                {parse(t('text professional trajectory', { ns: 'glossary' }) || '')}
+              </HomeProfessionalTrajectoryBoxStyled>
             </Flex>
           </Container>
         </Section>
 
         <SectionSecondary>
           <Container>
+            <div id="anchor-skills" />
+
             <Flex alignItems="center" flexDirection="column">
-              <Title2>habilidades</Title2>
+              <Title2>{t('skills', { ns: 'glossary' })}</Title2>
 
               <SvgLaptopCodeFill fill={variable.color.pink} height="50px" />
 
@@ -215,7 +186,9 @@ function Home(): ReactElement {
                                         <p>
                                           {item.title}
                                           <br />
-                                          <Span>{item.years}</Span>
+                                          <Span>{`${item.years} ${t('year', { ns: 'glossary' })}${
+                                            parseInt(item.years, 10) > 1 ? 's' : ''
+                                          }`}</Span>
                                         </p>
                                       </div>
                                       <div>
@@ -237,16 +210,18 @@ function Home(): ReactElement {
 
         <Section>
           <Container>
+            <div id="anchor-formation" />
+
             <Flex alignItems="center" flexDirection="column">
-              <Title2>formação</Title2>
+              <Title2>{t('professional qualification', { ns: 'glossary' })}</Title2>
 
               <SvgMortarboardFill fill={variable.color.turquoiseDark} height="50px" />
 
               <Spacer height={variable.space.spacingLG} />
 
               <HomeFlexStyled>
-                <HomeFormationBoxStyled>
-                  <Title4 lineColor={borderColor.secondary}>Graduação</Title4>
+                <HomeProfessionalQualificationBoxStyled>
+                  <Title4 lineColor={borderColor.secondary}>{t('graduation', { ns: 'glossary' })}</Title4>
 
                   <ul>
                     <li>
@@ -255,9 +230,9 @@ function Home(): ReactElement {
                       <p>
                         Análise e Desenvolvimento de Sistemas.
                         <br />
-                        <Span>Início: 09/05/2015</Span>
+                        <Span>{`${capitalizeFirstLetter(t('started', { ns: 'glossary' }))}: 09/05/2015`}</Span>
                         <br />
-                        <Span>Conclusão: 01/12/2021</Span>
+                        <Span>{`${capitalizeFirstLetter(t('finished', { ns: 'glossary' }))}: 01/12/2021`}</Span>
                       </p>
                     </li>
 
@@ -267,16 +242,16 @@ function Home(): ReactElement {
                       <p>
                         Análise e Desenvolvimento de Sistemas.
                         <br />
-                        <Span>Início: 01/03/2014</Span>
+                        <Span>{`${capitalizeFirstLetter(t('started', { ns: 'glossary' }))}: 01/03/2014`}</Span>
                         <br />
-                        <Span>Finalizado: 09/05/2015</Span>
+                        <Span>{`${capitalizeFirstLetter(t('finished', { ns: 'glossary' }))}: 09/05/2015`}</Span>
                       </p>
                     </li>
                   </ul>
 
                   <Spacer height={variable.space.spacingLG} />
 
-                  <Title4 lineColor={borderColor.secondary}>Principais Cursos</Title4>
+                  <Title4 lineColor={borderColor.secondary}>{t('main courses', { ns: 'glossary' })}</Title4>
 
                   <ul>
                     <li>
@@ -285,50 +260,50 @@ function Home(): ReactElement {
                       <p>
                         React + Redux: Fundamentos e 2 Apps do Absoluto ZERO!
                         <br />
-                        <Span>2020 - 54.5 horas</Span>
+                        <Span>{`2020 - 54.5 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-react-redux-fundamentos.pdf">
-                          Certificado
+                          {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
                       </p>
                       <p>
                         Desenvolvedor NodeJS e MongoDB
                         <br />
-                        <Span>2022 - 15.5 horas</Span>
+                        <Span>{`2022 - 15.5 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-nodejs-e-mongodb.pdf">
-                          Certificado
+                          {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
                       </p>
                       <p>
                         React Native: Desenvolva APPs Nativas para Android e IOS
                         <br />
-                        <Span>2022 - 45 horas</Span>
+                        <Span>{`2022 - 45 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-react-native-apps-nativos-android-ios.pdf">
-                          Certificado
+                          {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
                       </p>
                       <p>
                         AWS para Iniciantes 2023 - Aprenda e Domine a Nuvem Amazon
                         <br />
-                        <Span>2023 - 7 horas</Span>
+                        <Span>{`2023 - 7 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-aws-para-iniciantes-2023.pdf">
-                          Certificado
+                          {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
                       </p>
                       <p>
                         NestJS - Fundamentos
                         <br />
-                        <Span>2023 - 15 horas</Span>
+                        <Span>{`2023 - 15 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
                         <LinkToExternal link="/files/certificado-udemy-nestjs-fundamentos.pdf">
-                          Certificado
+                          {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
                       </p>
@@ -340,7 +315,7 @@ function Home(): ReactElement {
                       <p>
                         Developing MS ASP.NET Web Applications Using Visual Studio.Net
                         <br />
-                        <Span>2006 - 40 horas</Span>
+                        <Span>{`2006 - 40 ${t('hours', { ns: 'glossary' })}`}</Span>
                       </p>
                     </li>
 
@@ -350,17 +325,17 @@ function Home(): ReactElement {
                       <p>
                         Orientação a Objetos
                         <br />
-                        <Span>2005 - 8 horas</Span>
+                        <Span>{`2005 - 8 ${t('hours', { ns: 'glossary' })}`}</Span>
                       </p>
                       <p>
                         Mapeamento Objeto Relacional e Modelagem de Dados
                         <br />
-                        <Span>2005 - 20 horas</Span>
+                        <Span>{`2005 - 20 ${t('hours', { ns: 'glossary' })}`}</Span>
                       </p>
                       <p>
                         PostgreSQL - Fundamentos, SQL Básico e Avançado
                         <br />
-                        <Span>2005 - 20 horas</Span>
+                        <Span>{`2005 - 20 ${t('hours', { ns: 'glossary' })}`}</Span>
                       </p>
                     </li>
 
@@ -370,11 +345,11 @@ function Home(): ReactElement {
                       <p>
                         Adobe Photoshop CS Advanced Design Techniques
                         <br />
-                        <Span>2005 - 20 horas</Span>
+                        <Span>{`2005 - 20 ${t('hours', { ns: 'glossary' })}`}</Span>
                       </p>
                     </li>
                   </ul>
-                </HomeFormationBoxStyled>
+                </HomeProfessionalQualificationBoxStyled>
               </HomeFlexStyled>
             </Flex>
           </Container>
@@ -382,8 +357,10 @@ function Home(): ReactElement {
 
         <SectionSecondary>
           <Container>
+            <div id="anchor-contact" />
+
             <Flex alignItems="center" flexDirection="column">
-              <Title2>contato</Title2>
+              <Title2>{t('contact', { ns: 'glossary' })}</Title2>
 
               <SvgChatBar fill={variable.color.green} height="50px" />
 

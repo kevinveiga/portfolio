@@ -73,6 +73,7 @@ export const variable: IVariable = {
     whiteTransparent1: 'rgba(255, 255, 255, 0.1)',
     whiteTransparent3: 'rgba(255, 255, 255, 0.3)',
     whiteTransparent5: 'rgba(255, 255, 255, 0.5)',
+    whiteTransparent9: 'rgba(255, 255, 255, 0.9)',
     yellow: 'rgba(255, 198, 0, 1)'
   },
   colors: {
@@ -115,6 +116,7 @@ export const variable: IVariable = {
     formBoxShadow: 'inset 0 0 0 1px rgba(225, 225, 225, 1)',
     formBoxShadowFocus: 'inset 0 0 0 2px rgba(118, 118, 118, 1)',
     formBoxShadowError: 'inset 0 0 0 2px rgba(220, 70, 70, 1)',
+    headerHeight: '40px',
     headerManagerHeight: '60px',
     inputHeight: '42px',
     inputMargin: '10px',

@@ -39,7 +39,7 @@ export const scrollTo = (
       const anchorElement = anchorElementString ? document.querySelector(anchorElementString) : null;
       const newOffset = offset || window.innerWidth > 1000 ? -120 : -20;
       const scrollContext = scrollContextString ? document.querySelector(scrollContextString) : window;
-      const scrollYPos = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollYPos = window.scrollY || document.documentElement.scrollTop;
 
       let scrollTimer = timer;
 

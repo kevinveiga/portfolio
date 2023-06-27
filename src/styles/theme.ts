@@ -13,8 +13,8 @@ export const defaultTheme: DefaultTheme = {
   },
   borderColor: {
     primary: variable.color.gray3,
-    secondary: variable.color.grayDark3,
-    tertiary: variable.color.gray2
+    secondary: variable.color.gray4,
+    tertiary: variable.color.gray4
   },
   brandColor: {
     primary: variable.color.brandPrimary,
@@ -66,7 +66,7 @@ export const lightTheme: DefaultTheme = {
     borderColor: {
       primary: variable.color.grayLight,
       secondary: variable.color.grayLight2,
-      tertiary: variable.color.gray
+      tertiary: variable.color.grayLight3
     },
     brandColor: {
       primary: variable.color.brandPrimary,

@@ -252,6 +252,7 @@ export interface IVariable {
     whiteTransparent1: string;
     whiteTransparent3: string;
     whiteTransparent5: string;
+    whiteTransparent9: string;
     yellow: string;
   };
   colors: {
@@ -275,6 +276,7 @@ export interface IVariable {
     formBoxShadow: string;
     formBoxShadowFocus: string;
     formBoxShadowError: string;
+    headerHeight: string;
     headerManagerHeight: string;
     inputHeight: string;
     inputMargin: string;

@@ -52,7 +52,7 @@ export function PageProvider({ children }: any): PropsWithChildren<any> {
 
   // STATE
   const [stateBreadcrumb, setStateBreadcrumb] = useState<IBreadcrumb[] | null>(null);
-  const [stateLanguage, setStateLanguage] = usePersistedState<TLanguage>('language', 'en');
+  const [stateLanguage, setStateLanguage] = usePersistedState<TLanguage>('language', 'pt_BR');
 
   // CONTEXT PROVIDER
   const contextProvider = useMemo(

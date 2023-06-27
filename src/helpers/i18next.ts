@@ -23,8 +23,8 @@ i18next
   .init({
     debug: false,
     defaultNS: defaultNS,
-    fallbackLng: 'en',
-    lng: 'pt-BR',
+    fallbackLng: 'pt_BR',
+    lng: 'pt_BR',
     ns: [defaultNS, 'glossary'],
     react: {
       transEmptyNodeValue: '',

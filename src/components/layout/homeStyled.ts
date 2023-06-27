@@ -1,35 +1,28 @@
 import styled from 'styled-components';
 
+import { LinkToExternalStyled } from '@/components/link/linkToStyled';
+
 import { gradientDirection } from '@/styles/function';
 import { Span, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
-export const HomeResumeStyled = styled.div`
-  p {
-    color: ${({ theme }): string => theme.textColor.secondary};
-    font-family: sans-serif;
-    font-size: 14px;
-    text-align: center;
+export const HomeBtnScrollStyled = styled.button`
+  bottom: ${variable.space.spacingMD};
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
 
-    @media (min-width: ${variable.breakpoint.md}) {
-      font-size: 16px;
-    }
-
-    ${Span} {
-      color: ${variable.color.turquoise};
-      font-weight: 700;
+  &:hover {
+    svg {
+      opacity: 0.5;
     }
   }
-`;
 
-export const HomeFlexStyled = styled.div`
-  column-gap: ${variable.space.spacingMD};
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: ${variable.breakpoint.md};
-  row-gap: ${variable.space.spacingLG};
-  width: 100%;
+  svg {
+    fill: ${variable.color.turquoiseLight};
+    height: 14px;
+    transition: opacity ${variable.animation.transition};
+  }
 `;
 
 export const HomeContactBoxStyled = styled.div`
@@ -53,7 +46,17 @@ export const HomeContactBoxStyled = styled.div`
   }
 `;
 
-export const HomeFormationBoxStyled = styled.div`
+export const HomeFlexStyled = styled.div`
+  column-gap: ${variable.space.spacingMD};
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: ${variable.breakpoint.md};
+  row-gap: ${variable.space.spacingLG};
+  width: 100%;
+`;
+
+export const HomeProfessionalQualificationBoxStyled = styled.div`
   background-color: ${({ theme }): string => theme.bgColor.secondary};
   border: 1px solid ${({ theme }): string => theme.borderColor.secondary};
   border-radius: ${variable.layout.borderRadiusPrimary};
@@ -78,6 +81,10 @@ export const HomeFormationBoxStyled = styled.div`
         color: ${({ theme }): string => theme.textColor.secondary};
         line-height: 1.2;
 
+        &::first-letter {
+          text-transform: capitalize;
+        }
+
         a,
         ${Span} {
           font-size: 12px;
@@ -96,6 +103,28 @@ export const HomeFormationBoxStyled = styled.div`
           margin-left: ${variable.space.spacingXS};
         }
       }
+    }
+  }
+`;
+
+export const HomeProfessionalTrajectoryBoxStyled = styled.div`
+  p {
+    color: ${({ theme }): string => theme.textColor.secondary};
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+
+    @media (min-width: ${variable.breakpoint.md}) {
+      font-size: 16px;
+    }
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+
+    span {
+      color: ${variable.color.turquoise};
+      font-weight: 700;
     }
   }
 `;
@@ -137,6 +166,10 @@ export const HomeSkillsBoxStyled = styled.div`
           line-height: 1;
           margin: 0 ${variable.space.spacingXS};
 
+          &::first-letter {
+            text-transform: capitalize;
+          }
+
           ${Span} {
             color: ${variable.color.turquoise};
             font-size: 12px;
@@ -170,8 +203,17 @@ export const HomeTopStyled = styled.section`
   height: auto;
   width: 100%;
 
-  svg {
-    fill: ${variable.color.turquoiseLight};
-    height: 28px;
+  ${LinkToExternalStyled} {
+    &:hover {
+      svg {
+        opacity: 0.5;
+      }
+    }
+
+    svg {
+      fill: ${variable.color.turquoiseLight};
+      height: 28px;
+      transition: opacity ${variable.animation.transition};
+    }
   }
 `;

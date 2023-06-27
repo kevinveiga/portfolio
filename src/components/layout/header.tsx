@@ -1,59 +1,65 @@
 import React, { ReactElement } from 'react';
 
+import { scrollTo } from '@/helpers/scrollTo';
 import { useApp } from '@/pages/_app';
+import { useTranslation } from 'react-i18next';
+import { useChangeHeaderScroll } from '@/stores/header/useHeader';
 import { usePage } from '@/stores/page/usePage';
 
 import { Button } from '@/components/button/button';
-import { HeaderStyled, HeaderItemsStyled } from '@/components/layout/headerStyled';
+import { HeaderStyled, HeaderItemsStyled, HeaderNavItemsStyled } from '@/components/layout/headerStyled';
 import { SvgDarkLightMode, SvgFlagBrazil, SvgFlagUsa, SvgMenu } from '@/components/svg/svgStore';
 
 import { Box } from '@/styles/flex';
-import { Spacer } from '@/styles/layout';
 import { variable } from '@/styles/variable';
 
 export function Header(): ReactElement {
   // CONTEXT
   const { setStateTheme } = useApp();
   const { setStateLanguage } = usePage();
+  const { t } = useTranslation();
+
+  // CUSTOM HOOK
+  const stateChangeHeaderScroll = useChangeHeaderScroll('header');
 
   return (
-    <HeaderStyled>
+    <HeaderStyled change={stateChangeHeaderScroll} id="header">
       <Box alignItems="flex-start" justifyContent="flex-start">
-        <HeaderItemsStyled display={{ d: 'block', sm: 'none' }}>
+        <HeaderItemsStyled display={{ d: 'block', md: 'none' }}>
           <Button ariaLabel="menu close" height="100%" typeStyle="button-unset" width="100%">
             <SvgMenu fill={variable.color.turquoiseLight} />
           </Button>
         </HeaderItemsStyled>
 
-        <HeaderItemsStyled display={{ d: 'none', sm: 'block' }}>
+        <HeaderNavItemsStyled display={{ d: 'none', md: 'block' }}>
           <ul>
-            <li>resumo</li>
-
             <li>
-              <Spacer width={variable.space.spacingLG} />
+              <Button onClick={(): void => scrollTo('#anchor-trajectory')} typeStyle="button-unset">
+                {t('professional trajectory', { ns: 'glossary' })}
+              </Button>
             </li>
 
-            <li>habilidades</li>
-
             <li>
-              <Spacer width={variable.space.spacingLG} />
+              <Button onClick={(): void => scrollTo('#anchor-skills')} typeStyle="button-unset">
+                {t('skills', { ns: 'glossary' })}
+              </Button>
             </li>
 
-            <li>formação</li>
-
             <li>
-              <Spacer width={variable.space.spacingLG} />
+              <Button onClick={(): void => scrollTo('#anchor-formation')} typeStyle="button-unset">
+                {t('professional qualification', { ns: 'glossary' })}
+              </Button>
             </li>
 
-            <li>contato</li>
-
             <li>
-              <Spacer width={variable.space.spacingLG} />
+              <Button onClick={(): void => scrollTo('#anchor-contact')} typeStyle="button-unset">
+                {t('contact', { ns: 'glossary' })}
+              </Button>
             </li>
 
             <li>storybook</li>
           </ul>
-        </HeaderItemsStyled>
+        </HeaderNavItemsStyled>
       </Box>
 
       <Box alignItems="flex-start" justifyContent="flex-end">
@@ -66,17 +72,9 @@ export function Header(): ReactElement {
             </li>
 
             <li>
-              <Spacer width={variable.space.spacingXS} />
-            </li>
-
-            <li>
               <Button onClick={(): void => setStateLanguage('pt_BR')} typeStyle="button-unset">
                 <SvgFlagBrazil />
               </Button>
-            </li>
-
-            <li>
-              <Spacer width={variable.space.spacingXS} />
             </li>
 
             <li>
