@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { LinkToExternalStyled } from '@/components/link/linkToStyled';
 
@@ -7,24 +7,24 @@ import { gradientDirection } from '@/styles/function';
 import { Span, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
-export const HomeAnimationText1 = styled.span`
+const animationText = css`
   ${animation};
 
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-direction: alternate;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
+`;
+
+export const HomeAnimationText1 = styled.span`
+  ${animationText};
+
   animation-name: ${animationFadeOut()};
   position: absolute;
 `;
 
 export const HomeAnimationText2 = styled.span`
-  ${animation};
-
-  animation-delay: 3s;
-  animation-direction: alternate;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  ${animationText};
   animation-name: ${animationFadeIn()};
   position: absolute;
 `;
@@ -111,7 +111,7 @@ export const HomeProfessionalQualificationBoxStyled = styled.div`
         line-height: 1.2;
 
         &::first-letter {
-          text-transform: capitalize;
+          text-transform: uppercase;
         }
 
         a,
@@ -148,7 +148,7 @@ export const HomeProfessionalTrajectoryBoxStyled = styled.div`
     }
 
     &::first-letter {
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
 
     span {
@@ -196,7 +196,7 @@ export const HomeSkillsBoxStyled = styled.div`
           margin: 0 ${variable.space.spacingXS};
 
           &::first-letter {
-            text-transform: capitalize;
+            text-transform: uppercase;
           }
 
           ${Span} {

@@ -76,7 +76,7 @@ export const HeaderNavItemsStyled = styled.nav<IStyledSystem>`
       a,
       button {
         &::first-letter {
-          text-transform: capitalize;
+          text-transform: uppercase;
         }
       }
     }

@@ -22,6 +22,7 @@ import {
   HomeSkillsBoxStyled,
   HomeTopStyled
 } from '@/components/layout/homeStyled';
+import { LinkTo } from '@/components/link/linkTo';
 import { LinkToExternal } from '@/components/link/linkToExternal';
 import {
   SvgAwardFill,
@@ -38,7 +39,7 @@ import {
 } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
-import { BgImage } from '@/styles/image';
+import { BgImage, Image } from '@/styles/image';
 import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout';
 import { Span, Title1, Title2, Title3, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
@@ -148,7 +149,7 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('professional trajectory', { ns: 'glossary' })}</Title2>
 
-              <SvgAwardFill fill={variable.color.grayLight} height="50px" />
+              <SvgAwardFill fill={variable.color.grayLight} height="45px" />
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -166,7 +167,7 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('skills', { ns: 'glossary' })}</Title2>
 
-              <SvgLaptopCodeFill fill={variable.color.pink} height="50px" />
+              <SvgLaptopCodeFill fill={variable.color.pink} height="40px" />
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -175,7 +176,7 @@ function Home(): ReactElement {
                   ? skills.map((skill) => {
                       return (
                         <HomeSkillsBoxStyled key={skill.title}>
-                          <Title4>{`< ${skill.title} />`}</Title4>
+                          <Title4>{`< ${capitalizeFirstLetter(t(skill.title, { ns: 'glossary' }))} />`}</Title4>
 
                           <ul>
                             {skill?.itens.length > 0
@@ -218,7 +219,7 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('professional qualification', { ns: 'glossary' })}</Title2>
 
-              <SvgMortarboardFill fill={variable.color.turquoiseDark} height="50px" />
+              <SvgMortarboardFill fill={variable.color.turquoiseDark} height="45px" />
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -365,38 +366,46 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('contact', { ns: 'glossary' })}</Title2>
 
-              <SvgChatBar fill={variable.color.green} height="50px" />
+              <SvgChatBar fill={variable.color.green} height="40px" />
 
               <Spacer height={variable.space.spacingLG} />
 
               <HomeFlexStyled>
                 <HomeContactBoxStyled>
-                  <Box>
+                  <Box justifyContent="flex-end" width={{ d: '100%', sm: '250px' }}>
                     <ul>
                       <li>
-                        <SvgLinkedin fill={variable.color.blue} />
-                        <Span>Linkedin</Span>
+                        <LinkToExternal link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
+                          <SvgLinkedin fill={variable.color.blue} />
+                          <Span>Linkedin</Span>
+                        </LinkToExternal>
                       </li>
                       <li>
-                        <SvgWhatsappFill />
-                        <Span>+55 51 98135-7941</Span>
+                        <LinkToExternal link="https://wa.me/5551981357941">
+                          <SvgWhatsappFill />
+                          <Span>+55 51 98135-7941</Span>
+                        </LinkToExternal>
                       </li>
                       <li>
-                        <SvgGmail />
-                        <Span>kevin.veiga@gmail.com</Span>
+                        <LinkTo link="mailto:kevin.veiga@gmail.com">
+                          <SvgGmail />
+                          <Span>kevin.veiga@gmail.com</Span>
+                        </LinkTo>
                       </li>
                     </ul>
                   </Box>
 
-                  <Box>
-                    <Spacer width={variable.space.spacingXL} />
+                  <Box display={{ d: 'none', sm: 'flex' }}>
+                    <Spacer width={variable.space.spacingXXXL} />
 
                     <LineVertical backgroundColor={borderColor.secondary} height="80px" />
 
-                    <Spacer width={variable.space.spacingXL} />
+                    <Spacer width={variable.space.spacingXXXL} />
                   </Box>
 
-                  <Box></Box>
+                  <Box display={{ d: 'none', sm: 'flex' }} width="250px">
+                    <Image alt="fully responsive" height="180px" src="images/img-contact.png" />
+                  </Box>
                 </HomeContactBoxStyled>
               </HomeFlexStyled>
             </Flex>
