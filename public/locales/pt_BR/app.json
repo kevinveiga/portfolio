@@ -52,6 +52,9 @@
     "511": "Não autenticado na rede"
   },
   "menu": {
-    "professional trajectory": "trajetória profissional"
+    "contact": "contato",
+    "professional qualification": "qualificação profissional",
+    "professional trajectory": "trajetória profissional",
+    "skills": "habilidades"
   }
 }

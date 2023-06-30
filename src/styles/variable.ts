@@ -61,7 +61,7 @@ export const variable: IVariable = {
     tertiaryHover: 'rgba(0, 102, 147, 1)',
     textDarkPrimary: 'rgba(30, 30, 30, 1)',
     textDarkSecondary: 'rgba(128, 128, 128, 1)',
-    textDarkTertiary: 'rgba(118, 118, 118, 1)',
+    textDarkTertiary: 'rgba(161, 161, 161, 1)',
     textLightPrimary: 'rgba(255, 255, 255, 1)',
     textLightSecondary: 'rgba(190, 190, 190, 1)',
     textLightTertiary: 'rgba(118, 118, 118, 1)',

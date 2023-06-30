@@ -4,6 +4,11 @@ import { IInputStyled, IStyledSystem } from 'styled-components';
 
 import { TDisplay, TInputType, TLanguage } from '@/type';
 
+export interface IActive {
+  active: boolean;
+  setActive: (value: boolean) => void;
+}
+
 export interface IAccordion {
   id: string;
   obj: IAccordionItem[];

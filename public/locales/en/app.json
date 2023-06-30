@@ -52,6 +52,9 @@
     "511": "Network Authentication Required"
   },
   "menu": {
-    "professional trajectory": "professional trajectory"
+    "contact": "contact",
+    "professional qualification": "professional qualification",
+    "professional trajectory": "professional trajectory",
+    "skills": "skills"
   }
 }

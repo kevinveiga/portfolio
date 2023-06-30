@@ -88,9 +88,9 @@ function Home(): ReactElement {
         <meta name="description" content="Home" />
       </Head>
 
-      <Main>
-        <Header />
+      <Header />
 
+      <Main>
         <HomeTopStyled>
           <Box
             justifyContent="center"
@@ -174,7 +174,7 @@ function Home(): ReactElement {
 
         <Section>
           <Container>
-            <div id="anchor-trajectory" />
+            <div id="anchor-professional-trajectory" />
 
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('professional trajectory', { ns: 'glossary' })}</Title2>
@@ -248,7 +248,7 @@ function Home(): ReactElement {
 
         <Section>
           <Container>
-            <div id="anchor-formation" />
+            <div id="anchor-professional-qualification" />
 
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('professional qualification', { ns: 'glossary' })}</Title2>

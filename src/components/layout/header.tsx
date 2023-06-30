@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -8,11 +8,15 @@ import { useChangeHeaderScroll } from '@/stores/header/useHeader';
 import { usePage } from '@/stores/page/usePage';
 
 import { Button } from '@/components/button/button';
-import { HeaderStyled, HeaderItemsStyled, HeaderNavItemsStyled } from '@/components/layout/headerStyled';
+import { HeaderStyled, HeaderItemsStyled, HeaderItemsNavStyled } from '@/components/layout/headerStyled';
+import { LinkToExternal } from '@/components/link/linkToExternal';
+import { MenuMobile } from '@/components/layout/menuMobile';
 import { SvgDarkLightMode, SvgFlagBrazil, SvgFlagUsa, SvgMenu } from '@/components/svg/svgStore';
 
 import { Box } from '@/styles/flex';
 import { variable } from '@/styles/variable';
+
+import menuItens from '@/public/json/menu-itens.json';
 
 export function Header(): ReactElement {
   // CONTEXT
@@ -20,61 +24,50 @@ export function Header(): ReactElement {
   const { setStateLanguage } = usePage();
   const { t } = useTranslation();
 
+  // STATE
+  const [stateMenuMobileActive, setStateMenuMobileActive] = useState(false);
+
   // CUSTOM HOOK
   const stateChangeHeaderScroll = useChangeHeaderScroll('header');
 
   return (
     <HeaderStyled change={stateChangeHeaderScroll} id="header">
+      <MenuMobile active={stateMenuMobileActive} setActive={setStateMenuMobileActive} />
+
       <Box alignItems="flex-start" justifyContent="flex-start">
-        <HeaderItemsStyled display={{ d: 'block', md: 'none' }}>
-          <Button ariaLabel="menu close" height="100%" typeStyle="button-unset" width="100%">
-            <SvgMenu fill={variable.color.turquoiseLight} />
-          </Button>
-        </HeaderItemsStyled>
-
-        <HeaderNavItemsStyled display={{ d: 'none', md: 'block' }}>
+        <HeaderItemsNavStyled display={{ d: 'none', md: 'block' }}>
           <ul>
-            <li>
-              <Button onClick={(): void => scrollTo('#anchor-trajectory')} typeStyle="button-unset">
-                {t('professional trajectory', { ns: 'glossary' })}
-              </Button>
-            </li>
-
-            <li>
-              <Button onClick={(): void => scrollTo('#anchor-skills')} typeStyle="button-unset">
-                {t('skills', { ns: 'glossary' })}
-              </Button>
-            </li>
-
-            <li>
-              <Button onClick={(): void => scrollTo('#anchor-formation')} typeStyle="button-unset">
-                {t('professional qualification', { ns: 'glossary' })}
-              </Button>
-            </li>
-
-            <li>
-              <Button onClick={(): void => scrollTo('#anchor-contact')} typeStyle="button-unset">
-                {t('contact', { ns: 'glossary' })}
-              </Button>
-            </li>
-
-            <li>storybook</li>
+            {menuItens?.length > 0
+              ? menuItens?.map((item) => {
+                  return (
+                    <li key={item.title}>
+                      {item.anchor ? (
+                        <Button onClick={(): void => scrollTo(item.anchor)} typeStyle="button-unset">
+                          {t(`menu.${item.title}`, { ns: 'app' })}
+                        </Button>
+                      ) : (
+                        <LinkToExternal link={item.link} text={item.title} />
+                      )}
+                    </li>
+                  );
+                })
+              : null}
           </ul>
-        </HeaderNavItemsStyled>
+        </HeaderItemsNavStyled>
       </Box>
 
       <Box alignItems="flex-start" justifyContent="flex-end">
-        <HeaderItemsStyled>
+        <HeaderItemsStyled display={{ d: 'none', md: 'block' }}>
           <ul>
             <li>
-              <Button onClick={(): void => setStateLanguage('en')} typeStyle="button-unset">
-                <SvgFlagUsa />
+              <Button onClick={(): void => setStateLanguage('pt_BR')} typeStyle="button-unset">
+                <SvgFlagBrazil />
               </Button>
             </li>
 
             <li>
-              <Button onClick={(): void => setStateLanguage('pt_BR')} typeStyle="button-unset">
-                <SvgFlagBrazil />
+              <Button onClick={(): void => setStateLanguage('en')} typeStyle="button-unset">
+                <SvgFlagUsa />
               </Button>
             </li>
 
@@ -88,6 +81,19 @@ export function Header(): ReactElement {
               </Button>
             </li>
           </ul>
+        </HeaderItemsStyled>
+
+        <HeaderItemsStyled display={{ d: 'block', md: 'none' }}>
+          <Button
+            ariaLabel="menu close"
+            height="100%"
+            obj={{ hoverColor: variable.color.turquoiseLight }}
+            onClick={(): void => setStateMenuMobileActive(true)}
+            typeStyle="button-unset"
+            width="100%"
+          >
+            <SvgMenu fill={variable.color.blueDark} />
+          </Button>
         </HeaderItemsStyled>
       </Box>
     </HeaderStyled>

@@ -95,7 +95,7 @@ export const HomeProfessionalQualificationBoxStyled = styled.div`
         line-height: 1.2;
 
         &::first-letter {
-          text-transform: uppercase;
+          text-transform: capitalize;
         }
 
         a,
@@ -132,7 +132,7 @@ export const HomeProfessionalTrajectoryBoxStyled = styled.div`
     }
 
     &::first-letter {
-      text-transform: uppercase;
+      text-transform: capitalize;
     }
 
     span {
@@ -180,7 +180,7 @@ export const HomeSkillsBoxStyled = styled.div`
           margin: 0 ${variable.space.spacingXS};
 
           &::first-letter {
-            text-transform: uppercase;
+            text-transform: capitalize;
           }
 
           ${Span} {

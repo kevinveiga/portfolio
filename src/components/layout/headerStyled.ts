@@ -10,14 +10,16 @@ export const HeaderStyled = styled.header<IActiveStyled>`
   border-bottom: 1px solid ${({ change }): string | undefined => (change ? variable.color.grayLight4 : 'transparent')};
   color: ${({ change }): string | undefined => (change ? variable.color.textDarkPrimary : variable.color.white)};
   display: flex;
-  height: auto;
+  height: ${variable.layout.headerHeight};
   justify-content: space-between;
+  left: 50%;
   max-width: ${variable.breakpoint.lg};
   padding-bottom: ${variable.space.spacingXS};
   padding-left: ${variable.space.spacingSM};
   padding-right: ${variable.space.spacingSM};
   padding-top: ${variable.space.spacingXS};
   position: fixed;
+  transform: translateX(-50%);
   transition: background-color ${variable.animation.transition};
   width: 100%;
   z-index: 2;
@@ -61,7 +63,7 @@ export const HeaderItemsStyled = styled.div<IStyledSystem>`
   }
 `;
 
-export const HeaderNavItemsStyled = styled.nav<IStyledSystem>`
+export const HeaderItemsNavStyled = styled.nav<IStyledSystem>`
   ${display};
 
   > ul {
@@ -76,7 +78,7 @@ export const HeaderNavItemsStyled = styled.nav<IStyledSystem>`
       a,
       button {
         &::first-letter {
-          text-transform: uppercase;
+          text-transform: capitalize;
         }
       }
     }
