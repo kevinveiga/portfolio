@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState } from 'react';
 
+import { useTransition } from '@react-spring/web';
 import parse from 'html-react-parser';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
@@ -12,8 +13,7 @@ import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import {
-  HomeAnimationText1,
-  HomeAnimationText2,
+  HomeAnimationText,
   HomeBtnScrollStyled,
   HomeContactBoxStyled,
   HomeFlexStyled,
@@ -50,6 +50,33 @@ function Home(): ReactElement {
   // CONTEXT
   const { borderColor } = useTheme();
   const { t } = useTranslation();
+
+  // STATE
+  const [stateIndex, setStateIndex] = useState(0);
+  const [stateOnLoadAnimation, setStateOnLoadAnimation] = useState(true);
+
+  // ANIMATION
+  const animationTexts = ['Front-End', 'React', 'NodeJS'];
+
+  const transitions = useTransition(stateIndex, {
+    from: { opacity: stateOnLoadAnimation ? 1 : 0 },
+    enter: [{ opacity: 1 }],
+    leave: { opacity: 0 },
+    key: stateIndex,
+    delay: 1500,
+    config: {
+      duration: 1500
+    },
+    onRest: (_a, _b, item): void => {
+      if (stateOnLoadAnimation && item === 0) {
+        setStateOnLoadAnimation(false);
+      }
+
+      if (stateIndex === item) {
+        setStateIndex((prevState) => (prevState + 1) % animationTexts.length);
+      }
+    }
+  });
 
   return (
     <>
@@ -103,8 +130,9 @@ function Home(): ReactElement {
               <Flex alignItems={{ d: 'flex-start', md: 'center' }} flexDirection={{ d: 'column', md: 'row' }}>
                 <Box>
                   <Title1 lineHeight="1" mb={0}>
-                    <HomeAnimationText1>Front-End</HomeAnimationText1>
-                    <HomeAnimationText2>React</HomeAnimationText2>
+                    {transitions((style, index) => {
+                      return <HomeAnimationText style={style}>{animationTexts[index]}</HomeAnimationText>;
+                    })}
                     <br />
                     Developer
                   </Title1>

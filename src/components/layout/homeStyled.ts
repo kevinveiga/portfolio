@@ -1,31 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+
+import { animated } from '@react-spring/web';
 
 import { LinkToExternalStyled } from '@/components/link/linkToStyled';
 
-import { animation, animationFadeIn, animationFadeOut, animationMoveDown } from '@/styles/animation';
+import { animation, animationMoveDown } from '@/styles/animation';
 import { gradientDirection } from '@/styles/function';
 import { Span, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
-const animationText = css`
-  ${animation};
-
-  animation-delay: 2s;
-  animation-direction: alternate;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-`;
-
-export const HomeAnimationText1 = styled.span`
-  ${animationText};
-
-  animation-name: ${animationFadeOut()};
-  position: absolute;
-`;
-
-export const HomeAnimationText2 = styled.span`
-  ${animationText};
-  animation-name: ${animationFadeIn()};
+export const HomeAnimationText = styled(animated.span)`
   position: absolute;
 `;
 

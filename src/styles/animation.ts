@@ -12,35 +12,28 @@ export const animation = css<IAnimation>`
 
 export const animationFadeIn = (obj = { opacity: 1, visibility: 'visible' }): Keyframes => keyframes`
     0% {
-      opacity: 0;
-      visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
     }
-    49% {
-      visibility: hidden;
-    }
-    50% {
-      opacity: 0;
-      visibility: ${obj.visibility};
+    1% {
+        visibility: ${obj.visibility};
     }
     100% {
-      opacity: ${obj.opacity};
+        opacity: ${obj.opacity};
     }
 `;
 
 export const animationFadeOut = (obj = { opacity: 1, visibility: 'visible' }): Keyframes => keyframes`
     0% {
-      opacity: ${obj.opacity};
-      visibility: ${obj.visibility};
+        opacity: ${obj.opacity};
+        visibility: ${obj.visibility};
     }
-    50% {
-      opacity: 0;
-      visibility: ${obj.visibility};
+    99% {
+        visibility: ${obj.visibility};
     }
-    51% {
-      visibility: hidden;
-    }
-    100%{
-      opacity: 0;
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 `;
 

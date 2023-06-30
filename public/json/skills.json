@@ -5,6 +5,7 @@
       { "title": "Javascript", "years": "12" },
       { "title": "React", "years": "5" },
       { "title": "NextJS", "years": "4" },
+      { "title": "React-I18Next", "years": "1" },
       { "title": "Typescript", "years": "6" },
       { "title": "React Native", "years": "1" },
       { "title": "HTML", "years": "15" }
@@ -17,7 +18,8 @@
       { "title": "Styled System", "years": "5" },
       { "title": "CSS", "years": "15" },
       { "title": "SASS", "years": "6" },
-      { "title": "Fully Responsive", "years": "6" }
+      { "title": "Fully Responsive", "years": "6" },
+      { "title": "CSS Animation", "years": "6" }
     ]
   },
   {
