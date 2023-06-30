@@ -1,4 +1,5 @@
 import styled, { IActiveStyled, IStyledSystem } from 'styled-components';
+import { display } from 'styled-system';
 
 import { ButtonUnsetStyled } from '@/components/button/buttonStyled';
 
@@ -6,6 +7,8 @@ import { Subtitle1 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
 export const MenuMobileStyled = styled.div<IActiveStyled>`
+  ${display};
+
   background-color: ${({ theme }): string | undefined => theme.bgColor.primary};
   box-shadow: ${variable.layout.boxShadowPrimary};
   color: ${({ theme }): string | undefined => theme.textColor.primary};

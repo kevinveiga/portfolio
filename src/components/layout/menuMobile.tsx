@@ -25,7 +25,7 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
   const { t } = useTranslation();
 
   return (
-    <MenuMobileStyled active={active}>
+    <MenuMobileStyled active={active} display={{ d: 'block', md: 'none' }}>
       <Box>
         <Button onClick={(): void => setActive(false)} typeStyle="button-unset">
           <SvgClose />
