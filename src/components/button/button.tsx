@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { ReactElement } from 'react';
 
 import parse from 'html-react-parser';
 
@@ -13,7 +13,7 @@ export function Button({
   typeButton = 'button',
   typeStyle = 'button',
   ...props
-}: IButton): PropsWithChildren<any> {
+}: IButton): ReactElement {
   const acessibility = ariaLabel || text;
   const buttonContent = children || parse(`<span>${text}</span>` || '');
   let StyledComponent = ButtonStyled;

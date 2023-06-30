@@ -1,7 +1,7 @@
 import React, {
   createContext,
   Dispatch,
-  PropsWithChildren,
+  ReactElement,
   SetStateAction,
   useContext,
   useEffect,
@@ -43,7 +43,7 @@ export function usePage(): IPageContext {
   return context;
 }
 
-export function PageProvider({ children }: any): PropsWithChildren<any> {
+export function PageProvider({ children }: any): ReactElement {
   // CONTEXT
   useAxiosInterceptor();
   const { setStateIsLoading, setStateModalMessage } = useApp();

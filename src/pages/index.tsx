@@ -10,6 +10,8 @@ import { title } from '@/configApp';
 import { scrollTo } from '@/helpers/scrollTo';
 import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
 
+import { FadeInDevice } from '@/components/animation/fadeInDevice';
+import { FadeInIcon } from '@/components/animation/fadeInIcon';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import {
@@ -177,7 +179,9 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('professional trajectory', { ns: 'glossary' })}</Title2>
 
-              <SvgAwardFill fill={variable.color.grayLight} height="45px" />
+              <FadeInIcon>
+                <SvgAwardFill fill={variable.color.grayLight} height="45px" />
+              </FadeInIcon>
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -195,7 +199,9 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('skills', { ns: 'glossary' })}</Title2>
 
-              <SvgLaptopCodeFill fill={variable.color.pink} height="40px" />
+              <FadeInIcon>
+                <SvgLaptopCodeFill fill={variable.color.pink} height="40px" />
+              </FadeInIcon>
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -247,7 +253,9 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('professional qualification', { ns: 'glossary' })}</Title2>
 
-              <SvgMortarboardFill fill={variable.color.turquoiseDark} height="45px" />
+              <FadeInIcon>
+                <SvgMortarboardFill fill={variable.color.turquoiseDark} height="45px" />
+              </FadeInIcon>
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -394,7 +402,9 @@ function Home(): ReactElement {
             <Flex alignItems="center" flexDirection="column">
               <Title2>{t('contact', { ns: 'glossary' })}</Title2>
 
-              <SvgChatBar fill={variable.color.green} height="40px" />
+              <FadeInIcon>
+                <SvgChatBar fill={variable.color.green} height="40px" />
+              </FadeInIcon>
 
               <Spacer height={variable.space.spacingLG} />
 
@@ -432,7 +442,9 @@ function Home(): ReactElement {
                   </Box>
 
                   <Box display={{ d: 'none', sm: 'flex' }} width="250px">
-                    <Image alt="fully responsive" height="180px" src="images/img-contact.png" />
+                    <FadeInDevice>
+                      <Image alt="fully responsive" height="180px" src="images/img-contact.png" />
+                    </FadeInDevice>
                   </Box>
                 </HomeContactBoxStyled>
               </HomeFlexStyled>
