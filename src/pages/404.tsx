@@ -26,7 +26,7 @@ function Page404(): ReactElement {
       <BgImageOverlayTopBottom
         overlayColorBottom={variable.color.grayDark}
         overlayColorTop={variable.color.blackTransparent3}
-        src="./images/238.webp"
+        src="/images/238.webp"
       />
 
       <Main backgroundColor="transparent">

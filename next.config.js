@@ -11,6 +11,7 @@ module.exports = withBundleAnalyzer({
     ignoreDuringBuilds: true
   },
   images: {
-    formats: ['image/avif', 'image/webp']
+    formats: ['image/avif', 'image/webp'],
+    path: '/'
   }
 });
