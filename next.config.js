@@ -10,7 +10,5 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     formats: ['image/avif', 'image/webp']
-  },
-  output: 'export',
-  reactStrictMode: true
+  }
 });

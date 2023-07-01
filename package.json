@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kevinveiga.github.io/portfolio",
   "scripts": {
     "analyze": "ANALYZE=true next build",
     "build": "next build",
@@ -13,7 +14,9 @@
     "start": "next start",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "yarn export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.3",

@@ -282,7 +282,7 @@ function GettingStartedWithHooks(): ReactElement {
           <Subtitle2Docs>Primeiro esteja na branch que vai receber o merge:</Subtitle2Docs>
           <i>$ git checkout {`<nome_branch>`}</i>
           <Subtitle2Docs>Depois faça o merge usando origin:</Subtitle2Docs>
-          <i>$ git merge origin/development</i>
+          <i>$ git merge origin dev</i>
         </li>
       </ListDocs>
 
