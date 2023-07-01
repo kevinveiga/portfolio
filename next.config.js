@@ -5,13 +5,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 module.exports = withBundleAnalyzer({
+  assetPrefix: './',
   basePath: '/portfolio',
   eslint: {
     ignoreDuringBuilds: true
   },
   images: {
-    loader: 'akamai',
-    path: ''
+    formats: ['image/avif', 'image/webp'],
+    loader: 'akamai'
   },
   reactStrictMode: true
 });
