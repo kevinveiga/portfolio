@@ -4,7 +4,7 @@ export const variable: IVariable = {
   animation: {
     duration: '250ms',
     durationFast: '150ms',
-    durationSlow: '650ms',
+    durationSlow: '750ms',
     timing: 'ease-in-out',
     timeout1s: '1000',
     timeout3s: '3000',

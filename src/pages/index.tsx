@@ -1,6 +1,5 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 
-import { useTransition } from '@react-spring/web';
 import parse from 'html-react-parser';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
@@ -10,12 +9,13 @@ import { title } from '@/configApp';
 import { scrollTo } from '@/helpers/scrollTo';
 import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
 
-import { FadeInDevice } from '@/components/animation/fadeInDevice';
+import { FadeInBottomToTop } from '@/components/animation/fadeInBottomToTop';
 import { FadeInIcon } from '@/components/animation/fadeInIcon';
+import { FadeInRightToLeft } from '@/components/animation/fadeInRightToLeft';
+import { TransitionText } from '@/components/animation/transitionText';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import {
-  HomeAnimationText,
   HomeBtnScrollStyled,
   HomeContactBoxStyled,
   HomeFlexStyled,
@@ -41,7 +41,7 @@ import {
 } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
-import { BgImage, Image } from '@/styles/image';
+import { Image } from '@/styles/image';
 import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout';
 import { Span, Title1, Title2, Title3, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
@@ -52,33 +52,6 @@ function Home(): ReactElement {
   // CONTEXT
   const { borderColor } = useTheme();
   const { t } = useTranslation();
-
-  // STATE
-  const [stateIndex, setStateIndex] = useState(0);
-  const [stateOnLoadAnimation, setStateOnLoadAnimation] = useState(true);
-
-  // ANIMATION
-  const animationTexts = ['Front-End', 'React', 'NodeJS'];
-
-  const transitions = useTransition(stateIndex, {
-    from: { opacity: stateOnLoadAnimation ? 1 : 0 },
-    enter: [{ opacity: 1 }],
-    leave: { opacity: 0 },
-    key: stateIndex,
-    delay: 1500,
-    config: {
-      duration: 1500
-    },
-    onRest: (_a, _b, item): void => {
-      if (stateOnLoadAnimation && item === 0) {
-        setStateOnLoadAnimation(false);
-      }
-
-      if (stateIndex === item) {
-        setStateIndex((prevState) => (prevState + 1) % animationTexts.length);
-      }
-    }
-  });
 
   return (
     <>
@@ -97,15 +70,6 @@ function Home(): ReactElement {
             px={{ d: variable.space.spacingSM, md: variable.space.spacingLG }}
             py={{ d: variable.space.spacingLG, md: variable.space.spacingXXXL }}
           >
-            <BgImage
-              backgroundPosition="100% 100%"
-              backgroundSize="contain"
-              bottom={0}
-              height="85%"
-              right={{ d: variable.space.spacingSM, md: variable.space.spacingLG }}
-              src="images/portfolio-foto.png"
-            />
-
             <Flex flex="1 1 auto" flexDirection="column">
               <Spacer height={variable.space.spacingMD} />
 
@@ -132,9 +96,7 @@ function Home(): ReactElement {
               <Flex alignItems={{ d: 'flex-start', md: 'center' }} flexDirection={{ d: 'column', md: 'row' }}>
                 <Box>
                   <Title1 lineHeight="1" mb={0}>
-                    {transitions((style, index) => {
-                      return <HomeAnimationText style={style}>{animationTexts[index]}</HomeAnimationText>;
-                    })}
+                    <TransitionText />
                     <br />
                     Developer
                   </Title1>
@@ -160,6 +122,16 @@ function Home(): ReactElement {
                     <br />
                     {t('in Front-End development', { ns: 'glossary' })}
                   </Title4>
+                </Box>
+
+                <Box bottom={{ d: '-50px', md: '-90px' }} position="absolute" right={0}>
+                  <FadeInBottomToTop>
+                    <Image
+                      alt="Kevin Madalosso Veiga"
+                      height={{ d: '280px', md: '300px' }}
+                      src="images/portfolio-foto.png"
+                    />
+                  </FadeInBottomToTop>
                 </Box>
               </Flex>
 
@@ -442,9 +414,9 @@ function Home(): ReactElement {
                   </Box>
 
                   <Box display={{ d: 'none', sm: 'flex' }} width="250px">
-                    <FadeInDevice>
+                    <FadeInRightToLeft>
                       <Image alt="fully responsive" height="180px" src="images/img-contact.png" />
-                    </FadeInDevice>
+                    </FadeInRightToLeft>
                   </Box>
                 </HomeContactBoxStyled>
               </HomeFlexStyled>

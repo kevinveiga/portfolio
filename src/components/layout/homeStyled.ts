@@ -1,17 +1,11 @@
 import styled from 'styled-components';
 
-import { animated } from '@react-spring/web';
-
 import { LinkToExternalStyled } from '@/components/link/linkToStyled';
 
 import { animation, animationMoveDown } from '@/styles/animation';
 import { gradientDirection } from '@/styles/function';
 import { Span, Title4 } from '@/styles/text';
 import { variable } from '@/styles/variable';
-
-export const HomeAnimationText = styled(animated.span)`
-  position: absolute;
-`;
 
 export const HomeBtnScrollStyled = styled.button`
   ${animation};

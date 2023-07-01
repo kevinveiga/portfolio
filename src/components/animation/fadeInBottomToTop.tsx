@@ -4,19 +4,19 @@ import { animated, easings, useInView } from '@react-spring/web';
 
 import { variable } from '@/styles/variable';
 
-export function FadeInIcon({ children }: any): ReactElement {
+export function FadeInBottomToTop({ children }: any): ReactElement {
   // ANIMATION
   const [inViewRef, inView] = useInView(
     () => ({
-      from: { opacity: 0, transform: 'scale(1.2)' },
-      to: { opacity: 1, transform: 'scale(1)' },
+      from: { opacity: 0, transform: 'translateY(5%)' },
+      to: { opacity: 1, transform: 'translateY(0%)' },
       config: {
         duration: parseInt(variable.animation.durationSlow, 10),
-        easing: easings.easeInOutBack
+        easing: easings.easeInOutCubic
       }
     }),
     {
-      rootMargin: '-5% 0%'
+      rootMargin: '-35% 0%'
     }
   );
 
