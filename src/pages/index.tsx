@@ -149,7 +149,7 @@ function Home(): ReactElement {
             <div id="anchor-professional-trajectory" />
 
             <Flex alignItems="center" flexDirection="column">
-              <Title2>{t('professional trajectory', { ns: 'glossary' })}</Title2>
+              <Title2>{t('menu.professional trajectory', { ns: 'app' })}</Title2>
 
               <FadeInIcon>
                 <SvgAwardFill fill={variable.color.grayLight} height="45px" />
@@ -169,7 +169,7 @@ function Home(): ReactElement {
             <div id="anchor-skills" />
 
             <Flex alignItems="center" flexDirection="column">
-              <Title2>{t('skills', { ns: 'glossary' })}</Title2>
+              <Title2>{t('menu.skills', { ns: 'app' })}</Title2>
 
               <FadeInIcon>
                 <SvgLaptopCodeFill fill={variable.color.pink} height="40px" />
@@ -223,7 +223,7 @@ function Home(): ReactElement {
             <div id="anchor-professional-qualification" />
 
             <Flex alignItems="center" flexDirection="column">
-              <Title2>{t('professional qualification', { ns: 'glossary' })}</Title2>
+              <Title2>{t('menu.professional qualification', { ns: 'app' })}</Title2>
 
               <FadeInIcon>
                 <SvgMortarboardFill fill={variable.color.turquoiseDark} height="45px" />
@@ -372,7 +372,7 @@ function Home(): ReactElement {
             <div id="anchor-contact" />
 
             <Flex alignItems="center" flexDirection="column">
-              <Title2>{t('contact', { ns: 'glossary' })}</Title2>
+              <Title2>{t('menu.contact', { ns: 'app' })}</Title2>
 
               <FadeInIcon>
                 <SvgChatBar fill={variable.color.green} height="40px" />
