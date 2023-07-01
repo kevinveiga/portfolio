@@ -44,7 +44,7 @@ import image1 from '@/public/images/image-1.png';
 
 <Image alt={data.alt} src={data.foto} />
 
-<BgImageOverlay src="./images/banner-principal.jpg" />`}
+<BgImageOverlay src="/images/banner-principal.jpg" />`}
         </SyntaxHighlighter>
       </BoxDocs>
 
