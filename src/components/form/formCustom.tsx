@@ -20,7 +20,7 @@ import {
 import { Button } from '@/components/button/button';
 import {
   SvgArrowDown,
-  SvgEmail,
+  SvgEnvelope,
   SvgIdentification,
   SvgLock,
   SvgMoney,
@@ -489,7 +489,7 @@ export function InputEmail({
   return (
     <InputContainerStyled>
       {showSvg ? (
-        <SvgEmail height="16px" left={variable.layout.inputPaddingX} fill={bgColor.quaternary} maxWidth="16px" />
+        <SvgEnvelope height="16px" left={variable.layout.inputPaddingX} fill={bgColor.quaternary} maxWidth="16px" />
       ) : null}
 
       <InputStyled
