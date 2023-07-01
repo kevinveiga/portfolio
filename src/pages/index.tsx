@@ -129,7 +129,7 @@ function Home(): ReactElement {
                     <Image
                       alt="Kevin Madalosso Veiga"
                       height={{ d: '280px', md: '300px' }}
-                      src="images/portfolio-foto.png"
+                      src="./images/portfolio-foto.png"
                     />
                   </FadeInBottomToTop>
                 </Box>
@@ -415,7 +415,7 @@ function Home(): ReactElement {
 
                   <Box display={{ d: 'none', sm: 'flex' }} width="250px">
                     <FadeInRightToLeft>
-                      <Image alt="fully responsive" height="180px" src="images/img-contact.png" />
+                      <Image alt="fully responsive" height="180px" src="./images/img-contact.png" />
                     </FadeInRightToLeft>
                   </Box>
                 </HomeContactBoxStyled>
