@@ -23,12 +23,6 @@ function Page404(): ReactElement {
         <meta name="description" content="Sign In" />
       </Head>
 
-      <BgImageOverlayTopBottom
-        overlayColorBottom={variable.color.grayDark}
-        overlayColorTop={variable.color.blackTransparent3}
-        src="./images/238.webp"
-      />
-
       <Main backgroundColor="transparent">
         <Flex alignContent="center" height="100vh" justifyContent="center">
           <Box backgroundColor={variable.color.whiteTransparent5} justifyContent="center" p={3} width="100%">

@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components';
 
-import { title } from '@/configApp';
+import { title, urlImages } from '@/configApp';
 import { scrollTo } from '@/helpers/scrollTo';
 import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
 
@@ -129,7 +129,7 @@ function Home(): ReactElement {
                     <Image
                       alt="Kevin Madalosso Veiga"
                       height={{ d: '280px', md: '300px' }}
-                      src="/images/portfolio-foto.png"
+                      src={`${urlImages}/images/portfolio-foto.png`}
                     />
                   </FadeInBottomToTop>
                 </Box>
@@ -415,7 +415,7 @@ function Home(): ReactElement {
 
                   <Box display={{ d: 'none', sm: 'flex' }} width="250px">
                     <FadeInRightToLeft>
-                      <Image alt="fully responsive" height="180px" src="./images/img-contact.png" />
+                      <Image alt="fully responsive" height="180px" src={`${urlImages}/images/img-contact.png`} />
                     </FadeInRightToLeft>
                   </Box>
                 </HomeContactBoxStyled>

@@ -3,6 +3,8 @@ import React, { ReactElement } from 'react';
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
+import { title, urlImages } from '@/configApp';
+
 import { variable } from '@/styles/variable';
 
 class MyDocument extends Document {
@@ -48,33 +50,33 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="cache-control" content="public" />
           <meta httpEquiv="content-language" content="pt-BR" />
-          <meta name="author" content="Site" />
-          <meta name="copyright" content="© Site" />
+          <meta name="author" content="Kevin Madalosso Veiga" />
+          <meta name="copyright" content="© Kevin Madalosso Veiga" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="msapplication-TileColor" content={variable.color.primary} />
           <meta name="theme-color" content={variable.color.white} />
 
           {/* SEO */}
-          <meta name="description" content="Descrição." />
+          <meta name="description" content="Kevin Madalosso Veiga - Desenvolvedor Front-End." />
           <meta name="robots" content="all" />
           <meta name="google" content="notranslate" />
 
-          <meta property="og:description" content="Site" />
-          <meta property="og:image" content="favicon-512x512.png" />
-          <meta property="og:image:alt" content="Site" />
-          <meta property="og:image:secure_url" content="favicon-512x512.png" />
-          <meta property="og:title" content="Site" />
-          <meta property="og:type" content="website" />
+          <meta property="og:description" content={title} />
+          <meta property="og:image" content={`${urlImages}/favicon-512x512.png`} />
+          <meta property="og:image:alt" content={title} />
+          <meta property="og:image:secure_url" content={`${urlImages}/favicon-512x512.png`} />
+          <meta property="og:title" content={title} />
+          <meta property="og:type" content={title} />
           {/* END SEO */}
 
           {/* FAVICON */}
-          <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png" />
-          <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-          <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+          <link href={`${urlImages}/apple-touch-icon.png`} rel="apple-touch-icon" sizes="180x180" type="image/png" />
+          <link href={`${urlImages}/favicon-16x16.png`} rel="icon" sizes="16x16" type="image/png" />
+          <link href={`${urlImages}/favicon-32x32.png`} rel="icon" sizes="32x32" type="image/png" />
           {/* END FAVICON */}
 
           {/* MANIFEST */}
-          <link href="/manifest.webmanifest" rel="manifest" />
+          <link href={`${urlImages}/manifest.webmanifest`} rel="manifest" />
           {/* END MANIFEST */}
 
           {/* PRECONNECT */}
