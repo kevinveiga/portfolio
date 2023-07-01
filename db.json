@@ -1,80 +1,80 @@
 {
-    "informeRendimentos": {
-        "data": {
-            "current_page": 1,
-            "data": [
-                {
-                    "ano": "2021",
-                    "file_url": "Download",
-                    "id": "1",
-                    "usuario": "{ name: 'Teste 1' }"
-                },
-                {
-                    "ano": "2021",
-                    "file_url": "Download",
-                    "id": "2",
-                    "usuario": "{ name: 'Teste 2' }"
-                },
-                {
-                    "ano": "2021",
-                    "file_url": "Download",
-                    "id": "3",
-                    "usuario": "{ name: 'Teste 3' }"
-                }
-            ],
-            "per_page": 15,
-            "total": 3
+  "informeRendimentos": {
+    "data": {
+      "current_page": 1,
+      "data": [
+        {
+          "ano": "2021",
+          "file_url": "Download",
+          "id": "1",
+          "usuario": "{ name: 'Teste 1' }"
+        },
+        {
+          "ano": "2021",
+          "file_url": "Download",
+          "id": "2",
+          "usuario": "{ name: 'Teste 2' }"
+        },
+        {
+          "ano": "2021",
+          "file_url": "Download",
+          "id": "3",
+          "usuario": "{ name: 'Teste 3' }"
         }
-    },
-    "usuario": {
-        "admin": true,
-        "cpf": "300.000.111-55",
-        "email": "teste1@teste.com",
-        "id": "1",
-        "name": "Teste 1"
-    },
-    "usuarios": {
-        "data": {
-            "current_page": 1,
-            "data": [
-                {
-                    "admin": true,
-                    "cpf": "300.000.111-55",
-                    "email": "teste1@teste.com",
-                    "id": "1",
-                    "name": "Teste 1"
-                },
-                {
-                    "admin": false,
-                    "cpf": "200.222.222-22",
-                    "email": "teste2@teste.com",
-                    "id": "2",
-                    "name": "Teste 2"
-                },
-                {
-                    "admin": true,
-                    "cpf": "300.200.100-00",
-                    "email": "teste3@teste.com",
-                    "id": "3",
-                    "name": "teste 3"
-                }
-            ],
-            "per_page": 15,
-            "total": 3
-        }
-    },
-    "variaveisMensais": {
-        "data": {
-            "current_page": 1,
-            "data": [
-                {
-                    "id": "1",
-                    "data": "2022-01-01",
-                    "fator_cdi": 1.00349931
-                }
-            ],
-            "per_page": 15,
-            "total": 3
-        }
+      ],
+      "per_page": 15,
+      "total": 3
     }
+  },
+  "usuario": {
+    "admin": true,
+    "cpf": "300.000.111-55",
+    "email": "teste1@teste.com",
+    "id": "1",
+    "name": "Teste 1"
+  },
+  "usuarios": {
+    "data": {
+      "current_page": 1,
+      "data": [
+        {
+          "admin": true,
+          "cpf": "300.000.111-55",
+          "email": "teste1@teste.com",
+          "id": "1",
+          "name": "Teste 1"
+        },
+        {
+          "admin": false,
+          "cpf": "200.222.222-22",
+          "email": "teste2@teste.com",
+          "id": "2",
+          "name": "Teste 2"
+        },
+        {
+          "admin": true,
+          "cpf": "300.200.100-00",
+          "email": "teste3@teste.com",
+          "id": "3",
+          "name": "teste 3"
+        }
+      ],
+      "per_page": 15,
+      "total": 3
+    }
+  },
+  "variaveisMensais": {
+    "data": {
+      "current_page": 1,
+      "data": [
+        {
+          "id": "1",
+          "data": "2022-01-01",
+          "fator_cdi": 1.00349931
+        }
+      ],
+      "per_page": 15,
+      "total": 3
+    }
+  }
 }
