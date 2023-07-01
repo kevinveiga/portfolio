@@ -1,8 +1,6 @@
 import styled, { IActiveStyled, IStyledSystem } from 'styled-components';
 import { display } from 'styled-system';
 
-import { ButtonUnsetStyled } from '@/components/button/buttonStyled';
-
 import { Subtitle1 } from '@/styles/text';
 import { variable } from '@/styles/variable';
 
@@ -11,7 +9,8 @@ export const MenuMobileStyled = styled.div<IActiveStyled>`
 
   background-color: ${({ theme }): string | undefined => theme.bgColor.primary};
   box-shadow: ${variable.layout.boxShadowPrimary};
-  color: ${({ theme }): string | undefined => theme.textColor.primary};
+  color: ${({ theme }): string | undefined =>
+    theme.titleTheme === 'light' ? variable.color.blueDark : variable.color.white};
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -25,7 +24,8 @@ export const MenuMobileStyled = styled.div<IActiveStyled>`
   width: auto;
   z-index: 3;
 
-  ${ButtonUnsetStyled} {
+  a,
+  button {
     &:hover {
       color: ${({ change }): string | undefined => (change ? variable.color.turquoise : variable.color.turquoiseLight)};
     }

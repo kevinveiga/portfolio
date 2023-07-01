@@ -1,14 +1,12 @@
 import styled, { IActiveStyled, IStyledSystem } from 'styled-components';
 import { display } from 'styled-system';
 
-import { ButtonUnsetStyled } from '@/components/button/buttonStyled';
-
 import { variable } from '@/styles/variable';
 
 export const HeaderStyled = styled.header<IActiveStyled>`
   background-color: ${({ change }): string | undefined => (change ? variable.color.whiteTransparent9 : 'transparent')};
   border-bottom: 1px solid ${({ change }): string | undefined => (change ? variable.color.grayLight4 : 'transparent')};
-  color: ${({ change }): string | undefined => (change ? variable.color.textDarkPrimary : variable.color.white)};
+  color: ${({ change }): string | undefined => (change ? variable.color.blueDark : variable.color.white)};
   display: flex;
   height: ${variable.layout.headerHeight};
   justify-content: space-between;
@@ -29,7 +27,8 @@ export const HeaderStyled = styled.header<IActiveStyled>`
     padding-right: ${variable.space.spacingLG};
   }
 
-  ${ButtonUnsetStyled} {
+  a,
+  button {
     &:hover {
       color: ${({ change }): string | undefined => (change ? variable.color.turquoise : variable.color.turquoiseLight)};
     }
@@ -49,7 +48,8 @@ export const HeaderItemsStyled = styled.div<IStyledSystem>`
     }
   }
 
-  ${ButtonUnsetStyled} {
+  a,
+  button {
     &:hover {
       svg {
         opacity: 0.5;
