@@ -42,10 +42,8 @@ _notes
 .yarn-integrity
 last-package.json
 npm-debug.log*
-package-lock.json
 yarn-debug.log*
 yarn-error.log*
-yarn.lock*
 
 # NextJS
 /.next
