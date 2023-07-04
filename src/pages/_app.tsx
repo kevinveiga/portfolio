@@ -25,6 +25,7 @@ import { ModalMessage } from '@/components/modal/modalMessage';
 
 import { Normalize } from '@/styles/normalize';
 import { defaultTheme, lightTheme } from '@/styles/theme';
+import { variable } from '@/styles/variable';
 
 // DYNAMIC
 const LoaderDynamic = dynamic<any>(() => import('@/components/loader/loader').then((module) => module.Loader), {
@@ -99,8 +100,17 @@ function App({ Component, pageProps }: AppProps): ReactElement {
 
   // USEEFFECT
   useEffect(() => {
+    if (!stateIsServer) {
+      console.log('%c© Portfolio - Kevin M. Veiga', `color: ${variable.color.turquoise}`);
+      console.log(
+        '%cTecnologias utilizadas: React, NextJS, Typescript, Styled Components',
+        `color: ${variable.color.turquoise}`
+      );
+      console.log('%cFerramentas utilizadas: Babel, ESLint, Prettier, Husky', `color: ${variable.color.turquoise}`);
+    }
+
     return setStateIsServer(false);
-  }, []);
+  }, [stateIsServer]);
 
   return (
     <>
