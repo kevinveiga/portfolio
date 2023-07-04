@@ -9,7 +9,6 @@ import { LinkTo } from '@/components/link/linkTo';
 import { SvgArrowLeft } from '@/components/svg/svgStore';
 
 import { Box, Flex } from '@/styles/flex';
-import { BgImageOverlayTopBottom } from '@/styles/image';
 import { Main, Spacer } from '@/styles/layout';
 import { P, Title3 } from '@/styles/text';
 import { variable } from '@/styles/variable';
@@ -25,10 +24,6 @@ function Page404(): ReactElement {
 
       <Main backgroundColor="transparent">
         <Flex alignContent="center" height="100vh" justifyContent="center">
-          <Box backgroundColor={variable.color.whiteTransparent5} justifyContent="center" p={3} width="100%">
-            aqui vai o logo
-          </Box>
-
           <Spacer height={variable.space.spacingMD} width="100%" />
 
           <Box justifyContent="center">

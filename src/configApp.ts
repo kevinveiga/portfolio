@@ -11,6 +11,6 @@ export const title = 'Portfolio - Kevin M. Veiga';
 
 export const url = process.env.NEXT_PUBLIC_APP_URL || '';
 
-export const urlImages = 'portfolio';
+export const urlImages = dev ? '' : 'portfolio';
 
 export const urlInitial = '/';

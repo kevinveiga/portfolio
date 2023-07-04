@@ -4,9 +4,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 /* eslint-enable @typescript-eslint/no-var-requires */
 
+const dev = process.env.NODE_ENV === 'development';
+
 module.exports = withBundleAnalyzer({
-  assetPrefix: '/portfolio',
-  basePath: '/portfolio',
+  assetPrefix: dev ? '' : '/portfolio',
+  basePath: dev ? '' : '/portfolio',
   eslint: {
     ignoreDuringBuilds: true
   },
