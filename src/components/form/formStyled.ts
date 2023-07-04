@@ -10,7 +10,7 @@ const input = css<IInputStyled>`
   ${typography};
 
   background-clip: content-box;
-  border: 1px solid ${({ borderColor }): string => borderColor || 'transparent'};
+  border: 1px solid ${({ borderColor, theme }): string => borderColor || theme.borderColor.primary};
   ${({ borderRadius }): string | undefined =>
     borderRadius === undefined ? `border-radius: ${variable.layout.borderRadiusPrimary}` : undefined};
   box-shadow: inset 0 0 0 100px ${({ backgroundColor, theme }): string => backgroundColor || theme.inputBgColor.primary};
@@ -198,6 +198,7 @@ export const InputContainerStyled = styled.div`
 
   > button,
   > svg {
+    line-height: 0;
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
