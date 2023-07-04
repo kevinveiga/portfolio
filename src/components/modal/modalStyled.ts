@@ -46,7 +46,7 @@ export const ModalBackgroundStyled = styled.div<IStyledSystem>`
 `;
 
 export const ModalConfirmStyled = styled.div<IStyledSystem>`
-  background-color: ${({ backgroundColor, theme }): string => backgroundColor || theme.bgColor.tertiary};
+  background-color: ${({ backgroundColor, theme }): string => backgroundColor || theme.bgColor.primary};
   border-radius: ${variable.layout.borderRadiusPrimary};
   box-shadow: ${variable.layout.boxShadowPrimary};
   color: ${({ color }): string => color || 'unset'};
@@ -85,7 +85,7 @@ export const ModalContentStyled = styled.div<IStyledSystem>`
 `;
 
 export const ModalCookieStyled = styled.div`
-  background-color: ${({ theme }): string => theme.bgColor.tertiary};
+  background-color: ${({ theme }): string => theme.bgColor.primary};
   border-radius: ${variable.layout.borderRadiusPrimary};
   bottom: 25px;
   box-shadow: ${variable.layout.boxShadowPrimary};
