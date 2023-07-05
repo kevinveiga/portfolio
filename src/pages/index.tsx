@@ -139,7 +139,7 @@ function Home(): ReactElement {
             </Flex>
           </Box>
 
-          <HomeBtnScrollStyled onClick={(): void => scrollTo('#anchor-trajectory')}>
+          <HomeBtnScrollStyled onClick={(): void => scrollTo('#anchor-professional-trajectory')}>
             <SvgArrowDown />
           </HomeBtnScrollStyled>
         </HomeTopStyled>
