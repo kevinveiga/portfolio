@@ -5,9 +5,9 @@
       { "title": "Javascript", "years": "12" },
       { "title": "React", "years": "5" },
       { "title": "NextJS", "years": "4" },
-      { "title": "React-I18Next", "years": "1" },
+      { "title": "React-I18Next", "years": "2" },
       { "title": "Typescript", "years": "6" },
-      { "title": "React Native", "years": "1" },
+      { "title": "React Native", "years": "3" },
       { "title": "HTML", "years": "15" }
     ]
   },
@@ -27,7 +27,7 @@
       { "title": "NodeJS", "years": "2" },
       { "title": "NestJS", "years": "1" },
       { "title": "Axios", "years": "6" },
-      { "title": "GraphQL", "years": "1" }
+      { "title": "GraphQL", "years": "2" }
     ]
   },
   {
@@ -38,7 +38,7 @@
       { "title": "ESLint", "years": "5" },
       { "title": "Prettier", "years": "5" },
       { "title": "Animation", "years": "8" },
-      { "title": "Webpack", "years": "2" },
+      { "title": "Webpack", "years": "3" },
       { "title": "Gulp", "years": "3" }
     ]
   }
