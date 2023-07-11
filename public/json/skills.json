@@ -26,7 +26,7 @@
     "itens": [
       { "title": "NodeJS", "years": "2" },
       { "title": "NestJS", "years": "1" },
-      { "title": "API Restfull", "years": "6" },
+      { "title": "API Restful", "years": "8" },
       { "title": "Axios", "years": "6" },
       { "title": "GraphQL", "years": "2" }
     ]
