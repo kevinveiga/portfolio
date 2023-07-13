@@ -74,19 +74,19 @@ function Home(): ReactElement {
               <Spacer height={variable.space.spacingMD} />
 
               <Box zIndex={2}>
-                <LinkToExternal link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
+                <LinkToExternal ariaLabel="linkedin" link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
                   <SvgLinkedin />
                 </LinkToExternal>
 
                 <Spacer />
 
-                <LinkToExternal link="https://github.com/kevinveiga">
+                <LinkToExternal ariaLabel="github" link="https://github.com/kevinveiga">
                   <SvgGithub />
                 </LinkToExternal>
 
                 <Spacer />
 
-                <LinkToExternal link="/files/cv-kevin-m-veiga-2023.pdf">
+                <LinkToExternal ariaLabel="resume" link="/files/cv-kevin-m-veiga-2023.pdf">
                   <SvgDocument />
                 </LinkToExternal>
               </Box>
@@ -140,7 +140,10 @@ function Home(): ReactElement {
             </Flex>
           </Box>
 
-          <HomeBtnScrollStyled onClick={(): void => scrollTo('#anchor-professional-trajectory')}>
+          <HomeBtnScrollStyled
+            aria-label="scrolldown"
+            onClick={(): void => scrollTo('#anchor-professional-trajectory')}
+          >
             <SvgArrowDown />
           </HomeBtnScrollStyled>
         </HomeTopStyled>
@@ -275,7 +278,10 @@ function Home(): ReactElement {
                         <br />
                         <Span>{`2020 - 54.5 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
-                        <LinkToExternal link="/files/certificado-udemy-react-redux-fundamentos.pdf">
+                        <LinkToExternal
+                          ariaLabel="certificate"
+                          link="/files/certificado-udemy-react-redux-fundamentos.pdf"
+                        >
                           {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
@@ -285,7 +291,7 @@ function Home(): ReactElement {
                         <br />
                         <Span>{`2022 - 15.5 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
-                        <LinkToExternal link="/files/certificado-udemy-nodejs-e-mongodb.pdf">
+                        <LinkToExternal ariaLabel="certificate" link="/files/certificado-udemy-nodejs-e-mongodb.pdf">
                           {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
@@ -295,7 +301,10 @@ function Home(): ReactElement {
                         <br />
                         <Span>{`2022 - 45 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
-                        <LinkToExternal link="/files/certificado-udemy-react-native-apps-nativos-android-ios.pdf">
+                        <LinkToExternal
+                          ariaLabel="certificate"
+                          link="/files/certificado-udemy-react-native-apps-nativos-android-ios.pdf"
+                        >
                           {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
@@ -305,7 +314,10 @@ function Home(): ReactElement {
                         <br />
                         <Span>{`2023 - 7 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
-                        <LinkToExternal link="/files/certificado-udemy-aws-para-iniciantes-2023.pdf">
+                        <LinkToExternal
+                          ariaLabel="certificate"
+                          link="/files/certificado-udemy-aws-para-iniciantes-2023.pdf"
+                        >
                           {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
@@ -315,7 +327,7 @@ function Home(): ReactElement {
                         <br />
                         <Span>{`2023 - 15 ${t('hours', { ns: 'glossary' })}`}</Span>
                         <br />
-                        <LinkToExternal link="/files/certificado-udemy-nestjs-fundamentos.pdf">
+                        <LinkToExternal ariaLabel="certificate" link="/files/certificado-udemy-nestjs-fundamentos.pdf">
                           {capitalizeFirstLetter(t('certificate', { ns: 'glossary' }))}
                           <SvgLink45Deg height="12px" />
                         </LinkToExternal>
@@ -386,19 +398,19 @@ function Home(): ReactElement {
                   <Box justifyContent="flex-end" width={{ d: '100%', sm: '250px' }}>
                     <ul>
                       <li>
-                        <LinkToExternal link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
+                        <LinkToExternal ariaLabel="linkedin" link="https://www.linkedin.com/in/kevin-veiga-35a68026/">
                           <SvgLinkedin fill={variable.color.blue} />
                           <Span>Linkedin</Span>
                         </LinkToExternal>
                       </li>
                       <li>
-                        <LinkToExternal link="https://wa.me/5551981357941">
+                        <LinkToExternal ariaLabel="whatsapp" link="https://wa.me/5551981357941">
                           <SvgWhatsappFill />
                           <Span>+55 51 98135-7941</Span>
                         </LinkToExternal>
                       </li>
                       <li>
-                        <LinkTo link="mailto:kevin.veiga@gmail.com">
+                        <LinkTo ariaLabel="email" link="mailto:kevin.veiga@gmail.com">
                           <SvgGmail />
                           <Span>kevin.veiga@gmail.com</Span>
                         </LinkTo>

@@ -54,7 +54,7 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
                         {t(`menu.${item.title}`, { ns: 'app' })}
                       </Button>
                     ) : (
-                      <LinkToExternal link={item.link} text={item.title} />
+                      <LinkToExternal ariaLabel={item.title} link={item.link} text={item.title} />
                     )}
                   </li>
                 );

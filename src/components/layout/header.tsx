@@ -50,7 +50,7 @@ export function Header(): ReactElement {
                           {t(`menu.${item.title}`, { ns: 'app' })}
                         </Button>
                       ) : (
-                        <LinkToExternal link={item.link} text={item.title} />
+                        <LinkToExternal ariaLabel={item.title} link={item.link} text={item.title} />
                       )}
                     </li>
                   );
