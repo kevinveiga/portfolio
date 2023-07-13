@@ -27,7 +27,7 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
   return (
     <MenuMobileStyled active={active} display={{ d: 'block', md: 'none' }}>
       <Box>
-        <Button onClick={(): void => setActive(false)} typeStyle="button-unset">
+        <Button ariaLabel="close" onClick={(): void => setActive(false)} typeStyle="button-unset">
           <SvgClose />
         </Button>
       </Box>
@@ -44,6 +44,7 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
                   <li key={item.title}>
                     {item.anchor ? (
                       <Button
+                        ariaLabel={t(`menu.${item.title}`, { ns: 'app' }) || 'menu item'}
                         onClick={(): void => {
                           scrollTo(item.anchor);
                           setActive(false);
@@ -72,22 +73,24 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
 
           <li>
             <Button
+              ariaLabel={t('portuguese', { ns: 'glossary' }) || 'português'}
               onClick={(): void => {
                 setStateLanguage('pt_BR');
                 setActive(false);
               }}
-              text={t('portuguese', { ns: 'glossary' }) || undefined}
+              text={t('portuguese', { ns: 'glossary' }) || 'português'}
               typeStyle="button-unset"
             />
           </li>
 
           <li>
             <Button
+              ariaLabel={t('english', { ns: 'glossary' }) || 'inglês'}
               onClick={(): void => {
                 setStateLanguage('en');
                 setActive(false);
               }}
-              text={t('english', { ns: 'glossary' }) || undefined}
+              text={t('english', { ns: 'glossary' }) || 'inglês'}
               typeStyle="button-unset"
             />
           </li>
@@ -104,6 +107,7 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
 
           <li>
             <Button
+              ariaLabel="dark and light mode"
               onClick={(): void => {
                 setStateTheme((prevState: boolean) => !prevState);
                 setActive(false);

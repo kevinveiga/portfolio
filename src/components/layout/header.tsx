@@ -42,7 +42,11 @@ export function Header(): ReactElement {
                   return (
                     <li key={item.title}>
                       {item.anchor ? (
-                        <Button onClick={(): void => scrollTo(item.anchor)} typeStyle="button-unset">
+                        <Button
+                          ariaLabel={t(`menu.${item.title}`, { ns: 'app' }) || 'menu item'}
+                          onClick={(): void => scrollTo(item.anchor)}
+                          typeStyle="button-unset"
+                        >
                           {t(`menu.${item.title}`, { ns: 'app' })}
                         </Button>
                       ) : (
@@ -60,13 +64,21 @@ export function Header(): ReactElement {
         <HeaderItemsStyled display={{ d: 'none', md: 'block' }}>
           <ul>
             <li>
-              <Button onClick={(): void => setStateLanguage('pt_BR')} typeStyle="button-unset">
+              <Button
+                ariaLabel={t('portuguese', { ns: 'glossary' }) || 'português'}
+                onClick={(): void => setStateLanguage('pt_BR')}
+                typeStyle="button-unset"
+              >
                 <SvgFlagBrazil />
               </Button>
             </li>
 
             <li>
-              <Button onClick={(): void => setStateLanguage('en')} typeStyle="button-unset">
+              <Button
+                ariaLabel={t('english', { ns: 'glossary' }) || 'inglês'}
+                onClick={(): void => setStateLanguage('en')}
+                typeStyle="button-unset"
+              >
                 <SvgFlagUsa />
               </Button>
             </li>
