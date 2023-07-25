@@ -8,7 +8,7 @@ import { maskCep, maskCpf, maskCurrency, maskPhone } from '@/helpers/mask';
 import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
 import yup from '@/helpers/yup';
 import { IInput, IInputPasswordConfirm, ISelectCustom, ISelectCustomItems } from '@/interface';
-import { useClickOutside } from '@/stores/clickOutside/useClickOutside';
+import { useClickOutside } from '@/hooks/clickOutside/useClickOutside';
 
 import {
   InputContainerStyled,

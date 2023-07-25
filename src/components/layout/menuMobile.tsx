@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { scrollTo } from '@/helpers/scrollTo';
 import { IActive } from '@/interface';
 import { useApp } from '@/pages/_app';
-import { usePage } from '@/stores/page/usePage';
+import { usePage } from '@/hooks/page/usePage';
 
 import { Button } from '@/components/button/button';
 import { MenuMobileStyled, MenuMobileItemsNavStyled } from '@/components/layout/menuMobileStyled';

@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import parse from 'html-react-parser';
 
 import { IAccordion, IAccordionItem } from '@/interface';
-import { usePersistedState } from '@/stores/persistedState/usePersistedState';
+import { usePersistedState } from '@/hooks/persistedState/usePersistedState';
 
 import {
   AccordionStyled,

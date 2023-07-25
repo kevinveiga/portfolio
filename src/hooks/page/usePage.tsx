@@ -15,8 +15,8 @@ import { SWRConfig } from 'swr';
 
 import { IBreadcrumb } from '@/interface';
 import { useApp } from '@/pages/_app';
-import { useAxiosInterceptor } from '@/stores/axiosInterceptor/useAxiosInterceptor';
-import { usePersistedState } from '@/stores/persistedState/usePersistedState';
+import { useAxiosInterceptor } from '@/hooks/axiosInterceptor/useAxiosInterceptor';
+import { usePersistedState } from '@/hooks/persistedState/usePersistedState';
 import { TLanguage } from '@/type';
 
 interface IPageContext {

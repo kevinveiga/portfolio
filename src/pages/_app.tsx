@@ -16,8 +16,8 @@ import { ThemeProvider } from 'styled-components';
 
 import '@/helpers/i18next';
 import { IModal } from '@/interface';
-import { PageProvider } from '@/stores/page/usePage';
-import { usePersistedState } from '@/stores/persistedState/usePersistedState';
+import { PageProvider } from '@/hooks/page/usePage';
+import { usePersistedState } from '@/hooks/persistedState/usePersistedState';
 
 import { Loader } from '@/components/loader/loader';
 import { ModalInfo } from '@/components/modal/modalInfo';
