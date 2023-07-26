@@ -47,6 +47,7 @@
         "@typescript-eslint/no-explicit-any": ["off"],
         "@typescript-eslint/no-non-null-assertion": ["error"],
         "@typescript-eslint/no-redeclare": ["error"],
+        "@typescript-eslint/no-redundant-type-constituents": ["off"],
         "@typescript-eslint/no-shadow": ["error"],
         "@typescript-eslint/no-unsafe-argument": ["off"],
         "@typescript-eslint/no-unsafe-assignment": ["off"],
@@ -151,7 +152,7 @@
       {
         "arrowParens": "always",
         "bracketSpacing": true,
-        "endOfLine": "auto",
+        "endOfLine": "lf",
         "jsxSingleQuote": false,
         "printWidth": 120,
         "proseWrap": "preserve",

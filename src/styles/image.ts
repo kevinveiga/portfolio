@@ -46,7 +46,9 @@ export const BgImage = styled.div<IImageStyled>`
   ${({ height }): string | undefined => (height === undefined ? 'height: 100%' : undefined)};
   opacity: ${({ opacity }): number => opacity || 1};
   position: absolute;
-  transition: filter ${variable.animation.transitionSlow}, transform ${variable.animation.transition};
+  transition:
+    filter ${variable.animation.transitionSlow},
+    transform ${variable.animation.transition};
   ${({ width }): string | undefined => (width === undefined ? 'width: 100%' : undefined)};
   z-index: ${({ zIndex }): number => zIndex || -1};
 
@@ -60,33 +62,31 @@ export const BgImage = styled.div<IImageStyled>`
 `;
 
 export const BgImageOverlay = styled(BgImage)<IImageStyled>`
-  ${({ overlayColor }): any =>
-    css`
-      &::after {
-        background-color: ${overlayColor || variable.color.blackTransparent1};
-        content: ' ';
-        display: block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 2;
-      }
-    `};
+  ${({ overlayColor }): any => css`
+    &::after {
+      background-color: ${overlayColor || variable.color.blackTransparent1};
+      content: ' ';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  `};
 `;
 
 export const BgImageOverlayTopBottom = styled(BgImageOverlay)<IImageStyled>`
-  ${({ colorEndPercent, overlayColorBottom, overlayColorTop, colorStartPercent }): any =>
-    css`
-      &::after {
-        ${gradientDirection({
-          colorEnd: overlayColorBottom || variable.color.blackTransparent5,
-          colorEndPercent: colorEndPercent || '100%',
-          colorStart: overlayColorTop || variable.color.blackTransparent1,
-          colorStartPercent: colorStartPercent || '0',
-          deg: '180deg'
-        })};
-      }
-    `};
+  ${({ colorEndPercent, overlayColorBottom, overlayColorTop, colorStartPercent }): any => css`
+    &::after {
+      ${gradientDirection({
+        colorEnd: overlayColorBottom || variable.color.blackTransparent5,
+        colorEndPercent: colorEndPercent || '100%',
+        colorStart: overlayColorTop || variable.color.blackTransparent1,
+        colorStartPercent: colorStartPercent || '0',
+        deg: '180deg'
+      })};
+    }
+  `};
 `;

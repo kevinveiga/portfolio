@@ -16,7 +16,9 @@ export const AccordionChangeStyled = styled.div<IAccordion>`
     max-width: 18px;
     transform: ${({ active }): string => (active ? 'rotate(180deg)' : 'rotate(0deg)')};
     transform-origin: 50% 50%;
-    transition: fill ${variable.animation.transition}, transform ${variable.animation.transition};
+    transition:
+      fill ${variable.animation.transition},
+      transform ${variable.animation.transition};
     vertical-align: middle;
   }
 `;
@@ -39,20 +41,19 @@ export const AccordionItemStyled = styled.div<IAccordion>`
   ${({ justifyContent }): string | undefined =>
     justifyContent === undefined ? 'justify-content: space-between' : undefined};
 
-  ${({ obj: { hoverBgColor = 'transparent', hoverColor = variable.color.tertiary } = {} }): any =>
-    css`
-      &:hover {
-        background-color: ${hoverBgColor};
+  ${({ obj: { hoverBgColor = 'transparent', hoverColor = variable.color.tertiary } = {} }): any => css`
+    &:hover {
+      background-color: ${hoverBgColor};
 
-        span {
-          color: ${hoverColor};
-        }
-
-        svg {
-          fill: ${hoverColor};
-        }
+      span {
+        color: ${hoverColor};
       }
-    `}
+
+      svg {
+        fill: ${hoverColor};
+      }
+    }
+  `}
 
   span {
     color: ${({ theme }): string => theme.textColor.primary};

@@ -159,8 +159,8 @@ export function Input({
         maxLength={maxLength}
         name={fieldName}
         onBlur={(): void => setStateIsTouched(true)}
-        onChange={(e): void => handleChange(e.currentTarget.value)}
-        onFocus={(e): void => handleChange(e.currentTarget.value)}
+        onChange={(e: any): void => handleChange(e.currentTarget.value)}
+        onFocus={(e: any): void => handleChange(e.currentTarget.value)}
         placeholder={capitalizeFirstLetter(placeholder)}
         ref={inputRef}
         textIndent={SvgComponent ? variable.space.spacingMD : undefined}
@@ -430,8 +430,8 @@ export function InputDecrementIncrement({
         maxLength={maxLength}
         name={`${fieldName}-formatted-value`}
         onBlur={(): void => setStateIsTouched(true)}
-        onChange={(e): void => handleChange(e.currentTarget.value)}
-        onFocus={(e): void => handleChange(e.currentTarget.value)}
+        onChange={(e: any): void => handleChange(e.currentTarget.value)}
+        onFocus={(e: any): void => handleChange(e.currentTarget.value)}
         placeholder={capitalizeFirstLetter(placeholder)}
         ref={inputFormattedValueRef}
         textIndent={SvgComponent ? variable.space.spacingMD : undefined}
@@ -575,7 +575,7 @@ export function InputFile({
         maxLength={maxLength}
         name={fieldName}
         onBlur={(): void => setStateIsTouched(true)}
-        onChange={(e): void => handleChange(e.currentTarget.files)}
+        onChange={(e: any): void => handleChange(e.currentTarget.files)}
         ref={inputRef}
         type={typeInput}
         valid={Boolean(stateHasError) === false && stateIsTouched ? true : undefined}
@@ -690,7 +690,7 @@ export function InputFileThumbnail({
         maxLength={maxLength}
         name={fieldName}
         onBlur={(): void => setStateIsTouched(true)}
-        onChange={(e): void => handleChange(e.currentTarget.files)}
+        onChange={(e: any): void => handleChange(e.currentTarget.files)}
         ref={inputRef}
         type={typeInput}
         valid={Boolean(stateHasError) === false && stateIsTouched ? true : undefined}
@@ -942,8 +942,8 @@ export function Select({
         label={label}
         name={fieldName}
         onBlur={(): void => setStateIsTouched(true)}
-        onChange={(e): void => handleChange(e.currentTarget.value)}
-        onFocus={(e): void => handleChange(e.currentTarget.value)}
+        onChange={(e: any): void => handleChange(e.currentTarget.value)}
+        onFocus={(e: any): void => handleChange(e.currentTarget.value)}
         pr={`calc(${variable.layout.inputPaddingX} * 3)`}
         ref={selectRef}
         textIndent={SvgComponent ? variable.space.spacingMD : undefined}
@@ -1055,8 +1055,8 @@ export function Textarea({
         maxLength={maxLength}
         name={fieldName}
         onBlur={(): void => setStateIsTouched(true)}
-        onChange={(e): void => handleChange(e.currentTarget.value)}
-        onFocus={(e): void => handleChange(e.currentTarget.value)}
+        onChange={(e: any): void => handleChange(e.currentTarget.value)}
+        onFocus={(e: any): void => handleChange(e.currentTarget.value)}
         placeholder={capitalizeFirstLetter(placeholder)}
         ref={textareaRef}
         valid={Boolean(stateHasError) === false && stateIsTouched ? true : undefined}

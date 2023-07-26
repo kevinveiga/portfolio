@@ -1,4 +1,4 @@
-import { ComponentProps, ComponentType, ReactNode } from 'react';
+import { ComponentType, ReactNode } from 'react';
 
 import { IInputStyled, IStyledSystem } from 'styled-components';
 
@@ -66,7 +66,7 @@ export interface IGradient3Colors {
 export interface IInput extends IInputStyled {
   cbFunction?: (value: any) => void;
   checked?: boolean;
-  component?: ComponentType<ComponentProps<any>> | ComponentType<any>;
+  component?: ComponentType<any>;
   idInput: string;
   list?: string;
   max?: number;
@@ -79,7 +79,7 @@ export interface IInput extends IInputStyled {
   separator?: boolean;
   showSvg?: boolean;
   step?: number;
-  svgComponent?: ComponentType<ComponentProps<any>> | ComponentType<any>;
+  svgComponent?: ComponentType<any>;
   typeInput?: TInputType;
   validationSchema?: any;
   value?: string;
@@ -110,7 +110,7 @@ export interface IInputRadioItems {
 export interface ILabel extends IStyledSystem {
   ariaLabel?: string;
   children?: ReactNode;
-  component?: ComponentType<ComponentProps<any>> | ComponentType<any>;
+  component?: ComponentType<any>;
   forLabel?: string;
   text?: string;
 }
@@ -160,7 +160,7 @@ export interface ISelect extends IInputStyled {
   children?: ReactNode;
   idInput: string;
   name: string;
-  svgComponent?: ComponentType<ComponentProps<any>> | ComponentType<any>;
+  svgComponent?: ComponentType<any>;
   validationSchema?: any;
 }
 

@@ -13,7 +13,7 @@ import { LinkToExternal } from '@/components/link/linkToExternal';
 import { SvgClose } from '@/components/svg/svgStore';
 
 import { Box } from '@/styles/flex';
-import { LineHorizontal, Spacer } from '@/styles/layout';
+import { LineHorizontal } from '@/styles/layout';
 import { Subtitle1 } from '@/styles/text';
 
 import menuItens from '@/public/json/menu-itens.json';

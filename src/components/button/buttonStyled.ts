@@ -55,7 +55,9 @@ export const ButtonStyled = styled.button<IButton>`
   ${({ borderRadius }): string | undefined =>
     borderRadius === undefined ? `border-radius: ${variable.layout.borderRadiusPrimary}` : undefined};
   color: ${({ active, color }): string => (active ? variable.color.white : color || variable.color.white)};
-  transition: background-color ${variable.animation.transition}, border ${variable.animation.transition},
+  transition:
+    background-color ${variable.animation.transition},
+    border ${variable.animation.transition},
     color ${variable.animation.transition};
 
   p,
@@ -101,7 +103,9 @@ export const ButtonBorderStyled = styled.button<IButton>`
   border-style: solid;
   border-width: 2px;
   color: ${({ active, color }): string => (active ? variable.color.white : color || variable.color.primary)};
-  transition: background-color ${variable.animation.transition}, border ${variable.animation.transition},
+  transition:
+    background-color ${variable.animation.transition},
+    border ${variable.animation.transition},
     color ${variable.animation.transition};
 
   p,

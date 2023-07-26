@@ -28,7 +28,9 @@ const input = css<IInputStyled>`
   table-layout: fixed;
   text-indent: ${({ textIndent }): string => textIndent || 'unset'};
   text-overflow: ellipsis;
-  transition: border ${variable.animation.transition}, color ${variable.animation.transition};
+  transition:
+    border ${variable.animation.transition},
+    color ${variable.animation.transition};
   ${({ width }): string | undefined => (width === undefined ? 'width: 100%' : undefined)};
 
   &:hover {
@@ -68,7 +70,9 @@ const inputLabel = css<IInputStyled>`
             pointer-events: none;
             position: absolute;
             top: 10px;
-            transition: font-size ${variable.animation.transition}, top ${variable.animation.transition};
+            transition:
+              font-size ${variable.animation.transition},
+              top ${variable.animation.transition};
           }
 
           &:focus {
@@ -136,7 +140,9 @@ export const InputCheckboxRadioStyled = styled.input<IInputStyled>`
       background-color: ${variable.color.grayLight4};
       border: 2px solid ${variable.color.grayLight4};
       border-radius: ${variable.layout.borderRadiusPrimary};
-      box-shadow: inset 0 0 0 0 ${variable.color.grayDark}, 0 0 0 1px ${variable.color.grayDark};
+      box-shadow:
+        inset 0 0 0 0 ${variable.color.grayDark},
+        0 0 0 1px ${variable.color.grayDark};
       content: ' ';
       display: inline-block;
       height: 12px;
@@ -151,7 +157,9 @@ export const InputCheckboxRadioStyled = styled.input<IInputStyled>`
   &:checked {
     + label {
       &::before {
-        box-shadow: inset 0 0 0 10px ${variable.color.primary}, 0 0 0 1px ${variable.color.primary};
+        box-shadow:
+          inset 0 0 0 10px ${variable.color.primary},
+          0 0 0 1px ${variable.color.primary};
       }
     }
   }
@@ -172,7 +180,9 @@ export const InputCheckboxRadioButtonStyled = styled.input<IInputStyled>`
     border-radius: ${variable.layout.borderRadiusPrimary};
     cursor: pointer;
     padding: 15px 20px;
-    transition: background-color ${variable.animation.transition}, border ${variable.animation.transition},
+    transition:
+      background-color ${variable.animation.transition},
+      border ${variable.animation.transition},
       color ${variable.animation.transition};
     user-select: none;
 
@@ -289,7 +299,9 @@ export const LabelFileStyled = styled.label<IStyledSystem>`
   min-height: ${variable.layout.buttonHeight};
   padding: ${variable.space.spacingMD} ${variable.space.spacingSM};
   text-align: center;
-  transition: background-color ${variable.animation.transition}, color ${variable.animation.transition};
+  transition:
+    background-color ${variable.animation.transition},
+    color ${variable.animation.transition};
 
   &:hover {
     background-color: ${({ theme }): string => theme.bgColor.secondary};

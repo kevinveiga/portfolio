@@ -10,7 +10,9 @@ const linkLine = css`
     display: block;
     height: 3px;
     margin: 5px auto auto auto;
-    transition: background-color ${variable.animation.transition}, width ${variable.animation.transition};
+    transition:
+      background-color ${variable.animation.transition},
+      width ${variable.animation.transition};
     width: 0;
   }
 `;
