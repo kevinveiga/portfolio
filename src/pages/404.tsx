@@ -1,17 +1,17 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import Head from 'next/head';
+import Head from 'next/head'
 
-import { title } from '@/configApp';
+import { title } from '@/configApp'
 
-import { Button } from '@/components/button/button';
-import { LinkTo } from '@/components/link/linkTo';
-import { SvgArrowLeft } from '@/components/svg/svgStore';
+import { Button } from '@/components/button/button'
+import { LinkTo } from '@/components/link/linkTo'
+import { SvgArrowLeft } from '@/components/svg/svgStore'
 
-import { Box, Flex } from '@/styles/flex';
-import { Main, Spacer } from '@/styles/layout';
-import { P, Title3 } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { Box, Flex } from '@/styles/flex'
+import { Main, Spacer } from '@/styles/layout'
+import { P, Title3 } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
 function Page404(): ReactElement {
   return (
@@ -44,7 +44,7 @@ function Page404(): ReactElement {
         </Flex>
       </Main>
     </>
-  );
+  )
 }
 
-export default Page404;
+export default Page404

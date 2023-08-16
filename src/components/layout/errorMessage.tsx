@@ -1,30 +1,30 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import { errorMsgDefault } from '@/configApp';
+import { errorMsgDefault } from '@/configApp'
 
-import { P } from '@/styles/text';
+import { P } from '@/styles/text'
 
 export function ErrorMessage(data: Record<string, unknown> | string): ReactElement {
-  const errors = [];
-  const errorsObj = data;
+  const errors = []
+  const errorsObj = data
 
   if (errorsObj) {
     if (typeof errorsObj === 'string') {
-      errors.push(`- ${errorsObj}`);
+      errors.push(`- ${errorsObj}`)
     } else {
       for (let i = 0, l = Object.keys(errorsObj).length; i < l; i += 1) {
-        errors.push(`- ${errorsObj[Object.keys(errorsObj)[i]] as string}`);
+        errors.push(`- ${errorsObj[Object.keys(errorsObj)[i]] as string}`)
       }
     }
   } else {
-    errors.push(errorMsgDefault);
+    errors.push(errorMsgDefault)
   }
 
   return (
     <div>
       {errors?.map((item: string) => {
-        return <P key={item}>{item}</P>;
+        return <P key={item}>{item}</P>
       })}
     </div>
-  );
+  )
 }

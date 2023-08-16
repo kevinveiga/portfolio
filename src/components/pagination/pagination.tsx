@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import { Button } from '@/components/button/button';
-import { PaginationItemStyled, PaginationListStyled } from '@/components/pagination/paginationStyled';
+import { Button } from '@/components/button/button'
+import { PaginationItemStyled, PaginationListStyled } from '@/components/pagination/paginationStyled'
 
 export function Pagination({
   currentPage = 1,
@@ -9,10 +9,10 @@ export function Pagination({
   totalData = 1,
   paginate = (): any => null
 }: any): ReactElement {
-  const pageNumbers = [];
+  const pageNumbers = []
 
   for (let i = 1; i <= Math.ceil(totalData / dataPerPage); i += 1) {
-    pageNumbers.push(i);
+    pageNumbers.push(i)
   }
 
   return (
@@ -25,5 +25,5 @@ export function Pagination({
         </PaginationItemStyled>
       ))}
     </PaginationListStyled>
-  );
+  )
 }

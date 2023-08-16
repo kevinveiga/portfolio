@@ -1,8 +1,8 @@
-import { Form as Unform } from '@unform/web';
-import styled, { css, IActiveStyled, IInputStyled, IStyledSystem, ITextStyled } from 'styled-components';
-import { layout, position, space, typography } from 'styled-system';
+import { Form as Unform } from '@unform/web'
+import styled, { css, IActiveStyled, IInputStyled, IStyledSystem, ITextStyled } from 'styled-components'
+import { layout, position, space, typography } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 const input = css<IInputStyled>`
   ${layout};
@@ -59,7 +59,7 @@ const input = css<IInputStyled>`
           color: ${variable.color.gray};
         `
       : undefined}
-`;
+`
 
 const inputLabel = css<IInputStyled>`
   ${({ colorLabel, label }): any =>
@@ -100,19 +100,19 @@ const inputLabel = css<IInputStyled>`
       top: -3px;
     }
   }
-`;
+`
 
 export const FormStyled = styled(Unform as any)<IStyledSystem>`
   ${layout};
 
   width: 100%;
   z-index: 1;
-`;
+`
 
 export const InputStyled = styled.input.attrs<IInputStyled>(({ invalid }) => {
   return {
     'data-invalid': invalid ? true : undefined
-  };
+  }
 })<IInputStyled>`
   ${input};
   ${inputLabel};
@@ -121,7 +121,7 @@ export const InputStyled = styled.input.attrs<IInputStyled>(({ invalid }) => {
     invalid && validation ? `border: 1px solid ${variable.color.alert}` : undefined};
   ${({ valid, validation }): string | undefined =>
     valid && validation ? `border: 1px solid ${variable.color.primary}` : undefined};
-`;
+`
 
 export const InputCheckboxRadioStyled = styled.input<IInputStyled>`
   height: 0.1px;
@@ -163,7 +163,7 @@ export const InputCheckboxRadioStyled = styled.input<IInputStyled>`
       }
     }
   }
-`;
+`
 
 export const InputCheckboxRadioButtonStyled = styled.input<IInputStyled>`
   height: 0.1px;
@@ -200,7 +200,7 @@ export const InputCheckboxRadioButtonStyled = styled.input<IInputStyled>`
       color: ${variable.color.grayLight4};
     }
   }
-`;
+`
 
 export const InputContainerStyled = styled.div`
   height: auto;
@@ -218,7 +218,7 @@ export const InputContainerStyled = styled.div`
   > svg {
     pointer-events: none;
   }
-`;
+`
 
 export const InputDecrementIncrementContainerStyled = styled.div`
   height: auto;
@@ -241,13 +241,13 @@ export const InputDecrementIncrementContainerStyled = styled.div`
   > svg {
     pointer-events: none;
   }
-`;
+`
 
 export const InputFileStyled = styled.input.attrs<IInputStyled>(({ invalid }) => {
   return {
     'data-invalid': invalid ? true : undefined
-  };
-})<IInputStyled>``;
+  }
+})<IInputStyled>``
 
 export const InputRadioStyled = styled(InputCheckboxRadioStyled)`
   + label {
@@ -255,7 +255,7 @@ export const InputRadioStyled = styled(InputCheckboxRadioStyled)`
       border-radius: 50%;
     }
   }
-`;
+`
 
 export const LabelStyled = styled.label<ITextStyled>`
   ${layout};
@@ -280,7 +280,7 @@ export const LabelStyled = styled.label<ITextStyled>`
             text-transform: ${textTransformFirstLetter ?? 'capitalize'};
           }
         `};
-`;
+`
 
 export const LabelFileStyled = styled.label<IStyledSystem>`
   ${layout};
@@ -306,13 +306,13 @@ export const LabelFileStyled = styled.label<IStyledSystem>`
   &:hover {
     background-color: ${({ theme }): string => theme.bgColor.secondary};
   }
-`;
+`
 
 export const LabelFileThumbnailStyled = styled(LabelFileStyled)`
   background-color: ${({ backgroundColor }): string => backgroundColor || 'transparent'};
   border-color: ${({ borderColor, theme }): string => borderColor || theme.svgColor.primary};
   border-width: 1px;
-`;
+`
 
 export const LabelPlaceholderStyled = styled.label<ITextStyled>`
   ${layout};
@@ -325,12 +325,12 @@ export const LabelPlaceholderStyled = styled.label<ITextStyled>`
   ${({ fontWeight }): string | undefined =>
     fontWeight === undefined ? `font-weight: ${variable.text.fontWeightNormal}` : undefined};
   z-index: 1;
-`;
+`
 
 export const SelectStyled = styled.select.attrs<IInputStyled>(({ invalid }) => {
   return {
     'data-invalid': invalid ? true : undefined
-  };
+  }
 })<IInputStyled>`
   ${input};
   ${inputLabel};
@@ -350,7 +350,7 @@ export const SelectStyled = styled.select.attrs<IInputStyled>(({ invalid }) => {
     invalid && validation ? `border: 1px solid ${variable.color.alert}` : undefined};
   ${({ valid, validation }): string | undefined =>
     valid && validation ? `border: 1px solid ${variable.color.success}` : undefined};
-`;
+`
 
 export const SelectOptionsCustomStyled = styled.div<IActiveStyled>`
   left: 0;
@@ -394,7 +394,7 @@ export const SelectOptionsCustomStyled = styled.div<IActiveStyled>`
       }
     }
   }
-`;
+`
 
 export const TextareaStyled = styled.textarea<IInputStyled>`
   ${input};
@@ -407,7 +407,7 @@ export const TextareaStyled = styled.textarea<IInputStyled>`
     invalid && validation ? `border: 1px solid ${variable.color.alert}` : undefined};
   ${({ valid, validation }): string | undefined =>
     valid && validation ? `border: 1px solid ${variable.color.success}` : undefined};
-`;
+`
 
 export const ValidatedMessageStyled = styled.p`
   color: ${({ color }): string => color || variable.color.alert};
@@ -416,4 +416,4 @@ export const ValidatedMessageStyled = styled.p`
   line-height: 1.2;
   margin-top: 2px;
   position: absolute;
-`;
+`

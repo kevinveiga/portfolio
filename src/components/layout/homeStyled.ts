@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { LinkToExternalStyled } from '@/components/link/linkToStyled';
+import { LinkToExternalStyled } from '@/components/link/linkToStyled'
 
-import { animation, animationMoveDown } from '@/styles/animation';
-import { gradientDirection } from '@/styles/function';
-import { Span, Title4 } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { animation, animationMoveDown } from '@/styles/animation'
+import { gradientDirection } from '@/styles/function'
+import { Span, Title4 } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
 export const HomeBtnScrollStyled = styled.button`
   ${animation};
@@ -30,7 +30,7 @@ export const HomeBtnScrollStyled = styled.button`
     height: 14px;
     transition: opacity ${variable.animation.transition};
   }
-`;
+`
 
 export const HomeContactBoxStyled = styled.div`
   align-items: center;
@@ -51,7 +51,7 @@ export const HomeContactBoxStyled = styled.div`
       }
     }
   }
-`;
+`
 
 export const HomeFlexStyled = styled.div`
   column-gap: ${variable.space.spacingMD};
@@ -61,7 +61,7 @@ export const HomeFlexStyled = styled.div`
   max-width: ${variable.breakpoint.md};
   row-gap: ${variable.space.spacingLG};
   width: 100%;
-`;
+`
 
 export const HomeProfessionalQualificationBoxStyled = styled.div`
   background-color: ${({ theme }): string => theme.bgColor.secondary};
@@ -112,7 +112,7 @@ export const HomeProfessionalQualificationBoxStyled = styled.div`
       }
     }
   }
-`;
+`
 
 export const HomeProfessionalTrajectoryBoxStyled = styled.div`
   p {
@@ -134,7 +134,7 @@ export const HomeProfessionalTrajectoryBoxStyled = styled.div`
       font-weight: 700;
     }
   }
-`;
+`
 
 export const HomeSkillsBoxStyled = styled.div`
   display: flex;
@@ -199,7 +199,7 @@ export const HomeSkillsBoxStyled = styled.div`
       }
     }
   }
-`;
+`
 
 export const HomeTopStyled = styled.section`
   ${gradientDirection({ colorStart: variable.color.blueDark, colorEnd: variable.color.turquoiseLight, deg: '50deg' })};
@@ -223,4 +223,4 @@ export const HomeTopStyled = styled.section`
       transition: opacity ${variable.animation.transition};
     }
   }
-`;
+`

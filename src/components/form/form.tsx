@@ -1,14 +1,14 @@
-import React, { ReactElement, useEffect, useRef, useState } from 'react';
+import React, { ReactElement, useEffect, useRef, useState } from 'react'
 
-import { useField } from '@unform/core';
-import { useTheme } from 'styled-components';
+import { useField } from '@unform/core'
+import { useTheme } from 'styled-components'
 
-import { maskDecimal } from '@/helpers/mask';
-import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
-import yup from '@/helpers/yup';
-import { IInput, IInputDecimal, IInputRadioItems, IInputRadio, ILabel, ISelect } from '@/interface';
+import { maskDecimal } from '@/helpers/mask'
+import { capitalizeFirstLetter } from '@/helpers/stringManipulation'
+import yup from '@/helpers/yup'
+import { IInput, IInputDecimal, IInputRadioItems, IInputRadio, ILabel, ISelect } from '@/interface'
 
-import { Button } from '@/components/button/button';
+import { Button } from '@/components/button/button'
 import {
   InputContainerStyled,
   InputCheckboxRadioStyled,
@@ -22,23 +22,23 @@ import {
   SelectStyled,
   TextareaStyled,
   ValidatedMessageStyled
-} from '@/components/form/formStyled';
-import { SvgArrowDown } from '@/components/svg/svgStore';
+} from '@/components/form/formStyled'
+import { SvgArrowDown } from '@/components/svg/svgStore'
 
-import { Box } from '@/styles/flex';
-import { Spacer } from '@/styles/layout';
-import { Span } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { Box } from '@/styles/flex'
+import { Spacer } from '@/styles/layout'
+import { Span } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
 export function Label({ ariaLabel, children, forLabel, text, ...props }: ILabel): ReactElement {
-  const acessibility = ariaLabel || text;
-  const labelContent = children || text;
+  const acessibility = ariaLabel || text
+  const labelContent = children || text
 
   return (
     <LabelStyled aria-label={acessibility} htmlFor={forLabel} {...props}>
       {labelContent}
     </LabelStyled>
-  );
+  )
 }
 
 export function LabelFile({
@@ -49,14 +49,14 @@ export function LabelFile({
   text,
   ...props
 }: ILabel): ReactElement {
-  const acessibility = ariaLabel || text;
-  const labelContent = children || text;
+  const acessibility = ariaLabel || text
+  const labelContent = children || text
 
   return (
     <Component aria-label={acessibility} htmlFor={forLabel} {...props}>
       {labelContent}
     </Component>
-  );
+  )
 }
 
 // INPUTS
@@ -73,15 +73,15 @@ export function Input({
   ...props
 }: IInput): ReactElement {
   // CONTEXT
-  const { bgColor } = useTheme();
+  const { bgColor } = useTheme()
 
   // REF
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null)
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
   // USEEFFECT
   useEffect(() => {
@@ -89,60 +89,60 @@ export function Input({
       name: fieldName,
       ref: inputRef,
       clearValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.value = '';
+        current.value = ''
       },
       getValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        return current.value;
+        return current.value
       },
       setValue: (ref: any, value: string) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.value = value;
+        current.value = value
       }
-    });
-  }, [fieldName, registerField]);
+    })
+  }, [fieldName, registerField])
 
   // FUNCTION
   const handleChange = (value: any): void => {
     if (inputRef.current) {
       try {
-        inputRef.current.value = value;
+        inputRef.current.value = value
 
         if (cbFunction) {
-          cbFunction(value);
+          cbFunction(value)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             { [fieldName]: value },
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <InputContainerStyled>
@@ -176,7 +176,7 @@ export function Input({
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </InputContainerStyled>
-  );
+  )
 }
 
 export function InputCheckbox({
@@ -190,14 +190,14 @@ export function InputCheckbox({
   ...props
 }: IInput): ReactElement {
   // REF
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null)
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
-  const defaultChecked = Boolean(defaultValue) === Boolean(value);
+  const defaultChecked = Boolean(defaultValue) === Boolean(value)
 
   // USEEFFECT
   useEffect(() => {
@@ -205,60 +205,60 @@ export function InputCheckbox({
       name: fieldName,
       ref: inputRef,
       clearValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.checked = false;
+        current.checked = false
       },
       getValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        return current.checked;
+        return current.checked
       },
       setValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.checked = defaultChecked;
+        current.checked = defaultChecked
       }
-    });
-  }, [defaultChecked, fieldName, registerField]);
+    })
+  }, [defaultChecked, fieldName, registerField])
 
   // FUNCTION
   const handleChange = (checked = false): void => {
     if (inputRef.current) {
       try {
-        inputRef.current.checked = checked;
+        inputRef.current.checked = checked
 
         if (cbFunction) {
-          cbFunction(checked);
+          cbFunction(checked)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             { [fieldName]: checked },
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <div>
@@ -288,7 +288,7 @@ export function InputCheckbox({
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </div>
-  );
+  )
 }
 
 export function InputDecrementIncrement({
@@ -309,16 +309,16 @@ export function InputDecrementIncrement({
   ...props
 }: IInputDecimal): ReactElement {
   // CONTEXT
-  const { bgColor } = useTheme();
+  const { bgColor } = useTheme()
 
   // REF
-  const inputCleanValueRef = useRef<HTMLInputElement>(null);
-  const inputFormattedValueRef = useRef<HTMLInputElement>(null);
+  const inputCleanValueRef = useRef<HTMLInputElement>(null)
+  const inputFormattedValueRef = useRef<HTMLInputElement>(null)
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
   // USEEFFECT
   useEffect(() => {
@@ -326,30 +326,30 @@ export function InputDecrementIncrement({
       name: fieldName,
       ref: inputCleanValueRef,
       clearValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.value = '';
+        current.value = ''
       },
       getValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        return current.value;
+        return current.value
       }
-    });
-  }, [fieldName, registerField]);
+    })
+  }, [fieldName, registerField])
 
   // FUNCTION
   const handleChange = (value: any): void => {
     if (inputCleanValueRef.current && inputFormattedValueRef.current) {
       try {
-        let newValue = value;
+        let newValue = value
 
         if (
           max &&
           parseInt(value.toString().replace(/\D/g, ''), 10) >
             parseInt(parseFloat(max.toString()).toFixed(decimalScale).toString().replace(/\D/g, ''), 10)
         ) {
-          newValue = parseFloat(max.toString()).toFixed(decimalScale).toString();
+          newValue = parseFloat(max.toString()).toFixed(decimalScale).toString()
         }
 
         const { cleanValue, formattedValue } = maskDecimal({
@@ -357,17 +357,17 @@ export function InputDecrementIncrement({
           decimalSeparator: decimalSeparator,
           typeMeasure: typeMeasure,
           value: newValue
-        });
+        })
 
-        inputCleanValueRef.current.value = cleanValue;
-        inputFormattedValueRef.current.value = formattedValue;
+        inputCleanValueRef.current.value = cleanValue
+        inputFormattedValueRef.current.value = formattedValue
 
         if (cbFunction) {
-          cbFunction(formattedValue);
+          cbFunction(formattedValue)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             {
@@ -380,25 +380,25 @@ export function InputDecrementIncrement({
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <InputDecrementIncrementContainerStyled>
@@ -475,7 +475,7 @@ export function InputDecrementIncrement({
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </InputDecrementIncrementContainerStyled>
-  );
+  )
 }
 
 export function InputFile({
@@ -489,16 +489,16 @@ export function InputFile({
   ...props
 }: IInput): ReactElement {
   // CONTEXT
-  const { bgColor } = useTheme();
+  const { bgColor } = useTheme()
 
   // REF
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null)
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateFileName, setStateFileName] = useState<any>('Nenhum arquivo');
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateFileName, setStateFileName] = useState<any>('Nenhum arquivo')
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
   // USEEFFECT
   useEffect(() => {
@@ -506,60 +506,60 @@ export function InputFile({
       name: fieldName,
       ref: inputRef,
       clearValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.files = null;
+        current.files = null
       },
       getValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        return current.files[0];
+        return current.files[0]
       },
       setValue: (ref: any, value: string) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.files[0] = value;
+        current.files[0] = value
       }
-    });
-  }, [fieldName, registerField]);
+    })
+  }, [fieldName, registerField])
 
   // FUNCTION
   const handleChange = (files: any): void => {
     if (inputRef.current) {
       try {
-        setStateFileName(files ? files[0].name : 'undefined');
+        setStateFileName(files ? files[0].name : 'undefined')
 
         if (cbFunction) {
-          cbFunction(files ? files[0] : null);
+          cbFunction(files ? files[0] : null)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             { [fieldName]: files ? files[0].name : 'undefined' },
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <div>
@@ -593,7 +593,7 @@ export function InputFile({
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </div>
-  );
+  )
 }
 
 export function InputFileThumbnail({
@@ -607,15 +607,15 @@ export function InputFileThumbnail({
   ...props
 }: IInput): ReactElement {
   // CONTEXT
-  const { bgColor } = useTheme();
+  const { bgColor } = useTheme()
 
   // REF
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null)
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
   // USEEFFECT
   useEffect(() => {
@@ -623,58 +623,58 @@ export function InputFileThumbnail({
       name: fieldName,
       ref: inputRef,
       clearValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.files = null;
+        current.files = null
       },
       getValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        return current.files[0];
+        return current.files[0]
       },
       setValue: (ref: any, value: string) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.files[0] = value;
+        current.files[0] = value
       }
-    });
-  }, [fieldName, registerField]);
+    })
+  }, [fieldName, registerField])
 
   // FUNCTION
   const handleChange = (files: any): void => {
     if (inputRef.current) {
       try {
         if (cbFunction) {
-          cbFunction(files ? files[0] : null);
+          cbFunction(files ? files[0] : null)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             { [fieldName]: files ? files[0].name : 'undefined' },
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <InputContainerStyled>
@@ -702,7 +702,7 @@ export function InputFileThumbnail({
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </InputContainerStyled>
-  );
+  )
 }
 
 export function InputRadio({
@@ -716,12 +716,12 @@ export function InputRadio({
   ...props
 }: IInputRadio): ReactElement {
   // REF
-  const inputRefs = useRef<HTMLInputElement[]>([]);
+  const inputRefs = useRef<HTMLInputElement[]>([])
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
   // USEEFFECT
   useEffect(() => {
@@ -729,67 +729,67 @@ export function InputRadio({
       name: fieldName,
       ref: inputRefs,
       clearValue: (refs: any) => {
-        const { current } = refs;
-        const inputRef = current.find((ref: any) => ref.checked === true);
+        const { current } = refs
+        const inputRef = current.find((ref: any) => ref.checked === true)
 
         if (inputRef) {
-          inputRef.checked = false;
+          inputRef.checked = false
         }
       },
       getValue: (refs: any) => {
-        const { current } = refs;
+        const { current } = refs
 
-        return current.find((ref: any) => ref?.checked)?.value;
+        return current.find((ref: any) => ref?.checked)?.value
       },
       setValue: (refs: any, id: string) => {
-        const { current } = refs;
+        const { current } = refs
 
-        const inputRef = current.find((ref: any) => ref.id === id);
+        const inputRef = current.find((ref: any) => ref.id === id)
 
         if (inputRef) {
-          inputRef.checked = true;
+          inputRef.checked = true
         }
       }
-    });
-  }, [fieldName, registerField]);
+    })
+  }, [fieldName, registerField])
 
   // FUNCTION
   const handleChange = (value: any, index: number): void => {
     if (inputRefs.current[index]) {
       try {
-        inputRefs.current[index].value = value;
+        inputRefs.current[index].value = value
 
         if (cbFunction) {
-          cbFunction(value);
+          cbFunction(value)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             { [fieldName]: value },
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <div>
@@ -806,7 +806,7 @@ export function InputRadio({
               onChange={(e: any): void => handleChange(e.currentTarget.value, index)}
               onFocus={(e: any): void => handleChange(e.currentTarget.value, index)}
               ref={(ref: HTMLInputElement): any => {
-                inputRefs.current[index] = ref;
+                inputRefs.current[index] = ref
               }}
               type="radio"
               valid={Boolean(stateHasError) === false && stateIsTouched ? true : undefined}
@@ -820,14 +820,14 @@ export function InputRadio({
               </Label>
             )}
           </Box>
-        );
+        )
       })}
 
       {(error && !stateIsTouched) || stateHasError ? (
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </div>
-  );
+  )
 }
 
 export function Select({
@@ -841,15 +841,15 @@ export function Select({
   ...props
 }: ISelect): ReactElement {
   // CONTEXT
-  const { bgColor } = useTheme();
+  const { bgColor } = useTheme()
 
   // REF
-  const selectRef = useRef<HTMLSelectElement>(null);
+  const selectRef = useRef<HTMLSelectElement>(null)
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
   // USEEFFECT
   useEffect(() => {
@@ -857,76 +857,76 @@ export function Select({
       name: fieldName,
       ref: selectRef,
       clearValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.value = '';
+        current.value = ''
       },
       getValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        return current.value;
+        return current.value
       },
       setValue: (ref: any, value: string) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.value = value;
+        current.value = value
       }
-    });
-  }, [fieldName, registerField]);
+    })
+  }, [fieldName, registerField])
 
   // FUNCTION
   const handleHasValue = (value: string): void => {
     if (value) {
-      selectRef.current?.classList.add('has-value');
+      selectRef.current?.classList.add('has-value')
     } else {
-      selectRef.current?.classList.remove('has-value');
+      selectRef.current?.classList.remove('has-value')
     }
-  };
+  }
 
   useEffect(() => {
-    handleHasValue(defaultValue);
-  }, [defaultValue]);
+    handleHasValue(defaultValue)
+  }, [defaultValue])
 
   const handleChange = (value: any): void => {
     if (selectRef.current) {
       try {
-        selectRef.current.value = value;
+        selectRef.current.value = value
 
-        console.log('fieldName: ', fieldName);
+        console.log('fieldName: ', fieldName)
 
-        handleHasValue(value);
+        handleHasValue(value)
 
         if (cbFunction) {
-          cbFunction(value);
+          cbFunction(value)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             { [fieldName]: value },
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <InputContainerStyled>
@@ -962,7 +962,7 @@ export function Select({
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </InputContainerStyled>
-  );
+  )
 }
 
 export function Textarea({
@@ -976,12 +976,12 @@ export function Textarea({
   ...props
 }: IInput): ReactElement {
   // REF
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   // STATE
-  const { defaultValue, error, fieldName, registerField } = useField(name);
-  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined);
-  const [stateIsTouched, setStateIsTouched] = useState(false);
+  const { defaultValue, error, fieldName, registerField } = useField(name)
+  const [stateHasError, setStateHasError] = useState<string | undefined>(undefined)
+  const [stateIsTouched, setStateIsTouched] = useState(false)
 
   // USEEFFECT
   useEffect(() => {
@@ -989,60 +989,60 @@ export function Textarea({
       name: fieldName,
       ref: textareaRef,
       clearValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.value = '';
+        current.value = ''
       },
       getValue: (ref: any) => {
-        const { current } = ref;
+        const { current } = ref
 
-        return current.value;
+        return current.value
       },
       setValue: (ref: any, value: string) => {
-        const { current } = ref;
+        const { current } = ref
 
-        current.value = value;
+        current.value = value
       }
-    });
-  }, [fieldName, registerField]);
+    })
+  }, [fieldName, registerField])
 
   // FUNCTION
   const handleChange = (value: any): void => {
     if (textareaRef.current) {
       try {
-        textareaRef.current.value = value;
+        textareaRef.current.value = value
 
         if (cbFunction) {
-          cbFunction(value);
+          cbFunction(value)
         }
 
         if (validationSchema) {
-          setStateHasError(undefined);
+          setStateHasError(undefined)
 
           validationSchema.validateSync(
             { [fieldName]: value },
             {
               abortEarly: false
             }
-          );
+          )
         }
       } catch (err) {
         if (err instanceof yup.ValidationError) {
-          const errorMessages: { [key: string]: string } = {};
+          const errorMessages: { [key: string]: string } = {}
 
           err.inner.forEach((item: any) => {
-            errorMessages[item.path] = item.message;
-          });
+            errorMessages[item.path] = item.message
+          })
 
           if (errorMessages[fieldName]) {
-            setStateHasError(errorMessages[fieldName]);
+            setStateHasError(errorMessages[fieldName])
           }
         }
       }
 
-      setStateIsTouched(true);
+      setStateIsTouched(true)
     }
-  };
+  }
 
   return (
     <InputContainerStyled>
@@ -1070,5 +1070,5 @@ export function Textarea({
         <ValidatedMessageStyled>{error || stateHasError}</ValidatedMessageStyled>
       ) : undefined}
     </InputContainerStyled>
-  );
+  )
 }

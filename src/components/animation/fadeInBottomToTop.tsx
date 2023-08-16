@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import { animated, easings, useInView } from '@react-spring/web';
+import { animated, easings, useInView } from '@react-spring/web'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export function FadeInBottomToTop({ children }: any): ReactElement {
   // ANIMATION
@@ -18,11 +18,11 @@ export function FadeInBottomToTop({ children }: any): ReactElement {
     {
       rootMargin: '-35% 0%'
     }
-  );
+  )
 
   return (
     <animated.div ref={inViewRef} style={inView}>
       {children}
     </animated.div>
-  );
+  )
 }

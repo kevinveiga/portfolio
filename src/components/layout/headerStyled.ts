@@ -1,7 +1,7 @@
-import styled, { IActiveStyled, IStyledSystem } from 'styled-components';
-import { display } from 'styled-system';
+import styled, { IActiveStyled, IStyledSystem } from 'styled-components'
+import { display } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export const HeaderStyled = styled.header<IActiveStyled>`
   background-color: ${({ change }): string | undefined => (change ? variable.color.whiteTransparent9 : 'transparent')};
@@ -33,7 +33,7 @@ export const HeaderStyled = styled.header<IActiveStyled>`
       color: ${({ change }): string | undefined => (change ? variable.color.turquoise : variable.color.turquoiseLight)};
     }
   }
-`;
+`
 
 export const HeaderItemsStyled = styled.div<IStyledSystem>`
   ${display};
@@ -61,7 +61,7 @@ export const HeaderItemsStyled = styled.div<IStyledSystem>`
     max-width: 18px;
     transition: opacity ${variable.animation.transition};
   }
-`;
+`
 
 export const HeaderItemsNavStyled = styled.nav<IStyledSystem>`
   ${display};
@@ -83,4 +83,4 @@ export const HeaderItemsNavStyled = styled.nav<IStyledSystem>`
       }
     }
   }
-`;
+`

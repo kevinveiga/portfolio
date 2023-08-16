@@ -1,38 +1,38 @@
-import React, { ReactElement } from 'react';
-import ReactDOM from 'react-dom';
+import React, { ReactElement } from 'react'
+import ReactDOM from 'react-dom'
 
-import parse from 'html-react-parser';
-import { useTranslation } from 'react-i18next';
-import { useTheme } from 'styled-components';
+import parse from 'html-react-parser'
+import { useTranslation } from 'react-i18next'
+import { useTheme } from 'styled-components'
 
-import { IModalConfirm } from '@/interface';
+import { IModalConfirm } from '@/interface'
 
-import { Button } from '@/components/button/button';
-import { ModalConfirmStyled, ModalConfirmContentStyled } from '@/components/modal/modalStyled';
-import { SvgClose } from '@/components/svg/svgStore';
+import { Button } from '@/components/button/button'
+import { ModalConfirmStyled, ModalConfirmContentStyled } from '@/components/modal/modalStyled'
+import { SvgClose } from '@/components/svg/svgStore'
 
-import { Box, Flex } from '@/styles/flex';
-import { Spacer } from '@/styles/layout';
-import { P } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { Box, Flex } from '@/styles/flex'
+import { Spacer } from '@/styles/layout'
+import { P } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
 export function ModalConfirm({ cbFunction, message, setActive, ...props }: IModalConfirm): ReactElement | null {
   // CONTEXT
-  const { titleTheme } = useTheme();
-  const { t } = useTranslation();
+  const { titleTheme } = useTheme()
+  const { t } = useTranslation()
 
   // FUNCTION
   const handleNo = (): void => {
-    setActive(null);
-  };
+    setActive(null)
+  }
 
   const handleYes = (): void => {
-    setActive(null);
+    setActive(null)
 
     if (cbFunction) {
-      cbFunction();
+      cbFunction()
     }
-  };
+  }
 
   return ReactDOM.createPortal(
     <ModalConfirmStyled {...props}>
@@ -67,5 +67,5 @@ export function ModalConfirm({ cbFunction, message, setActive, ...props }: IModa
       </Flex>
     </ModalConfirmStyled>,
     document.getElementById('id-modalconfirm-root') as Element
-  );
+  )
 }

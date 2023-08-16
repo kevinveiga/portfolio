@@ -1,8 +1,8 @@
-declare module '*.gif';
-declare module '*.jpg';
-declare module '*.json';
-declare module '*.png';
-declare module '*.svg';
+declare module '*.gif'
+declare module '*.jpg'
+declare module '*.json'
+declare module '*.png'
+declare module '*.svg'
 
 // declare global {
 //     interface Window {
@@ -10,4 +10,4 @@ declare module '*.svg';
 //     }
 // }
 
-export {};
+export {}

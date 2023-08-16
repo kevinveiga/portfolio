@@ -1,4 +1,4 @@
-import * as yup from 'yup';
+import * as yup from 'yup'
 
 yup.setLocale({
   array: {
@@ -37,7 +37,7 @@ yup.setLocale({
     url: 'Deve ter um formato de URL válido',
     uuid: 'Deve ser um UUID válido'
   }
-});
+})
 
 // yup.setLocale({
 //     array: {
@@ -78,4 +78,4 @@ yup.setLocale({
 //     }
 // });
 
-export default yup;
+export default yup

@@ -1,30 +1,30 @@
-import React, { ReactElement } from 'react';
-import ReactDOM from 'react-dom';
+import React, { ReactElement } from 'react'
+import ReactDOM from 'react-dom'
 
-import { useTranslation } from 'react-i18next';
-import { useTheme } from 'styled-components';
+import { useTranslation } from 'react-i18next'
+import { useTheme } from 'styled-components'
 
-import { IModal } from '@/interface';
+import { IModal } from '@/interface'
 
-import { Button } from '@/components/button/button';
-import { ModalCookieStyled } from '@/components/modal/modalStyled';
-import { SvgClose } from '@/components/svg/svgStore';
+import { Button } from '@/components/button/button'
+import { ModalCookieStyled } from '@/components/modal/modalStyled'
+import { SvgClose } from '@/components/svg/svgStore'
 
-import { Box, Flex } from '@/styles/flex';
-import { P } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { Box, Flex } from '@/styles/flex'
+import { P } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
 export function ModalCookie({ setActive }: IModal): ReactElement | null {
   // CONTEXT
-  const { titleTheme } = useTheme();
-  const { t } = useTranslation();
+  const { titleTheme } = useTheme()
+  const { t } = useTranslation()
 
   // FUNCTION
   const handleCookieConfirm = (): void => {
     if (setActive) {
-      setActive(false);
+      setActive(false)
     }
-  };
+  }
 
   return ReactDOM.createPortal(
     <ModalCookieStyled>
@@ -52,5 +52,5 @@ export function ModalCookie({ setActive }: IModal): ReactElement | null {
       </Flex>
     </ModalCookieStyled>,
     document.getElementById('id-modalcookie-root') as Element
-  );
+  )
 }

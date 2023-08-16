@@ -1,28 +1,28 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
-import { scrollTo } from '@/helpers/scrollTo';
-import { IActive } from '@/interface';
-import { useApp } from '@/pages/_app';
-import { usePage } from '@/hooks/page/usePage';
+import { scrollTo } from '@/helpers/scrollTo'
+import { IActive } from '@/interface'
+import { useApp } from '@/pages/_app'
+import { usePage } from '@/hooks/page/usePage'
 
-import { Button } from '@/components/button/button';
-import { MenuMobileStyled, MenuMobileItemsNavStyled } from '@/components/layout/menuMobileStyled';
-import { LinkToExternal } from '@/components/link/linkToExternal';
-import { SvgClose } from '@/components/svg/svgStore';
+import { Button } from '@/components/button/button'
+import { MenuMobileStyled, MenuMobileItemsNavStyled } from '@/components/layout/menuMobileStyled'
+import { LinkToExternal } from '@/components/link/linkToExternal'
+import { SvgClose } from '@/components/svg/svgStore'
 
-import { Box } from '@/styles/flex';
-import { LineHorizontal } from '@/styles/layout';
-import { Subtitle1 } from '@/styles/text';
+import { Box } from '@/styles/flex'
+import { LineHorizontal } from '@/styles/layout'
+import { Subtitle1 } from '@/styles/text'
 
-import menuItens from '@/public/json/menu-itens.json';
+import menuItens from '@/public/json/menu-itens.json'
 
 export function MenuMobile({ active, setActive }: IActive): ReactElement {
   // CONTEXT
-  const { stateTheme, setStateTheme } = useApp();
-  const { setStateLanguage } = usePage();
-  const { t } = useTranslation();
+  const { stateTheme, setStateTheme } = useApp()
+  const { setStateLanguage } = usePage()
+  const { t } = useTranslation()
 
   return (
     <MenuMobileStyled active={active} display={{ d: 'block', md: 'none' }}>
@@ -46,8 +46,8 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
                       <Button
                         ariaLabel={t(`menu.${item.title}`, { ns: 'app' }) || 'menu item'}
                         onClick={(): void => {
-                          scrollTo(item.anchor);
-                          setActive(false);
+                          scrollTo(item.anchor)
+                          setActive(false)
                         }}
                         typeStyle="button-unset"
                       >
@@ -57,7 +57,7 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
                       <LinkToExternal ariaLabel={item.title} link={item.link} text={item.title} />
                     )}
                   </li>
-                );
+                )
               })
             : null}
         </ul>
@@ -75,8 +75,8 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
             <Button
               ariaLabel={t('portuguese', { ns: 'glossary' }) || 'português'}
               onClick={(): void => {
-                setStateLanguage('pt_BR');
-                setActive(false);
+                setStateLanguage('pt_BR')
+                setActive(false)
               }}
               text={t('portuguese', { ns: 'glossary' }) || 'português'}
               typeStyle="button-unset"
@@ -87,8 +87,8 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
             <Button
               ariaLabel={t('english', { ns: 'glossary' }) || 'inglês'}
               onClick={(): void => {
-                setStateLanguage('en');
-                setActive(false);
+                setStateLanguage('en')
+                setActive(false)
               }}
               text={t('english', { ns: 'glossary' }) || 'inglês'}
               typeStyle="button-unset"
@@ -109,8 +109,8 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
             <Button
               ariaLabel="dark and light mode"
               onClick={(): void => {
-                setStateTheme((prevState: boolean) => !prevState);
-                setActive(false);
+                setStateTheme((prevState: boolean) => !prevState)
+                setActive(false)
               }}
               text={t(`${stateTheme ? 'dark' : 'light'} theme`, { ns: 'glossary' }) || undefined}
               typeStyle="button-unset"
@@ -119,5 +119,5 @@ export function MenuMobile({ active, setActive }: IActive): ReactElement {
         </ul>
       </MenuMobileItemsNavStyled>
     </MenuMobileStyled>
-  );
+  )
 }

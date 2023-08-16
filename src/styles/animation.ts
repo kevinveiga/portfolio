@@ -1,4 +1,4 @@
-import { css, IAnimation, keyframes, Keyframes } from 'styled-components';
+import { css, IAnimation, keyframes, Keyframes } from 'styled-components'
 
 export const animation = css<IAnimation>`
   animation-delay: ${({ delay }): string => delay || '0s'};
@@ -8,7 +8,7 @@ export const animation = css<IAnimation>`
   animation-iteration-count: ${({ iterationCount }): string | number => iterationCount || 1};
   animation-play-state: ${({ playState }): string => playState || 'running'};
   animation-timing-function: ${({ timingFunction }): string => timingFunction || 'ease-in-out'};
-`;
+`
 
 export const animationFadeIn = (obj = { opacity: 1, visibility: 'visible' }): Keyframes => keyframes`
     0% {
@@ -21,7 +21,7 @@ export const animationFadeIn = (obj = { opacity: 1, visibility: 'visible' }): Ke
     100% {
         opacity: ${obj.opacity};
     }
-`;
+`
 
 export const animationFadeOut = (obj = { opacity: 1, visibility: 'visible' }): Keyframes => keyframes`
     0% {
@@ -35,7 +35,7 @@ export const animationFadeOut = (obj = { opacity: 1, visibility: 'visible' }): K
         opacity: 0;
         visibility: hidden;
     }
-`;
+`
 
 export const animationMoveDown = (obj = { move: '2px' }): Keyframes => keyframes`
     0% {
@@ -50,4 +50,4 @@ export const animationMoveDown = (obj = { move: '2px' }): Keyframes => keyframes
     100% {
       transform: translateY(0);
     }
-`;
+`

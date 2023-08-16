@@ -5,66 +5,66 @@ import {
   setCepFormatted,
   setDateFormatted,
   setPhoneFormatted
-} from './dataFormatter';
+} from './dataFormatter'
 
 export const getFormDataFormatter = (formData: Record<string, any>): Record<string, any> => {
-  const formDataFormatter: Record<string, any> = {};
+  const formDataFormatter: Record<string, any> = {}
 
   for (let i = 0, l = Object.keys(formData).length; i < l; i += 1) {
-    const key = Object.keys(formData)[i];
+    const key = Object.keys(formData)[i]
 
     if ({}.hasOwnProperty.call(formData, key)) {
       switch (key) {
         case 'celular' || 'telefone':
-          formDataFormatter[key] = getPhoneFormatted(formData[key]);
+          formDataFormatter[key] = getPhoneFormatted(formData[key])
 
-          break;
+          break
         case 'data' || 'data_nascimento':
-          formDataFormatter[key] = getDateFormatted(formData[key]);
+          formDataFormatter[key] = getDateFormatted(formData[key])
 
-          break;
+          break
         case 'cep' || 'endereco_cep':
-          formDataFormatter[key] = getCepFormatted(formData[key]);
+          formDataFormatter[key] = getCepFormatted(formData[key])
 
-          break;
+          break
         default:
-          formDataFormatter[key] = formData[key] == null ? '' : formData[key];
+          formDataFormatter[key] = formData[key] == null ? '' : formData[key]
 
-          break;
+          break
       }
     }
   }
 
-  return formDataFormatter;
-};
+  return formDataFormatter
+}
 
 export const setFormDataFormatter = (formData: Record<string, any>): Record<string, any> => {
-  const formDataFormatter: Record<string, any> = {};
+  const formDataFormatter: Record<string, any> = {}
 
   for (let i = 0, l = Object.keys(formData).length; i < l; i += 1) {
-    const key = Object.keys(formData)[i];
+    const key = Object.keys(formData)[i]
 
     if ({}.hasOwnProperty.call(formData, key)) {
       switch (key) {
         case 'celular' || 'telefone':
-          formDataFormatter[key] = setPhoneFormatted(formData[key]);
+          formDataFormatter[key] = setPhoneFormatted(formData[key])
 
-          break;
+          break
         case 'data' || 'data_nascimento':
-          formDataFormatter[key] = setDateFormatted(formData[key]);
+          formDataFormatter[key] = setDateFormatted(formData[key])
 
-          break;
+          break
         case 'cep' || 'endereco_cep':
-          formDataFormatter[key] = setCepFormatted(formData[key]);
+          formDataFormatter[key] = setCepFormatted(formData[key])
 
-          break;
+          break
         default:
-          formDataFormatter[key] = formData[key] == null ? '' : formData[key];
+          formDataFormatter[key] = formData[key] == null ? '' : formData[key]
 
-          break;
+          break
       }
     }
   }
 
-  return formDataFormatter;
-};
+  return formDataFormatter
+}

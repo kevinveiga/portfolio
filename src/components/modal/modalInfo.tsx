@@ -1,40 +1,40 @@
-import React, { ReactElement, useState } from 'react';
-import ReactDOM from 'react-dom';
+import React, { ReactElement, useState } from 'react'
+import ReactDOM from 'react-dom'
 
-import { useTranslation } from 'react-i18next';
-import { useTheme } from 'styled-components';
+import { useTranslation } from 'react-i18next'
+import { useTheme } from 'styled-components'
 
-import { IModal } from '@/interface';
+import { IModal } from '@/interface'
 
-import { Button } from '@/components/button/button';
-import { ModalInfoStyled, ModalInfoButtonsStyled } from '@/components/modal/modalStyled';
-import { SvgArrowDown, SvgClose } from '@/components/svg/svgStore';
+import { Button } from '@/components/button/button'
+import { ModalInfoStyled, ModalInfoButtonsStyled } from '@/components/modal/modalStyled'
+import { SvgArrowDown, SvgClose } from '@/components/svg/svgStore'
 
-import { Spacer } from '@/styles/layout';
-import { variable } from '@/styles/variable';
+import { Spacer } from '@/styles/layout'
+import { variable } from '@/styles/variable'
 
 export function ModalInfo({ content, onClose, setActive, ...props }: IModal): ReactElement | null {
   // CONTEXT
-  const { svgColor } = useTheme();
-  const { t } = useTranslation();
+  const { svgColor } = useTheme()
+  const { t } = useTranslation()
 
   // STATE
-  const [stateMaximizeMinimize, setStateMaximizeMinimize] = useState(true);
+  const [stateMaximizeMinimize, setStateMaximizeMinimize] = useState(true)
 
   // FUNCTION
   const handleClose = (): void => {
     if (setActive) {
-      setActive(null);
+      setActive(null)
     }
 
     if (onClose) {
-      onClose();
+      onClose()
     }
-  };
+  }
 
   const handleMaximizeMinimize = (): void => {
-    setStateMaximizeMinimize((prevState) => !prevState);
-  };
+    setStateMaximizeMinimize((prevState) => !prevState)
+  }
 
   return ReactDOM.createPortal(
     <ModalInfoStyled open={stateMaximizeMinimize} {...props}>
@@ -63,5 +63,5 @@ export function ModalInfo({ content, onClose, setActive, ...props }: IModal): Re
       {content}
     </ModalInfoStyled>,
     document.getElementById('id-modalinfo-root') as Element
-  );
+  )
 }

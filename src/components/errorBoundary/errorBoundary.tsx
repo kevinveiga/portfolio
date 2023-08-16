@@ -1,43 +1,43 @@
-import React, { Component, ErrorInfo, PropsWithChildren, ReactNode } from 'react';
+import React, { Component, ErrorInfo, PropsWithChildren, ReactNode } from 'react'
 
-import { errorMsgDefault } from '@/configApp';
+import { errorMsgDefault } from '@/configApp'
 
-import { P } from '@/styles/text';
+import { P } from '@/styles/text'
 
 interface IProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 interface IState {
-  hasError: boolean;
+  hasError: boolean
 }
 
 export class ErrorBoundary extends Component<IProps, IState> {
   static getDerivedStateFromError(): IState {
     // Update state so the next render will show the fallback UI.
-    return { hasError: true };
+    return { hasError: true }
   }
 
   constructor(props: PropsWithChildren<any>) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   // You can also log the error to an error reporting service
   componentDidCatch(error: Error, info: ErrorInfo): void {
-    console.error('Error: ', error);
-    console.info('Info: ', info);
+    console.error('Error: ', error)
+    console.info('Info: ', info)
   }
 
   render(): ReactNode {
-    const { hasError } = this.state;
-    const { children } = this.props;
+    const { hasError } = this.state
+    const { children } = this.props
 
     if (hasError) {
       // You can render any custom fallback UI
-      return <P>{errorMsgDefault}</P>;
+      return <P>{errorMsgDefault}</P>
     }
 
-    return children;
+    return children
   }
 }

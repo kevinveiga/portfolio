@@ -1,18 +1,18 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import { ILanguage } from '@/interface';
+import { ILanguage } from '@/interface'
 
-import { SvgFlagBrazil, SvgFlagSpain, SvgFlagUsa } from '@/components/svg/svgStore';
+import { SvgFlagBrazil, SvgFlagSpain, SvgFlagUsa } from '@/components/svg/svgStore'
 
 export function LanguageFlag({ language, ...props }: ILanguage): ReactElement {
   switch (language) {
     case 'pt_BR':
-      return <SvgFlagBrazil {...props} />;
+      return <SvgFlagBrazil {...props} />
 
     case 'es':
-      return <SvgFlagSpain {...props} />;
+      return <SvgFlagSpain {...props} />
 
     default:
-      return <SvgFlagUsa {...props} />;
+      return <SvgFlagUsa {...props} />
   }
 }

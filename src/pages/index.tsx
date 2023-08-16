@@ -1,20 +1,20 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import parse from 'html-react-parser';
-import Head from 'next/head';
-import { useTranslation } from 'react-i18next';
-import { useTheme } from 'styled-components';
+import parse from 'html-react-parser'
+import Head from 'next/head'
+import { useTranslation } from 'react-i18next'
+import { useTheme } from 'styled-components'
 
-import { title, urlImages } from '@/configApp';
-import { scrollTo } from '@/helpers/scrollTo';
-import { capitalizeFirstLetter } from '@/helpers/stringManipulation';
+import { title, urlImages } from '@/configApp'
+import { scrollTo } from '@/helpers/scrollTo'
+import { capitalizeFirstLetter } from '@/helpers/stringManipulation'
 
-import { FadeInBottomToTop } from '@/components/animation/fadeInBottomToTop';
-import { FadeInIcon } from '@/components/animation/fadeInIcon';
-import { FadeInRightToLeft } from '@/components/animation/fadeInRightToLeft';
-import { TransitionText } from '@/components/animation/transitionText';
-import { Footer } from '@/components/layout/footer';
-import { Header } from '@/components/layout/header';
+import { FadeInBottomToTop } from '@/components/animation/fadeInBottomToTop'
+import { FadeInIcon } from '@/components/animation/fadeInIcon'
+import { FadeInRightToLeft } from '@/components/animation/fadeInRightToLeft'
+import { TransitionText } from '@/components/animation/transitionText'
+import { Footer } from '@/components/layout/footer'
+import { Header } from '@/components/layout/header'
 import {
   HomeBtnScrollStyled,
   HomeContactBoxStyled,
@@ -23,9 +23,9 @@ import {
   HomeProfessionalTrajectoryBoxStyled,
   HomeSkillsBoxStyled,
   HomeTopStyled
-} from '@/components/layout/homeStyled';
-import { LinkTo } from '@/components/link/linkTo';
-import { LinkToExternal } from '@/components/link/linkToExternal';
+} from '@/components/layout/homeStyled'
+import { LinkTo } from '@/components/link/linkTo'
+import { LinkToExternal } from '@/components/link/linkToExternal'
 import {
   SvgAwardFill,
   SvgArrowDown,
@@ -38,20 +38,20 @@ import {
   SvgLinkedin,
   SvgMortarboardFill,
   SvgWhatsappFill
-} from '@/components/svg/svgStore';
+} from '@/components/svg/svgStore'
 
-import { Box, Flex } from '@/styles/flex';
-import { Image } from '@/styles/image';
-import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout';
-import { Span, Title1, Title2, Title3, Title4 } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { Box, Flex } from '@/styles/flex'
+import { Image } from '@/styles/image'
+import { Container, LineVertical, Main, Section, SectionSecondary, Spacer } from '@/styles/layout'
+import { Span, Title1, Title2, Title3, Title4 } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
-import skills from '@/public/json/skills.json';
+import skills from '@/public/json/skills.json'
 
 function Home(): ReactElement {
   // CONTEXT
-  const { borderColor } = useTheme();
-  const { t } = useTranslation();
+  const { borderColor } = useTheme()
+  const { t } = useTranslation()
 
   return (
     <>
@@ -209,12 +209,12 @@ function Home(): ReactElement {
                                         <code>{'}'}</code>
                                       </div>
                                     </li>
-                                  );
+                                  )
                                 })
                               : null}
                           </ul>
                         </HomeSkillsBoxStyled>
-                      );
+                      )
                     })
                   : null}
               </HomeFlexStyled>
@@ -445,7 +445,7 @@ function Home(): ReactElement {
         <Footer />
       </Main>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home

@@ -1,8 +1,8 @@
-import styled, { IActiveStyled, IModalStyled, IStyledSystem } from 'styled-components';
-import { space } from 'styled-system';
+import styled, { IActiveStyled, IModalStyled, IStyledSystem } from 'styled-components'
+import { space } from 'styled-system'
 
-import { gradientDirection, scrollbar } from '@/styles/function';
-import { variable } from '@/styles/variable';
+import { gradientDirection, scrollbar } from '@/styles/function'
+import { variable } from '@/styles/variable'
 
 export const ModalStyled = styled.div<IStyledSystem>`
   background-color: ${({ backgroundColor, theme }): string => backgroundColor || theme.bgColor.primary};
@@ -20,7 +20,7 @@ export const ModalStyled = styled.div<IStyledSystem>`
   @media (max-width: ${variable.breakpoint.sm}) {
     width: 90%;
   }
-`;
+`
 
 export const ModalBackgroundStyled = styled.div<IStyledSystem>`
   background-color: ${variable.color.blackTransparent3};
@@ -43,7 +43,7 @@ export const ModalBackgroundStyled = styled.div<IStyledSystem>`
       deg: '0deg'
     })}
   }
-`;
+`
 
 export const ModalConfirmStyled = styled.div<IStyledSystem>`
   background-color: ${({ backgroundColor, theme }): string => backgroundColor || theme.bgColor.primary};
@@ -61,7 +61,7 @@ export const ModalConfirmStyled = styled.div<IStyledSystem>`
   @media (max-width: ${variable.breakpoint.sm}) {
     width: 90%;
   }
-`;
+`
 
 export const ModalConfirmContentStyled = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ export const ModalConfirmContentStyled = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   word-break: break-all;
-`;
+`
 
 export const ModalContentStyled = styled.div<IStyledSystem>`
   ${space};
@@ -82,7 +82,7 @@ export const ModalContentStyled = styled.div<IStyledSystem>`
   flex-direction: column;
   height: 80vh;
   overflow-y: auto;
-`;
+`
 
 export const ModalCookieStyled = styled.div`
   background-color: ${({ theme }): string => theme.bgColor.primary};
@@ -98,7 +98,7 @@ export const ModalCookieStyled = styled.div`
   @media (min-width: ${variable.breakpoint.sm}) {
     width: 720px;
   }
-`;
+`
 
 export const ModalInfoStyled = styled.div<IActiveStyled>`
   background-color: ${({ backgroundColor, theme }): string => backgroundColor || theme.bgColor.primary};
@@ -118,7 +118,7 @@ export const ModalInfoStyled = styled.div<IActiveStyled>`
   @media (max-width: ${variable.breakpoint.sm}) {
     width: 90%;
   }
-`;
+`
 
 export const ModalInfoButtonsStyled = styled.div<IActiveStyled>`
   display: flex;
@@ -130,7 +130,7 @@ export const ModalInfoButtonsStyled = styled.div<IActiveStyled>`
   [data-svg-maximize-minimize='true'] {
     transform: ${({ open }): string => (open ? 'rotate(0deg)' : 'rotate(180deg)')};
   }
-`;
+`
 
 export const ModalInfoContentStyled = styled.div<IStyledSystem>`
   ${space};
@@ -143,7 +143,7 @@ export const ModalInfoContentStyled = styled.div<IStyledSystem>`
   max-height: 200px;
   min-height: 100px;
   overflow-y: auto;
-`;
+`
 
 export const ModalTopStyled = styled.div<IModalStyled>`
   ${space};
@@ -160,4 +160,4 @@ export const ModalTopStyled = styled.div<IModalStyled>`
   flex: 1 1 auto;
   flex-wrap: wrap;
   justify-content: space-between;
-`;
+`

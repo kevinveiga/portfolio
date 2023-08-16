@@ -1,7 +1,7 @@
-import styled, { css, IButton } from 'styled-components';
-import { border, flexbox, layout, position, space, typography } from 'styled-system';
+import styled, { css, IButton } from 'styled-components'
+import { border, flexbox, layout, position, space, typography } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 const button = css<IButton>`
   ${flexbox};
@@ -44,7 +44,7 @@ const button = css<IButton>`
           opacity: 0.5;
         `
       : undefined}
-`;
+`
 
 export const ButtonStyled = styled.button<IButton>`
   ${border};
@@ -88,7 +88,7 @@ export const ButtonStyled = styled.button<IButton>`
           }
         `
       : undefined}
-`;
+`
 
 export const ButtonBorderStyled = styled.button<IButton>`
   ${border};
@@ -136,7 +136,7 @@ export const ButtonBorderStyled = styled.button<IButton>`
           }
         `
       : undefined}
-`;
+`
 
 export const ButtonUnsetStyled = styled.button<IButton>`
   ${flexbox};
@@ -196,4 +196,4 @@ export const ButtonUnsetStyled = styled.button<IButton>`
     transition: fill ${variable.animation.transition};
     vertical-align: middle;
   }
-`;
+`

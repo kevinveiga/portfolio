@@ -1,10 +1,10 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import parse from 'html-react-parser';
+import parse from 'html-react-parser'
 
-import { IButton } from '@/interface';
+import { IButton } from '@/interface'
 
-import { ButtonStyled, ButtonBorderStyled, ButtonUnsetStyled } from '@/components/button/buttonStyled';
+import { ButtonStyled, ButtonBorderStyled, ButtonUnsetStyled } from '@/components/button/buttonStyled'
 
 export function Button({
   ariaLabel = '',
@@ -14,28 +14,28 @@ export function Button({
   typeStyle = 'button',
   ...props
 }: IButton): ReactElement {
-  const acessibility = ariaLabel || text;
-  const buttonContent = children || parse(`<span>${text}</span>` || '');
-  let StyledComponent = ButtonStyled;
+  const acessibility = ariaLabel || text
+  const buttonContent = children || parse(`<span>${text}</span>` || '')
+  let StyledComponent = ButtonStyled
 
   switch (typeStyle) {
     case 'button-border':
-      StyledComponent = ButtonBorderStyled;
+      StyledComponent = ButtonBorderStyled
 
-      break;
+      break
 
     case 'button-unset':
-      StyledComponent = ButtonUnsetStyled;
+      StyledComponent = ButtonUnsetStyled
 
-      break;
+      break
 
     default:
-      break;
+      break
   }
 
   return (
     <StyledComponent aria-label={acessibility} type={typeButton} {...props}>
       {buttonContent}
     </StyledComponent>
-  );
+  )
 }

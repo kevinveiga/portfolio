@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from 'react'
 
 export type TAlignContent =
   | 'center'
@@ -8,21 +8,21 @@ export type TAlignContent =
   | 'initial'
   | 'space-around'
   | 'space-between'
-  | 'stretch';
+  | 'stretch'
 
-export type TAlignItems = 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'inherit' | 'initial' | 'stretch';
+export type TAlignItems = 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'inherit' | 'initial' | 'stretch'
 
-export type TAlignSelf = 'auto' | 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'inherit' | 'initial' | 'stretch';
+export type TAlignSelf = 'auto' | 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'inherit' | 'initial' | 'stretch'
 
-export type TAnimationDirection = 'alternate' | 'alternate-reverse' | 'inherit' | 'initial' | 'normal' | 'reverse';
+export type TAnimationDirection = 'alternate' | 'alternate-reverse' | 'inherit' | 'initial' | 'normal' | 'reverse'
 
-export type TAnimationFillMode = 'backwards' | 'both' | 'inherit' | 'initial' | 'none' | 'forwards';
+export type TAnimationFillMode = 'backwards' | 'both' | 'inherit' | 'initial' | 'none' | 'forwards'
 
-export type TAnimationIterationCount = 'infinite' | 'inherit' | 'initial' | number;
+export type TAnimationIterationCount = 'infinite' | 'inherit' | 'initial' | number
 
-export type TAnimationPlayState = 'inherit' | 'initial' | 'paused' | 'running';
+export type TAnimationPlayState = 'inherit' | 'initial' | 'paused' | 'running'
 
-export type TBackgroundRepeat = 'inherit' | 'initial' | 'repeat' | 'no-repeat' | 'repeat-x' | 'repeat-y';
+export type TBackgroundRepeat = 'inherit' | 'initial' | 'repeat' | 'no-repeat' | 'repeat-x' | 'repeat-y'
 
 export type TCursor =
   | 'alias'
@@ -64,7 +64,7 @@ export type TCursor =
   | 'w-resize'
   | 'wait'
   | 'zoom-in'
-  | 'zoom-out';
+  | 'zoom-out'
 
 export type TDisplay =
   | 'block'
@@ -88,15 +88,15 @@ export type TDisplay =
   | 'table-column-group'
   | 'table-footer-group'
   | 'table-header-group'
-  | 'table-row';
+  | 'table-row'
 
-export type TFlexDirection = 'column' | 'column-reverse' | 'inherit' | 'initial' | 'row' | 'row-reverse';
+export type TFlexDirection = 'column' | 'column-reverse' | 'inherit' | 'initial' | 'row' | 'row-reverse'
 
-export type TFlexWrap = 'inherit' | 'initial' | 'nowrap' | 'wrap' | 'wrap-reverse';
+export type TFlexWrap = 'inherit' | 'initial' | 'nowrap' | 'wrap' | 'wrap-reverse'
 
-export type TFontWeight = 'inherit' | 'initial' | 300 | 700;
+export type TFontWeight = 'inherit' | 'initial' | 300 | 700
 
-export type TGap = 'inherit' | 'initial' | 'normal' | 'revert' | 'unset' | number | string;
+export type TGap = 'inherit' | 'initial' | 'normal' | 'revert' | 'unset' | number | string
 
 export type TInputType =
   | 'button'
@@ -120,7 +120,7 @@ export type TInputType =
   | 'text'
   | 'time'
   | 'url'
-  | 'week';
+  | 'week'
 
 export type TJustifyContent =
   | 'center'
@@ -131,9 +131,9 @@ export type TJustifyContent =
   | 'space-around'
   | 'space-between'
   | 'space-evenly'
-  | 'stretch';
+  | 'stretch'
 
-export type TJustifyItems = 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'inherit' | 'initial' | 'stretch';
+export type TJustifyItems = 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'inherit' | 'initial' | 'stretch'
 
 export type TJustifySelf =
   | 'auto'
@@ -143,9 +143,9 @@ export type TJustifySelf =
   | 'flex-start'
   | 'inherit'
   | 'initial'
-  | 'stretch';
+  | 'stretch'
 
-export type TLanguage = 'en' | 'pt_BR';
+export type TLanguage = 'en' | 'pt_BR'
 
 export type TOverflow =
   | 'auto'
@@ -156,15 +156,15 @@ export type TOverflow =
   | 'revert'
   | 'scroll'
   | 'unset'
-  | 'visible';
+  | 'visible'
 
-export type TPosition = 'absolute' | 'fixed' | 'relative' | 'static' | 'sticky';
+export type TPosition = 'absolute' | 'fixed' | 'relative' | 'static' | 'sticky'
 
-export type TState<T> = [T, Dispatch<SetStateAction<T>>];
+export type TState<T> = [T, Dispatch<SetStateAction<T>>]
 
-export type TTextAlign = 'center' | 'inherit' | 'initial' | 'justify' | 'left' | 'right';
+export type TTextAlign = 'center' | 'inherit' | 'initial' | 'justify' | 'left' | 'right'
 
-export type TTextTransform = 'capitalize' | 'inherit' | 'initial' | 'lowercase' | 'none' | 'uppercase';
+export type TTextTransform = 'capitalize' | 'inherit' | 'initial' | 'lowercase' | 'none' | 'uppercase'
 
 export type TVerticalAlign =
   | 'baseline'
@@ -177,6 +177,6 @@ export type TVerticalAlign =
   | 'super'
   | 'text-bottom'
   | 'text-top'
-  | 'top';
+  | 'top'
 
-export type TWhiteSpace = 'inherit' | 'initial' | 'normal' | 'nowrap' | 'pre' | 'pre-line' | 'pre-wrap';
+export type TWhiteSpace = 'inherit' | 'initial' | 'normal' | 'nowrap' | 'pre' | 'pre-line' | 'pre-wrap'

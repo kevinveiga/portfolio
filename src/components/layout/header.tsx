@@ -1,34 +1,34 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useState } from 'react'
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
-import { scrollTo } from '@/helpers/scrollTo';
-import { useApp } from '@/pages/_app';
-import { useChangeHeaderScroll } from '@/hooks/header/useHeader';
-import { usePage } from '@/hooks/page/usePage';
+import { scrollTo } from '@/helpers/scrollTo'
+import { useApp } from '@/pages/_app'
+import { useChangeHeaderScroll } from '@/hooks/header/useHeader'
+import { usePage } from '@/hooks/page/usePage'
 
-import { Button } from '@/components/button/button';
-import { HeaderStyled, HeaderItemsStyled, HeaderItemsNavStyled } from '@/components/layout/headerStyled';
-import { LinkToExternal } from '@/components/link/linkToExternal';
-import { MenuMobile } from '@/components/layout/menuMobile';
-import { SvgDarkLightMode, SvgFlagBrazil, SvgFlagUsa, SvgMenu } from '@/components/svg/svgStore';
+import { Button } from '@/components/button/button'
+import { HeaderStyled, HeaderItemsStyled, HeaderItemsNavStyled } from '@/components/layout/headerStyled'
+import { LinkToExternal } from '@/components/link/linkToExternal'
+import { MenuMobile } from '@/components/layout/menuMobile'
+import { SvgDarkLightMode, SvgFlagBrazil, SvgFlagUsa, SvgMenu } from '@/components/svg/svgStore'
 
-import { Box } from '@/styles/flex';
-import { variable } from '@/styles/variable';
+import { Box } from '@/styles/flex'
+import { variable } from '@/styles/variable'
 
-import menuItens from '@/public/json/menu-itens.json';
+import menuItens from '@/public/json/menu-itens.json'
 
 export function Header(): ReactElement {
   // CONTEXT
-  const { setStateTheme } = useApp();
-  const { setStateLanguage } = usePage();
-  const { t } = useTranslation();
+  const { setStateTheme } = useApp()
+  const { setStateLanguage } = usePage()
+  const { t } = useTranslation()
 
   // STATE
-  const [stateMenuMobileActive, setStateMenuMobileActive] = useState(false);
+  const [stateMenuMobileActive, setStateMenuMobileActive] = useState(false)
 
   // CUSTOM HOOK
-  const stateChangeHeaderScroll = useChangeHeaderScroll('header');
+  const stateChangeHeaderScroll = useChangeHeaderScroll('header')
 
   return (
     <HeaderStyled change={stateChangeHeaderScroll} id="header">
@@ -53,7 +53,7 @@ export function Header(): ReactElement {
                         <LinkToExternal ariaLabel={item.title} link={item.link} text={item.title} />
                       )}
                     </li>
-                  );
+                  )
                 })
               : null}
           </ul>
@@ -109,5 +109,5 @@ export function Header(): ReactElement {
         </HeaderItemsStyled>
       </Box>
     </HeaderStyled>
-  );
+  )
 }

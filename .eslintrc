@@ -56,7 +56,7 @@
         "@typescript-eslint/no-unsafe-return": ["off"],
         "@typescript-eslint/no-unused-vars": ["warn"],
         "@typescript-eslint/no-use-before-define": ["error"],
-        "@typescript-eslint/semi": ["error"]
+        "@typescript-eslint/semi": ["error", "never"]
       }
     }
   ],
@@ -114,7 +114,7 @@
     "no-debugger": "error",
     "no-empty": "warn",
     "no-eq-null": "off",
-    "no-extra-semi": "warn",
+    "no-extra-semi": "error",
     "no-inline-comments": "warn",
     "no-invalid-regexp": "error",
     "no-multiple-empty-lines": [
@@ -157,7 +157,7 @@
         "printWidth": 120,
         "proseWrap": "preserve",
         "requirePragma": false,
-        "semi": true,
+        "semi": false,
         "singleQuote": true,
         "tabWidth": 2,
         "trailingComma": "none",
@@ -227,7 +227,7 @@
     "react/style-prop-object": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "semi": "error",
+    "semi": ["error", "never"],
     "strict": "error"
   },
   "settings": {

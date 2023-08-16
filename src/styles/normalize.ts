@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
-import { scrollbar } from '@/styles/function';
-import { variable } from '@/styles/variable';
+import { scrollbar } from '@/styles/function'
+import { variable } from '@/styles/variable'
 
 export const Normalize = createGlobalStyle`
     /* GENERAL */
@@ -334,4 +334,4 @@ export const Normalize = createGlobalStyle`
     var {
         font-style: normal;
     }
-`;
+`

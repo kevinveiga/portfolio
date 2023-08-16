@@ -1,16 +1,16 @@
-import { sleep } from '@/helpers/sleep';
+import { sleep } from '@/helpers/sleep'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
-let scrollOnce = false;
+let scrollOnce = false
 
 const fnElementPosition = (elementPosition: Element | null): number => {
   return elementPosition
     ? elementPosition.getBoundingClientRect().y -
         document.body.getBoundingClientRect().y +
         (window.innerWidth < parseInt(variable.breakpoint.md, 10) ? 0 : 80)
-    : 0;
-};
+    : 0
+}
 
 const fnScroll = (anchor: number, context: Element | (Window & typeof globalThis) | null): void => {
   if (context) {
@@ -19,12 +19,12 @@ const fnScroll = (anchor: number, context: Element | (Window & typeof globalThis
         behavior: 'smooth',
         left: 0,
         top: anchor
-      });
+      })
     } catch (error) {
-      context.scrollTo(0, anchor);
+      context.scrollTo(0, anchor)
     }
   }
-};
+}
 
 export const scrollTo = (
   anchorElementString = '',
@@ -36,36 +36,36 @@ export const scrollTo = (
   if (doScroll) {
     // Verifica se o scroll já está sendo feito
     if (!scrollOnce) {
-      const anchorElement = anchorElementString ? document.querySelector(anchorElementString) : null;
-      const newOffset = offset || window.innerWidth > 1000 ? -120 : -20;
-      const scrollContext = scrollContextString ? document.querySelector(scrollContextString) : window;
-      const scrollYPos = window.scrollY || document.documentElement.scrollTop;
+      const anchorElement = anchorElementString ? document.querySelector(anchorElementString) : null
+      const newOffset = offset || window.innerWidth > 1000 ? -120 : -20
+      const scrollContext = scrollContextString ? document.querySelector(scrollContextString) : window
+      const scrollYPos = window.scrollY || document.documentElement.scrollTop
 
-      let scrollTimer = timer;
+      let scrollTimer = timer
 
       // Se o scroll deve ir para um elemento, então é adicionado um timer de 750ms para fazer o scroll corretamente
       if (anchorElementString && Math.trunc(fnElementPosition(anchorElement)) !== Math.trunc(scrollYPos)) {
-        scrollTimer = 250;
+        scrollTimer = 250
       }
 
       const delay = async (): Promise<void> => {
-        await sleep(scrollTimer);
+        await sleep(scrollTimer)
 
-        fnScroll(fnElementPosition(anchorElement) + newOffset, scrollContext);
-      };
+        fnScroll(fnElementPosition(anchorElement) + newOffset, scrollContext)
+      }
 
-      delay().catch(() => null);
+      delay().catch(() => null)
 
-      scrollOnce = true;
+      scrollOnce = true
     }
 
     // Reseta a verificação se o scroll já estava sendo feito
     const delay = async (): Promise<void> => {
-      await sleep(1000);
+      await sleep(1000)
 
-      scrollOnce = false;
-    };
+      scrollOnce = false
+    }
 
-    delay().catch(() => null);
+    delay().catch(() => null)
   }
-};
+}

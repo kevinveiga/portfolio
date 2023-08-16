@@ -1,8 +1,8 @@
-import styled, { css, IStyledSystem } from 'styled-components';
-import { border, boxShadow, flexbox, layout, position, space, typography } from 'styled-system';
+import styled, { css, IStyledSystem } from 'styled-components'
+import { border, boxShadow, flexbox, layout, position, space, typography } from 'styled-system'
 
-import { scrollbarInvisible, scrollbarTable } from '@/styles/function';
-import { variable } from '@/styles/variable';
+import { scrollbarInvisible, scrollbarTable } from '@/styles/function'
+import { variable } from '@/styles/variable'
 
 export const Box = styled.div<IStyledSystem>`
   ${border};
@@ -22,11 +22,11 @@ export const Box = styled.div<IStyledSystem>`
   ${({ display }): string | undefined => (display === undefined ? 'display: flex' : undefined)};
   ${({ flexWrap }): string | undefined => (flexWrap === undefined ? 'flex-wrap: wrap' : undefined)};
   ${({ rowGap }): string | undefined => (rowGap ? `row-gap: ${rowGap}` : undefined)};
-`;
+`
 
 export const BoxTheme = styled(Box)<IStyledSystem>`
   background-color: ${({ backgroundColor, theme }): string => backgroundColor || theme.bgColor.primary};
-`;
+`
 
 export const Flex = styled.div<IStyledSystem>`
   ${border};
@@ -55,8 +55,8 @@ export const Flex = styled.div<IStyledSystem>`
           }
         `
       : undefined};
-`;
+`
 
 export const FlexTheme = styled(Flex)<IStyledSystem>`
   background-color: ${({ backgroundColor, theme }): string => backgroundColor || theme.bgColor.primary};
-`;
+`

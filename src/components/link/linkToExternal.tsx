@@ -1,10 +1,10 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import Link from 'next/link';
+import Link from 'next/link'
 
-import { ILinkExternal } from '@/interface';
+import { ILinkExternal } from '@/interface'
 
-import { LinkToExternalStyled } from '@/components/link/linkToStyled';
+import { LinkToExternalStyled } from '@/components/link/linkToStyled'
 
 export function LinkToExternal({
   ariaLabel = '',
@@ -14,9 +14,9 @@ export function LinkToExternal({
   text = '',
   ...props
 }: ILinkExternal): ReactElement {
-  const acessibility = ariaLabel || text;
-  const linkToContent = children || text;
-  const rel = target === '_blank' ? 'noopener noreferrer' : '';
+  const acessibility = ariaLabel || text
+  const linkToContent = children || text
+  const rel = target === '_blank' ? 'noopener noreferrer' : ''
 
   return (
     <Link href={link} passHref={true}>
@@ -24,5 +24,5 @@ export function LinkToExternal({
         {linkToContent}
       </LinkToExternalStyled>
     </Link>
-  );
+  )
 }

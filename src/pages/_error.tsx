@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import { Container, Main } from '@/styles/layout';
-import { Title4 } from '@/styles/text';
+import { Container, Main } from '@/styles/layout'
+import { Title4 } from '@/styles/text'
 
 function Error({ statusCode }: any): ReactElement {
   const errorStatusObj: Record<number, string> = {
@@ -43,7 +43,7 @@ function Error({ statusCode }: any): ReactElement {
     508: 'O servidor detectou um looping infinito ao processar a requisição',
     510: 'Exigem-se extenções posteriores à requisição para o servidor atendê-la',
     511: 'Não autenticado na rede'
-  };
+  }
 
   return (
     <Main>
@@ -57,7 +57,7 @@ function Error({ statusCode }: any): ReactElement {
         )}
       </Container>
     </Main>
-  );
+  )
 }
 
-export default Error;
+export default Error

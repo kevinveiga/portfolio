@@ -1,17 +1,17 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import { ISvgStyled } from 'styled-components';
+import { ISvgStyled } from 'styled-components'
 
-import { SvgStyled, SvgLogoLoaderStyled } from '@/components/svg/svgStyled';
+import { SvgStyled, SvgLogoLoaderStyled } from '@/components/svg/svgStyled'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export function SvgArrowDown({ ...props }: ISvgStyled): ReactElement {
   return (
     <SvgStyled {...props} viewBox="0 0 307.05 180.33" xmlns="http://www.w3.org/2000/svg">
       <path d="m302.44 17.43-11.1-11.1a15.7 15.7 0 0 0-22.2 0L153.66 120.35 37.91 4.6a15.7 15.7 0 0 0-22.21 0L4.6 15.7a15.7 15.7 0 0 0 0 22.2l137.83 137.83a15.7 15.7 0 0 0 22.2 0l137.81-136.1a15.67 15.67 0 0 0 0-22.2z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgArrowLeft({ ...props }: ISvgStyled): ReactElement {
@@ -19,7 +19,7 @@ export function SvgArrowLeft({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 257.6 451.8" xmlns="http://www.w3.org/2000/svg">
       <path d="M226 0a31.5 31.5 0 0 1 22.3 54l-172 172 172 171.8a31.6 31.6 0 0 1-44.7 44.8L9.3 248.3a31.5 31.5 0 0 1 0-44.7L203.5 9.3A31.5 31.5 0 0 1 226 0z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgArrowRight({ ...props }: ISvgStyled): ReactElement {
@@ -27,7 +27,7 @@ export function SvgArrowRight({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 257.6 451.8" xmlns="http://www.w3.org/2000/svg">
       <path d="M31.6 0A31.5 31.5 0 0 0 9.3 54l171.9 172-172 171.8A31.6 31.6 0 0 0 54 442.6l194.3-194.3a31.5 31.5 0 0 0 0-44.7L54 9.3A31.5 31.5 0 0 0 31.6 0z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgAwardFill({ ...props }: ISvgStyled): ReactElement {
@@ -37,7 +37,7 @@ export function SvgAwardFill({ ...props }: ISvgStyled): ReactElement {
 
       <path d="M1.7 11.8V16l4-1 4 1v-4.2l-2.01.3-1.98 1.03-1.99-1.03Z" fill={variable.color.yellow} />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgChatBar({ ...props }: ISvgStyled): ReactElement {
@@ -45,7 +45,7 @@ export function SvgChatBar({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 15.33" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.53a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2Zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgChecked({ ...props }: ISvgStyled): ReactElement {
@@ -53,7 +53,7 @@ export function SvgChecked({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 23.8 16.9" xmlns="http://www.w3.org/2000/svg">
       <path d="M22.2.5a1 1 0 0 0-.6.3l-13.1 13-6.2-6.1A1 1 0 0 0 .8 9.2l7 6.9a1 1 0 0 0 .7.3 1 1 0 0 0 .7-.3L23.1 2.2a1 1 0 0 0-.9-1.7z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgClose({ ...props }: ISvgStyled): ReactElement {
@@ -61,7 +61,7 @@ export function SvgClose({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 212.98 212.98" xmlns="http://www.w3.org/2000/svg">
       <path d="m131.8 106.5 75.94-75.94a17.9 17.9 0 1 0-25.31-25.32l-75.94 75.94L30.55 5.24a17.9 17.9 0 1 0-25.3 25.31l75.93 75.94-75.94 75.94a17.9 17.9 0 0 0 25.31 25.31l75.94-75.94 75.94 75.94a17.9 17.9 0 1 0 25.31-25.31z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgDarkLightMode({ ...props }: ISvgStyled): ReactElement {
@@ -69,7 +69,7 @@ export function SvgDarkLightMode({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path d="M10 0a10 10 0 100 20 10 10 0 000-20zm4.43 3.33a8 8 0 11-11.1 11.1 9 9 0 008.8-2.3 9 9 0 002.3-8.8z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgDocument({ ...props }: ISvgStyled): ReactElement {
@@ -77,7 +77,7 @@ export function SvgDocument({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M7.5 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5Zm0 1v2A1.5 1.5 0 0 0 9 4.5h2V14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Zm-4 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM3 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgEnvelope({ ...props }: ISvgStyled): ReactElement {
@@ -85,7 +85,7 @@ export function SvgEnvelope({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2Zm2-1a1 1 0 0 0-1 1v.22l7 4.2 7-4.2V2a1 1 0 0 0-1-1Zm13 2.38-4.7 2.83L15 9.1Zm-.03 6.88L9.33 6.79 8 7.59l-1.33-.8-5.64 3.47A1 1 0 0 0 2 11h12a1 1 0 0 0 .97-.74zM1 9.1l4.7-2.9L1 3.38Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgFilter({ ...props }: ISvgStyled): ReactElement {
@@ -93,7 +93,7 @@ export function SvgFilter({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 19.5 19.5" xmlns="http://www.w3.org/2000/svg">
       <path d="M6.75 9.27v9.48a.75.75 0 0 0 1.09.67l4.5-2.25a.75.75 0 0 0 .41-.67V9.27l6.58-8.04a.75.75 0 1 0-1.16-.96l-6.75 8.25a.75.75 0 0 0-.17.48v7.04l-3 1.5V9a.75.75 0 0 0-.17-.48L2.33 1.5h11.92a.75.75 0 1 0 0-1.5H.75a.75.75 0 0 0-.58 1.23z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgFlagBrazil({ ...props }: ISvgStyled): ReactElement {
@@ -110,7 +110,7 @@ export function SvgFlagBrazil({ ...props }: ISvgStyled): ReactElement {
         fill="#f0f0f0"
       />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgFlagSpain({ ...props }: ISvgStyled): ReactElement {
@@ -120,7 +120,7 @@ export function SvgFlagSpain({ ...props }: ISvgStyled): ReactElement {
 
       <path d="M0 104h448v112H0Z" fill="#ffd02b" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgFlagUsa({ ...props }: ISvgStyled): ReactElement {
@@ -146,7 +146,7 @@ export function SvgFlagUsa({ ...props }: ISvgStyled): ReactElement {
         fill="#f5f5f5"
       />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgGithub({ ...props }: ISvgStyled): ReactElement {
@@ -154,7 +154,7 @@ export function SvgGithub({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 15.61" xmlns="http://www.w3.org/2000/svg">
       <path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8a8 8 0 0 0-8-8Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgGoogle({ ...props }: ISvgStyled): ReactElement {
@@ -177,7 +177,7 @@ export function SvgGoogle({ ...props }: ISvgStyled): ReactElement {
         d="M109.52 297.33c-17.2 13.1-34.4 26.1-51.6 39.2-10.7 8.1-21.4 16.3-32.1 24.5-8.3-15.4-13.7-31.7-18.1-48.5-8.4-32.5-9.7-65.5-5.1-98.6 3.6-26 11.1-51 23.2-74.4 15 11.5 29.9 23.1 44.9 34.6 12.9 9.9 25.8 19.7 38.7 29.5-2.2 10.7-5.3 21.2-6.3 32.2-1.8 20 .1 39.5 5.8 58.7.4.8.5 1.8.6 2.8z"
       />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgGmail({ ...props }: ISvgStyled): ReactElement {
@@ -199,7 +199,7 @@ export function SvgGmail({ ...props }: ISvgStyled): ReactElement {
         d="M126.07 116.11 6.8 29.54C-.2 24.35-2.22 14.43 2.97 7.44 8.15.45 18.3-1.13 25.5 4.06L126.3 77.33 227.76 3.16a15.68 15.68 0 0 1 22.1 3.6 15.68 15.68 0 0 1-3.62 22.1z"
       />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgIdentification({ ...props }: ISvgStyled): ReactElement {
@@ -207,7 +207,7 @@ export function SvgIdentification({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 6a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 6Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 8.57 7.21 7 5 7c-2.09 0-3.8 1.4-3.98 3.18A1 1 0 0 0 2 11h6.96c.03-.16.04-.33.04-.5ZM7 4a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgInvalid({ ...props }: ISvgStyled): ReactElement {
@@ -215,7 +215,7 @@ export function SvgInvalid({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
       <path d="M1.2.5a.7.7 0 0 0-.5 1.3l6.8 6.7-6.8 6.7a.7.7 0 0 0 .5 1.3.7.7 0 0 0 .5-.3l6.8-6.7 6.7 6.7a.7.7 0 0 0 .5.3.7.7 0 0 0 .5-1.3L9.5 8.5l6.7-6.7a.7.7 0 1 0-1-1L8.5 7.4 1.7.7a.7.7 0 0 0-.5-.2z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgLaptopCodeFill({ ...props }: ISvgStyled): ReactElement {
@@ -223,7 +223,7 @@ export function SvgLaptopCodeFill({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
       <path d="M2.5 0A1.5 1.5 0 0 0 1 1.5V10h14V1.5A1.5 1.5 0 0 0 13.5 0Zm6.17 2.7a.18.18 0 0 1 .21.23L7.46 7.57a.18.18 0 0 1-.34-.1l1.42-4.64a.18.18 0 0 1 .13-.12ZM6.7 3.79a.18.18 0 0 1 .18.04.18.18 0 0 1 0 .26L5.75 5.2l1.13 1.12a.18.18 0 0 1-.26.26L5.37 5.33a.18.18 0 0 1 0-.26l1.25-1.25a.18.18 0 0 1 .08-.04zm2.5 0a.18.18 0 0 1 .18.04l1.25 1.25a.18.18 0 0 1 0 .26L9.38 6.58a.18.18 0 0 1-.26-.26l1.13-1.12-1.13-1.12a.18.18 0 0 1 0-.26.18.18 0 0 1 .08-.04zM0 10.5A1.5 1.5 0 0 0 1.5 12h13a1.5 1.5 0 0 0 1.5-1.5Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgLink45Deg({ ...props }: ISvgStyled): ReactElement {
@@ -231,7 +231,7 @@ export function SvgLink45Deg({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 11.07 11.07" xmlns="http://www.w3.org/2000/svg">
       <path d="M4.12 2.7a3 3 0 0 0 .83 4.83l.77-.77a2 2 0 0 1-.9-3.35l1.84-1.83a2 2 0 1 1 2.83 2.83l-.8.8c.11.42.16.85.13 1.28l1.37-1.37A3 3 0 1 0 5.95.88ZM2.25 4.59.88 5.95a3 3 0 1 0 4.24 4.24l1.83-1.83a3 3 0 0 0-.83-4.83l-.58.6a1 1 0 0 0-.16.19 2 2 0 0 1 .86 3.34L4.42 9.48a2 2 0 1 1-2.83-2.83l.79-.79a4.02 4.02 0 0 1-.13-1.28z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgLinkedin({ ...props }: ISvgStyled): ReactElement {
@@ -239,7 +239,7 @@ export function SvgLinkedin({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 1.15C0 .5.53 0 1.18 0h13.64C15.48 0 16 .51 16 1.15v13.7c0 .64-.53 1.15-1.18 1.15H1.18C.53 16 0 15.49 0 14.85Zm4.94 12.24V6.17h-2.4v7.22zm-1.2-8.2c.84 0 1.36-.56 1.36-1.26-.01-.7-.52-1.24-1.34-1.24-.82 0-1.36.54-1.36 1.24s.52 1.25 1.33 1.25zm4.91 8.2V9.36c0-.22.02-.43.08-.59.17-.43.57-.87 1.23-.87.87 0 1.22.66 1.22 1.63v3.86h2.4V9.25C13.58 7.03 12.4 6 10.82 6c-1.28 0-1.85.7-2.17 1.2v.02h-.02a5.54 5.54 0 0 1 .02-.03V6.17h-2.4c.03.68 0 7.22 0 7.22z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgLock({ ...props }: ISvgStyled): ReactElement {
@@ -247,7 +247,7 @@ export function SvgLock({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
       <path d="M11.23 6.07c.06-.3.09-.6.09-.91A5.24 5.24 0 0 0 6 0 5.24 5.24 0 0 0 .77 6.07C.3 6.35 0 6.83 0 7.4v5.05C0 13.3.74 14 1.66 14h8.68c.92 0 1.66-.7 1.66-1.56V7.39c0-.55-.3-1.04-.77-1.32Zm-4.5 4.4v1.1c0 .39-.33.7-.73.7-.4 0-.73-.31-.73-.7v-1.1a1.42 1.42 0 0 1-.8-1.25c0-.79.69-1.43 1.53-1.43.84 0 1.52.64 1.52 1.43 0 .54-.32 1.02-.79 1.26zM9.3 5.84H2.71A3.34 3.34 0 0 1 6 1.84a3.34 3.34 0 0 1 3.28 3.99z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgLogoLoader({ ...props }: ISvgStyled): ReactElement {
@@ -265,7 +265,7 @@ export function SvgLogoLoader({ ...props }: ISvgStyled): ReactElement {
         />
       </path>
     </SvgLogoLoaderStyled>
-  );
+  )
 }
 
 export function SvgLogout({ ...props }: ISvgStyled): ReactElement {
@@ -273,7 +273,7 @@ export function SvgLogout({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
       <path d="M.15 6.35a.5.5 0 0 1 0-.7l3-3a.5.5 0 1 1 .7.7L1.71 5.5h8.8a.5.5 0 0 1 0 1H1.7l2.14 2.15a.5.5 0 0 1-.7.7zM6 10.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 0h8A1.5 1.5 0 0 1 16 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 10.5v-2a.5.5 0 0 1 1 0z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgMenu({ ...props }: ISvgStyled): ReactElement {
@@ -281,7 +281,7 @@ export function SvgMenu({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 459 306" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0v51h459V0zm0 127.5v51h459v-51zM0 255v51h459v-51z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgMoney({ ...props }: ISvgStyled): ReactElement {
@@ -289,7 +289,7 @@ export function SvgMoney({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 8.31 14" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 9.78c.15 1.67 1.51 2.85 3.6 3V14h1.03v-1.22c2.27-.17 3.68-1.43 3.68-3.3 0-1.59-.94-2.5-2.95-3.02l-.73-.2v-3.8c1.13.12 1.88.72 2.07 1.62h1.47c-.16-1.6-1.54-2.75-3.54-2.87V0H3.6v1.23C1.65 1.46.32 2.71.32 4.4c0 1.45.97 2.48 2.66 2.92l.61.16v4.03c-1.15-.17-1.94-.8-2.13-1.72Zm3.4-3.83c-1.05-.27-1.6-.83-1.6-1.62 0-.95.7-1.64 1.8-1.83V6l-.2-.05zm1.58 1.87c1.29.32 1.85.86 1.85 1.77 0 1.1-.82 1.82-2.2 1.94v-3.8l.35.09z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgMortarboardFill({ ...props }: ISvgStyled): ReactElement {
@@ -302,7 +302,7 @@ export function SvgMortarboardFill({ ...props }: ISvgStyled): ReactElement {
         fill={variable.color.turquoise}
       />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgNumber({ ...props }: ISvgStyled): ReactElement {
@@ -310,7 +310,7 @@ export function SvgNumber({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M2.87 11.3V4.14H1.7L0 5.38v1.14l1.64-1.18h.06v5.96h1.17ZM6.1 6.2v-.06c0-.61.44-1.16 1.2-1.16.67 0 1.17.44 1.17 1.1 0 .63-.42 1.1-.81 1.53l-2.66 2.94v.75h4.78v-1H6.64v-.06l1.77-1.99c.65-.72 1.24-1.33 1.24-2.27C9.65 4.85 8.72 4 7.3 4 5.74 4 4.95 5.06 4.95 6.15v.06h1.14Zm6.56 1.89h.78c.82 0 1.37.48 1.38 1.18.01.7-.55 1.22-1.42 1.2-.77 0-1.33-.41-1.38-.94h-1.1c.05 1.05.94 1.91 2.47 1.91 1.48 0 2.64-.84 2.62-2.14a1.72 1.72 0 0 0-1.55-1.71v-.07a1.68 1.68 0 0 0 1.32-1.68C15.75 4.8 14.84 4 13.41 4c-1.5 0-2.31.88-2.34 1.9h1.11c.04-.5.5-.95 1.2-.95.71 0 1.21.44 1.21 1.07.01.64-.5 1.11-1.2 1.11h-.75v.96Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgPhone({ ...props }: ISvgStyled): ReactElement {
@@ -318,7 +318,7 @@ export function SvgPhone({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M1.89.51a1.75 1.75 0 0 1 2.6.16l1.8 2.3c.33.43.45.98.32 1.5l-.55 2.2a.68.68 0 0 0 .18.64l2.45 2.45a.68.68 0 0 0 .65.18l2.19-.55a1.75 1.75 0 0 1 1.49.32l2.3 1.8c.84.64.91 1.86.17 2.6l-1.03 1.04a2.78 2.78 0 0 1-2.88.7 18.63 18.63 0 0 1-7.01-4.42 18.63 18.63 0 0 1-4.42-7 2.78 2.78 0 0 1 .7-2.89z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgPin({ ...props }: ISvgStyled): ReactElement {
@@ -326,7 +326,7 @@ export function SvgPin({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 16s6-5.69 6-10A6 6 0 0 0 0 6c0 4.31 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgThumbnail({ ...props }: ISvgStyled): ReactElement {
@@ -334,7 +334,7 @@ export function SvgThumbnail({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 0a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm12 1a1 1 0 0 1 1 1v6.5l-3.78-1.95a.5.5 0 0 0-.57.1l-3.71 3.7-2.66-1.77a.5.5 0 0 0-.63.07L1 11V2a1 1 0 0 1 1-1ZM6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgUser({ ...props }: ISvgStyled): ReactElement {
@@ -342,7 +342,7 @@ export function SvgUser({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-7a7 7 0 0 0-5.47 11.37C3.24 11.23 4.8 10 8 10c3.2 0 4.76 1.23 5.47 2.37A7 7 0 0 0 8 1Zm3 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgUserPlus({ ...props }: ISvgStyled): ReactElement {
@@ -350,7 +350,7 @@ export function SvgUserPlus({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 0a3 3 0 0 0 0 6 3 3 0 0 0 0-6Zm-.24 1.01A2 2 0 0 1 8 3a2 2 0 0 1-4 0 2 2 0 0 1 1.76-1.99ZM13.5 3a.5.5 0 0 0-.5.5V5h-1.5a.5.5 0 0 0 0 1H13v1.5a.5.5 0 0 0 1 0V6h1.5a.5.5 0 0 0 0-1H14V3.5a.5.5 0 0 0-.5-.5ZM6 7c-5 0-6 3-6 4s1 1 1 1h10s1 0 1-1-1-4-6-4zm0 1c2.29 0 3.52.68 4.17 1.33.68.68.83 1.42.83 1.67H1c0-.25.15-.99.83-1.67C2.48 8.68 3.71 8 6 8Z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgView({ ...props }: ISvgStyled): ReactElement {
@@ -358,7 +358,7 @@ export function SvgView({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg">
       <path d="M27.95 9.68C25.95 3.88 20.35 0 14 0A14.62 14.62 0 0 0 .05 9.68a1 1 0 0 0 0 .65C2.05 16.1 7.65 20 14 20s11.95-3.89 13.95-9.68a1 1 0 0 0 0-.65zM14 16a6 6 0 1 1 .01-12.01A6 6 0 0 1 14 16z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgViewDisabled({ ...props }: ISvgStyled): ReactElement {
@@ -366,7 +366,7 @@ export function SvgViewDisabled({ ...props }: ISvgStyled): ReactElement {
     <SvgStyled {...props} viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
       <path d="M22.68 21.27a14.1 14.1 0 0 0 5.27-6.94 1 1 0 0 0 0-.65C25.95 7.88 20.35 4 14 4c-2.48 0-4.84.6-6.92 1.67L1.7.29A1 1 0 1 0 .29 1.71l26 26a1 1 0 1 0 1.42-1.42zM14 8a6 6 0 0 1 4.89 9.47l-8.36-8.35A5.96 5.96 0 0 1 14 8zm4.72 14.96c.1.1.06.27-.07.31-7.7 2.47-16.03-1.5-18.6-8.94a1.02 1.02 0 0 1 0-.66 14 14 0 0 1 3.6-5.57.16.16 0 0 1 .21 0l4.3 4.3c.03.04.04.08.03.12a6.04 6.04 0 0 0 7.28 7.3c.05-.02.1-.01.13.02l3.12 3.12z" />
     </SvgStyled>
-  );
+  )
 }
 
 export function SvgWhatsappFill({ ...props }: ISvgStyled): ReactElement {
@@ -378,5 +378,5 @@ export function SvgWhatsappFill({ ...props }: ISvgStyled): ReactElement {
         d="M76.73 13.08A44.3 44.3 0 0 0 45.2 0 44.66 44.66 0 0 0 6.54 66.89L.21 90l23.65-6.2a44.55 44.55 0 0 0 21.3 5.43h.03c24.58 0 44.58-20.01 44.6-44.6a44.33 44.33 0 0 0-13.06-31.55zM27.09 46.22c-.56-.75-4.55-6.04-4.55-11.53 0-5.49 2.87-8.18 3.9-9.3A4.1 4.1 0 0 1 29.4 24c.74 0 1.49 0 2.13.04.69.03 1.6-.26 2.51 1.91.93 2.23 3.16 7.72 3.44 8.28.28.55.46 1.2.09 1.95-.37.74-.56 1.2-1.11 1.86-.56.65-1.17 1.45-1.68 1.95-.55.55-1.13 1.16-.48 2.27a33.57 33.57 0 0 0 6.2 7.72c4.25 3.8 7.84 4.98 8.96 5.53 1.1.56 1.76.47 2.4-.28.66-.74 2.8-3.25 3.54-4.36.74-1.12 1.48-.93 2.5-.56 1.03.37 6.5 3.07 7.62 3.62 1.11.56 1.86.84 2.14 1.3.27.47.27 2.7-.65 5.3-.93 2.6-5.39 4.98-7.53 5.3-1.92.29-4.35.4-7.02-.44a64 64 0 0 1-6.35-2.35c-11.18-4.82-18.48-16.08-19.03-16.82Z"
       />
     </SvgStyled>
-  );
+  )
 }

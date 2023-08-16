@@ -1,7 +1,7 @@
-import styled, { css, IStyledSystem } from 'styled-components';
-import { layout, position, space, typography } from 'styled-system';
+import styled, { css, IStyledSystem } from 'styled-components'
+import { layout, position, space, typography } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 const linkLine = css`
   &::after {
@@ -15,7 +15,7 @@ const linkLine = css`
       width ${variable.animation.transition};
     width: 0;
   }
-`;
+`
 
 export const LinkToStyled = styled.a<IStyledSystem>`
   ${layout};
@@ -105,7 +105,7 @@ export const LinkToStyled = styled.a<IStyledSystem>`
           }
         `
       : undefined};
-`;
+`
 
 export const LinkToExternalStyled = styled.a<IStyledSystem>`
   ${layout};
@@ -185,4 +185,4 @@ export const LinkToExternalStyled = styled.a<IStyledSystem>`
           }
         `
       : undefined};
-`;
+`

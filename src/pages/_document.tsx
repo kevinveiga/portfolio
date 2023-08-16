@@ -1,16 +1,16 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
-import { title, urlImages } from '@/configApp';
+import { title, urlImages } from '@/configApp'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<any> {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
     try {
       /* eslint-disable react/display-name */
@@ -20,10 +20,10 @@ class MyDocument extends Document {
             (App) =>
             (props): any =>
               sheet.collectStyles(<App {...props} />)
-        });
+        })
       /* eslint-enable react/display-name */
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps = await Document.getInitialProps(ctx)
 
       return {
         ...initialProps,
@@ -33,9 +33,9 @@ class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         )
-      };
+      }
     } finally {
-      sheet.seal();
+      sheet.seal()
     }
   }
 
@@ -110,8 +110,8 @@ class MyDocument extends Document {
           <div id="id-modalmessage-root"></div>
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

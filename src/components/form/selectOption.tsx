@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
 export const arrayMonth = [
   {
@@ -49,7 +49,7 @@ export const arrayMonth = [
     label: '12',
     value: '12'
   }
-];
+]
 
 export const arrayUF = [
   {
@@ -164,17 +164,17 @@ export const arrayUF = [
     label: 'TO',
     value: 'to'
   }
-];
+]
 
 export function arrayYear({ initialYear }: { initialYear: number }): Record<string, string>[] {
-  const arrayOfYears = [];
-  const currentYear = new Date().getFullYear();
+  const arrayOfYears = []
+  const currentYear = new Date().getFullYear()
 
   for (let i = initialYear, l = currentYear + 1; i < l; i += 1) {
-    arrayOfYears.push({ label: i.toString(), value: i.toString() });
+    arrayOfYears.push({ label: i.toString(), value: i.toString() })
   }
 
-  return arrayOfYears;
+  return arrayOfYears
 }
 
 export function OptionMonth(): ReactElement {
@@ -193,7 +193,7 @@ export function OptionMonth(): ReactElement {
       <option value="11">11</option>
       <option value="12">12</option>
     </>
-  );
+  )
 }
 
 export function OptionUF(): ReactElement {
@@ -228,15 +228,15 @@ export function OptionUF(): ReactElement {
       <option value="sp">SP</option>
       <option value="to">TO</option>
     </>
-  );
+  )
 }
 
 export function OptionYear({ initialYear }: { initialYear: number }): ReactElement {
-  const arrayOfYears = [];
-  const currentYear = new Date().getFullYear();
+  const arrayOfYears = []
+  const currentYear = new Date().getFullYear()
 
   for (let i = initialYear, l = currentYear + 1; i < l; i += 1) {
-    arrayOfYears.push(i);
+    arrayOfYears.push(i)
   }
 
   return (
@@ -246,8 +246,8 @@ export function OptionYear({ initialYear }: { initialYear: number }): ReactEleme
           <option key={year} value={year}>
             {year}
           </option>
-        );
+        )
       })}
     </>
-  );
+  )
 }

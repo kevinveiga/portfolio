@@ -1,7 +1,7 @@
-import styled, { IStyledSystem } from 'styled-components';
-import { layout } from 'styled-system';
+import styled, { IStyledSystem } from 'styled-components'
+import { layout } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export const ProgressStyled = styled.div<IStyledSystem>`
   ${layout};
@@ -11,7 +11,7 @@ export const ProgressStyled = styled.div<IStyledSystem>`
   height: 6px;
   overflow: hidden;
   ${({ width }): number | string | undefined => (width === undefined ? 'width: 100%' : undefined)};
-`;
+`
 
 export const ProgressBarStyled = styled.div<IStyledSystem>`
   ${layout};
@@ -19,4 +19,4 @@ export const ProgressBarStyled = styled.div<IStyledSystem>`
   background-color: ${({ backgroundColor }): string => backgroundColor || 'transparent'};
   border-radius: ${variable.layout.borderRadiusPrimary};
   height: 100%;
-`;
+`

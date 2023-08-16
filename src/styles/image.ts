@@ -1,15 +1,15 @@
-import styled, { css, IImageStyled, IStyledSystem } from 'styled-components';
-import { background, layout, position, space } from 'styled-system';
+import styled, { css, IImageStyled, IStyledSystem } from 'styled-components'
+import { background, layout, position, space } from 'styled-system'
 
-import { gradientDirection } from '@/styles/function';
-import { variable } from '@/styles/variable';
+import { gradientDirection } from '@/styles/function'
+import { variable } from '@/styles/variable'
 
 export const Image = styled.img<IImageStyled>`
   ${layout};
   ${space};
 
   object-fit: ${({ objectFit }): string => objectFit || 'cover'};
-`;
+`
 
 export const ImageCircleContainer = styled.div<IStyledSystem>`
   ${layout};
@@ -20,14 +20,14 @@ export const ImageCircleContainer = styled.div<IStyledSystem>`
   overflow: hidden;
   text-align: center;
   ${({ width }): number | string | undefined => (width === undefined ? 'width: 150px' : undefined)};
-`;
+`
 
 export const ImageCircleBorderContainer = styled.div`
   border-radius: 50%;
   height: 175px;
   overflow: hidden;
   width: 175px;
-`;
+`
 
 export const BgImage = styled.div<IImageStyled>`
   ${background};
@@ -59,7 +59,7 @@ export const BgImage = styled.div<IImageStyled>`
           transform-origin: 50% 50%;
         `
       : undefined};
-`;
+`
 
 export const BgImageOverlay = styled(BgImage)<IImageStyled>`
   ${({ overlayColor }): any => css`
@@ -75,7 +75,7 @@ export const BgImageOverlay = styled(BgImage)<IImageStyled>`
       z-index: 2;
     }
   `};
-`;
+`
 
 export const BgImageOverlayTopBottom = styled(BgImageOverlay)<IImageStyled>`
   ${({ colorEndPercent, overlayColorBottom, overlayColorTop, colorStartPercent }): any => css`
@@ -89,4 +89,4 @@ export const BgImageOverlayTopBottom = styled(BgImageOverlay)<IImageStyled>`
       })};
     }
   `};
-`;
+`

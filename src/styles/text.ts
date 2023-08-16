@@ -1,7 +1,7 @@
-import styled, { css, ITextStyled } from 'styled-components';
-import { layout, space, typography } from 'styled-system';
+import styled, { css, ITextStyled } from 'styled-components'
+import { layout, space, typography } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 const title = css<ITextStyled>`
   ${layout};
@@ -41,11 +41,11 @@ const title = css<ITextStyled>`
           }
         `
       : undefined};
-`;
+`
 
 export const Br = styled.br<ITextStyled>`
   ${layout};
-`;
+`
 
 export const P = styled.p<ITextStyled>`
   ${layout};
@@ -69,7 +69,7 @@ export const P = styled.p<ITextStyled>`
             text-transform: ${textTransformFirstLetter ?? 'capitalize'};
           }
         `};
-`;
+`
 
 export const Span = styled.span<ITextStyled>`
   ${layout};
@@ -90,7 +90,7 @@ export const Span = styled.span<ITextStyled>`
           }
         `
       : undefined};
-`;
+`
 
 export const Subtitle1 = styled.p<ITextStyled>`
   ${title};
@@ -102,7 +102,7 @@ export const Subtitle1 = styled.p<ITextStyled>`
   @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 12px' : undefined)};
   }
-`;
+`
 
 export const Title1 = styled.h1<ITextStyled>`
   ${title};
@@ -118,7 +118,7 @@ export const Title1 = styled.h1<ITextStyled>`
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 76px' : undefined)};
     ${({ mb }): string | undefined => (mb === undefined ? `margin-bottom: ${variable.space.spacingMD}` : undefined)};
   }
-`;
+`
 
 export const Title2 = styled.h2<ITextStyled>`
   ${title};
@@ -131,7 +131,7 @@ export const Title2 = styled.h2<ITextStyled>`
   @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 26px' : undefined)};
   }
-`;
+`
 
 export const Title3 = styled.h3<ITextStyled>`
   ${title};
@@ -144,7 +144,7 @@ export const Title3 = styled.h3<ITextStyled>`
   @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 24px' : undefined)};
   }
-`;
+`
 
 export const Title4 = styled.h4<ITextStyled>`
   ${title};
@@ -157,7 +157,7 @@ export const Title4 = styled.h4<ITextStyled>`
   @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 20px' : undefined)};
   }
-`;
+`
 
 export const Title5 = styled.h5<ITextStyled>`
   ${title};
@@ -169,4 +169,4 @@ export const Title5 = styled.h5<ITextStyled>`
   @media (min-width: ${variable.breakpoint.md}) {
     ${({ fontSize }): string | undefined => (fontSize === undefined ? 'font-size: 14px' : undefined)};
   }
-`;
+`

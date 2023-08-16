@@ -1,8 +1,8 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
-import { IGradient, IGradient3Colors } from '@/interface';
+import { IGradient, IGradient3Colors } from '@/interface'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export const gradientDirection = ({
   colorEnd = variable.color.secondary,
@@ -14,8 +14,8 @@ export const gradientDirection = ({
   return css`
     background-image: linear-gradient(${deg}, ${colorStart} ${colorStartPercent}, ${colorEnd} ${colorEndPercent});
     background-repeat: repeat-x;
-  `;
-};
+  `
+}
 
 export const gradientDirection3Colors = ({
   colorEnd = variable.color.secondary,
@@ -34,8 +34,8 @@ export const gradientDirection3Colors = ({
       ${colorEnd} ${colorEndPercent}
     );
     background-repeat: repeat-x;
-  `;
-};
+  `
+}
 
 export const gradientDirectionRepeat = ({
   colorEnd = variable.color.secondary,
@@ -50,8 +50,8 @@ export const gradientDirectionRepeat = ({
       ${colorStart} ${colorStartPercent},
       ${colorEnd} ${colorEndPercent}
     );
-  `;
-};
+  `
+}
 
 export const gradientDirection3ColorsRepeat = ({
   colorEnd = variable.color.secondary,
@@ -69,8 +69,8 @@ export const gradientDirection3ColorsRepeat = ({
       ${colorMid} ${colorMidPercent},
       ${colorEnd} ${colorEndPercent}
     );
-  `;
-};
+  `
+}
 
 export const gradientRadial = ({
   colorEnd = variable.color.secondary,
@@ -80,8 +80,8 @@ export const gradientRadial = ({
 }: IGradient): any => {
   return css`
     background-image: radial-gradient(circle, ${colorStart} ${colorStartPercent}, ${colorEnd} ${colorEndPercent});
-  `;
-};
+  `
+}
 
 export const gradientRadialRepeat = ({
   colorEnd = variable.color.secondary,
@@ -95,16 +95,16 @@ export const gradientRadialRepeat = ({
       ${colorStart} ${colorStartPercent},
       ${colorEnd} ${colorEndPercent}
     );
-  `;
-};
+  `
+}
 
 export const letterSpacing = (value = '0', align = ''): any => {
   return css`
     letter-spacing: ${value};
     ${align === 'center' && `padding-left: ${value};`}
     ${align === 'right' && `margin-right: -${value};`}
-  `;
-};
+  `
+}
 
 export const scrollbar = (colorPrimary = '', colorSecondary = '', scrollbarSize = '8px'): any => {
   return css`
@@ -139,8 +139,8 @@ export const scrollbar = (colorPrimary = '', colorSecondary = '', scrollbarSize 
       background-color: ${({ theme }): string => colorSecondary || theme.bgColor.primary};
       margin: 0;
     }
-  `;
-};
+  `
+}
 
 export const scrollbarInvisible = (): any => {
   return css`
@@ -175,8 +175,8 @@ export const scrollbarInvisible = (): any => {
       background-color: transparent;
       margin: 0;
     }
-  `;
-};
+  `
+}
 
 export const scrollbarTable = (colorPrimary = '', colorSecondary = '', scrollbarSize = '6px'): any => {
   return css`
@@ -215,5 +215,5 @@ export const scrollbarTable = (colorPrimary = '', colorSecondary = '', scrollbar
       background-color: transparent;
       margin: 0;
     }
-  `;
-};
+  `
+}

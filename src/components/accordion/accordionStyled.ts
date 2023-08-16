@@ -1,14 +1,14 @@
-import styled, { css, IAccordion, IStyledSystem } from 'styled-components';
-import { flexbox, position, space } from 'styled-system';
+import styled, { css, IAccordion, IStyledSystem } from 'styled-components'
+import { flexbox, position, space } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export const AccordionStyled = styled.div<IStyledSystem>`
   ${position};
 
   display: flex;
   flex-direction: column;
-`;
+`
 
 export const AccordionChangeStyled = styled.div<IAccordion>`
   svg {
@@ -21,7 +21,7 @@ export const AccordionChangeStyled = styled.div<IAccordion>`
       transform ${variable.animation.transition};
     vertical-align: middle;
   }
-`;
+`
 
 export const AccordionFormChangeStyled = styled(AccordionChangeStyled)`
   svg {
@@ -29,7 +29,7 @@ export const AccordionFormChangeStyled = styled(AccordionChangeStyled)`
     max-width: 14px;
     transform: ${({ active }): string => (active ? 'rotate(0deg)' : 'rotate(-90deg)')};
   }
-`;
+`
 
 export const AccordionItemStyled = styled.div<IAccordion>`
   ${flexbox};
@@ -65,7 +65,7 @@ export const AccordionItemStyled = styled.div<IAccordion>`
   svg {
     fill: ${({ theme }): string => theme.svgColor.primary};
   }
-`;
+`
 
 export const AccordionItemContentStyled = styled.div<IAccordion>`
   ${position};
@@ -76,8 +76,8 @@ export const AccordionItemContentStyled = styled.div<IAccordion>`
   overflow: ${({ active }): any => (active ? 'visible' : 'hidden')};
   transition: height ${variable.animation.transitionFast};
   width: 100%;
-`;
+`
 
 export const AccordionItemTextStyled = styled.div<IStyledSystem>`
   ${space};
-`;
+`

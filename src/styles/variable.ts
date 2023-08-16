@@ -1,4 +1,4 @@
-import { IVariable } from '@/interface';
+import { IVariable } from '@/interface'
 
 export const variable: IVariable = {
   animation: {
@@ -142,4 +142,4 @@ export const variable: IVariable = {
     letterSpacing: '0',
     lineHeight: '1.4'
   }
-};
+}

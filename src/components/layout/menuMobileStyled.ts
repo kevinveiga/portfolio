@@ -1,8 +1,8 @@
-import styled, { IActiveStyled, IStyledSystem } from 'styled-components';
-import { display } from 'styled-system';
+import styled, { IActiveStyled, IStyledSystem } from 'styled-components'
+import { display } from 'styled-system'
 
-import { Subtitle1 } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { Subtitle1 } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
 export const MenuMobileStyled = styled.div<IActiveStyled>`
   ${display};
@@ -30,7 +30,7 @@ export const MenuMobileStyled = styled.div<IActiveStyled>`
       color: ${({ change }): string | undefined => (change ? variable.color.turquoise : variable.color.turquoiseLight)};
     }
   }
-`;
+`
 
 export const MenuMobileItemsNavStyled = styled.nav<IStyledSystem>`
   > ul {
@@ -53,4 +53,4 @@ export const MenuMobileItemsNavStyled = styled.nav<IStyledSystem>`
   ${Subtitle1} {
     color: ${({ theme }): string | undefined => theme.textColor.tertiary};
   }
-`;
+`

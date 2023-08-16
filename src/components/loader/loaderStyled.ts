@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export const LoaderBackgroundStyled = styled.div`
   background-color: ${variable.color.blackTransparent5};
@@ -10,7 +10,7 @@ export const LoaderBackgroundStyled = styled.div`
   top: 0;
   width: 100%;
   z-index: 10;
-`;
+`
 
 export const LoaderContentStyled = styled.div`
   height: 100px;
@@ -19,4 +19,4 @@ export const LoaderContentStyled = styled.div`
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   width: 100px;
-`;
+`

@@ -1,6 +1,6 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme } from 'styled-components'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export const defaultTheme: DefaultTheme = {
   titleTheme: 'dark',
@@ -50,7 +50,7 @@ export const defaultTheme: DefaultTheme = {
     secondary: variable.color.textLightSecondary,
     tertiary: variable.color.textLightTertiary
   }
-};
+}
 
 export const lightTheme: DefaultTheme = {
   ...defaultTheme,
@@ -95,4 +95,4 @@ export const lightTheme: DefaultTheme = {
       tertiary: variable.color.textDarkTertiary
     }
   }
-};
+}

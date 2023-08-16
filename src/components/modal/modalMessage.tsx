@@ -1,18 +1,18 @@
-import React, { ReactElement } from 'react';
-import ReactDOM from 'react-dom';
+import React, { ReactElement } from 'react'
+import ReactDOM from 'react-dom'
 
-import { useTranslation } from 'react-i18next';
-import { useTheme } from 'styled-components';
+import { useTranslation } from 'react-i18next'
+import { useTheme } from 'styled-components'
 
-import { IModal } from '@/interface';
+import { IModal } from '@/interface'
 
-import { Button } from '@/components/button/button';
-import { ModalStyled, ModalBackgroundStyled, ModalTopStyled } from '@/components/modal/modalStyled';
-import { SvgClose } from '@/components/svg/svgStore';
+import { Button } from '@/components/button/button'
+import { ModalStyled, ModalBackgroundStyled, ModalTopStyled } from '@/components/modal/modalStyled'
+import { SvgClose } from '@/components/svg/svgStore'
 
-import { Box, Flex } from '@/styles/flex';
-import { P } from '@/styles/text';
-import { variable } from '@/styles/variable';
+import { Box, Flex } from '@/styles/flex'
+import { P } from '@/styles/text'
+import { variable } from '@/styles/variable'
 
 export function ModalMessage({
   children,
@@ -24,22 +24,22 @@ export function ModalMessage({
   ...props
 }: IModal): ReactElement | null {
   // CONTEXT
-  const { bgColor } = useTheme();
-  const { t } = useTranslation();
+  const { bgColor } = useTheme()
+  const { t } = useTranslation()
 
   // VARIABLE
-  const modalContent = children || content;
+  const modalContent = children || content
 
   // FUNCTION
   const handleClose = (): void => {
     if (setActive) {
-      setActive(null);
+      setActive(null)
     }
 
     if (onClose) {
-      onClose();
+      onClose()
     }
-  };
+  }
 
   return ReactDOM.createPortal(
     <>
@@ -73,5 +73,5 @@ export function ModalMessage({
       </ModalStyled>
     </>,
     document.getElementById('id-modalmessage-root') as Element
-  );
+  )
 }

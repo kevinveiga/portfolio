@@ -1,9 +1,9 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from 'react'
 
-import parse from 'html-react-parser';
+import parse from 'html-react-parser'
 
-import { IAccordion, IAccordionItem } from '@/interface';
-import { usePersistedState } from '@/hooks/persistedState/usePersistedState';
+import { IAccordion, IAccordionItem } from '@/interface'
+import { usePersistedState } from '@/hooks/persistedState/usePersistedState'
 
 import {
   AccordionStyled,
@@ -11,20 +11,20 @@ import {
   AccordionItemStyled,
   AccordionItemContentStyled,
   AccordionItemTextStyled
-} from '@/components/accordion/accordionStyled';
-import { SvgArrowDown } from '@/components/svg/svgStore';
+} from '@/components/accordion/accordionStyled'
+import { SvgArrowDown } from '@/components/svg/svgStore'
 
-import { LineHorizontal, Spacer } from '@/styles/layout';
-import { Span } from '@/styles/text';
+import { LineHorizontal, Spacer } from '@/styles/layout'
+import { Span } from '@/styles/text'
 
 export function Accordion({ id, obj }: IAccordion): ReactElement | null {
   // STATE
-  const [stateAccordion, setStateAccordion] = usePersistedState<string>(`accordion-${id}`, '');
+  const [stateAccordion, setStateAccordion] = usePersistedState<string>(`accordion-${id}`, '')
 
   // FUNCTION
   const toggleAccordion = (value: string): void => {
-    setStateAccordion((state) => (state !== value ? value : ''));
-  };
+    setStateAccordion((state) => (state !== value ? value : ''))
+  }
 
   return obj ? (
     <div>
@@ -55,8 +55,8 @@ export function Accordion({ id, obj }: IAccordion): ReactElement | null {
 
             <Spacer />
           </AccordionStyled>
-        );
+        )
       })}
     </div>
-  ) : null;
+  ) : null
 }

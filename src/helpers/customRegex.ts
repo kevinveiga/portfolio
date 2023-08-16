@@ -13,4 +13,4 @@ export const customRegex = {
   password: /^(?=.*([A-z]|[0-9])).{6,}$/,
   phone: /^\(?(\d{2})\)?\s?(\d{1})-?(\d{4})-?(\d{3,4})$/,
   photo: /^.+\.(jpg|jpeg|png)$/
-};
+}

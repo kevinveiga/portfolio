@@ -1,7 +1,7 @@
-import styled, { css, ISvgStyled } from 'styled-components';
-import { layout, position, space, typography, verticalAlign } from 'styled-system';
+import styled, { css, ISvgStyled } from 'styled-components'
+import { layout, position, space, typography, verticalAlign } from 'styled-system'
 
-import { variable } from '@/styles/variable';
+import { variable } from '@/styles/variable'
 
 export const SvgStyled = styled.svg<ISvgStyled>`
   ${layout};
@@ -24,10 +24,10 @@ export const SvgStyled = styled.svg<ISvgStyled>`
           }
         `
       : undefined};
-`;
+`
 
 export const SvgLogoLoaderStyled = styled.svg`
   fill: ${({ fill }): string => fill || variable.color.grayLight2};
   height: 100%;
   width: 100%;
-`;
+`
