@@ -6,12 +6,12 @@ import { useTheme } from 'styled-components'
 import { maskDecimal } from '@/helpers/mask'
 import { capitalizeFirstLetter } from '@/helpers/stringManipulation'
 import yup from '@/helpers/yup'
-import { IInput, IInputDecimal, IInputRadioItems, IInputRadio, ILabel, ISelect } from '@/interface'
+import { IInput, IInputDecimal, IInputRadio, IInputRadioItems, ILabel, ISelect } from '@/interface'
 
 import { Button } from '@/components/button/button'
 import {
-  InputContainerStyled,
   InputCheckboxRadioStyled,
+  InputContainerStyled,
   InputDecrementIncrementContainerStyled,
   InputFileStyled,
   InputRadioStyled,

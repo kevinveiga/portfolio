@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 
-import { ProgressStyled, ProgressBarStyled } from '@/components/progress/progressStyled'
+import { ProgressBarStyled, ProgressStyled } from '@/components/progress/progressStyled'
 import { SvgChecked } from '@/components/svg/svgStore'
 
 import { Spacer } from '@/styles/layout'

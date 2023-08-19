@@ -10,14 +10,14 @@ import React, {
 } from 'react'
 
 import { AppProps } from 'next/app'
-import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 
 import '@/helpers/i18next'
-import { IModal } from '@/interface'
 import { PageProvider } from '@/hooks/page/usePage'
 import { usePersistedState } from '@/hooks/persistedState/usePersistedState'
+import { IModal } from '@/interface'
 
 import { Loader } from '@/components/loader/loader'
 import { ModalInfo } from '@/components/modal/modalInfo'

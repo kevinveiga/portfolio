@@ -27,8 +27,8 @@ import {
 import { LinkTo } from '@/components/link/linkTo'
 import { LinkToExternal } from '@/components/link/linkToExternal'
 import {
-  SvgAwardFill,
   SvgArrowDown,
+  SvgAwardFill,
   SvgChatBar,
   SvgDocument,
   SvgGithub,

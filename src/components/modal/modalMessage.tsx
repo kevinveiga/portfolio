@@ -7,7 +7,7 @@ import { useTheme } from 'styled-components'
 import { IModal } from '@/interface'
 
 import { Button } from '@/components/button/button'
-import { ModalStyled, ModalBackgroundStyled, ModalTopStyled } from '@/components/modal/modalStyled'
+import { ModalBackgroundStyled, ModalStyled, ModalTopStyled } from '@/components/modal/modalStyled'
 import { SvgClose } from '@/components/svg/svgStore'
 
 import { Box, Flex } from '@/styles/flex'

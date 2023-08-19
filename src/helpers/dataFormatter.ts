@@ -1,5 +1,5 @@
-import { customRegex } from '@/helpers/customRegex'
 import { currencyType } from '@/helpers/currencyType'
+import { customRegex } from '@/helpers/customRegex'
 
 export const getBooleanFormatted = (value: boolean | string): string => {
   switch (Boolean(value)) {

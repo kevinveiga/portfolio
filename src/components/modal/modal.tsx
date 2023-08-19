@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { IModal } from '@/interface'
 
-import { ModalStyled, ModalBackgroundStyled } from '@/components/modal/modalStyled'
+import { ModalBackgroundStyled, ModalStyled } from '@/components/modal/modalStyled'
 
 export function Modal({ children, content, onClose, setActive, ...props }: IModal): ReactElement | null {
   // VARIABLE

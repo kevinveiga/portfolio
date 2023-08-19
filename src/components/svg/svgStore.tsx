@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 
 import { ISvgStyled } from 'styled-components'
 
-import { SvgStyled, SvgLogoLoaderStyled } from '@/components/svg/svgStyled'
+import { SvgLogoLoaderStyled, SvgStyled } from '@/components/svg/svgStyled'
 
 import { variable } from '@/styles/variable'
 

@@ -1,5 +1,5 @@
-import { IAuthData } from '@/interface'
 import { ActionType } from '@/hooks/action/actionType'
+import { IAuthData } from '@/interface'
 
 interface IAuthAction {
   error?: string | null

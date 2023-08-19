@@ -7,7 +7,7 @@ import { useTheme } from 'styled-components'
 import { IModal } from '@/interface'
 
 import { Button } from '@/components/button/button'
-import { ModalInfoStyled, ModalInfoButtonsStyled } from '@/components/modal/modalStyled'
+import { ModalInfoButtonsStyled, ModalInfoStyled } from '@/components/modal/modalStyled'
 import { SvgArrowDown, SvgClose } from '@/components/svg/svgStore'
 
 import { Spacer } from '@/styles/layout'

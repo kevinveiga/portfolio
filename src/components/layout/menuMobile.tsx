@@ -3,12 +3,12 @@ import React, { ReactElement } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { scrollTo } from '@/helpers/scrollTo'
+import { usePage } from '@/hooks/page/usePage'
 import { IActive } from '@/interface'
 import { useApp } from '@/pages/_app'
-import { usePage } from '@/hooks/page/usePage'
 
 import { Button } from '@/components/button/button'
-import { MenuMobileStyled, MenuMobileItemsNavStyled } from '@/components/layout/menuMobileStyled'
+import { MenuMobileItemsNavStyled, MenuMobileStyled } from '@/components/layout/menuMobileStyled'
 import { LinkToExternal } from '@/components/link/linkToExternal'
 import { SvgClose } from '@/components/svg/svgStore'
 

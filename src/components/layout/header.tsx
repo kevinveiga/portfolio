@@ -3,14 +3,14 @@ import React, { ReactElement, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { scrollTo } from '@/helpers/scrollTo'
-import { useApp } from '@/pages/_app'
 import { useChangeHeaderScroll } from '@/hooks/header/useHeader'
 import { usePage } from '@/hooks/page/usePage'
+import { useApp } from '@/pages/_app'
 
 import { Button } from '@/components/button/button'
-import { HeaderStyled, HeaderItemsStyled, HeaderItemsNavStyled } from '@/components/layout/headerStyled'
-import { LinkToExternal } from '@/components/link/linkToExternal'
+import { HeaderItemsNavStyled, HeaderItemsStyled, HeaderStyled } from '@/components/layout/headerStyled'
 import { MenuMobile } from '@/components/layout/menuMobile'
+import { LinkToExternal } from '@/components/link/linkToExternal'
 import { SvgDarkLightMode, SvgFlagBrazil, SvgFlagUsa, SvgMenu } from '@/components/svg/svgStore'
 
 import { Box } from '@/styles/flex'

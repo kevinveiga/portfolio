@@ -7,9 +7,10 @@ import { useTheme } from 'styled-components'
 import { maskCep, maskCpf, maskCurrency, maskPhone } from '@/helpers/mask'
 import { capitalizeFirstLetter } from '@/helpers/stringManipulation'
 import yup from '@/helpers/yup'
-import { IInput, IInputPasswordConfirm, ISelectCustom, ISelectCustomItems } from '@/interface'
 import { useClickOutside } from '@/hooks/clickOutside/useClickOutside'
+import { IInput, IInputPasswordConfirm, ISelectCustom, ISelectCustomItems } from '@/interface'
 
+import { Button } from '@/components/button/button'
 import {
   InputContainerStyled,
   InputStyled,
@@ -17,7 +18,6 @@ import {
   SelectOptionsCustomStyled,
   ValidatedMessageStyled
 } from '@/components/form/formStyled'
-import { Button } from '@/components/button/button'
 import {
   SvgArrowDown,
   SvgEnvelope,
@@ -25,10 +25,10 @@ import {
   SvgLock,
   SvgMoney,
   SvgNumber,
-  SvgPin,
   SvgPhone,
-  SvgView,
+  SvgPin,
   SvgUser,
+  SvgView,
   SvgViewDisabled
 } from '@/components/svg/svgStore'
 

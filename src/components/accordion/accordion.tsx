@@ -2,15 +2,15 @@ import React, { ReactElement } from 'react'
 
 import parse from 'html-react-parser'
 
-import { IAccordion, IAccordionItem } from '@/interface'
 import { usePersistedState } from '@/hooks/persistedState/usePersistedState'
+import { IAccordion, IAccordionItem } from '@/interface'
 
 import {
-  AccordionStyled,
   AccordionChangeStyled,
-  AccordionItemStyled,
   AccordionItemContentStyled,
-  AccordionItemTextStyled
+  AccordionItemStyled,
+  AccordionItemTextStyled,
+  AccordionStyled
 } from '@/components/accordion/accordionStyled'
 import { SvgArrowDown } from '@/components/svg/svgStore'
 

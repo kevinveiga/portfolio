@@ -11,8 +11,7 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "document": true,
@@ -65,7 +64,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "project": ["./tsconfig.json"],
     "sourceType": "module",
     "tsconfigRootDir": "./"
@@ -85,6 +84,45 @@
     "global-require": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
+    "import/order": [
+      "warn",
+      {
+        "groups": [["external", "builtin"], "internal", ["sibling", "parent"], "index"],
+        "pathGroups": [
+          {
+            "pattern": "@(react|react-dom|react-native)",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@/(helpers/**|hooks/**|pages/**)",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/styles/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/public/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
     "import/prefer-default-export": "off",
     "indent": [
       "off",
@@ -228,6 +266,15 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "semi": ["error", "never"],
+    "sort-imports": [
+      "error",
+      {
+        "allowSeparatedGroups": true,
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false
+      }
+    ],
     "strict": "error"
   },
   "settings": {

@@ -4,7 +4,7 @@ import parse from 'html-react-parser'
 
 import { IButton } from '@/interface'
 
-import { ButtonStyled, ButtonBorderStyled, ButtonUnsetStyled } from '@/components/button/buttonStyled'
+import { ButtonBorderStyled, ButtonStyled, ButtonUnsetStyled } from '@/components/button/buttonStyled'
 
 export function Button({
   ariaLabel = '',

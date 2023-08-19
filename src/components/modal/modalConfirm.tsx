@@ -8,7 +8,7 @@ import { useTheme } from 'styled-components'
 import { IModalConfirm } from '@/interface'
 
 import { Button } from '@/components/button/button'
-import { ModalConfirmStyled, ModalConfirmContentStyled } from '@/components/modal/modalStyled'
+import { ModalConfirmContentStyled, ModalConfirmStyled } from '@/components/modal/modalStyled'
 import { SvgClose } from '@/components/svg/svgStore'
 
 import { Box, Flex } from '@/styles/flex'
