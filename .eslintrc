@@ -95,7 +95,7 @@
             "position": "before"
           },
           {
-            "pattern": "@/(helpers/**|hooks/**|pages/**)",
+            "pattern": "@/(contexts/**|helpers/**|hooks/**|pages/**)",
             "group": "internal",
             "position": "after"
           },

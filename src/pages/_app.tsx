@@ -15,7 +15,7 @@ import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 
 import '@/helpers/i18next'
-import { PageProvider } from '@/hooks/page/usePage'
+import { PageProvider } from '@/contexts/page/usePage'
 import { usePersistedState } from '@/hooks/persistedState/usePersistedState'
 import { IModal } from '@/interface'
 

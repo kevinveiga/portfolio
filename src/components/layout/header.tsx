@@ -2,9 +2,9 @@ import React, { ReactElement, useState } from 'react'
 
 import { useTranslation } from 'react-i18next'
 
+import { usePage } from '@/contexts/page/usePage'
 import { scrollTo } from '@/helpers/scrollTo'
 import { useChangeHeaderScroll } from '@/hooks/header/useHeader'
-import { usePage } from '@/hooks/page/usePage'
 import { useApp } from '@/pages/_app'
 
 import { Button } from '@/components/button/button'

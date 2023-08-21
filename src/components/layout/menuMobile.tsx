@@ -2,8 +2,8 @@ import React, { ReactElement } from 'react'
 
 import { useTranslation } from 'react-i18next'
 
+import { usePage } from '@/contexts/page/usePage'
 import { scrollTo } from '@/helpers/scrollTo'
-import { usePage } from '@/hooks/page/usePage'
 import { IActive } from '@/interface'
 import { useApp } from '@/pages/_app'
 
